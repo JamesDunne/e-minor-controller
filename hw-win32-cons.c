@@ -97,8 +97,8 @@ int song_load_name(u8 song_index, char name[SONG_NAME_MAXLENGTH]) {
 
     f = fopen("eeprom.bin", "rb");
     if (f == NULL) {
-        printf("fake metal\r\n");
-        strncpy(name, "*METAL*     ", 12);
+        printf("fake name\r\n");
+        strncpy(name, "GENERAL     ", 12);
         return 0;
     }
 
@@ -126,11 +126,15 @@ int song_load_presets(u8 song_index, u8 programs[fsw_preset_count], int* preset_
     f = fopen("eeprom.bin", "rb");
     if (f == NULL) {
         printf("fake programs\r\n");
-        programs[0] = 2;
-        programs[1] = 3;
-        programs[2] = 6;
-        programs[3] = 7;
-        *preset_count = 4;
+        programs[0] = 0;
+        programs[1] = 1;
+        programs[2] = 20;
+        programs[3] = 21;
+        programs[4] = 22;
+        programs[5] = 23;
+        programs[6] = 24;
+        programs[7] = 25;
+        *preset_count = 8;
         return 0;
     }
 
@@ -163,9 +167,9 @@ int song_store_presets(u8 song_index, u8 programs[fsw_preset_count], int preset_
     FILE *f;
 
     /* try to load 'eeprom.bin': */
-    f = fopen("eeprom.bin", "rwb");
+    f = fopen("eeprom.bin", "r+b");
     if (f == NULL) {
-        f = fopen("eeprom.bin", "wbc");
+        f = fopen("eeprom.bin", "wb");
         song_count = 1;
         fwrite(&song_count, sizeof(u8), 1, f);
         fwrite(programs, sizeof(u8), preset_count, f);
@@ -189,6 +193,8 @@ int song_store_presets(u8 song_index, u8 programs[fsw_preset_count], int preset_
     printf("pos2: 0x%08x\r\n", ftell(f));
     fwrite(programs, sizeof(u8), preset_count, f);
     printf("pos3: 0x%08x\r\n", ftell(f));
+    for (int i = 0; i < preset_count; ++i)
+        printf("%d\r\n", programs[i]);
     for (int i = preset_count; i < fsw_preset_count; ++i)
         fwrite(&invalid, sizeof(u8), 1, f);
     printf("pos4: 0x%08x\r\n", ftell(f));
