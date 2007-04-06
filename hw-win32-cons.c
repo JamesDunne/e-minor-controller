@@ -38,8 +38,8 @@ void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2) {
 void leds_show_digits(u8 value) {
     printf("VALU:  %03d\r\n", value);
 }
-void leds_show_alphas(char text[SONG_NAME_MAXLENGTH]) {
-    printf("TEXT: %.12s\r\n", text);
+void leds_show_alphas(char text[LEDS_MAX_ALPHAS]) {
+    printf("TEXT: %." "16" "s\r\n", text);
 }
 
 /* --------------- Momentary toggle foot-switches: */
@@ -74,8 +74,8 @@ void fsw_led_set_active(int idx) {
 /* --------------- Data persistence functions: */
 
 /* Gets total number of programmed songs */
-u8 songs_count() {
-    u8 song_count;
+u16 songs_count() {
+    u16 song_count;
     FILE *f;
 
     f = fopen("eeprom.bin", "rb");
@@ -85,25 +85,25 @@ u8 songs_count() {
     }
 
     /* read the count of song records: */
-    fread(&song_count, sizeof(u8), 1, f);
+    fread(&song_count, sizeof(u16), 1, f);
     return song_count;
 }
 
 /* Loads the name of the song, given the song_index */
-int song_load_name(u8 song_index, char name[SONG_NAME_MAXLENGTH]) {
-    u8 song_record_size = SONG_NAME_MAXLENGTH + fsw_preset_count;
-    u8 song_count;
+int song_load_name(u16 song_index, char name[SONG_NAME_MAXLENGTH]) {
+    u8  song_record_size = SONG_NAME_MAXLENGTH + fsw_preset_count;
+    u16 song_count;
     FILE *f;
 
     f = fopen("eeprom.bin", "rb");
     if (f == NULL) {
         printf("fake name\r\n");
-        strncpy(name, "GENERAL     ", 12);
+        strncpy(name, "GENERAL ", SONG_NAME_MAXLENGTH);
         return 0;
     }
 
     /* read the count of song records: */
-    fread(&song_count, sizeof(u8), 1, f);
+    fread(&song_count, sizeof(u16), 1, f);
     if (song_index >= song_count) return 1;
 
     /* seek to song_index record, at the 'name' position: */
@@ -116,9 +116,9 @@ int song_load_name(u8 song_index, char name[SONG_NAME_MAXLENGTH]) {
 }
 
 /* Loads preset bank for the given song_index into programs and the count into *preset_count */
-int song_load_presets(u8 song_index, u8 programs[fsw_preset_count], int* preset_count) {
+int song_load_presets(u16 song_index, u8 programs[fsw_preset_count], int* preset_count) {
     u8  song_record_size = SONG_NAME_MAXLENGTH + fsw_preset_count;
-    u8  song_count;
+    u16 song_count;
     int i;
     FILE *f;
 
@@ -139,7 +139,7 @@ int song_load_presets(u8 song_index, u8 programs[fsw_preset_count], int* preset_
     }
 
     /* read the count of song records: */
-    fread(&song_count, sizeof(u8), 1, f);
+    fread(&song_count, sizeof(u16), 1, f);
     if (song_index >= song_count) {
         printf("index out of range\r\n");
         return 1;
@@ -160,46 +160,40 @@ int song_load_presets(u8 song_index, u8 programs[fsw_preset_count], int* preset_
 }
 
 /* Saves preset bank for the given song_index from programs and the count from preset_count */
-int song_store_presets(u8 song_index, u8 programs[fsw_preset_count], int preset_count, char name[SONG_NAME_MAXLENGTH]) {
+int song_store_presets(u16 song_index, u8 programs[fsw_preset_count], int preset_count, char name[SONG_NAME_MAXLENGTH]) {
     u8  song_record_size = SONG_NAME_MAXLENGTH + fsw_preset_count;
     u8  invalid = 0xFF;
-    u8  song_count;
+    u16 song_count;
     FILE *f;
+    int i;
 
     /* try to load 'eeprom.bin': */
     f = fopen("eeprom.bin", "r+b");
     if (f == NULL) {
         f = fopen("eeprom.bin", "wb");
         song_count = 1;
-        fwrite(&song_count, sizeof(u8), 1, f);
+        fwrite(&song_count, sizeof(u16), 1, f);
         fwrite(programs, sizeof(u8), preset_count, f);
-        for (int i = preset_count; i < fsw_preset_count; ++i)
+        for (i = preset_count; i < fsw_preset_count; ++i)
             fwrite(&invalid, sizeof(u8), 1, f);
-        fwrite(name, sizeof(char), 12, f);
+        fwrite(name, sizeof(char), SONG_NAME_MAXLENGTH, f);
         fclose(f);
         return 0;
     }
 
     /* read the count of song records: */
-    fread(&song_count, sizeof(u8), 1, f);
+    fread(&song_count, sizeof(u16), 1, f);
     if (song_index >= song_count) {
         printf("index out of range\r\n");
         return 1;
     }
 
     /* seek to song_index record: */
-    printf("pos1: 0x%08x\r\n", ftell(f));
     fseek(f, (song_record_size * song_index), SEEK_CUR);
-    printf("pos2: 0x%08x\r\n", ftell(f));
     fwrite(programs, sizeof(u8), preset_count, f);
-    printf("pos3: 0x%08x\r\n", ftell(f));
-    for (int i = 0; i < preset_count; ++i)
-        printf("%d\r\n", programs[i]);
-    for (int i = preset_count; i < fsw_preset_count; ++i)
+    for (i = preset_count; i < fsw_preset_count; ++i)
         fwrite(&invalid, sizeof(u8), 1, f);
-    printf("pos4: 0x%08x\r\n", ftell(f));
-    fwrite(name, sizeof(char), 12, f);
-    printf("pos5: 0x%08x\r\n", ftell(f));
+    fwrite(name, sizeof(char), SONG_NAME_MAXLENGTH, f);
     fclose(f);
 
     return 0;    

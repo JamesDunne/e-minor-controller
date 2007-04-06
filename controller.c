@@ -2,20 +2,49 @@
 
     A programmable MIDI foot controller.
 
+    Written by James S. Dunne
+    04/05/2007
+
+    Firmware Design:
+        * 65,536 max (theoretical) song banks of presets to store
+        * Up to 32 max (theoretical) presets to store per song bank
+        * Hardware abstraction interface
+        * No controller code references any standard C function
+
     Hardware design:
         * N program-change foot-switches, which act like radio-buttons
         * LED status indicators per each of N foot-switches indicate active preset
         * 4-digit LED 7-segment display
-        * 4 foot-switches for generic increment/decrement of values
+        * 16-alpha LED display for messages/song names
+        * 4 foot-switches for generic increment/decrement program value
             (2 for single-digit increments, 2 for double-digit increments)
-        ? optional rotary dial in addition to increment/decrement foot-switches
-        ? optional increment/decrement index of active preset footswitch
+        ? optional rotary dial for program value
+        * 2 foot-switches for increment/decrement of active preset footswitch
 
-    Features:
-        *
+    Possible hardware layout diagram:
+
+    (o)     = SPST rugged foot-switch
+    (*)     = Single on/off LED
+    (.)     = Rotary dial for digital increment/decrement
+    [ ... ] = LED 7-segment (or more) display
+
+           POWER                                      MIDI OUT   EXPR IN (opt)
+            ||                                          | |         ||
+        /------------------------------------------------------------------\
+        |                                                                  |
+        |  [ LED TEXT READOUT (16 chars)          ]   [ VALU ]  (.)        |
+        |                                                                  |
+        |  (*)   (*)   (*)   (*)  < PRVSNG NXTSNG >   INC 1 INC 10         |
+        |  (o)   (o)   (o)   (o)     (o)    (o)        (o)   (o)           | 
+        |   1     2     3     4                                     STORE  |
+        |                                                            (o)   |
+        |  (*)   (*)   (*)   (*)  < PREV   NEXT >     DEC 1 DEC 10         |
+        |  (o)   (o)   (o)   (o)     (o)    (o)        (o)   (o)           |
+        |   5     6     7     8                                            |
+        \------------------------------------------------------------------/
+
 */
 
-#include <stdio.h>
 #include "types.h"
 #include "hardware.h"
 
@@ -41,13 +70,45 @@ enum controller_state_t {
 u32 fsws, lastfsws;
 u32 fswes, lastfswes;
 
+char hexchar(u8 v) {
+    return (v < 10) ? ('0' + v) : ('A' + (v - 10));
+}
+
+void show_message(char msg[LEDS_MAX_ALPHAS]) {
+    int i = LEDS_MAX_ALPHAS - 1;
+    while (i >= 0) {
+        if (msg[i] == 0) msg[i] = ' ';
+        else break;
+    }
+    leds_show_alphas(msg);
+}
+
 /* activate current preset and send the MIDI program change message */
 void preset_activate() {
+    char disp[LEDS_MAX_ALPHAS];
+    int i;
+
     curr_program = programs[curr_preset];
     midi_send_cmd1(0xC, midi_channel, curr_program);
     fsw_led_set_active(curr_preset);
     leds_show_digits(curr_program);
-    leds_show_alphas(song_name);
+
+    /* show song name with leading song # as "XXXX: " */
+    disp[0] = hexchar((curr_song & 0xF000) >> 12);
+    disp[1] = hexchar((curr_song & 0x0F00) >> 8);
+    disp[2] = hexchar((curr_song & 0x00F0) >> 4);
+    disp[3] = hexchar(curr_song & 0x000F);
+    disp[4] = ':';
+    disp[5] = ' ';
+    /* copy song name until it fits in the LED alpha display */
+    for (i = 6; (i < LEDS_MAX_ALPHAS) && (i - 6 < SONG_NAME_MAXLENGTH); ++i) {
+        disp[i] = song_name[i - 6];
+    }
+    /* trailing spaces if necessary */
+    for (; i < LEDS_MAX_ALPHAS; ++i)
+        disp[i] = ' ';
+    
+    leds_show_alphas(disp);
 }
 
 /* activate current song */
@@ -165,12 +226,12 @@ int main(int argc, char **argv) {
                     if (state == STATE_PROGRAM_STORE) {
                         /* double tap on STORE cancels */
                         state = STATE_PRESETS;
-                        leds_show_alphas("CANCELLED   ");
+                        show_message("CANCELLED");
                         /* TODO:  start a timer to refresh message */
                     } else {
                         /* switch state to program-store-to-preset: */
                         state = STATE_PROGRAM_STORE;
-                        leds_show_alphas("CHOOSE DEST ");
+                        show_message("CHOOSE DEST");
                     }
                     break;
             }
@@ -191,7 +252,7 @@ int main(int argc, char **argv) {
                         curr_preset = p;
                         preset_activate();
                     } else {
-                        leds_show_alphas("INVALID!    ");
+                        show_message("INVALID!");
                         /* TODO:  start a timer to refresh message */
                     }
                 }
@@ -216,7 +277,7 @@ int main(int argc, char **argv) {
                         preset_activate();
                         state = STATE_PRESETS;
                     } else {
-                        leds_show_alphas("INVALID!    ");
+                        show_message("INVALID!");
                         /* TODO:  start a timer to refresh message */
                     }
                 }

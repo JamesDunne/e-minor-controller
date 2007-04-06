@@ -7,7 +7,8 @@
     NOTE: it is expected that 'types.h' is #included before this file
 */
 
-#define SONG_NAME_MAXLENGTH 12
+#define SONG_NAME_MAXLENGTH 8
+#define LEDS_MAX_ALPHAS 16
 
 /* --------------- MIDI I/O functions: */
 
@@ -27,7 +28,7 @@ void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2);
 /* --------------- LED read-out display functions: */
 
 void leds_show_digits(u8 value);
-void leds_show_alphas(char text[SONG_NAME_MAXLENGTH]);
+void leds_show_alphas(char text[LEDS_MAX_ALPHAS]);
 
 /* --------------- Momentary toggle foot-switches: */
 
@@ -43,15 +44,15 @@ void fsw_led_set_active(int idx);
 /* --------------- Data persistence functions: */
 
 /* Gets total number of programmed songs */
-u8 songs_count();
+u16 songs_count();
 
 /* Loads the name of the song, given the song_index */
-int song_load_name(u8 song_index, char name[SONG_NAME_MAXLENGTH]);
+int song_load_name(u16 song_index, char name[SONG_NAME_MAXLENGTH]);
 
 /* Loads preset bank for the given song_index into programs and the count into *preset_count */
-int song_load_presets(u8 song_index, u8 programs[fsw_preset_count], int* preset_count);
+int song_load_presets(u16 song_index, u8 programs[fsw_preset_count], int* preset_count);
 /* Saves preset bank for the given song_index from programs and the count from preset_count */
-int song_store_presets(u8 song_index, u8 programs[fsw_preset_count], int preset_count, char name[SONG_NAME_MAXLENGTH]);
+int song_store_presets(u16 song_index, u8 programs[fsw_preset_count], int preset_count, char name[SONG_NAME_MAXLENGTH]);
 
 /* ---------------- Extra user-interface switches: */
 
