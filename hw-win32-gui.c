@@ -4,6 +4,8 @@
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
+#define IDT_TIMER1 101
+
 static char sClassName[]  = "MyClass";
 static HINSTANCE zhInstance = NULL;
 
@@ -68,6 +70,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		MessageBox(0, "Error Creating Window!", "Error!", MB_ICONSTOP | MB_OK);
 		return 0;
 	}
+
+	SetTimer(hwndMain,         // handle to main window
+		IDT_TIMER1,            // timer identifier
+		10,                    // 10-ms interval
+		(TIMERPROC) NULL);     // no timer callback
 
 	ShowWindow(hwndMain, nCmdShow);
 	UpdateWindow(hwndMain);
@@ -281,6 +288,11 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 			}
 			/* TODO: fix to only redraw affected button */
 			InvalidateRect(hwnd, NULL, TRUE);
+			break;
+		case WM_TIMER:
+			switch (wParam) {
+				case IDT_TIMER1: controller_10msec_timer(); break;
+			}
 			break;
 		default:
 			return DefWindowProc(hwnd, Message, wParam, lParam);

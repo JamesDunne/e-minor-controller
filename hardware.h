@@ -35,7 +35,6 @@ enum fsw_bits {
     FSB_DEC = 30,
     FSB_INC = 31
 };
-
 enum fsw_masks {
 	FSM_PRESET_1 = (1 << FSB_PRESET_1),
 	FSM_PRESET_2 = (1 << FSB_PRESET_2),
@@ -83,3 +82,9 @@ void midi_send_byte(u8 data);
 */
 void midi_send_cmd1(u8 cmd, u8 channel, u8 data1);
 void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2);
+
+/* --------------- Controller logic interface functions: */
+
+void controller_init();
+void controller_10msec_timer();
+void controller_handle();
