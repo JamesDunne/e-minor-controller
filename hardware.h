@@ -68,6 +68,9 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 /* Stores the programs back to the bank: */
 void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]);
 
+/* Load bank name for browsing through banks: */
+void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]);
+
 /* --------------- MIDI I/O functions: */
 
 /* Send a single MIDI byte. */

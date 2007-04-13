@@ -129,12 +129,23 @@ void bank_activate(u8 notify) {
 	}
 }
 
+/* load current bank name only and display it on 4-digit display */
+void bank_showname() {
+	bank_loadname(curr_bank, bankname);
+	leds_show_4alphas(bankname);
+}
+
 /* current and previous foot-switch states: */
 u32		sw_curr = 0, sw_last = 0;
 
 /* determine if a footswitch was pressed: */
 u8 button_pressed(u32 mask) {
 	return ((sw_curr & mask) == mask) && ((sw_last & mask) == 0);
+}
+
+/* determine if still holding footswitch: */
+u8 button_held(u32 mask) {
+	return (sw_curr & mask) == mask;
 }
 
 /* determine if a footswitch was released: */
@@ -151,12 +162,6 @@ void controller_init() {
 
 	curr_mapindex = 0;
 	bankmap_activate(1);
-
-	if (slider_poll() == 0) {
-		mode = MODE_PRACTICE;
-	} else {
-		mode = MODE_CONCERT;
-	}
 
 	sw_curr = sw_last = 0;
 }
@@ -177,10 +182,195 @@ void controller_10msec_timer() {
 /* main control loop */
 void controller_handle() {
 	sw_curr = fsw_poll();
-	mode = MODE_CONCERT;
 
+	/* determine mode */
+	if (slider_poll() == 0) {
+		mode = MODE_PRACTICE;
+	} else {
+		mode = MODE_CONCERT;
+	}
+
+	/* NEXT/PREV never change function depending on mode */
+
+	/* NEXT pressed: */
+	if (button_pressed(FSM_NEXT)) {
+		if (curr_mapindex == bankmap_count - 1) {
+			/* crossed the upper bank-map boundary, load the next bank */
+			if (curr_bank == bank_count - 1) {
+				curr_bank = 0;
+			} else {
+				++curr_bank;
+			}
+			/* show the bank name */
+			bank_activate(1);
+			/* activate the first map for the new bank, but do not display the MIDI program # */
+			curr_mapindex = 0;
+			bankmap_activate(0);
+		} else {
+			/* activate the next map for the new bank, and display the MIDI program # */
+			++curr_mapindex;
+			bankmap_activate(1);
+		}
+	}
+	/* PREV pressed: */
+	if (button_pressed(FSM_PREV)) {
+		if (curr_mapindex == 0) {
+			/* crossed the lower bank-map boundary, load the previous bank */
+			if (curr_bank == 0) {
+				curr_bank = bank_count - 1;
+			} else {
+				--curr_bank;
+			}
+			/* show the bank name */
+			bank_activate(1);
+			/* activate the last map for the new bank, but do not display the MIDI program # */
+			curr_mapindex = bankmap_count - 1;
+			bankmap_activate(0);
+		} else {
+			/* activate the previous map for the new bank, and display the MIDI program # */
+			--curr_mapindex;
+			bankmap_activate(1);
+		}
+	}
+
+	/* PRACTICE vs. CONCERT modes: */
 	switch (mode) {
 		case MODE_PRACTICE:
+			/* one of preset 1-4 pressed: */
+			if (button_pressed(FSM_PRESET_1)) {
+				cdtimer2 = 20;
+			}
+			if (button_held(FSM_PRESET_1) && (cdtimer2 == 0)) {
+				/* long hold, store preset value: */
+				bank[0] = curr_program;
+				bank_store(curr_bank, bank);
+			} else if (button_released(FSM_PRESET_1) && (cdtimer2 > 0)) {
+				/* regular short tap, activate preset requested: */
+				curr_preset = 0;
+				preset_activate(1);
+			}
+			if (button_pressed(FSM_PRESET_2)) {
+				curr_preset = 1;
+				preset_activate(1);
+			}
+			if (button_pressed(FSM_PRESET_3)) {
+				curr_preset = 2;
+				preset_activate(1);
+			}
+			if (button_pressed(FSM_PRESET_4)) {
+				curr_preset = 3;
+				preset_activate(1);
+			}
+
+			/* INC pressed: */
+			if (button_pressed(FSM_INC)) {
+				if (curr_program == 127) curr_program = 0;
+				else ++curr_program;
+				leds_show_4digits(curr_program);
+
+				accel_state = ACCEL_NONE;
+				accel_time = accel_time_slow;
+				accel_count = 0;
+				accel_state = ACCEL_INC_SLOW;
+			}
+			/* INC released: */
+			if (button_released(FSM_INC)) {
+				accel_state = ACCEL_NONE;
+				program_activate(1);
+			}
+
+			/* DEC pressed: */
+			if (button_pressed(FSM_DEC)) {
+				if (curr_program == 0) curr_program = 127;
+				else --curr_program;
+				leds_show_4digits(curr_program);
+
+				accel_state = ACCEL_NONE;
+				accel_time = accel_time_slow;
+				accel_count = 0;
+				accel_state = ACCEL_DEC_SLOW;
+			}
+			/* DEC released: */
+			if (button_released(FSM_DEC)) {
+				accel_state = ACCEL_NONE;
+				program_activate(1);
+			}
+
+			/* acceleration countdown timer hit 0 and we're incrementing slowly */
+			if ((accel_state != ACCEL_NONE) && (accel_time == 0)) {
+				switch (accel_state) {
+					case ACCEL_INC_SLOW:
+						if (curr_program == 127) curr_program = 0;
+						else ++curr_program;
+						leds_show_4digits(curr_program);
+
+						/* if we cycled more than 5 values, ramp up to next speed */
+						if (accel_count++ == 5) {
+							accel_count = 0;
+							accel_state = ACCEL_INC_MEDIUM;
+							accel_time = accel_time_medium;
+						} else {
+							accel_time = accel_time_slow;
+						}
+						break;
+					case ACCEL_INC_MEDIUM:
+						if (curr_program == 127) curr_program = 0;
+						else ++curr_program;
+						leds_show_4digits(curr_program);
+
+						/* if we cycled more than 5 values, ramp up to next speed */
+						if (accel_count++ == 20) {
+							accel_count = 0;
+							accel_state = ACCEL_INC_FAST;
+							accel_time = accel_time_fast;
+						} else {
+							accel_time = accel_time_medium;
+						}
+						break;
+					case ACCEL_INC_FAST:
+						if (curr_program == 127) curr_program = 0;
+						else ++curr_program;
+						leds_show_4digits(curr_program);
+
+						accel_time = accel_time_fast;
+						break;
+					case ACCEL_DEC_SLOW:
+						if (curr_program == 0) curr_program = 127;
+						else --curr_program;
+						leds_show_4digits(curr_program);
+
+						/* if we cycled more than 5 values, ramp up to next speed */
+						if (accel_count++ == 5) {
+							accel_count = 0;
+							accel_state = ACCEL_DEC_MEDIUM;
+							accel_time = accel_time_medium;
+						} else {
+							accel_time = accel_time_slow;
+						}
+						break;
+					case ACCEL_DEC_MEDIUM:
+						if (curr_program == 0) curr_program = 127;
+						else --curr_program;
+						leds_show_4digits(curr_program);
+
+						/* if we cycled more than 5 values, ramp up to next speed */
+						if (accel_count++ == 20) {
+							accel_count = 0;
+							accel_state = ACCEL_DEC_FAST;
+							accel_time = accel_time_fast;
+						} else {
+							accel_time = accel_time_medium;
+						}
+						break;
+					case ACCEL_DEC_FAST:
+						if (curr_program == 0) curr_program = 127;
+						else --curr_program;
+						leds_show_4digits(curr_program);
+
+						accel_time = accel_time_fast;
+						break;
+				}
+			}
 			break;
 
 		case MODE_CONCERT:
@@ -210,52 +400,11 @@ void controller_handle() {
 				preset_activate(1);
 			}
 
-			/* NEXT pressed: */
-			if (button_pressed(FSM_NEXT)) {
-				if (curr_mapindex == bankmap_count - 1) {
-					/* crossed the upper bank-map boundary, load the next bank */
-					if (curr_bank == bank_count - 1) {
-						curr_bank = 0;
-					} else {
-						++curr_bank;
-					}
-					/* show the bank name */
-					bank_activate(1);
-					/* activate the first map for the new bank, but do not display the MIDI program # */
-					curr_mapindex = 0;
-					bankmap_activate(0);
-				} else {
-					/* activate the next map for the new bank, and display the MIDI program # */
-					++curr_mapindex;
-					bankmap_activate(1);
-				}
-			}
-			/* PREV pressed: */
-			if (button_pressed(FSM_PREV)) {
-				if (curr_mapindex == 0) {
-					/* crossed the lower bank-map boundary, load the previous bank */
-					if (curr_bank == 0) {
-						curr_bank = bank_count - 1;
-					} else {
-						--curr_bank;
-					}
-					/* show the bank name */
-					bank_activate(1);
-					/* activate the last map for the new bank, but do not display the MIDI program # */
-					curr_mapindex = bankmap_count - 1;
-					bankmap_activate(0);
-				} else {
-					/* activate the previous map for the new bank, and display the MIDI program # */
-					--curr_mapindex;
-					bankmap_activate(1);
-				}
-			}
-
 			/* INC pressed: */
 			if (button_pressed(FSM_INC)) {
-				if (curr_program == 127) curr_program = 0;
-				else ++curr_program;
-				program_activate(1);
+				if (curr_bank == bank_count - 1) curr_bank = 0;
+				else ++curr_bank;
+				bank_showname();
 
 				accel_state = ACCEL_NONE;
 				accel_time = accel_time_slow;
@@ -265,13 +414,15 @@ void controller_handle() {
 			/* INC released: */
 			if (button_released(FSM_INC)) {
 				accel_state = ACCEL_NONE;
+				/* load the bank, but don't change program # */
+				bank_activate(0);
 			}
 
 			/* DEC pressed: */
 			if (button_pressed(FSM_DEC)) {
-				if (curr_program == 0) curr_program = 127;
-				else --curr_program;
-				program_activate(1);
+				if (curr_bank == 0) curr_bank = bank_count - 1;
+				else --curr_bank;
+				bank_showname();
 
 				accel_state = ACCEL_NONE;
 				accel_time = accel_time_slow;
@@ -281,15 +432,18 @@ void controller_handle() {
 			/* DEC released: */
 			if (button_released(FSM_DEC)) {
 				accel_state = ACCEL_NONE;
+				/* load the bank, but don't change program # */
+				bank_activate(0);
 			}
 
 			/* acceleration countdown timer hit 0 and we're incrementing slowly */
 			if ((accel_state != ACCEL_NONE) && (accel_time == 0)) {
 				switch (accel_state) {
 					case ACCEL_INC_SLOW:
-						if (curr_program == 127) curr_program = 0;
-						else ++curr_program;
-						program_activate(1);
+						if (curr_bank == bank_count - 1) curr_bank = 0;
+						else ++curr_bank;
+						bank_showname();
+
 						/* if we cycled more than 5 values, ramp up to next speed */
 						if (accel_count++ == 5) {
 							accel_count = 0;
@@ -300,9 +454,10 @@ void controller_handle() {
 						}
 						break;
 					case ACCEL_INC_MEDIUM:
-						if (curr_program == 127) curr_program = 0;
-						else ++curr_program;
-						program_activate(1);
+						if (curr_bank == bank_count - 1) curr_bank = 0;
+						else ++curr_bank;
+						bank_showname();
+
 						/* if we cycled more than 5 values, ramp up to next speed */
 						if (accel_count++ == 20) {
 							accel_count = 0;
@@ -313,15 +468,17 @@ void controller_handle() {
 						}
 						break;
 					case ACCEL_INC_FAST:
-						if (curr_program == 127) curr_program = 0;
-						else ++curr_program;
-						program_activate(1);
+						if (curr_bank == bank_count - 1) curr_bank = 0;
+						else ++curr_bank;
+						bank_showname();
+
 						accel_time = accel_time_fast;
 						break;
 					case ACCEL_DEC_SLOW:
-						if (curr_program == 0) curr_program = 127;
-						else --curr_program;
-						program_activate(1);
+						if (curr_bank == 0) curr_bank = bank_count - 1;
+						else --curr_bank;
+						bank_showname();
+
 						/* if we cycled more than 5 values, ramp up to next speed */
 						if (accel_count++ == 5) {
 							accel_count = 0;
@@ -332,9 +489,10 @@ void controller_handle() {
 						}
 						break;
 					case ACCEL_DEC_MEDIUM:
-						if (curr_program == 0) curr_program = 127;
-						else --curr_program;
-						program_activate(1);
+						if (curr_bank == 0) curr_bank = bank_count - 1;
+						else --curr_bank;
+						bank_showname();
+
 						/* if we cycled more than 5 values, ramp up to next speed */
 						if (accel_count++ == 20) {
 							accel_count = 0;
@@ -345,9 +503,10 @@ void controller_handle() {
 						}
 						break;
 					case ACCEL_DEC_FAST:
-						if (curr_program == 0) curr_program = 127;
-						else --curr_program;
-						program_activate(1);
+						if (curr_bank == 0) curr_bank = bank_count - 1;
+						else --curr_bank;
+						bank_showname();
+
 						accel_time = accel_time_fast;
 						break;
 				}

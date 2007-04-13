@@ -1,4 +1,6 @@
 #include <windows.h>
+#include <winuser.h>
+#include <stdio.h>
 #include "types.h"
 #include "hardware.h"
 
@@ -59,7 +61,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		CW_USEDEFAULT,
 		CW_USEDEFAULT,
 		(int)(inWidth * dpi) + 9,
-		(int)(inHeight * dpi) + 29,
+		(int)(inHeight * dpi) + 28,
 		NULL,
 		NULL,
 		zhInstance,
@@ -344,35 +346,65 @@ void fsw_led_set_active(int idx) {
 
 /* Poll the slider switch to see which mode we're in: */
 u8 slider_poll() {
-	return 0;
+	return 1;
 }
 
 /* --------------- Data persistence functions: */
 
 /* Gets number of stored banks */
 u16 banks_count() {
-	return 1;
+	return 2;
 }
 
 /* Loads a bank into the specified arrays: */
 void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count) {
-	strncpy(name, "HELO", BANK_NAME_MAXLENGTH);
-	bank[0] = 0;
-	bank[1] = 1;
-	bank[2] = 2;
-	bank[3] = 3;
-	bankmap[0] = 0;
-	bankmap[1] = 1;
-	bankmap[2] = 0;
-	bankmap[3] = 2;
-	bankmap[4] = 0;
-	bankmap[5] = 3;
-	bankmap[6] = 0;
-	*bankmap_count = 7;
+	printf("LOAD: %4d\r\n", bank_index);
+	switch (bank_index) {
+		case 0:
+			strncpy(name, "SOC1", BANK_NAME_MAXLENGTH);
+			bank[0] = 0;
+			bank[1] = 11;
+			bank[2] = 22;
+			bank[3] = 33;
+			bankmap[0] = 0;
+			bankmap[1] = 1;
+			bankmap[2] = 0;
+			bankmap[3] = 2;
+			bankmap[4] = 0;
+			bankmap[5] = 3;
+			bankmap[6] = 0;
+			*bankmap_count = 7;
+			break;
+		case 1:
+			strncpy(name, "SOC1", BANK_NAME_MAXLENGTH);
+			bank[0] = 44;
+			bank[1] = 11;
+			bank[2] = 22;
+			bank[3] = 22;
+			bankmap[0] = 0;
+			bankmap[1] = 1;
+			bankmap[2] = 2;
+			*bankmap_count = 3;
+			break;
+	}
+}
+
+/* Load bank name for browsing through banks: */
+void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
+	switch (bank_index) {
+		case 0:
+			strncpy(name, "SOC1", BANK_NAME_MAXLENGTH);
+			break;
+		case 1:
+			strncpy(name, "SOC2", BANK_NAME_MAXLENGTH);
+			break;
+	}
+	printf("NAME: %4d = \"%.4s\"\r\n", bank_index, name);
 }
 
 /* Stores the programs back to the bank: */
 void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
+    printf("STOR: %4d = {0x%02X, 0x%02X, 0x%02X, 0x%02X}\r\n", bank_index, bank[0], bank[1], bank[2], bank[3]);
 }
 
 /* --------------- MIDI I/O functions: */
