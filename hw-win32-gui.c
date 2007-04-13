@@ -25,6 +25,10 @@ static char leds1_text[2] = " ";
 static u8 fsw_active = 0;
 static u8 led_active[4];
 static BOOL mode = FALSE;
+static BOOL rom_loaded = FALSE;
+
+static u8 *rom_data = NULL;
+static size_t rom_size;
 
 static HWND hwndMain;
 
@@ -401,14 +405,96 @@ u8 slider_poll() {
 
 /* --------------- Data persistence functions: */
 
+void load_eeprom() {
+	FILE	*f = fopen("eeprom.bin", "rb");
+	fseek(f, 0, SEEK_END);
+	rom_size = ftell(f);
+	printf("%d rom size\r\n", rom_size);
+	fseek(f, 0, SEEK_SET);
+
+	rom_data = malloc(sizeof(u8) * rom_size);
+	fread(rom_data, rom_size, sizeof(u8), f);
+	printf("%02X%02X", rom_data[0], rom_data[1]);
+	rom_loaded = TRUE;
+}
+
 /* Gets number of stored banks */
 u16 banks_count() {
-	return 4;
+	u16	count;
+
+	/* load from eeprom.bin */
+	if (!rom_loaded) load_eeprom();
+
+	/* read the bank count: */
+	count = *((u16 *)&(rom_data[0]));
+	printf("%d banks\r\n", count);
+	return count;
 }
+
+/* Count in bits:
+	32 bits for bank name (4 ASCII chars)
+	(14 bits per preset for 7-bit program # + 7-bit controller #) * 4 presets = 56 bits
+	3 bits for sequence count
+	2 bits per sequence no * 8 sequences max = 16 bits for sequence preset #s
+
+	56 + 32 + 3 + 16 = 107 bits = 14 bytes.
+*/
+const u8 bank_record_size = 14;
 
 /* Loads a bank into the specified arrays: */
 void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count) {
-	printf("LOAD: %4d\r\n", bank_index);
+#if 1
+	u16	count;
+	u16	addr;
+
+	/* load from eeprom.bin */
+	if (!rom_loaded) load_eeprom();
+
+	/* read the bank count: */
+	count = *((u16 *)&(rom_data[0]));
+	if (bank_index >= count) {
+		return;
+	}
+
+	/* load the bit-compressed data */
+	addr = sizeof(u16) + (bank_index * bank_record_size);
+
+	name[0] = rom_data[addr];
+	name[1] = rom_data[addr+1];
+	name[2] = rom_data[addr+2];
+	name[3] = rom_data[addr+3];
+
+	bank[0] =                                    ((rom_data[addr+4] & 0xFE) >> 1);
+	bank[1] = ((rom_data[addr+4] & 0x01) << 6) | ((rom_data[addr+5] & 0xFC) >> 2);
+	bank[2] = ((rom_data[addr+5] & 0x03) << 5) | ((rom_data[addr+6] & 0xF8) >> 3);
+	bank[3] = ((rom_data[addr+6] & 0x07) << 4) | ((rom_data[addr+7] & 0xF0) >> 4);
+
+	bankcontroller[0] = ((rom_data[addr+ 7] & 0x0F) << 3) | ((rom_data[addr+ 8] & 0xF0) >> 5);
+	bankcontroller[1] = ((rom_data[addr+ 8] & 0x1F) << 2) | ((rom_data[addr+ 9] & 0xE0) >> 6);
+	bankcontroller[2] = ((rom_data[addr+ 9] & 0x3F) << 1) | ((rom_data[addr+10] & 0xC0) >> 7);
+	bankcontroller[3] = ((rom_data[addr+10] & 0x7F));
+
+	*bankmap_count = ((rom_data[addr+11] & 0xF0) >> 4);
+	printf("%d count\r\n", *bankmap_count);
+	bankmap[0] = ((rom_data[addr+11] & 0x0C) >> 2);
+	printf("map0 = %d\r\n", bankmap[0]);
+	bankmap[1] = ((rom_data[addr+11] & 0x03));
+	printf("map1 = %d\r\n", bankmap[1]);
+	bankmap[2] = ((rom_data[addr+12] & 0xC0) >> 6);
+	printf("map2 = %d\r\n", bankmap[2]);
+	bankmap[3] = ((rom_data[addr+12] & 0x30) >> 4);
+	printf("map3 = %d\r\n", bankmap[3]);
+	bankmap[4] = ((rom_data[addr+12] & 0x0C) >> 2);
+	printf("map4 = %d\r\n", bankmap[4]);
+	bankmap[5] = ((rom_data[addr+12] & 0x03));
+	printf("map5 = %d\r\n", bankmap[5]);
+	bankmap[6] = ((rom_data[addr+13] & 0xC0) >> 6);
+	printf("map6 = %d\r\n", bankmap[6]);
+	bankmap[7] = ((rom_data[addr+13] & 0x30) >> 4);
+	printf("map7 = %d\r\n", bankmap[7]);
+
+	/* 4 free bits left before next byte boundary */
+#else
 	switch (bank_index) {
 		case 0:
 			strncpy(name, "SOC1", BANK_NAME_MAXLENGTH);
@@ -479,15 +565,38 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 			*bankmap_count = 6;
 			break;
 	}
+#endif
 }
 
 /* Load bank name for browsing through banks: */
 void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
+#if 1
+	u16	count;
+	u16	addr;
+
+	/* load from eeprom.bin */
+	if (!rom_loaded) load_eeprom();
+
+	/* read the bank count: */
+	count = *((u16 *)&(rom_data[0]));
+	if (bank_index >= count) {
+		return;
+	}
+
+	/* load the bit-compressed data */
+	addr = sizeof(u16) + (bank_index * bank_record_size);
+
+	name[0] = rom_data[addr];
+	name[1] = rom_data[addr+1];
+	name[2] = rom_data[addr+2];
+	name[3] = rom_data[addr+3];
+#else
 	u8 bank[BANK_PRESET_COUNT];
 	u8 bankcontroller[BANK_PRESET_COUNT];
 	u8 bankmap[BANK_MAP_COUNT];
 	u8 bankmap_count;
 	bank_load(bank_index, name, bank, bankcontroller, bankmap, &bankmap_count);
+#endif
 }
 
 /* Stores the programs back to the bank: */
@@ -497,6 +606,23 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
 
 /* Look up a bank # in the sorted index */
 u16 bank_getsortedindex(u16 sort_index) {
+#if 1
+	u16	count;
+	u16	addr;
+
+	/* load from eeprom.bin */
+	if (!rom_loaded) load_eeprom();
+
+	/* read the bank count: */
+	count = *((u16 *)&(rom_data[0]));
+	if (sort_index >= count) {
+		return;
+	}
+
+	/* read the bank index given the sort index location: */
+	addr = sizeof(u16) + (count * bank_record_size) + (sort_index * sizeof(u16));
+	return *((u16 *)&(rom_data[addr]));
+#else
 	switch (sort_index) {
 		case 0: return 3;
 		case 1: return 2;
@@ -504,6 +630,7 @@ u16 bank_getsortedindex(u16 sort_index) {
 		case 3: return 1;
 	}
 	return 65535;
+#endif
 }
 
 /* --------------- MIDI I/O functions: */
