@@ -24,6 +24,7 @@ static char leds1_text[2] = " ";
 
 static u8 fsw_active = 0;
 static u8 led_active[4];
+static BOOL mode = FALSE;
 
 static HWND hwndMain;
 
@@ -112,6 +113,15 @@ BOOL dpi_LineTo(HDC hdc, double X, double Y) {
 	LineTo(hdc, (int)(X * dpi), (int)(Y * dpi));
 }
 
+BOOL dpi_Rectangle(HDC hdc, double left, double top, double right, double bottom) {
+	Rectangle(hdc,
+		(int)(left * dpi),
+		(int)(top * dpi),
+		(int)(right * dpi),
+		(int)(bottom * dpi)
+	);
+}
+
 BOOL dpi_CenterEllipse(HDC hdc, double cX, double cY, double rW, double rH) {
 	Ellipse(hdc,
 		(int)((cX - rW) * dpi),
@@ -133,7 +143,7 @@ void paintFacePlate(HWND hwnd) {
 
 	HFONT	fontLED;
 	HPEN	penThick, penThin;
-	HBRUSH	brsWhite, brsRed, brsGreen;
+	HBRUSH	brsWhite, brsRed, brsGreen, brsBlack;
 
 	int		hCount = 0, vCount = 0;
 	double	inH, inV;
@@ -156,6 +166,7 @@ void paintFacePlate(HWND hwnd) {
 	brsWhite = CreateSolidBrush(RGB(255, 255, 255));
 	brsRed = CreateSolidBrush(RGB(250, 25, 5));
 	brsGreen = CreateSolidBrush(RGB(25, 250, 5));
+	brsBlack = CreateSolidBrush(RGB(0, 0, 0));
 
 	SetBkMode(hDC, TRANSPARENT);
 	SetTextColor(hDC, RGB(32, 64, 127));
@@ -229,7 +240,6 @@ void paintFacePlate(HWND hwnd) {
 			dpi_CenterEllipse(hDC, 1.5 + (hCount * 2.0), 2.5, 0.2032, 0.2032);
 		}
 	}
-	DeleteObject(brsRed);
 
 	SelectObject(hDC, brsGreen);
 	for (hCount = 0; hCount < 4; ++hCount) {
@@ -237,7 +247,6 @@ void paintFacePlate(HWND hwnd) {
 			dpi_CenterEllipse(hDC, 1.5 + (hCount * 2.0), 2.5, 0.2032, 0.2032);
 		}
 	}
-	DeleteObject(brsGreen);
 
 	/* write the 4-digit and 1-digit LED displays */
 	SetBkMode(hDC, OPAQUE);
@@ -245,9 +254,26 @@ void paintFacePlate(HWND hwnd) {
 	SetTextColor(hDC, RGB(255,0,0));
 	SelectObject(hDC, fontLED);
 	dpi_TextOut(hDC, 1.02, 1.02, leds4_text, 4);
-	dpi_TextOut(hDC, 4.02, 1.02, leds1_text, 1);
+	dpi_TextOut(hDC, 7.48, 1.02, leds1_text, 1);
 	DeleteObject(fontLED);
 
+	/* draw PRACTICE/CONCERT slider-switch */
+	if (mode) {
+		/* CONCERT mode */
+		SelectObject(hDC, brsBlack);
+		dpi_Rectangle(hDC, 5.35, 1.2, 5.5, 1.3);
+		SelectObject(hDC, brsRed);
+		dpi_Rectangle(hDC, 5.5, 1.2, 5.65, 1.3);
+	} else {
+		/* PRACTICE mode */
+		SelectObject(hDC, brsBlack);
+		dpi_Rectangle(hDC, 5.5, 1.2, 5.65, 1.3);
+		SelectObject(hDC, brsRed);
+		dpi_Rectangle(hDC, 5.35, 1.2, 5.5, 1.3);
+	}
+
+	DeleteObject(brsRed);
+	DeleteObject(brsGreen);
 	DeleteObject(penThick);
 	DeleteObject(penThin);
 
@@ -293,6 +319,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 				case 'S': case 's': pushed[5] = 0; break;
 				case 'D': case 'd': pushed[6] = 0; break;
 				case 'F': case 'f': pushed[7] = 0; break;
+
+				case 'M': case 'm': mode = !mode; break;
 			}
 			/* TODO: fix to only redraw affected button */
 			InvalidateRect(hwnd, NULL, TRUE);
@@ -368,7 +396,7 @@ void fsw_led_disable(int idx) {
 
 /* Poll the slider switch to see which mode we're in: */
 u8 slider_poll() {
-	return 0;
+	return (mode ? 1 : 0);
 }
 
 /* --------------- Data persistence functions: */

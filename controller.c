@@ -280,9 +280,25 @@ void controller_handle() {
 
 	/* determine mode */
 	if (slider_poll() == 0) {
-		mode = MODE_PRACTICE;
+		if (mode == MODE_CONCERT) {
+			/* switched from CONCERT to PRACTICE */
+			mode = MODE_PRACTICE;
+			/* load the alphabetically first bank and start from the beginning of its program */
+			curr_sortedbank = 0;
+			sortedbank_activate(1);
+			curr_mapindex = 0;
+			bankmap_activate(0);
+		}
 	} else {
-		mode = MODE_CONCERT;
+		if (mode == MODE_PRACTICE) {
+			/* switched from PRACTICE to CONCERT */
+			mode = MODE_CONCERT;
+			/* load the sequentially first bank and start from the beginning of its program */
+			curr_bank = 0;
+			bank_activate(1);
+			curr_mapindex = 0;
+			bankmap_activate(0);
+		}
 	}
 
 	/* NEXT/PREV never change function depending on mode */
@@ -291,13 +307,25 @@ void controller_handle() {
 	if (button_pressed(FSM_NEXT)) {
 		if (curr_mapindex == bankmap_count - 1) {
 			/* crossed the upper bank-map boundary, load the next bank */
-			if (curr_bank == bank_count - 1) {
-				curr_bank = 0;
+			if (mode == MODE_PRACTICE) {
+				/* PRACTICE mode cycles through banks by sorted index #: */
+				if (curr_sortedbank == bank_count - 1) {
+					curr_sortedbank = 0;
+				} else {
+					++curr_sortedbank;
+				}
+				/* show the bank name */
+				sortedbank_activate(1);
 			} else {
-				++curr_bank;
+				/* CONCERT mode cycles through banks by index #: */
+				if (curr_bank == bank_count - 1) {
+					curr_bank = 0;
+				} else {
+					++curr_bank;
+				}
+				/* show the bank name */
+				bank_activate(1);
 			}
-			/* show the bank name */
-			bank_activate(1);
 			/* activate the first map for the new bank, but do not display the MIDI program # */
 			curr_mapindex = 0;
 			bankmap_activate(0);
@@ -311,13 +339,25 @@ void controller_handle() {
 	if (button_pressed(FSM_PREV)) {
 		if (curr_mapindex == 0) {
 			/* crossed the lower bank-map boundary, load the previous bank */
-			if (curr_bank == 0) {
-				curr_bank = bank_count - 1;
+			if (mode == MODE_PRACTICE) {
+				/* PRACTICE mode cycles through banks by sorted index #: */
+				if (curr_sortedbank == 0) {
+					curr_sortedbank = bank_count - 1;
+				} else {
+					--curr_sortedbank;
+				}
+				/* show the bank name */
+				sortedbank_activate(1);
 			} else {
-				--curr_bank;
+				/* CONCERT mode cycles through banks by index #: */
+				if (curr_bank == 0) {
+					curr_bank = bank_count - 1;
+				} else {
+					--curr_bank;
+				}
+				/* show the bank name */
+				bank_activate(1);
 			}
-			/* show the bank name */
-			bank_activate(1);
 			/* activate the last map for the new bank, but do not display the MIDI program # */
 			curr_mapindex = bankmap_count - 1;
 			bankmap_activate(0);
