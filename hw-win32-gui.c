@@ -411,9 +411,28 @@ void load_eeprom() {
 	rom_size = ftell(f);
 	fseek(f, 0, SEEK_SET);
 
-	rom_data = malloc(sizeof(u8) * rom_size);
+	rom_data = malloc(sizeof(u8) * 24 * 1024);
+	memset(rom_data, 0, sizeof(u8) * 24 * 1024);
+
 	fread(rom_data, rom_size, sizeof(u8), f);
+	fclose(f);
+
 	rom_loaded = TRUE;
+}
+
+void read_eeprom(u8 chunk[64], u16 addr) {
+	/* copy 64-byte chunk from rom_data: */
+	memcpy(chunk, rom_data + addr, 64);
+}
+
+void write_eeprom(u8 chunk[64], u16 addr) {
+	/* copy 64-byte chunk to rom_data: */
+	memcpy(rom_data + addr, chunk, 64);
+	/* flush the rom_data to the file: */
+	FILE	*f = fopen("eeprom.bin", "wb");
+	fseek(f, 0, SEEK_SET);
+	fwrite(rom_data, 24 * 1024, sizeof(u8), f);
+	fclose(f);
 }
 
 /* Gets number of stored banks */
@@ -468,7 +487,7 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 	}
 
 	/* load the bit-compressed data */
-	addr = sizeof(u16) + (bank_index * bank_record_size);
+	addr = 64 + (bank_index * bank_record_size);
 
 	name[0] = rom_data[addr+0] & 0x7F;
 	name[1] = rom_data[addr+1] & 0x7F;
@@ -588,7 +607,7 @@ void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
 	}
 
 	/* load the bit-compressed data */
-	addr = sizeof(u16) + (bank_index * bank_record_size);
+	addr = 64 + (bank_index * bank_record_size);
 
 	name[0] = rom_data[addr+0] & 0x7F;
 	name[1] = rom_data[addr+1] & 0x7F;
@@ -605,7 +624,32 @@ void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
 
 /* Stores the programs back to the bank: */
 void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
+	u8 chunk[64];
+	u16	addr, addrhi, addrlo;
+
 	printf("STOR: %4d = {0x%02X, 0x%02X, 0x%02X, 0x%02X}\r\n", bank_index, bank[0], bank[1], bank[2], bank[3]);
+
+	addr = 64 + (bank_index * bank_record_size);
+	addrhi = addr & ~63;
+	addrlo = addr & 63;
+
+	printf("Read 64 bytes at 0x%08X\r\n", addrhi);
+
+	/* load the 64-byte aligned chunk: */
+	read_eeprom(chunk, addrhi);
+
+	printf("Modify bank at offset 0x%02X\r\n", addrlo);
+
+	/* overwrite the bank program section for the bank record: */
+	chunk[addrlo+4] = bank[0];
+	chunk[addrlo+5] = bank[1];
+	chunk[addrlo+6] = bank[2];
+	chunk[addrlo+7] = bank[3];
+
+	printf("Write 64 bytes at 0x%08X\r\n", addrhi);
+
+	/* write back the 64-byte chunk: */
+	write_eeprom(chunk, (64 + (bank_index * bank_record_size)) & ~63);
 }
 
 /* Look up a bank # in the sorted index */
@@ -624,7 +668,7 @@ u16 bank_getsortedindex(u16 sort_index) {
 	}
 
 	/* read the bank index given the sort index location: */
-	addr = sizeof(u16) + (count * bank_record_size) + (sort_index * sizeof(u16));
+	addr = 64 + (count * bank_record_size) + (sort_index * sizeof(u16));
 	return *((u16 *)&(rom_data[addr]));
 #else
 	switch (sort_index) {
