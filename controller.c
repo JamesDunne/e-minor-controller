@@ -1,31 +1,31 @@
 /*
 
-    A programmable MIDI foot controller.
+	A programmable MIDI foot controller.
 
-    Written by James S. Dunne
-    04/05/2007
+	Written by James S. Dunne
+	04/05/2007
 
-    Firmware Design:
-        * 65,536 max (theoretical) song banks of presets to store
-        * Up to 32 max (theoretical) presets to store per song bank
-        * Hardware abstraction interface
-        * No controller code references any standard C function
+	Firmware Design:
+		* 65,536 max (theoretical) song banks of presets to store
+		* Up to 32 max (theoretical) presets to store per song bank
+		* Hardware abstraction interface
+		* No controller code references any standard C function
 
-    Hardware design:
-        * N program-change foot-switches, which act like radio-buttons
-        * LED status indicators per each of N foot-switches indicate active preset
-        * 4-digit LED 7-segment display
-        * 16-alpha LED display for messages/song names
-        * 4 foot-switches for generic increment/decrement program value
-            (2 for single-digit increments, 2 for double-digit increments)
-        ? optional rotary dial for program value
-        * 2 foot-switches for increment/decrement of active preset footswitch
+	Hardware design:
+		* N program-change foot-switches, which act like radio-buttons
+		* LED status indicators per each of N foot-switches indicate active preset
+		* 4-digit LED 7-segment display
+		* 16-alpha LED display for messages/song names
+		* 4 foot-switches for generic increment/decrement program value
+			(2 for single-digit increments, 2 for double-digit increments)
+		? optional rotary dial for program value
+		* 2 foot-switches for increment/decrement of active preset footswitch
 
-    Possible hardware layout diagram:
+	Possible hardware layout diagram:
 
-    (o)     = SPST rugged foot-switch
-    (*)     = Single on/off LED
-    [ ... ] = LED 7-segment (or more) display
+	(o)     = SPST rugged foot-switch
+	(*)     = Single on/off LED
+	[ ... ] = LED 7-segment (or more) display
 	{\}		= slider switch
 
  PWR  MIDI OUT EXPR IN (opt)
@@ -94,7 +94,7 @@ enum mainmode {
 
 /* send the MIDI program change message */
 void program_activate(u8 notify) {
-    midi_send_cmd1(0xC, midi_channel, curr_program);
+	midi_send_cmd1(0xC, midi_channel, curr_program);
 	if (notify) {
 		/* show the program value: */
 		leds_show_4digits(curr_program);
@@ -104,10 +104,10 @@ void program_activate(u8 notify) {
 /* activate current preset */
 void preset_activate(u8 notify) {
 	/* grab the program # from the bank */
-    curr_program = bank[curr_preset];
+	curr_program = bank[curr_preset];
 	program_activate(notify);
 	/* activate the footswitch LED: */
-    fsw_led_set_active(curr_preset);
+	fsw_led_set_active(curr_preset);
 }
 
 /* activate the preset for the current bank map index */
@@ -121,8 +121,11 @@ void bankmap_activate(u8 notify) {
 
 /* load current bank but do not switch to a preset */
 void bank_activate(u8 notify) {
-    /* load up the selected bank: */
-    bank_load(curr_bank, bankname, bank, bankmap, &bankmap_count);
+	/* load up the selected bank: */
+	bank_load(curr_bank, bankname, bank, bankmap, &bankmap_count);
+	curr_mapindex = 0;
+	/* always show the bank map index */
+	leds_show_1digit(curr_mapindex + 1);
 	if (notify) {
 		/* display bank name: */
 		leds_show_4alphas(bankname);
@@ -137,6 +140,8 @@ void bank_showname() {
 
 /* current and previous foot-switch states: */
 u32		sw_curr = 0, sw_last = 0;
+u8		switch_state = 0;
+u8		incdec_mode = 0;
 
 /* determine if a footswitch was pressed: */
 u8 button_pressed(u32 mask) {
@@ -177,6 +182,42 @@ void controller_10msec_timer() {
 	if (cdtimer1 > 0) --cdtimer1;
 	if (cdtimer2 > 0) --cdtimer2;
 	if (cdtimer3 > 0) --cdtimer3;
+}
+
+void inc_practice_value() {
+	if (incdec_mode == 0) {
+		if (curr_bank == bank_count - 1) curr_bank = 0;
+		else ++curr_bank;
+	} else {
+		if (curr_program == 127) curr_program = 0;
+		else ++curr_program;
+	}
+}
+
+void dec_practice_value() {
+	if (incdec_mode == 0) {
+		if (curr_bank == 0) curr_bank = bank_count - 1;
+		else --curr_bank;
+	} else {
+		if (curr_program == 0) curr_program = 127;
+		else --curr_program;
+	}
+}
+
+void notify_practice_value() {
+	if (incdec_mode == 0) {
+		bank_showname();
+	} else {
+		leds_show_4digits(curr_program);
+	}
+}
+
+void activate_practice_value() {
+	if (incdec_mode == 0) {
+		bank_activate(0);
+	} else {
+		program_activate(1);
+	}
 }
 
 /* main control loop */
@@ -238,14 +279,6 @@ void controller_handle() {
 		case MODE_PRACTICE:
 			/* one of preset 1-4 pressed: */
 			if (button_pressed(FSM_PRESET_1)) {
-				cdtimer2 = 20;
-			}
-			if (button_held(FSM_PRESET_1) && (cdtimer2 == 0)) {
-				/* long hold, store preset value: */
-				bank[0] = curr_program;
-				bank_store(curr_bank, bank);
-			} else if (button_released(FSM_PRESET_1) && (cdtimer2 > 0)) {
-				/* regular short tap, activate preset requested: */
 				curr_preset = 0;
 				preset_activate(1);
 			}
@@ -263,46 +296,77 @@ void controller_handle() {
 			}
 
 			/* INC pressed: */
-			if (button_pressed(FSM_INC)) {
-				if (curr_program == 127) curr_program = 0;
-				else ++curr_program;
-				leds_show_4digits(curr_program);
-
-				accel_state = ACCEL_NONE;
-				accel_time = accel_time_slow;
+			if (button_pressed(FSM_INC) && !button_held(FSM_DEC) && (cdtimer3 == 0)) {
+				/* INC pushed first */
+				printf("INC pushed\r\n");
+				cdtimer3 = 30;
+			}
+			/* Still holding INC alone after ~300 ms: */
+			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_INC) && !button_held(FSM_DEC) && (cdtimer3 == 0)) {
+				printf("INC held\r\n");
+				accel_time = 0;
 				accel_count = 0;
 				accel_state = ACCEL_INC_SLOW;
 			}
 			/* INC released: */
 			if (button_released(FSM_INC)) {
-				accel_state = ACCEL_NONE;
-				program_activate(1);
+				printf("INC released\r\n");
+				if (switch_state == 0) {
+					if (cdtimer3 > 0) {
+						inc_practice_value();
+						notify_practice_value();
+						cdtimer3 = 0;
+					}
+					accel_state = ACCEL_NONE;
+					activate_practice_value();
+				} else {
+					--switch_state;
+				}
 			}
 
 			/* DEC pressed: */
-			if (button_pressed(FSM_DEC)) {
-				if (curr_program == 0) curr_program = 127;
-				else --curr_program;
-				leds_show_4digits(curr_program);
-
-				accel_state = ACCEL_NONE;
-				accel_time = accel_time_slow;
+			if (button_pressed(FSM_DEC) && !button_held(FSM_INC) && (cdtimer3 == 0)) {
+				/* DEC pushed first */
+				printf("DEC pushed\r\n");
+				cdtimer3 = 30;
+			}
+			/* Still holding DEC alone after ~300 ms: */
+			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_DEC) && !button_held(FSM_INC) && (cdtimer3 == 0)) {
+				printf("DEC held\r\n");
+				accel_time = 0;
 				accel_count = 0;
 				accel_state = ACCEL_DEC_SLOW;
 			}
 			/* DEC released: */
 			if (button_released(FSM_DEC)) {
-				accel_state = ACCEL_NONE;
-				program_activate(1);
+				printf("DEC released\r\n");
+				if (switch_state == 0) {
+					if (cdtimer3 > 0) {
+						dec_practice_value();
+						notify_practice_value();
+						cdtimer3 = 0;
+					}
+					accel_state = ACCEL_NONE;
+					activate_practice_value();
+				} else {
+					--switch_state;
+				}
+			}
+
+			/* INC+DEC held for ~300ms: */
+			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_INC) && button_held(FSM_DEC) && (cdtimer3 == 0)) {
+				switch_state = 2;
+				printf("INC+DEC switch\r\n");
+				if (incdec_mode == 0) incdec_mode = 1;
+				else incdec_mode = 0;
 			}
 
 			/* acceleration countdown timer hit 0 and we're incrementing slowly */
 			if ((accel_state != ACCEL_NONE) && (accel_time == 0)) {
 				switch (accel_state) {
 					case ACCEL_INC_SLOW:
-						if (curr_program == 127) curr_program = 0;
-						else ++curr_program;
-						leds_show_4digits(curr_program);
+						inc_practice_value();
+						notify_practice_value();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
 						if (accel_count++ == 5) {
@@ -314,9 +378,8 @@ void controller_handle() {
 						}
 						break;
 					case ACCEL_INC_MEDIUM:
-						if (curr_program == 127) curr_program = 0;
-						else ++curr_program;
-						leds_show_4digits(curr_program);
+						inc_practice_value();
+						notify_practice_value();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
 						if (accel_count++ == 20) {
@@ -328,16 +391,15 @@ void controller_handle() {
 						}
 						break;
 					case ACCEL_INC_FAST:
-						if (curr_program == 127) curr_program = 0;
-						else ++curr_program;
-						leds_show_4digits(curr_program);
+						inc_practice_value();
+						notify_practice_value();
 
 						accel_time = accel_time_fast;
 						break;
+
 					case ACCEL_DEC_SLOW:
-						if (curr_program == 0) curr_program = 127;
-						else --curr_program;
-						leds_show_4digits(curr_program);
+						dec_practice_value();
+						notify_practice_value();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
 						if (accel_count++ == 5) {
@@ -349,9 +411,8 @@ void controller_handle() {
 						}
 						break;
 					case ACCEL_DEC_MEDIUM:
-						if (curr_program == 0) curr_program = 127;
-						else --curr_program;
-						leds_show_4digits(curr_program);
+						dec_practice_value();
+						notify_practice_value();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
 						if (accel_count++ == 20) {
@@ -363,9 +424,8 @@ void controller_handle() {
 						}
 						break;
 					case ACCEL_DEC_FAST:
-						if (curr_program == 0) curr_program = 127;
-						else --curr_program;
-						leds_show_4digits(curr_program);
+						dec_practice_value();
+						notify_practice_value();
 
 						accel_time = accel_time_fast;
 						break;

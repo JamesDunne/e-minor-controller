@@ -346,7 +346,7 @@ void fsw_led_set_active(int idx) {
 
 /* Poll the slider switch to see which mode we're in: */
 u8 slider_poll() {
-	return 1;
+	return 0;
 }
 
 /* --------------- Data persistence functions: */
@@ -376,7 +376,7 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 			*bankmap_count = 7;
 			break;
 		case 1:
-			strncpy(name, "SOC1", BANK_NAME_MAXLENGTH);
+			strncpy(name, "SOC2", BANK_NAME_MAXLENGTH);
 			bank[0] = 44;
 			bank[1] = 11;
 			bank[2] = 22;
@@ -404,7 +404,7 @@ void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
 
 /* Stores the programs back to the bank: */
 void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
-    printf("STOR: %4d = {0x%02X, 0x%02X, 0x%02X, 0x%02X}\r\n", bank_index, bank[0], bank[1], bank[2], bank[3]);
+	printf("STOR: %4d = {0x%02X, 0x%02X, 0x%02X, 0x%02X}\r\n", bank_index, bank[0], bank[1], bank[2], bank[3]);
 }
 
 /* --------------- MIDI I/O functions: */
@@ -416,18 +416,18 @@ void midi_send_byte(u8 data) {
 
 /* Send formatted MIDI commands.
 
-    0 <= cmd <= F       - MIDI command
-    0 <= channel <= F   - MIDI channel to send command to
-    00 <= data1 <= FF   - first data byte of MIDI command
-    00 <= data2 <= FF   - second (optional) data byte of MIDI command
+	0 <= cmd <= F       - MIDI command
+	0 <= channel <= F   - MIDI channel to send command to
+	00 <= data1 <= FF   - first data byte of MIDI command
+	00 <= data2 <= FF   - second (optional) data byte of MIDI command
 */
 void midi_send_cmd1(u8 cmd, u8 channel, u8 data1) {
-    midi_send_byte(((cmd & 0xF) << 4) | (channel & 0xF));
-    midi_send_byte(data1);
+	midi_send_byte(((cmd & 0xF) << 4) | (channel & 0xF));
+	midi_send_byte(data1);
 }
 
 void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2) {
-    midi_send_byte(((cmd & 0xF) << 4) | (channel & 0xF));
-    midi_send_byte(data1);
-    midi_send_byte(data2);
+	midi_send_byte(((cmd & 0xF) << 4) | (channel & 0xF));
+	midi_send_byte(data1);
+	midi_send_byte(data2);
 }
