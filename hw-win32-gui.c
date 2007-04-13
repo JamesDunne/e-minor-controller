@@ -11,7 +11,7 @@ LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 static char sClassName[]  = "MyClass";
 static HINSTANCE zhInstance = NULL;
 
-const int dpi = 96;
+const int dpi = 64;
 const double inWidth = 9.0;
 const double inHeight = 7.0;
 
@@ -23,6 +23,7 @@ static char leds4_text[5] = "    ";
 static char leds1_text[2] = " ";
 
 static u8 fsw_active = 0;
+static u8 led_active[4];
 
 static HWND hwndMain;
 
@@ -83,6 +84,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	for (i = 0; i < 8; ++i) {
 		pushed[i] = 0;
+		led_active[i] = 0;
 	}
 
 	/* initialize the logic controller */
@@ -223,14 +225,18 @@ void paintFacePlate(HWND hwnd) {
 	SelectObject(hDC, penThin);
 	SelectObject(hDC, brsRed);
 	for (hCount = 0; hCount < 4; ++hCount) {
-		if (hCount != fsw_active) {
+		if (!led_active[hCount]) {
 			dpi_CenterEllipse(hDC, 1.5 + (hCount * 2.0), 2.5, 0.2032, 0.2032);
 		}
 	}
 	DeleteObject(brsRed);
 
 	SelectObject(hDC, brsGreen);
-	dpi_CenterEllipse(hDC, 1.5 + (fsw_active * 2.0), 2.5, 0.2032, 0.2032);
+	for (hCount = 0; hCount < 4; ++hCount) {
+		if (led_active[hCount]) {
+			dpi_CenterEllipse(hDC, 1.5 + (hCount * 2.0), 2.5, 0.2032, 0.2032);
+		}
+	}
 	DeleteObject(brsGreen);
 
 	/* write the 4-digit and 1-digit LED displays */
@@ -338,7 +344,23 @@ u32 fsw_poll() {
 
 /* Set currently active program foot-switch's LED indicator and disable all others */
 void fsw_led_set_active(int idx) {
-	fsw_active = idx;
+	int i;
+	for (i = 0; i < 4; ++i) {
+		led_active[i] = 0;
+	}
+	led_active[idx] = 1;
+	InvalidateRect(hwndMain, NULL, TRUE);
+}
+
+/* Explicitly enable a single LED without affecting the others */
+void fsw_led_enable(int idx) {
+	led_active[idx] = 1;
+	InvalidateRect(hwndMain, NULL, TRUE);
+}
+
+/* Explicitly disable a single LED without affecting the others */
+void fsw_led_disable(int idx) {
+	led_active[idx] = 0;
 	InvalidateRect(hwndMain, NULL, TRUE);
 }
 
@@ -353,19 +375,19 @@ u8 slider_poll() {
 
 /* Gets number of stored banks */
 u16 banks_count() {
-	return 2;
+	return 4;
 }
 
 /* Loads a bank into the specified arrays: */
-void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count) {
+void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count) {
 	printf("LOAD: %4d\r\n", bank_index);
 	switch (bank_index) {
 		case 0:
 			strncpy(name, "SOC1", BANK_NAME_MAXLENGTH);
 			bank[0] = 0;
-			bank[1] = 11;
-			bank[2] = 22;
-			bank[3] = 33;
+			bank[1] = 1;
+			bank[2] = 2;
+			bank[3] = 3;
 			bankmap[0] = 0;
 			bankmap[1] = 1;
 			bankmap[2] = 0;
@@ -373,38 +395,87 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 			bankmap[4] = 0;
 			bankmap[5] = 3;
 			bankmap[6] = 0;
+			bankcontroller[0] = 0;
+			bankcontroller[1] = 0;
+			bankcontroller[2] = 0;
+			bankcontroller[3] = 0;
 			*bankmap_count = 7;
 			break;
 		case 1:
 			strncpy(name, "SOC2", BANK_NAME_MAXLENGTH);
-			bank[0] = 44;
-			bank[1] = 11;
-			bank[2] = 22;
-			bank[3] = 22;
+			bank[0] = 4;
+			bank[1] = 1;
+			bank[2] = 2;
+			bank[3] = 5;
 			bankmap[0] = 0;
 			bankmap[1] = 1;
 			bankmap[2] = 2;
+			bankcontroller[0] = 1;
+			bankcontroller[1] = 1;
+			bankcontroller[2] = 1;
+			bankcontroller[3] = 1;
 			*bankmap_count = 3;
+			break;
+		case 2:
+			strncpy(name, "ROE ", BANK_NAME_MAXLENGTH);
+			bank[0] = 12;
+			bank[1] = 6;
+			bank[2] = 7;
+			bank[3] = 1;
+			bankmap[0] = 0;
+			bankmap[1] = 2;
+			bankmap[2] = 1;
+			bankmap[3] = 3;
+			bankcontroller[0] = 2;
+			bankcontroller[1] = 2;
+			bankcontroller[2] = 2;
+			bankcontroller[3] = 2;
+			*bankmap_count = 4;
+			break;
+		case 3:
+			strncpy(name, "ES  ", BANK_NAME_MAXLENGTH);
+			bank[0] = 1;
+			bank[1] = 3;
+			bank[2] = 7;
+			bank[3] = 12;
+			bankmap[0] = 0;
+			bankmap[1] = 1;
+			bankmap[2] = 0;
+			bankmap[3] = 2;
+			bankmap[4] = 3;
+			bankmap[5] = 0;
+			bankcontroller[0] = 3;
+			bankcontroller[1] = 3;
+			bankcontroller[2] = 3;
+			bankcontroller[3] = 3;
+			*bankmap_count = 6;
 			break;
 	}
 }
 
 /* Load bank name for browsing through banks: */
 void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
-	switch (bank_index) {
-		case 0:
-			strncpy(name, "SOC1", BANK_NAME_MAXLENGTH);
-			break;
-		case 1:
-			strncpy(name, "SOC2", BANK_NAME_MAXLENGTH);
-			break;
-	}
-	printf("NAME: %4d = \"%.4s\"\r\n", bank_index, name);
+	u8 bank[BANK_PRESET_COUNT];
+	u8 bankcontroller[BANK_PRESET_COUNT];
+	u8 bankmap[BANK_MAP_COUNT];
+	u8 bankmap_count;
+	bank_load(bank_index, name, bank, bankcontroller, bankmap, &bankmap_count);
 }
 
 /* Stores the programs back to the bank: */
 void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
 	printf("STOR: %4d = {0x%02X, 0x%02X, 0x%02X, 0x%02X}\r\n", bank_index, bank[0], bank[1], bank[2], bank[3]);
+}
+
+/* Look up a bank # in the sorted index */
+u16 bank_getsortedindex(u16 sort_index) {
+	switch (sort_index) {
+		case 0: return 3;
+		case 1: return 2;
+		case 2: return 0;
+		case 3: return 1;
+	}
+	return 65535;
 }
 
 /* --------------- MIDI I/O functions: */

@@ -5,22 +5,6 @@
 	Written by James S. Dunne
 	04/05/2007
 
-	Firmware Design:
-		* 65,536 max (theoretical) song banks of presets to store
-		* Up to 32 max (theoretical) presets to store per song bank
-		* Hardware abstraction interface
-		* No controller code references any standard C function
-
-	Hardware design:
-		* N program-change foot-switches, which act like radio-buttons
-		* LED status indicators per each of N foot-switches indicate active preset
-		* 4-digit LED 7-segment display
-		* 16-alpha LED display for messages/song names
-		* 4 foot-switches for generic increment/decrement program value
-			(2 for single-digit increments, 2 for double-digit increments)
-		? optional rotary dial for program value
-		* 2 foot-switches for increment/decrement of active preset footswitch
-
 	Possible hardware layout diagram:
 
 	(o)     = SPST rugged foot-switch
@@ -51,6 +35,7 @@
 const u8 midi_channel = 0;
 
 u8      bank[BANK_PRESET_COUNT];
+u8		bankcontroller[BANK_PRESET_COUNT];
 u8		bankmap[BANK_MAP_COUNT];
 u8		bankmap_count;
 char	bankname[BANK_NAME_MAXLENGTH];
@@ -60,6 +45,7 @@ u8      curr_program;
 u8      curr_preset;
 u8      curr_mapindex;
 u16     curr_bank;
+u16		curr_sortedbank;
 
 u16		bank_count;
 
@@ -67,9 +53,9 @@ u16		bank_count;
 u16		accel_time;
 u8		accel_count;
 
-u16		cdtimer1 = 0;
-u16		cdtimer2 = 0;
-u16		cdtimer3 = 0;
+u16		cdtimer_flash = 0;
+u16		cdtimer_store = 0;
+u16		cdtimer_incdec_held = 0;
 
 enum acceleration_state {
 	ACCEL_NONE,
@@ -80,6 +66,15 @@ enum acceleration_state {
 	ACCEL_DEC_MEDIUM,
 	ACCEL_DEC_FAST
 } accel_state = ACCEL_NONE;
+
+enum flashing_led_state {
+	FLASH_NONE,
+	FLASH_STORE,
+	FLASH_BANK_SELECT_MODE,
+	FLASH_PRGM_SELECT_MODE
+} flash_state = FLASH_NONE;
+
+u8		flash_led = 0;
 
 /* time period in ms before value is changed */
 const u16 accel_time_slow	= 15;
@@ -122,7 +117,7 @@ void bankmap_activate(u8 notify) {
 /* load current bank but do not switch to a preset */
 void bank_activate(u8 notify) {
 	/* load up the selected bank: */
-	bank_load(curr_bank, bankname, bank, bankmap, &bankmap_count);
+	bank_load(curr_bank, bankname, bank, bankcontroller, bankmap, &bankmap_count);
 	curr_mapindex = 0;
 	/* always show the bank map index */
 	leds_show_1digit(curr_mapindex + 1);
@@ -132,15 +127,30 @@ void bank_activate(u8 notify) {
 	}
 }
 
-/* load current bank name only and display it on 4-digit display */
+/* load the real bank # from the sorted index */
+void sortedbank_activate(u8 notify) {
+	curr_bank = bank_getsortedindex(curr_sortedbank);
+	bank_activate(notify);
+}
+
+/* TODO: reverse lookup table for bank # to sort_index # */
+
+/* load only current bank name and display it on 4-digit display */
 void bank_showname() {
+	bank_loadname(curr_bank, bankname);
+	leds_show_4alphas(bankname);
+}
+
+/* load only current bank name from the sorted index and display it on 4-digit display */
+void sortedbank_showname() {
+	curr_bank = bank_getsortedindex(curr_sortedbank);
 	bank_loadname(curr_bank, bankname);
 	leds_show_4alphas(bankname);
 }
 
 /* current and previous foot-switch states: */
 u32		sw_curr = 0, sw_last = 0;
-u8		switch_state = 0;
+u8		switch_state = 0, store_state = 0;
 u8		incdec_mode = 0;
 
 /* determine if a footswitch was pressed: */
@@ -179,15 +189,59 @@ void controller_10msec_timer() {
 	}
 
 	/* handle simple count-down timers: */
-	if (cdtimer1 > 0) --cdtimer1;
-	if (cdtimer2 > 0) --cdtimer2;
-	if (cdtimer3 > 0) --cdtimer3;
+	if (cdtimer_store > 0) --cdtimer_store;
+	if (cdtimer_incdec_held > 0) --cdtimer_incdec_held;
+
+	/* handle LED flashing states: */
+	if (cdtimer_flash > 0) {
+		switch (flash_state) {
+			case FLASH_STORE:
+				if ((cdtimer_flash & 31) == 0) {
+					fsw_led_enable(flash_led);
+				} else if ((cdtimer_flash & 31) == 15) {
+					fsw_led_disable(flash_led);
+				}
+				break;
+			case FLASH_BANK_SELECT_MODE:
+				if ((cdtimer_flash & 31) == 0) {
+					fsw_led_enable(0);
+					fsw_led_enable(1);
+					fsw_led_disable(2);
+					fsw_led_disable(3);
+				} else if ((cdtimer_flash & 31) == 15) {
+					fsw_led_disable(0);
+					fsw_led_disable(1);
+					fsw_led_disable(2);
+					fsw_led_disable(3);
+				}
+				break;
+			case FLASH_PRGM_SELECT_MODE:
+				if ((cdtimer_flash & 31) == 0) {
+					fsw_led_disable(0);
+					fsw_led_disable(1);
+					fsw_led_enable(2);
+					fsw_led_enable(3);
+				} else if ((cdtimer_flash & 31) == 15) {
+					fsw_led_disable(0);
+					fsw_led_disable(1);
+					fsw_led_disable(2);
+					fsw_led_disable(3);
+				}
+				break;
+		}
+
+		--cdtimer_flash;
+		if (cdtimer_flash == 0) {
+			/* reset LEDs to proper state */
+			fsw_led_set_active(curr_preset);
+		}
+	}
 }
 
 void inc_practice_value() {
 	if (incdec_mode == 0) {
-		if (curr_bank == bank_count - 1) curr_bank = 0;
-		else ++curr_bank;
+		if (curr_sortedbank == bank_count - 1) curr_sortedbank = 0;
+		else ++curr_sortedbank;
 	} else {
 		if (curr_program == 127) curr_program = 0;
 		else ++curr_program;
@@ -196,8 +250,8 @@ void inc_practice_value() {
 
 void dec_practice_value() {
 	if (incdec_mode == 0) {
-		if (curr_bank == 0) curr_bank = bank_count - 1;
-		else --curr_bank;
+		if (curr_sortedbank == 0) curr_sortedbank = bank_count - 1;
+		else --curr_sortedbank;
 	} else {
 		if (curr_program == 0) curr_program = 127;
 		else --curr_program;
@@ -206,7 +260,7 @@ void dec_practice_value() {
 
 void notify_practice_value() {
 	if (incdec_mode == 0) {
-		bank_showname();
+		sortedbank_showname();
 	} else {
 		leds_show_4digits(curr_program);
 	}
@@ -214,7 +268,7 @@ void notify_practice_value() {
 
 void activate_practice_value() {
 	if (incdec_mode == 0) {
-		bank_activate(0);
+		sortedbank_activate(0);
 	} else {
 		program_activate(1);
 	}
@@ -280,42 +334,88 @@ void controller_handle() {
 			/* one of preset 1-4 pressed: */
 			if (button_pressed(FSM_PRESET_1)) {
 				curr_preset = 0;
-				preset_activate(1);
+				if (incdec_mode == 1) {
+					/* check if held for ~300msec */
+					cdtimer_store = 30;
+					store_state = 0;
+				} else {
+					preset_activate(1);
+				}
 			}
 			if (button_pressed(FSM_PRESET_2)) {
 				curr_preset = 1;
-				preset_activate(1);
+				if (incdec_mode == 1) {
+					/* check if held for ~300msec */
+					cdtimer_store = 30;
+					store_state = 0;
+				} else {
+					preset_activate(1);
+				}
 			}
 			if (button_pressed(FSM_PRESET_3)) {
 				curr_preset = 2;
-				preset_activate(1);
+				if (incdec_mode == 1) {
+					/* check if held for ~300msec */
+					cdtimer_store = 30;
+					store_state = 0;
+				} else {
+					preset_activate(1);
+				}
 			}
 			if (button_pressed(FSM_PRESET_4)) {
 				curr_preset = 3;
-				preset_activate(1);
+				if (incdec_mode == 1) {
+					/* check if held for ~300msec */
+					cdtimer_store = 30;
+					store_state = 0;
+				} else {
+					preset_activate(1);
+				}
+			}
+			if (incdec_mode == 1) {
+				/* check if the store-timer ran out and we're able to store: */
+				if ((cdtimer_store == 0) && (store_state == 0)) {
+					/* still holding a button? */
+					if (button_held(FSM_PRESET_1) || button_held(FSM_PRESET_2) || button_held(FSM_PRESET_3) || button_held(FSM_PRESET_4)) {
+						/* store the program */
+						store_state = 1;
+						bank[curr_preset] = curr_program;
+						bank_store(curr_bank, bank);
+						preset_activate(1);
+						/* flash the stored LED */
+						flash_state = FLASH_STORE;
+						flash_led = curr_preset;
+						cdtimer_flash = 100;
+					}
+				}
+				/* check if a button was released: */
+				if (button_released(FSM_PRESET_1) || button_released(FSM_PRESET_2) || button_released(FSM_PRESET_3) || button_released(FSM_PRESET_4)) {
+					if ((cdtimer_store > 0) && (store_state == 0)) {
+						/* was only tapped (held less than ~300msec) */
+						preset_activate(1);
+						cdtimer_store = 0;
+					}
+				}
 			}
 
 			/* INC pressed: */
-			if (button_pressed(FSM_INC) && !button_held(FSM_DEC) && (cdtimer3 == 0)) {
+			if (button_pressed(FSM_INC) && !button_held(FSM_DEC) && (cdtimer_incdec_held == 0)) {
 				/* INC pushed first */
-				printf("INC pushed\r\n");
-				cdtimer3 = 30;
+				cdtimer_incdec_held = 30;
 			}
 			/* Still holding INC alone after ~300 ms: */
-			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_INC) && !button_held(FSM_DEC) && (cdtimer3 == 0)) {
-				printf("INC held\r\n");
+			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_INC) && !button_held(FSM_DEC) && (cdtimer_incdec_held == 0)) {
 				accel_time = 0;
 				accel_count = 0;
 				accel_state = ACCEL_INC_SLOW;
 			}
 			/* INC released: */
 			if (button_released(FSM_INC)) {
-				printf("INC released\r\n");
 				if (switch_state == 0) {
-					if (cdtimer3 > 0) {
+					if (cdtimer_incdec_held > 0) {
 						inc_practice_value();
 						notify_practice_value();
-						cdtimer3 = 0;
+						cdtimer_incdec_held = 0;
 					}
 					accel_state = ACCEL_NONE;
 					activate_practice_value();
@@ -325,26 +425,23 @@ void controller_handle() {
 			}
 
 			/* DEC pressed: */
-			if (button_pressed(FSM_DEC) && !button_held(FSM_INC) && (cdtimer3 == 0)) {
+			if (button_pressed(FSM_DEC) && !button_held(FSM_INC) && (cdtimer_incdec_held == 0)) {
 				/* DEC pushed first */
-				printf("DEC pushed\r\n");
-				cdtimer3 = 30;
+				cdtimer_incdec_held = 30;
 			}
 			/* Still holding DEC alone after ~300 ms: */
-			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_DEC) && !button_held(FSM_INC) && (cdtimer3 == 0)) {
-				printf("DEC held\r\n");
+			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_DEC) && !button_held(FSM_INC) && (cdtimer_incdec_held == 0)) {
 				accel_time = 0;
 				accel_count = 0;
 				accel_state = ACCEL_DEC_SLOW;
 			}
 			/* DEC released: */
 			if (button_released(FSM_DEC)) {
-				printf("DEC released\r\n");
 				if (switch_state == 0) {
-					if (cdtimer3 > 0) {
+					if (cdtimer_incdec_held > 0) {
 						dec_practice_value();
 						notify_practice_value();
-						cdtimer3 = 0;
+						cdtimer_incdec_held = 0;
 					}
 					accel_state = ACCEL_NONE;
 					activate_practice_value();
@@ -354,11 +451,21 @@ void controller_handle() {
 			}
 
 			/* INC+DEC held for ~300ms: */
-			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_INC) && button_held(FSM_DEC) && (cdtimer3 == 0)) {
+			if ((accel_state == ACCEL_NONE) && (switch_state == 0) && button_held(FSM_INC) && button_held(FSM_DEC) && (cdtimer_incdec_held == 0)) {
 				switch_state = 2;
-				printf("INC+DEC switch\r\n");
-				if (incdec_mode == 0) incdec_mode = 1;
-				else incdec_mode = 0;
+				if (incdec_mode == 0) {
+					/* program-select mode */
+					incdec_mode = 1;
+					flash_state = FLASH_PRGM_SELECT_MODE;
+					cdtimer_flash = 100;
+					notify_practice_value();
+				} else {
+					/* bank-select mode by alphabetical order */
+					incdec_mode = 0;
+					flash_state = FLASH_BANK_SELECT_MODE;
+					cdtimer_flash = 100;
+					notify_practice_value();
+				}
 			}
 
 			/* acceleration countdown timer hit 0 and we're incrementing slowly */

@@ -53,6 +53,12 @@ u32 fsw_poll();
 /* Set currently active program foot-switch's LED indicator and disable all others */
 void fsw_led_set_active(int idx);
 
+/* Explicitly enable a single LED without affecting the others */
+void fsw_led_enable(int idx);
+
+/* Explicitly disable a single LED without affecting the others */
+void fsw_led_disable(int idx);
+
 /* --------------- Slider switch: */
 
 /* Poll the slider switch to see which mode we're in: */
@@ -64,12 +70,15 @@ u8 slider_poll();
 u16 banks_count();
 
 /* Loads a bank into the specified arrays: */
-void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count);
+void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count);
 /* Stores the programs back to the bank: */
 void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]);
 
 /* Load bank name for browsing through banks: */
 void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]);
+
+/* Get the alphabetically sorted bank index */
+u16 bank_getsortedindex(u16 sort_index);
 
 /* --------------- MIDI I/O functions: */
 
