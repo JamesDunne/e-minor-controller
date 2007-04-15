@@ -14,8 +14,6 @@
 
 /* --------------- LED read-out display functions: */
 
-/* show 3 digits of decimal on the 4-digit display */
-void leds_show_4digits(u8 value);
 /* show 4 alphas on the 4-digit display */
 void leds_show_4alphas(char text[LEDS_MAX_ALPHAS]);
 

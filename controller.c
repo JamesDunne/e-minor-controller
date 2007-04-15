@@ -92,13 +92,39 @@ enum mainmode {
 	MODE_CONCERT
 } mode;
 
+/* convert integer to ASCII in fixed number of chars, right-aligned */
+void itoa_fixed(u8 n, char s[LEDS_MAX_ALPHAS]) {
+	u8 i = LEDS_MAX_ALPHAS - 1;
+
+	do {
+		s[i--] = (n%10) + '0';
+	} while ((n /= 10) > 0);
+
+	/* pad the left chars with spaces: */
+	for (;i > 0;--i) s[i] = ' ';
+	s[i] = ' ';
+}
+
+/* display a program value in decimal with a leading 'P': */
+void show_program() {
+	char	a[LEDS_MAX_ALPHAS];
+
+	/* convert curr_program to ASCII: */
+	itoa_fixed(curr_program, a);
+	/* leading 'P' char: */
+	a[0] = 'P';
+	leds_show_4alphas(a);
+
+	/* start timer to revert the display: */
+	cdtimer_value = value_flashtime;
+}
+
 /* send the MIDI program change message */
 void program_activate(u8 notify) {
 	midi_send_cmd1(0xC, midi_channel, curr_program);
 	if (notify) {
 		/* show the program value: */
-		leds_show_4digits(curr_program);
-		cdtimer_value = value_flashtime;
+		show_program();
 	}
 }
 
@@ -278,8 +304,7 @@ void notify_practice_value() {
 	if (incdec_mode == 0) {
 		sortedbank_showname();
 	} else {
-		leds_show_4digits(curr_program);
-		cdtimer_value = value_flashtime;
+		show_program();
 	}
 }
 

@@ -24,7 +24,7 @@ static char leds1_text[2] = " ";
 
 static u8 fsw_active = 0;
 static u8 led_active[4];
-static BOOL mode = FALSE;
+static BOOL mode = TRUE;
 static BOOL rom_loaded = FALSE;
 
 static u8 *rom_data = NULL;
@@ -32,10 +32,32 @@ static size_t rom_size;
 
 static HWND hwndMain;
 
+HMIDIOUT      outHandle;
+
+void show_midi_output_devices() {
+	MIDIOUTCAPS     moc;
+	unsigned long iNumDevs, i;
+
+	/* Get the number of MIDI Out devices in this computer */
+	iNumDevs = midiOutGetNumDevs();
+
+	/* Go through all of those devices, displaying their names */
+	for (i = 0; i < iNumDevs; i++)
+	{
+		/* Get info about the next device */
+		if (!midiOutGetDevCaps(i, &moc, sizeof(MIDIOUTCAPS)))
+		{
+			/* Display its Device ID and name */
+			printf("Device ID #%u: %s\r\n", i, moc.szPname);
+		}
+	}
+}
+
 /* main entry point */
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
 	WNDCLASSEX WndClass;
 	MSG Msg;
+	unsigned long result;
 
 	int i;
 
@@ -50,11 +72,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	WndClass.hIcon         = LoadIcon(NULL, IDI_APPLICATION);
 	WndClass.hIconSm       = LoadIcon(NULL, IDI_APPLICATION);
 	WndClass.hCursor       = LoadCursor(NULL, IDC_ARROW);
-	WndClass.hbrBackground = (HBRUSH)(COLOR_BACKGROUND);
+	WndClass.hbrBackground = (HBRUSH)(COLOR_WINDOW);
 	WndClass.lpszMenuName  = NULL;
 	WndClass.lpszClassName = sClassName;
 
-	if(!RegisterClassEx(&WndClass)) {
+	if (!RegisterClassEx(&WndClass)) {
 		MessageBox(0, "Error Registering Class!", "Error!", MB_ICONSTOP | MB_OK);
 		return 0;
 	}
@@ -90,6 +112,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	for (i = 0; i < 8; ++i) {
 		pushed[i] = 0;
 		led_active[i] = 0;
+	}
+
+	/* display the possible MIDI output devices: */
+	show_midi_output_devices();
+
+	/* Open the MIDI Mapper */
+	result = midiOutOpen(&outHandle, (UINT)-1, 0, 0, CALLBACK_WINDOW);
+	if (result) {
+		printf("There was an error opening MIDI Mapper!  Disabling MIDI output...\r\n");
+	} else {
+		printf("Opened MIDI mapper.\r\n");
 	}
 
 	/* initialize the logic controller */
@@ -284,12 +317,21 @@ void paintFacePlate(HWND hwnd) {
 	EndPaint(hwnd, &Ps);
 }
 
+/* message processing function: */
 LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) {
-	switch(Message) {
+	switch (Message) {
 		case WM_CLOSE:
 			DestroyWindow(hwnd);
 			break;
 		case WM_DESTROY:
+			/* Close the MIDI device */
+			if (outHandle != 0) {
+				if (midiOutClose(outHandle)) {
+					printf("There was a problem closing the MIDI mapper.\r\n");
+				} else {
+					printf("Closed MIDI mapper.\r\n");
+				}
+			}
 			PostQuitMessage(0);
 			break;
 		case WM_PAINT:
@@ -341,12 +383,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 }
 
 /* --------------- LED read-out display functions: */
-
-/* show 3 digits of decimal on the 4-digit display */
-void leds_show_4digits(u8 value) {
-	sprintf(leds4_text, "%4d", value);
-	InvalidateRect(hwndMain, NULL, TRUE);
-}
 
 /* show 4 alphas on the 4-digit display */
 void leds_show_4alphas(char text[LEDS_MAX_ALPHAS]) {
@@ -688,11 +724,6 @@ u16 bank_getsortedindex(u16 sort_index) {
 
 /* --------------- MIDI I/O functions: */
 
-/* Send a single MIDI byte. */
-void midi_send_byte(u8 data) {
-	printf("MIDI: 0x%02X\r\n", data);
-}
-
 /* Send formatted MIDI commands.
 
 	0 <= cmd <= F       - MIDI command
@@ -701,12 +732,17 @@ void midi_send_byte(u8 data) {
 	00 <= data2 <= FF   - second (optional) data byte of MIDI command
 */
 void midi_send_cmd1(u8 cmd, u8 channel, u8 data1) {
-	midi_send_byte(((cmd & 0xF) << 4) | (channel & 0xF));
-	midi_send_byte(data1);
+	printf("MIDI: cmd=%1X, chan=%1X, %02X\r\n", cmd, channel, data1);
+	if (outHandle != 0) {
+		/* send the MIDI command to the opened MIDI Mapper device: */
+		midiOutShortMsg(outHandle, ((cmd & 0xF) << 4) | (channel & 0xF) | ((u32)data1 << 8));
+	}
 }
 
 void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2) {
-	midi_send_byte(((cmd & 0xF) << 4) | (channel & 0xF));
-	midi_send_byte(data1);
-	midi_send_byte(data2);
+	printf("MIDI: cmd=%1X, chan=%1X, %02X %02X\r\n", cmd, channel, data1, data2);
+	if (outHandle != 0) {
+		/* send the MIDI command to the opened MIDI Mapper device: */
+		midiOutShortMsg(outHandle, ((cmd & 0xF) << 4) | (channel & 0xF) | ((u32)data1 << 8) | ((u32)data2 << 16));
+	}
 }
