@@ -59,10 +59,13 @@ void fsw_led_enable(int idx);
 /* Explicitly disable a single LED without affecting the others */
 void fsw_led_disable(int idx);
 
-/* --------------- Slider switch: */
+/* --------------- External inputs: */
 
 /* Poll the slider switch to see which mode we're in: */
 u8 slider_poll();
+
+/* Poll the expression pedal's data (0-127): */
+u8 expr_poll();
 
 /* --------------- Data persistence functions: */
 

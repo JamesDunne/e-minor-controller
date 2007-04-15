@@ -396,11 +396,16 @@ void fsw_led_disable(int idx) {
 	InvalidateRect(hwndMain, NULL, TRUE);
 }
 
-/* --------------- Slider switch: */
+/* --------------- External inputs: */
 
 /* Poll the slider switch to see which mode we're in: */
 u8 slider_poll() {
 	return (mode ? 1 : 0);
+}
+
+/* Poll the expression pedal's data (0-127): */
+u8 expr_poll() {
+    return 0;
 }
 
 /* --------------- Data persistence functions: */
