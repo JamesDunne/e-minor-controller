@@ -88,8 +88,8 @@ const u16 value_flashtime	= 75;
 
 /* concert/practice main mode switch */
 enum mainmode {
-	MODE_PRACTICE,
-	MODE_CONCERT
+	MODE_PRACTICE = 0,
+	MODE_CONCERT = 1
 } mode;
 
 /* convert integer to ASCII in fixed number of chars, right-aligned */
@@ -202,20 +202,6 @@ u8 button_released(u32 mask) {
 	return ((sw_last & mask) == mask) && ((sw_curr & mask) == 0);
 }
 
-/* set the controller to an initial state */
-void controller_init() {
-	bank_count = banks_count();
-
-	curr_bank = 0;
-	bank_activate(1);
-
-	curr_mapindex = 0;
-	bankmap_activate(1);
-
-	sw_curr = sw_last = 0;
-	cc_curr = cc_last = expr_poll();
-}
-
 /* called every 10ms */
 void controller_10msec_timer() {
 	/* handle inc/dec acceleration: */
@@ -314,6 +300,21 @@ void activate_practice_value() {
 	} else {
 		program_activate(1);
 	}
+}
+
+/* set the controller to an initial state */
+void controller_init() {
+	bank_count = banks_count();
+
+	curr_bank = 0;
+	bank_activate(1);
+
+	curr_mapindex = 0;
+	bankmap_activate(1);
+
+	sw_curr = sw_last = 0;
+	cc_curr = cc_last = expr_poll();
+	mode = slider_poll();
 }
 
 /* main control loop */
