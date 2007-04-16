@@ -23,7 +23,7 @@
 |  1    2    3    4  |
 |                    |
 | (o)  (o)  (o)  (o) |
-| PREV NEXT DEC  INC |
+| INC  DEC  ENTR NEXT|
 |                    |
 \--------------------/
 
@@ -352,7 +352,7 @@ void controller_handle() {
 		}
 	}
 
-	/* NEXT/PREV never change function depending on mode */
+	/* NEXT never changes function depending on mode */
 
 	/* NEXT pressed: */
 	if (button_pressed(FSM_NEXT)) {
@@ -387,43 +387,6 @@ void controller_handle() {
 			} else {
 				/* activate the next map for the new bank, and display the MIDI program # */
 				++curr_mapindex;
-				bankmap_activate(1);
-			}
-		}
-	}
-	/* PREV pressed: */
-	if (button_pressed(FSM_PREV)) {
-		if (loaded_bank != curr_bank) {
-			/* prepared to switch to a bank, but did not activate the first map */
-			bankmap_activate(1);
-		} else {
-			if (curr_mapindex == 0) {
-				/* crossed the lower bank-map boundary, load the previous bank */
-				if (mode == MODE_PRACTICE) {
-					/* PRACTICE mode cycles through banks by sorted index #: */
-					if (curr_sortedbank == 0) {
-						curr_sortedbank = bank_count - 1;
-					} else {
-						--curr_sortedbank;
-					}
-					/* show the bank name */
-					sortedbank_activate(1);
-				} else {
-					/* CONCERT mode cycles through banks by index #: */
-					if (curr_bank == 0) {
-						curr_bank = bank_count - 1;
-					} else {
-						--curr_bank;
-					}
-					/* show the bank name */
-					bank_activate(1);
-				}
-				/* activate the last map for the new bank, but do not display the MIDI program # */
-				curr_mapindex = bankmap_count - 1;
-				bankmap_activate(0);
-			} else {
-				/* activate the previous map for the new bank, and display the MIDI program # */
-				--curr_mapindex;
 				bankmap_activate(1);
 			}
 		}
@@ -567,6 +530,11 @@ void controller_handle() {
 					cdtimer_flash = 100;
 					notify_practice_value();
 				}
+			}
+
+			/* ENTER pressed */
+			if (button_pressed(FSM_ENTER)) {
+
 			}
 
 			/* acceleration countdown timer hit 0 and we're incrementing slowly */

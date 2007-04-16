@@ -28,10 +28,10 @@ enum fsw_bits {
     FSB_PRESET_3 = 2,
     FSB_PRESET_4 = 3,
 
-    FSB_PREV = 28,
-    FSB_NEXT = 29,
-    FSB_DEC = 30,
-    FSB_INC = 31
+    FSB_DEC = 28,
+    FSB_INC = 29,
+    FSB_ENTER = 30,
+    FSB_NEXT = 31,
 };
 enum fsw_masks {
 	FSM_PRESET_1 = (1 << FSB_PRESET_1),
@@ -39,10 +39,10 @@ enum fsw_masks {
 	FSM_PRESET_3 = (1 << FSB_PRESET_3),
 	FSM_PRESET_4 = (1 << FSB_PRESET_4),
 
-    FSM_PREV = (1 << FSB_PREV),
-    FSM_NEXT = (1 << FSB_NEXT),
     FSM_DEC = (1 << FSB_DEC),
-    FSM_INC = (1 << FSB_INC)
+    FSM_INC = (1 << FSB_INC),
+    FSM_ENTER = (1 << FSB_ENTER),
+    FSM_NEXT = (1 << FSB_NEXT)
 };
 
 /* Poll up to 28 foot-switch toggles simultaneously.  PREV NEXT DEC  INC map to 28-31 bit positions. */
