@@ -536,7 +536,7 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 
 	/* count is stored 0-7, but means 1-8 so add 1 */
 	*bankmap_count = (rom_data[addr+12] & 0x07) + 1;
-	/* load 8x 2-bit (0-3) values from the next few bytes for the program: */
+	/* load 8x 2-bit (0-3) values from the next few bytes for the sequence: */
 	bankmap[0] = ((rom_data[addr+13] & 0xC0) >> 6);
 	bankmap[1] = ((rom_data[addr+13] & 0x30) >> 4);
 	bankmap[2] = ((rom_data[addr+13] & 0x0C) >> 2);
@@ -573,7 +573,7 @@ void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
 }
 
 /* Stores the programs back to the bank: */
-void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
+void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 bankmap_count) {
 	u8 chunk[64];
 	u16	addr, addrhi, addrlo;
 
@@ -589,6 +589,23 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
 	chunk[addrlo+5] = bank[1];
 	chunk[addrlo+6] = bank[2];
 	chunk[addrlo+7] = bank[3];
+
+	chunk[addrlo+ 8] = bankcontroller[0] & 0x7F;
+	chunk[addrlo+ 9] = bankcontroller[1] & 0x7F;
+	chunk[addrlo+10] = bankcontroller[2] & 0x7F;
+	chunk[addrlo+11] = bankcontroller[3] & 0x7F;
+
+	/* count is stored 0-7, but means 1-8 so subtract 1 */
+	chunk[addrlo+12] = (bankmap_count - 1) & 0x07;
+	/* store 8x 2-bit (0-3) values to the next few bytes for the sequence: */
+	chunk[addrlo+13] = ((bankmap[0] & 0x03) << 6) |
+					   ((bankmap[1] & 0x03) << 4) |
+					   ((bankmap[2] & 0x03) << 2) |
+					    (bankmap[3] & 0x03);
+	chunk[addrlo+14] = ((bankmap[4] & 0x03) << 6) |
+					   ((bankmap[5] & 0x03) << 4) |
+					   ((bankmap[6] & 0x03) << 2) |
+					    (bankmap[7] & 0x03);
 
 	/* write back the 64-byte chunk: */
 	write_eeprom(chunk, (64 + (bank_index * bank_record_size)) & ~63);

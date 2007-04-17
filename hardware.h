@@ -73,7 +73,7 @@ u16 banks_count();
 /* Loads a bank into the specified arrays: */
 void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count);
 /* Stores the programs back to the bank: */
-void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]);
+void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 bankmap_count);
 
 /* Load bank name for browsing through banks: */
 void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]);
