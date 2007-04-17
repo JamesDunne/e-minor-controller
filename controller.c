@@ -110,7 +110,7 @@ void show_program() {
 	char	a[LEDS_MAX_ALPHAS];
 
 	/* convert curr_program to ASCII: */
-	itoa_fixed(curr_program, a);
+	itoa_fixed(curr_program + 1, a);
 	/* leading 'P' char: */
 	a[0] = 'P';
 	leds_show_4alphas(a);
