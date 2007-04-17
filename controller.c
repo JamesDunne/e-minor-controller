@@ -540,7 +540,6 @@ void controller_handle() {
 					/* ENTER held at least ~300msec: */
 					if (button_held(FSM_ENTER) && (cdtimer_holdenter == 0) && (program_mode == PROGRAM_NONE)) {
 						/* enter sequence program mode */
-						printf("Switch to SEQUENCE mode\r\n");
 						program_mode = PROGRAM_SEQUENCE;
 						curr_mapindex = 0;
 						curr_preset = 4;
@@ -562,11 +561,6 @@ void controller_handle() {
 							notify_practice_value();
 						}
 					}
-
-			/* ENTER pressed */
-			if (button_pressed(FSM_ENTER)) {
-
-			}
 
 					/* acceleration countdown timer hit 0 and we're incrementing slowly */
 					if ((accel_state != ACCEL_NONE) && (accel_time == 0)) {
