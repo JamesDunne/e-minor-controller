@@ -28,10 +28,10 @@ enum fsw_bits {
     FSB_PRESET_3 = 2,
     FSB_PRESET_4 = 3,
 
-    FSB_PREV = 28,
-    FSB_NEXT = 29,
-    FSB_DEC = 30,
-    FSB_INC = 31
+    FSB_DEC = 28,
+    FSB_INC = 29,
+    FSB_ENTER = 30,
+    FSB_NEXT = 31,
 };
 enum fsw_masks {
 	FSM_PRESET_1 = (1 << FSB_PRESET_1),
@@ -39,10 +39,10 @@ enum fsw_masks {
 	FSM_PRESET_3 = (1 << FSB_PRESET_3),
 	FSM_PRESET_4 = (1 << FSB_PRESET_4),
 
-    FSM_PREV = (1 << FSB_PREV),
-    FSM_NEXT = (1 << FSB_NEXT),
     FSM_DEC = (1 << FSB_DEC),
-    FSM_INC = (1 << FSB_INC)
+    FSM_INC = (1 << FSB_INC),
+    FSM_ENTER = (1 << FSB_ENTER),
+    FSM_NEXT = (1 << FSB_NEXT)
 };
 
 /* Poll up to 28 foot-switch toggles simultaneously.  PREV NEXT DEC  INC map to 28-31 bit positions. */
@@ -73,7 +73,7 @@ u16 banks_count();
 /* Loads a bank into the specified arrays: */
 void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count);
 /* Stores the programs back to the bank: */
-void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]);
+void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 bankmap_count);
 
 /* Load bank name for browsing through banks: */
 void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]);

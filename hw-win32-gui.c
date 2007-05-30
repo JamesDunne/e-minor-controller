@@ -250,7 +250,7 @@ void paintFacePlate(HWND hwnd) {
 		dpi_TextOut(hDC, 1.475 + (hCount * 2.0), 4.0, num, 1);
 	}
 
-	/* draw 4x evenly spaced foot-switches for PREV, NEXT, DEC, INC */
+	/* draw 4x evenly spaced foot-switches for DEC, INC, ENTER, NEXT */
 	for (hCount = 0; hCount < 4; ++hCount) {
 		SelectObject(hDC, penThick);
 		dpi_CenterEllipse(hDC, 1.5 + (hCount * 2.0), 5.5, 0.34026, 0.34026);
@@ -263,11 +263,11 @@ void paintFacePlate(HWND hwnd) {
 		}
 	}
 
-	/* label the PREV, NEXT, DEC, INC foot-switches */
-	dpi_TextOut(hDC, 1.325, 6.0, "PREV", 4);
-	dpi_TextOut(hDC, 3.325, 6.0, "NEXT", 4);
-	dpi_TextOut(hDC, 5.380, 6.0, "DEC", 3);
-	dpi_TextOut(hDC, 7.410, 6.0, "INC", 3);
+	/* label the DEC, INC, ENTER, NEXT foot-switches */
+	dpi_TextOut(hDC, 1.380, 6.0, "DEC", 3);
+	dpi_TextOut(hDC, 3.410, 6.0, "INC", 3);
+	dpi_TextOut(hDC, 5.300, 6.0, "ENTER", 5);
+	dpi_TextOut(hDC, 7.325, 6.0, "NEXT", 4);
 
 	/* draw 4x evenly spaced 8mm (203.2mil) LEDs above 1-4 preset switches */
 	SelectObject(hDC, penThin);
@@ -398,16 +398,16 @@ void leds_show_1digit(u8 value) {
 
 /* --------------- Momentary toggle foot-switches: */
 
-/* Poll up to 28 foot-switch toggles simultaneously.  PREV NEXT DEC  INC map to 28-31 bit positions. */
+/* Poll up to 28 foot-switch toggles simultaneously.  DEC INC ENTER NEXT map to 28-31 bit positions. */
 u32 fsw_poll() {
 	return ((u32)pushed[0] << FSB_PRESET_1) |
 		   ((u32)pushed[1] << FSB_PRESET_2) |
 		   ((u32)pushed[2] << FSB_PRESET_3) |
 		   ((u32)pushed[3] << FSB_PRESET_4) |
-		   ((u32)pushed[4] << FSB_PREV) |
-		   ((u32)pushed[5] << FSB_NEXT) |
-		   ((u32)pushed[6] << FSB_DEC) |
-		   ((u32)pushed[7] << FSB_INC);
+		   ((u32)pushed[4] << FSB_DEC) |
+		   ((u32)pushed[5] << FSB_INC) |
+		   ((u32)pushed[6] << FSB_ENTER) |
+		   ((u32)pushed[7] << FSB_NEXT);
 }
 
 /* Set currently active program foot-switch's LED indicator and disable all others */
@@ -490,17 +490,7 @@ u16 banks_count() {
 
 /* Count in bits:
 
-Bit-packed storage:
-	32 bits for bank name (4 ASCII chars)
-	(14 bits per preset for 7-bit program # + 7-bit controller #) * 4 presets = 56 bits
-	1 bit padding
-	3 bits for sequence count
-	2 bits per sequence no * 8 sequences max = 16 bits for sequence preset #s
-	4 bits padding
-
-	32 + 56 + 1 + 3 + 16 + 4 = 112 bits = 14 bytes.
-
-More padded bit-packed storage:
+Padded bit-packed storage:
 	32 bits bank name
 	(16 bits per preset for 8-bit program # + 8-bit controller #) * 4 presets = 64 bits
 	4 bits padding
@@ -514,7 +504,6 @@ const u8 bank_record_size = 16;
 
 /* Loads a bank into the specified arrays: */
 void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count) {
-#if 1
 	u16	count;
 	u16	addr;
 
@@ -547,7 +536,7 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 
 	/* count is stored 0-7, but means 1-8 so add 1 */
 	*bankmap_count = (rom_data[addr+12] & 0x07) + 1;
-	/* load 8x 2-bit (0-3) values from the next few bytes for the program: */
+	/* load 8x 2-bit (0-3) values from the next few bytes for the sequence: */
 	bankmap[0] = ((rom_data[addr+13] & 0xC0) >> 6);
 	bankmap[1] = ((rom_data[addr+13] & 0x30) >> 4);
 	bankmap[2] = ((rom_data[addr+13] & 0x0C) >> 2);
@@ -558,83 +547,10 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 	bankmap[7] = ((rom_data[addr+14] & 0x03));
 
 	/* 8 free bits left before next 16-byte boundary */
-#else
-	switch (bank_index) {
-		case 0:
-			strncpy(name, "SOC1", BANK_NAME_MAXLENGTH);
-			bank[0] = 0;
-			bank[1] = 1;
-			bank[2] = 2;
-			bank[3] = 3;
-			bankmap[0] = 0;
-			bankmap[1] = 1;
-			bankmap[2] = 0;
-			bankmap[3] = 2;
-			bankmap[4] = 0;
-			bankmap[5] = 3;
-			bankmap[6] = 0;
-			bankcontroller[0] = 0;
-			bankcontroller[1] = 0;
-			bankcontroller[2] = 0;
-			bankcontroller[3] = 0;
-			*bankmap_count = 7;
-			break;
-		case 1:
-			strncpy(name, "SOC2", BANK_NAME_MAXLENGTH);
-			bank[0] = 4;
-			bank[1] = 1;
-			bank[2] = 2;
-			bank[3] = 5;
-			bankmap[0] = 0;
-			bankmap[1] = 1;
-			bankmap[2] = 2;
-			bankcontroller[0] = 1;
-			bankcontroller[1] = 1;
-			bankcontroller[2] = 1;
-			bankcontroller[3] = 1;
-			*bankmap_count = 3;
-			break;
-		case 2:
-			strncpy(name, "ROE ", BANK_NAME_MAXLENGTH);
-			bank[0] = 12;
-			bank[1] = 6;
-			bank[2] = 7;
-			bank[3] = 1;
-			bankmap[0] = 0;
-			bankmap[1] = 2;
-			bankmap[2] = 1;
-			bankmap[3] = 3;
-			bankcontroller[0] = 2;
-			bankcontroller[1] = 2;
-			bankcontroller[2] = 2;
-			bankcontroller[3] = 2;
-			*bankmap_count = 4;
-			break;
-		case 3:
-			strncpy(name, "ES  ", BANK_NAME_MAXLENGTH);
-			bank[0] = 1;
-			bank[1] = 3;
-			bank[2] = 7;
-			bank[3] = 12;
-			bankmap[0] = 0;
-			bankmap[1] = 1;
-			bankmap[2] = 0;
-			bankmap[3] = 2;
-			bankmap[4] = 3;
-			bankmap[5] = 0;
-			bankcontroller[0] = 3;
-			bankcontroller[1] = 3;
-			bankcontroller[2] = 3;
-			bankcontroller[3] = 3;
-			*bankmap_count = 6;
-			break;
-	}
-#endif
 }
 
 /* Load bank name for browsing through banks: */
 void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
-#if 1
 	u16	count;
 	u16	addr;
 
@@ -654,32 +570,19 @@ void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]) {
 	name[1] = rom_data[addr+1] & 0x7F;
 	name[2] = rom_data[addr+2] & 0x7F;
 	name[3] = rom_data[addr+3] & 0x7F;
-#else
-	u8 bank[BANK_PRESET_COUNT];
-	u8 bankcontroller[BANK_PRESET_COUNT];
-	u8 bankmap[BANK_MAP_COUNT];
-	u8 bankmap_count;
-	bank_load(bank_index, name, bank, bankcontroller, bankmap, &bankmap_count);
-#endif
 }
 
 /* Stores the programs back to the bank: */
-void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
+void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 bankmap_count) {
 	u8 chunk[64];
 	u16	addr, addrhi, addrlo;
-
-	printf("STOR: %4d = {0x%02X, 0x%02X, 0x%02X, 0x%02X}\r\n", bank_index, bank[0], bank[1], bank[2], bank[3]);
 
 	addr = 64 + (bank_index * bank_record_size);
 	addrhi = addr & ~63;
 	addrlo = addr & 63;
 
-	printf("Read 64 bytes at 0x%08X\r\n", addrhi);
-
 	/* load the 64-byte aligned chunk: */
 	read_eeprom(chunk, addrhi);
-
-	printf("Modify bank at offset 0x%02X\r\n", addrlo);
 
 	/* overwrite the bank program section for the bank record: */
 	chunk[addrlo+4] = bank[0];
@@ -687,7 +590,22 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
 	chunk[addrlo+6] = bank[2];
 	chunk[addrlo+7] = bank[3];
 
-	printf("Write 64 bytes at 0x%08X\r\n", addrhi);
+	chunk[addrlo+ 8] = bankcontroller[0] & 0x7F;
+	chunk[addrlo+ 9] = bankcontroller[1] & 0x7F;
+	chunk[addrlo+10] = bankcontroller[2] & 0x7F;
+	chunk[addrlo+11] = bankcontroller[3] & 0x7F;
+
+	/* count is stored 0-7, but means 1-8 so subtract 1 */
+	chunk[addrlo+12] = (bankmap_count - 1) & 0x07;
+	/* store 8x 2-bit (0-3) values to the next few bytes for the sequence: */
+	chunk[addrlo+13] = ((bankmap[0] & 0x03) << 6) |
+					   ((bankmap[1] & 0x03) << 4) |
+					   ((bankmap[2] & 0x03) << 2) |
+					    (bankmap[3] & 0x03);
+	chunk[addrlo+14] = ((bankmap[4] & 0x03) << 6) |
+					   ((bankmap[5] & 0x03) << 4) |
+					   ((bankmap[6] & 0x03) << 2) |
+					    (bankmap[7] & 0x03);
 
 	/* write back the 64-byte chunk: */
 	write_eeprom(chunk, (64 + (bank_index * bank_record_size)) & ~63);
@@ -695,7 +613,6 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT]) {
 
 /* Look up a bank # in the sorted index */
 u16 bank_getsortedindex(u16 sort_index) {
-#if 1
 	u16	count;
 	u16	addr;
 
@@ -711,15 +628,6 @@ u16 bank_getsortedindex(u16 sort_index) {
 	/* read the bank index given the sort index location: */
 	addr = 64 + (count * bank_record_size) + (sort_index * sizeof(u16));
 	return *((u16 *)&(rom_data[addr]));
-#else
-	switch (sort_index) {
-		case 0: return 3;
-		case 1: return 2;
-		case 2: return 0;
-		case 3: return 1;
-	}
-	return 65535;
-#endif
 }
 
 /* --------------- MIDI I/O functions: */
@@ -728,8 +636,7 @@ u16 bank_getsortedindex(u16 sort_index) {
 
 	0 <= cmd <= F       - MIDI command
 	0 <= channel <= F   - MIDI channel to send command to
-	00 <= data1 <= FF   - first data byte of MIDI command
-	00 <= data2 <= FF   - second (optional) data byte of MIDI command
+	00 <= data1 <= FF   - data byte of MIDI command
 */
 void midi_send_cmd1(u8 cmd, u8 channel, u8 data1) {
 	printf("MIDI: cmd=%1X, chan=%1X, %02X\r\n", cmd, channel, data1);
@@ -739,6 +646,13 @@ void midi_send_cmd1(u8 cmd, u8 channel, u8 data1) {
 	}
 }
 
+/* Send formatted MIDI commands.
+
+	0 <= cmd <= F       - MIDI command
+	0 <= channel <= F   - MIDI channel to send command to
+	00 <= data1 <= FF   - first data byte of MIDI command
+	00 <= data2 <= FF   - second (optional) data byte of MIDI command
+*/
 void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2) {
 	printf("MIDI: cmd=%1X, chan=%1X, %02X %02X\r\n", cmd, channel, data1, data2);
 	if (outHandle != 0) {
