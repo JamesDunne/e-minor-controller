@@ -27,14 +27,10 @@
 |                    |
 \--------------------/
 
-NOTE:   CONCERT mode: Implement hold-down of preset button to
-quick-switch to said preset, but on release switch back to last
-preset.
-
 */
 
-#include "types.h"
-#include "hardware.h"
+#include "../common/types.h"
+#include "../common/hardware.h"
 
 const u8 midi_channel = 0;
 

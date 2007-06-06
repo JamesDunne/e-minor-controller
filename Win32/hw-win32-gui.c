@@ -1,8 +1,8 @@
 #include <windows.h>
 #include <winuser.h>
 #include <stdio.h>
-#include "types.h"
-#include "hardware.h"
+#include "../common/types.h"
+#include "../common/hardware.h"
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
@@ -467,10 +467,12 @@ void read_eeprom(u8 chunk[64], u16 addr) {
 }
 
 void write_eeprom(u8 chunk[64], u16 addr) {
+	FILE *f;
+
 	/* copy 64-byte chunk to rom_data: */
 	memcpy(rom_data + addr, chunk, 64);
 	/* flush the rom_data to the file: */
-	FILE	*f = fopen("eeprom.bin", "wb");
+	f = fopen("eeprom.bin", "wb");
 	fseek(f, 0, SEEK_SET);
 	fwrite(rom_data, 24 * 1024, sizeof(u8), f);
 	fclose(f);
