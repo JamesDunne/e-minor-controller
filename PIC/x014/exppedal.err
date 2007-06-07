@@ -1,5 +1,0 @@
-Error[1105] C:\fw\midicontroller\x014\exppedal.c 12 : symbol 'ExpPedalSvc' has not been defined
-Error[1101] C:\fw\midicontroller\x014\exppedal.c 12 : lvalue required
-Error[1105] C:\fw\midicontroller\x014\exppedal.c 13 : symbol 'ExpPedalInst' has not been defined
-Warning[2058] C:\fw\midicontroller\x014\exppedal.c 13 : call of function without prototype
-Error[1101] C:\fw\midicontroller\x014\exppedal.c 13 : lvalue required

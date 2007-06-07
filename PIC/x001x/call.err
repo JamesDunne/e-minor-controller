@@ -1,4 +1,0 @@
-Message[301] E:\WORK\PEDAL\X001\_MICRDEF442.INC 36 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
-Error[113]   E:\WORK\PEDAL\X001\CALL.ASM 15 : Symbol not previously defined (ADC_ACQUISITION_TIME)
-Error[113]   E:\WORK\PEDAL\X001\CALL.ASM 16 : Symbol not previously defined (Temp0)
-Error[113]   E:\WORK\PEDAL\X001\CALL.ASM 20 : Symbol not previously defined (Temp0)
