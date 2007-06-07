@@ -1,0 +1,1607 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+ABDEN	C:\fw\midicontroller\x002x\c_18f4455.h	769;"	m	line:769
+ABDOVF	C:\fw\midicontroller\x002x\c_18f4455.h	776;"	m	line:776
+ABORT_ALL_LBC	C:\fw\midicontroller\x002x\loaddef.h	30;"	p	line:30	signature:(void)
+ACCESS::0	C:\fw\midicontroller\x002x\c_18f4455.h	1221;"	d	line:1221
+ACKDT	C:\fw\midicontroller\x002x\c_18f4455.h	873;"	m	line:873
+ACKEN	C:\fw\midicontroller\x002x\c_18f4455.h	872;"	m	line:872
+ACKSTAT	C:\fw\midicontroller\x002x\c_18f4455.h	874;"	m	line:874
+ACQT0	C:\fw\midicontroller\x002x\c_18f4455.h	825;"	m	line:825
+ACQT1	C:\fw\midicontroller\x002x\c_18f4455.h	826;"	m	line:826
+ACQT2	C:\fw\midicontroller\x002x\c_18f4455.h	827;"	m	line:827
+ACTVIE	C:\fw\midicontroller\x002x\c_18f4455.h	71;"	m	line:71
+ACTVIF	C:\fw\midicontroller\x002x\c_18f4455.h	61;"	m	line:61
+ADCS0	C:\fw\midicontroller\x002x\c_18f4455.h	822;"	m	line:822
+ADCS1	C:\fw\midicontroller\x002x\c_18f4455.h	823;"	m	line:823
+ADCS2	C:\fw\midicontroller\x002x\c_18f4455.h	824;"	m	line:824
+ADC_CONVERSION	C:\fw\midicontroller\x002x\MAIN.C	11;"	p	line:11	file:	signature:(unsigned char Channel)
+ADC_CONVERSION	C:\fw\midicontroller\x002x\MAIN.C	95;"	f	line:95	signature:(unsigned char Channel)
+ADDEN	C:\fw\midicontroller\x002x\c_18f4455.h	645;"	m	line:645
+ADDR0	C:\fw\midicontroller\x002x\c_18f4455.h	119;"	m	line:119
+ADDR0	C:\fw\midicontroller\x002x\c_18f4455.h	25;"	m	line:25
+ADDR1	C:\fw\midicontroller\x002x\c_18f4455.h	120;"	m	line:120
+ADDR1	C:\fw\midicontroller\x002x\c_18f4455.h	26;"	m	line:26
+ADDR2	C:\fw\midicontroller\x002x\c_18f4455.h	121;"	m	line:121
+ADDR2	C:\fw\midicontroller\x002x\c_18f4455.h	27;"	m	line:27
+ADDR3	C:\fw\midicontroller\x002x\c_18f4455.h	122;"	m	line:122
+ADDR3	C:\fw\midicontroller\x002x\c_18f4455.h	28;"	m	line:28
+ADDR4	C:\fw\midicontroller\x002x\c_18f4455.h	123;"	m	line:123
+ADDR5	C:\fw\midicontroller\x002x\c_18f4455.h	124;"	m	line:124
+ADDR6	C:\fw\midicontroller\x002x\c_18f4455.h	125;"	m	line:125
+ADDRESS_STATE::5	C:\fw\midicontroller\x002x\USBMMAP.H	62;"	d	line:62
+ADEN	C:\fw\midicontroller\x002x\c_18f4455.h	653;"	m	line:653
+ADFM	C:\fw\midicontroller\x002x\c_18f4455.h	829;"	m	line:829
+ADIE	C:\fw\midicontroller\x002x\c_18f4455.h	549;"	m	line:549
+ADIF	C:\fw\midicontroller\x002x\c_18f4455.h	560;"	m	line:560
+ADIP	C:\fw\midicontroller\x002x\c_18f4455.h	571;"	m	line:571
+ADON	C:\fw\midicontroller\x002x\c_18f4455.h	843;"	m	line:843
+ADR	C:\fw\midicontroller\x002x\USBMMAP.H	123;"	m	line:123	struct:_BDT::<anonymous>
+ADRH	C:\fw\midicontroller\x002x\USBMMAP.H	117;"	m	line:117	struct:_BDT::<anonymous>
+ADRL	C:\fw\midicontroller\x002x\USBMMAP.H	116;"	m	line:116	struct:_BDT::<anonymous>
+ADR_PENDING_STATE::4	C:\fw\midicontroller\x002x\USBMMAP.H	61;"	d	line:61
+AN0	C:\fw\midicontroller\x002x\c_18f4455.h	278;"	m	line:278
+AN1	C:\fw\midicontroller\x002x\c_18f4455.h	279;"	m	line:279
+AN2	C:\fw\midicontroller\x002x\c_18f4455.h	280;"	m	line:280
+AN3	C:\fw\midicontroller\x002x\c_18f4455.h	281;"	m	line:281
+AN4	C:\fw\midicontroller\x002x\c_18f4455.h	283;"	m	line:283
+ATTACHED_STATE::1	C:\fw\midicontroller\x002x\USBMMAP.H	58;"	d	line:58
+AUX_POWER_OFF_BIT::2	C:\fw\midicontroller\x002x\c_portdef.h	280;"	d	line:280
+AUX_POWER_OFF_LAT::LATE	C:\fw\midicontroller\x002x\c_portdef.h	283;"	d	line:283
+AUX_POWER_OFF_LAT_BIT::LATEbits.LATE2	C:\fw\midicontroller\x002x\c_portdef.h	282;"	d	line:282
+AUX_POWER_OFF_PIN::PORTEbits.RE2	C:\fw\midicontroller\x002x\c_portdef.h	281;"	d	line:281
+AUX_POWER_OFF_PORT::PORTE	C:\fw\midicontroller\x002x\c_portdef.h	284;"	d	line:284
+B0	C:\fw\midicontroller\x002x\_TOOLS.H	71;"	m	line:71
+B1	C:\fw\midicontroller\x002x\_TOOLS.H	71;"	m	line:71
+B2	C:\fw\midicontroller\x002x\_TOOLS.H	71;"	m	line:71
+BANKED::1	C:\fw\midicontroller\x002x\c_18f4455.h	1222;"	d	line:1222
+BC8	C:\fw\midicontroller\x002x\USBMMAP.H	84;"	m	line:84	struct:_BD_STAT::<anonymous>
+BC8	C:\fw\midicontroller\x002x\USBMMAP.H	94;"	m	line:94	struct:_BD_STAT::<anonymous>
+BC9	C:\fw\midicontroller\x002x\USBMMAP.H	85;"	m	line:85	struct:_BD_STAT::<anonymous>
+BC9	C:\fw\midicontroller\x002x\USBMMAP.H	95;"	m	line:95	struct:_BD_STAT::<anonymous>
+BCLIE	C:\fw\midicontroller\x002x\c_18f4455.h	580;"	m	line:580
+BCLIF	C:\fw\midicontroller\x002x\c_18f4455.h	597;"	m	line:597
+BCLIP	C:\fw\midicontroller\x002x\c_18f4455.h	614;"	m	line:614
+BDT	C:\fw\midicontroller\x002x\USBMMAP.H	125;"	t	line:125
+BD_STAT	C:\fw\midicontroller\x002x\USBMMAP.H	108;"	t	line:108
+BF	C:\fw\midicontroller\x002x\c_18f4455.h	891;"	m	line:891
+BGST	C:\fw\midicontroller\x002x\c_18f4455.h	1012;"	m	line:1012
+BGST	C:\fw\midicontroller\x002x\c_18f4455.h	1044;"	m	line:1044
+BOOL	C:\fw\midicontroller\x002x\TYPEDEFS.H	150;"	t	line:150
+BOOST1_BIT::4	C:\fw\midicontroller\x002x\c_portdef.h	92;"	d	line:92
+BOOST1_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	95;"	d	line:95
+BOOST1_LAT_BIT::LATBbits.LATB4	C:\fw\midicontroller\x002x\c_portdef.h	94;"	d	line:94
+BOOST1_PIN::PORTBbits.RB4	C:\fw\midicontroller\x002x\c_portdef.h	93;"	d	line:93
+BOOST1_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	96;"	d	line:96
+BOOST2_BIT::5	C:\fw\midicontroller\x002x\c_portdef.h	99;"	d	line:99
+BOOST2_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	102;"	d	line:102
+BOOST2_LAT_BIT::LATBbits.LATB5	C:\fw\midicontroller\x002x\c_portdef.h	101;"	d	line:101
+BOOST2_PIN::PORTBbits.RB5	C:\fw\midicontroller\x002x\c_portdef.h	100;"	d	line:100
+BOOST2_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	103;"	d	line:103
+BOR	C:\fw\midicontroller\x002x\c_18f4455.h	978;"	m	line:978
+BRG16	C:\fw\midicontroller\x002x\c_18f4455.h	772;"	m	line:772
+BRGH	C:\fw\midicontroller\x002x\c_18f4455.h	660;"	m	line:660
+BSTALL	C:\fw\midicontroller\x002x\USBMMAP.H	86;"	m	line:86	struct:_BD_STAT::<anonymous>
+BTOEE	C:\fw\midicontroller\x002x\c_18f4455.h	93;"	m	line:93
+BTOEF	C:\fw\midicontroller\x002x\c_18f4455.h	83;"	m	line:83
+BTSEE	C:\fw\midicontroller\x002x\c_18f4455.h	95;"	m	line:95
+BTSEF	C:\fw\midicontroller\x002x\c_18f4455.h	85;"	m	line:85
+BYTE	C:\fw\midicontroller\x002x\TYPEDEFS.H	58;"	t	line:58
+BitField	C:\fw\midicontroller\x002x\_TOOLS.H	54;"	t	line:54
+Byte0	C:\fw\midicontroller\x002x\TYPEDEFS.H	103;"	m	line:103	struct:_DWORD::<anonymous>
+Byte0	C:\fw\midicontroller\x002x\TYPEDEFS.H	70;"	m	line:70	struct:_WORD::<anonymous>
+Byte1	C:\fw\midicontroller\x002x\TYPEDEFS.H	104;"	m	line:104	struct:_DWORD::<anonymous>
+Byte1	C:\fw\midicontroller\x002x\TYPEDEFS.H	71;"	m	line:71	struct:_WORD::<anonymous>
+Byte2	C:\fw\midicontroller\x002x\TYPEDEFS.H	105;"	m	line:105	struct:_DWORD::<anonymous>
+Byte3	C:\fw\midicontroller\x002x\TYPEDEFS.H	106;"	m	line:106	struct:_DWORD::<anonymous>
+ByteToSend	C:\fw\midicontroller\x002x\RS232.C	76;"	l	line:76
+ByteToSend	C:\fw\midicontroller\x002x\usbapplet.c	35;"	l	line:35
+C	C:\fw\midicontroller\x002x\c_18f4455.h	1092;"	m	line:1092
+C1INV	C:\fw\midicontroller\x002x\c_18f4455.h	700;"	m	line:700
+C1OUT	C:\fw\midicontroller\x002x\c_18f4455.h	702;"	m	line:702
+C2INV	C:\fw\midicontroller\x002x\c_18f4455.h	701;"	m	line:701
+C2OUT	C:\fw\midicontroller\x002x\c_18f4455.h	703;"	m	line:703
+CCP1	C:\fw\midicontroller\x002x\c_18f4455.h	337;"	m	line:337
+CCP1IE	C:\fw\midicontroller\x002x\c_18f4455.h	545;"	m	line:545
+CCP1IF	C:\fw\midicontroller\x002x\c_18f4455.h	556;"	m	line:556
+CCP1IP	C:\fw\midicontroller\x002x\c_18f4455.h	567;"	m	line:567
+CCP1M0	C:\fw\midicontroller\x002x\c_18f4455.h	797;"	m	line:797
+CCP1M0	C:\fw\midicontroller\x002x\c_18f4455.h	808;"	m	line:808
+CCP1M1	C:\fw\midicontroller\x002x\c_18f4455.h	798;"	m	line:798
+CCP1M1	C:\fw\midicontroller\x002x\c_18f4455.h	809;"	m	line:809
+CCP1M2	C:\fw\midicontroller\x002x\c_18f4455.h	799;"	m	line:799
+CCP1M2	C:\fw\midicontroller\x002x\c_18f4455.h	810;"	m	line:810
+CCP1M3	C:\fw\midicontroller\x002x\c_18f4455.h	800;"	m	line:800
+CCP1M3	C:\fw\midicontroller\x002x\c_18f4455.h	811;"	m	line:811
+CCP2IE	C:\fw\midicontroller\x002x\c_18f4455.h	577;"	m	line:577
+CCP2IF	C:\fw\midicontroller\x002x\c_18f4455.h	594;"	m	line:594
+CCP2IP	C:\fw\midicontroller\x002x\c_18f4455.h	611;"	m	line:611
+CCP2M0	C:\fw\midicontroller\x002x\c_18f4455.h	785;"	m	line:785
+CCP2M1	C:\fw\midicontroller\x002x\c_18f4455.h	786;"	m	line:786
+CCP2M2	C:\fw\midicontroller\x002x\c_18f4455.h	787;"	m	line:787
+CCP2M3	C:\fw\midicontroller\x002x\c_18f4455.h	788;"	m	line:788
+CFG01::romstruct\	C:\fw\midicontroller\x002x\USBDSC.H	55;"	d	line:55
+CFGS	C:\fw\midicontroller\x002x\c_18f4455.h	633;"	m	line:633
+CHARGER_CURRENT_BIT::1	C:\fw\midicontroller\x002x\c_portdef.h	21;"	d	line:21
+CHARGER_CURRENT_LAT::LATA	C:\fw\midicontroller\x002x\c_portdef.h	24;"	d	line:24
+CHARGER_CURRENT_LAT_BIT::LATAbits.LATA1	C:\fw\midicontroller\x002x\c_portdef.h	23;"	d	line:23
+CHARGER_CURRENT_PIN::PORTAbits.RA1	C:\fw\midicontroller\x002x\c_portdef.h	22;"	d	line:22
+CHARGER_CURRENT_PORT::PORTA	C:\fw\midicontroller\x002x\c_portdef.h	25;"	d	line:25
+CHARGER_SW_BIT::3	C:\fw\midicontroller\x002x\c_portdef.h	216;"	d	line:216
+CHARGER_SW_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	219;"	d	line:219
+CHARGER_SW_LAT_BIT::LATDbits.LATD3	C:\fw\midicontroller\x002x\c_portdef.h	218;"	d	line:218
+CHARGER_SW_PIN::PORTDbits.RD3	C:\fw\midicontroller\x002x\c_portdef.h	217;"	d	line:217
+CHARGER_SW_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	220;"	d	line:220
+CHARGE_RATE_BIT::1	C:\fw\midicontroller\x002x\c_portdef.h	273;"	d	line:273
+CHARGE_RATE_LAT::LATE	C:\fw\midicontroller\x002x\c_portdef.h	276;"	d	line:276
+CHARGE_RATE_LAT_BIT::LATEbits.LATE1	C:\fw\midicontroller\x002x\c_portdef.h	275;"	d	line:275
+CHARGE_RATE_PIN::PORTEbits.RE1	C:\fw\midicontroller\x002x\c_portdef.h	274;"	d	line:274
+CHARGE_RATE_PORT::PORTE	C:\fw\midicontroller\x002x\c_portdef.h	277;"	d	line:277
+CHECK_AUTO_RAMP	C:\fw\midicontroller\x002x\loaddef.h	31;"	p	line:31	signature:(void)
+CHECK_AUTO_SHED	C:\fw\midicontroller\x002x\loaddef.h	32;"	p	line:32	signature:(void)
+CHS0	C:\fw\midicontroller\x002x\c_18f4455.h	845;"	m	line:845
+CHS1	C:\fw\midicontroller\x002x\c_18f4455.h	846;"	m	line:846
+CHS2	C:\fw\midicontroller\x002x\c_18f4455.h	847;"	m	line:847
+CHS3	C:\fw\midicontroller\x002x\c_18f4455.h	848;"	m	line:848
+CIS	C:\fw\midicontroller\x002x\c_18f4455.h	699;"	m	line:699
+CK	C:\fw\midicontroller\x002x\c_18f4455.h	347;"	m	line:347
+CK1SPP	C:\fw\midicontroller\x002x\c_18f4455.h	385;"	m	line:385
+CK2SPP	C:\fw\midicontroller\x002x\c_18f4455.h	386;"	m	line:386
+CKE	C:\fw\midicontroller\x002x\c_18f4455.h	897;"	m	line:897
+CKP	C:\fw\midicontroller\x002x\c_18f4455.h	883;"	m	line:883
+CLK1EN	C:\fw\midicontroller\x002x\c_18f4455.h	18;"	m	line:18
+CLKCFG0	C:\fw\midicontroller\x002x\c_18f4455.h	20;"	m	line:20
+CLKCFG1	C:\fw\midicontroller\x002x\c_18f4455.h	21;"	m	line:21
+CLRWDT::(x)_asmCLRWDT_endasm	C:\fw\midicontroller\x002x\_TOOLS.H	36;"	d	line:36
+CM0	C:\fw\midicontroller\x002x\c_18f4455.h	696;"	m	line:696
+CM1	C:\fw\midicontroller\x002x\c_18f4455.h	697;"	m	line:697
+CM2	C:\fw\midicontroller\x002x\c_18f4455.h	698;"	m	line:698
+CMIE	C:\fw\midicontroller\x002x\c_18f4455.h	583;"	m	line:583
+CMIF	C:\fw\midicontroller\x002x\c_18f4455.h	600;"	m	line:600
+CMIP	C:\fw\midicontroller\x002x\c_18f4455.h	617;"	m	line:617
+COMMAND_ACCEPTED::0x02	C:\fw\midicontroller\x002x\c_cnstdef.h	22;"	d	line:22
+COMMAND_REJECTED::0x01	C:\fw\midicontroller\x002x\c_cnstdef.h	21;"	d	line:21
+CONFIGURED_STATE::6	C:\fw\midicontroller\x002x\USBMMAP.H	63;"	d	line:63
+CRC16EE	C:\fw\midicontroller\x002x\c_18f4455.h	91;"	m	line:91
+CRC16EF	C:\fw\midicontroller\x002x\c_18f4455.h	81;"	m	line:81
+CRC5EE	C:\fw\midicontroller\x002x\c_18f4455.h	90;"	m	line:90
+CRC5EF	C:\fw\midicontroller\x002x\c_18f4455.h	80;"	m	line:80
+CREN	C:\fw\midicontroller\x002x\c_18f4455.h	646;"	m	line:646
+CSEN	C:\fw\midicontroller\x002x\c_18f4455.h	19;"	m	line:19
+CSRC	C:\fw\midicontroller\x002x\c_18f4455.h	665;"	m	line:665
+CTRL_TRF_DATA	C:\fw\midicontroller\x002x\USB.H	349;"	t	line:349
+CTRL_TRF_SETUP	C:\fw\midicontroller\x002x\USB.H	308;"	t	line:308
+CUT_BIT::3	C:\fw\midicontroller\x002x\c_portdef.h	85;"	d	line:85
+CUT_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	88;"	d	line:88
+CUT_LAT_BIT::LATBbits.LATB3	C:\fw\midicontroller\x002x\c_portdef.h	87;"	d	line:87
+CUT_PIN::PORTBbits.RB3	C:\fw\midicontroller\x002x\c_portdef.h	86;"	d	line:86
+CUT_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	89;"	d	line:89
+CVR0	C:\fw\midicontroller\x002x\c_18f4455.h	708;"	m	line:708
+CVR1	C:\fw\midicontroller\x002x\c_18f4455.h	709;"	m	line:709
+CVR2	C:\fw\midicontroller\x002x\c_18f4455.h	710;"	m	line:710
+CVR3	C:\fw\midicontroller\x002x\c_18f4455.h	711;"	m	line:711
+CVREF	C:\fw\midicontroller\x002x\c_18f4455.h	712;"	m	line:712
+CVREN	C:\fw\midicontroller\x002x\c_18f4455.h	715;"	m	line:715
+CVROE	C:\fw\midicontroller\x002x\c_18f4455.h	714;"	m	line:714
+CVRR	C:\fw\midicontroller\x002x\c_18f4455.h	713;"	m	line:713
+CVRSS	C:\fw\midicontroller\x002x\c_18f4455.h	719;"	m	line:719
+ClassReqHandler	C:\fw\midicontroller\x002x\usbdescript.c	392;"	v	line:392
+ClearArray	C:\fw\midicontroller\x002x\USB.C	1490;"	f	line:1490	signature:(byte* startAdr,byte count)
+ClrWdt::{_asmclrwdt_endasm}	C:\fw\midicontroller\x002x\c_18f4455.h	1228;"	d	line:1228
+CmdLength	C:\fw\midicontroller\x002x\RAM_DEF.C	20;"	v	line:20
+Cnt	C:\fw\midicontroller\x002x\USBMMAP.H	115;"	m	line:115	struct:_BDT::<anonymous>
+CommEcho2Bytes::CommFlags1.bit6	C:\fw\midicontroller\x002x\C_RAMDEF.H	44;"	d	line:44
+CommEcho4Bytes::CommFlags1.bit7	C:\fw\midicontroller\x002x\C_RAMDEF.H	45;"	d	line:45
+CommFlags1	C:\fw\midicontroller\x002x\RAM_DEF.C	26;"	v	line:26
+CopyFromNVR	C:\fw\midicontroller\x002x\loaddef.h	13;"	p	line:13	signature:(void)
+CtrlTrfData	C:\fw\midicontroller\x002x\USB.C	443;"	v	line:443
+D	C:\fw\midicontroller\x002x\c_18f4455.h	929;"	m	line:929
+DATA_ADDRESS	C:\fw\midicontroller\x002x\c_18f4455.h	923;"	m	line:923
+DATA_RETURNED::0x05	C:\fw\midicontroller\x002x\c_cnstdef.h	25;"	d	line:25
+DC	C:\fw\midicontroller\x002x\c_18f4455.h	1093;"	m	line:1093
+DC1B0	C:\fw\midicontroller\x002x\c_18f4455.h	801;"	m	line:801
+DC1B0	C:\fw\midicontroller\x002x\c_18f4455.h	812;"	m	line:812
+DC1B1	C:\fw\midicontroller\x002x\c_18f4455.h	802;"	m	line:802
+DC1B1	C:\fw\midicontroller\x002x\c_18f4455.h	813;"	m	line:813
+DC2B0	C:\fw\midicontroller\x002x\c_18f4455.h	789;"	m	line:789
+DC2B1	C:\fw\midicontroller\x002x\c_18f4455.h	790;"	m	line:790
+DEFAULT_PREDELAY::3	C:\fw\midicontroller\x002x\c_cnstdef.h	27;"	d	line:27
+DEFAULT_STATE::3	C:\fw\midicontroller\x002x\USBMMAP.H	60;"	d	line:60
+DETACHED_STATE::0	C:\fw\midicontroller\x002x\USBMMAP.H	57;"	d	line:57
+DFN8EE	C:\fw\midicontroller\x002x\c_18f4455.h	92;"	m	line:92
+DFN8EF	C:\fw\midicontroller\x002x\c_18f4455.h	82;"	m	line:82
+DIR	C:\fw\midicontroller\x002x\c_18f4455.h	101;"	m	line:101
+DISABLE_ALL_INTERRUPTS::\	C:\fw\midicontroller\x002x\_TOOLS.H	17;"	d	line:17
+DISABLE_ALL_INTERRUPTS::\	C:\fw\midicontroller\x002x\c_system.h	28;"	d	line:28
+DONE	C:\fw\midicontroller\x002x\c_18f4455.h	852;"	m	line:852
+DSC_CFG::0x02	C:\fw\midicontroller\x002x\USB.H	63;"	d	line:63
+DSC_DEV::0x01	C:\fw\midicontroller\x002x\USB.H	62;"	d	line:62
+DSC_EP::0x05	C:\fw\midicontroller\x002x\USB.H	66;"	d	line:66
+DSC_INTF::0x04	C:\fw\midicontroller\x002x\USB.H	65;"	d	line:65
+DSC_STR::0x03	C:\fw\midicontroller\x002x\USB.H	64;"	d	line:64
+DT	C:\fw\midicontroller\x002x\c_18f4455.h	348;"	m	line:348
+DTS	C:\fw\midicontroller\x002x\USBMMAP.H	90;"	m	line:90	struct:_BD_STAT::<anonymous>
+DTSEN	C:\fw\midicontroller\x002x\USBMMAP.H	87;"	m	line:87	struct:_BD_STAT::<anonymous>
+DWORD	C:\fw\midicontroller\x002x\TYPEDEFS.H	117;"	t	line:117
+D_A	C:\fw\midicontroller\x002x\c_18f4455.h	896;"	m	line:896
+Data	C:\fw\midicontroller\x002x\RS232.C	75;"	l	line:75
+DataBuffer	C:\fw\midicontroller\x002x\RAM_DEF.C	10;"	v	line:10
+DataDir	C:\fw\midicontroller\x002x\USB.H	230;"	m	line:230	struct:_CTRL_TRF_SETUP::<anonymous>
+DevChem	C:\fw\midicontroller\x002x\usbdescript.c	254;"	v	line:254
+ECCPAS0	C:\fw\midicontroller\x002x\c_18f4455.h	728;"	m	line:728
+ECCPAS0	C:\fw\midicontroller\x002x\c_18f4455.h	739;"	m	line:739
+ECCPAS1	C:\fw\midicontroller\x002x\c_18f4455.h	729;"	m	line:729
+ECCPAS1	C:\fw\midicontroller\x002x\c_18f4455.h	740;"	m	line:740
+ECCPAS2	C:\fw\midicontroller\x002x\c_18f4455.h	730;"	m	line:730
+ECCPAS2	C:\fw\midicontroller\x002x\c_18f4455.h	741;"	m	line:741
+ECCPASE	C:\fw\midicontroller\x002x\c_18f4455.h	731;"	m	line:731
+ECCPASE	C:\fw\midicontroller\x002x\c_18f4455.h	742;"	m	line:742
+EEAddress	C:\fw\midicontroller\x002x\RAM_DEF.C	13;"	v	line:13
+EEIE	C:\fw\midicontroller\x002x\c_18f4455.h	581;"	m	line:581
+EEIF	C:\fw\midicontroller\x002x\c_18f4455.h	598;"	m	line:598
+EEIP	C:\fw\midicontroller\x002x\c_18f4455.h	615;"	m	line:615
+EEPGD	C:\fw\midicontroller\x002x\c_18f4455.h	634;"	m	line:634
+EE_NOM_INV_AC_OUTPUT::0x10	C:\fw\midicontroller\x002x\c_cnstdef.h	38;"	d	line:38
+EE_NOM_VAC::0x0A	C:\fw\midicontroller\x002x\c_cnstdef.h	35;"	d	line:35
+EE_NOM_VDC_BATT::0x0B	C:\fw\midicontroller\x002x\c_cnstdef.h	36;"	d	line:36
+EE_RPT_HIGH_LINE_SET_H::0x11	C:\fw\midicontroller\x002x\c_cnstdef.h	39;"	d	line:39
+EE_RPT_HIGH_LINE_SET_L::0x12	C:\fw\midicontroller\x002x\c_cnstdef.h	40;"	d	line:40
+EE_RPT_LOW_LINE_SET::0x13	C:\fw\midicontroller\x002x\c_cnstdef.h	41;"	d	line:41
+EE_SKU_STRING::0x3E	C:\fw\midicontroller\x002x\c_cnstdef.h	29;"	d	line:29
+EE_SW_LD_BNKS::0x0C	C:\fw\midicontroller\x002x\c_cnstdef.h	37;"	d	line:37
+EE_SYS_PWR_RATING_H::0x06	C:\fw\midicontroller\x002x\c_cnstdef.h	33;"	d	line:33
+EE_SYS_PWR_RATING_L::0x07	C:\fw\midicontroller\x002x\c_cnstdef.h	34;"	d	line:34
+EE_USB_ID_STRING::0x44	C:\fw\midicontroller\x002x\c_cnstdef.h	30;"	d	line:30
+EE_VBATT_MULTIPLIER::0x14	C:\fw\midicontroller\x002x\c_cnstdef.h	42;"	d	line:42
+EE_VRMS_MULTIPLIER::0x15	C:\fw\midicontroller\x002x\c_cnstdef.h	43;"	d	line:43
+EMERGENCY_POWER_OFF_BIT::1	C:\fw\midicontroller\x002x\c_portdef.h	71;"	d	line:71
+EMERGENCY_POWER_OFF_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	74;"	d	line:74
+EMERGENCY_POWER_OFF_LAT_BIT::LATBbits.LATB1	C:\fw\midicontroller\x002x\c_portdef.h	73;"	d	line:73
+EMERGENCY_POWER_OFF_PIN::PORTBbits.RB1	C:\fw\midicontroller\x002x\c_portdef.h	72;"	d	line:72
+EMERGENCY_POWER_OFF_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	75;"	d	line:75
+ENABLE_ALL_INTERRUPTS::\	C:\fw\midicontroller\x002x\_TOOLS.H	13;"	d	line:13
+ENABLE_ALL_INTERRUPTS::\	C:\fw\midicontroller\x002x\c_system.h	24;"	d	line:24
+ENDP0	C:\fw\midicontroller\x002x\c_18f4455.h	102;"	m	line:102
+ENDP1	C:\fw\midicontroller\x002x\c_18f4455.h	103;"	m	line:103
+ENDP2	C:\fw\midicontroller\x002x\c_18f4455.h	104;"	m	line:104
+ENDP3	C:\fw\midicontroller\x002x\c_18f4455.h	105;"	m	line:105
+END_RAMPING_LBC	C:\fw\midicontroller\x002x\loaddef.h	18;"	p	line:18	signature:(void)
+END_SHEDDING_LBC	C:\fw\midicontroller\x002x\loaddef.h	16;"	p	line:16	signature:(void)
+EP00_IN::((0x00<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	401;"	d	line:401
+EP00_OUT::((0x00<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	400;"	d	line:400
+EP01_IN::((0x01<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	403;"	d	line:403
+EP01_OUT::((0x01<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	402;"	d	line:402
+EP02_IN::((0x02<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	405;"	d	line:405
+EP02_OUT::((0x02<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	404;"	d	line:404
+EP03_IN::((0x03<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	407;"	d	line:407
+EP03_OUT::((0x03<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	406;"	d	line:406
+EP04_IN::((0x04<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	409;"	d	line:409
+EP04_OUT::((0x04<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	408;"	d	line:408
+EP05_IN::((0x05<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	411;"	d	line:411
+EP05_OUT::((0x05<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	410;"	d	line:410
+EP06_IN::((0x06<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	413;"	d	line:413
+EP06_OUT::((0x06<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	412;"	d	line:412
+EP07_IN::((0x07<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	415;"	d	line:415
+EP07_OUT::((0x07<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	414;"	d	line:414
+EP08_IN::((0x08<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	417;"	d	line:417
+EP08_OUT::((0x08<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	416;"	d	line:416
+EP09_IN::((0x09<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	419;"	d	line:419
+EP09_OUT::((0x09<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	418;"	d	line:418
+EP0_BUFF_SIZE::8	C:\fw\midicontroller\x002x\USBCFG.H	38;"	d	line:38
+EP10_IN::((0x0A<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	421;"	d	line:421
+EP10_OUT::((0x0A<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	420;"	d	line:420
+EP11_IN::((0x0B<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	423;"	d	line:423
+EP11_OUT::((0x0B<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	422;"	d	line:422
+EP12_IN::((0x0C<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	425;"	d	line:425
+EP12_OUT::((0x0C<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	424;"	d	line:424
+EP13_IN::((0x0D<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	427;"	d	line:427
+EP13_OUT::((0x0D<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	426;"	d	line:426
+EP14_IN::((0x0E<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	429;"	d	line:429
+EP14_OUT::((0x0E<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	428;"	d	line:428
+EP15_IN::((0x0F<<3)|(IN<<2))	C:\fw\midicontroller\x002x\USB.H	431;"	d	line:431
+EP15_OUT::((0x0F<<3)|(OUT<<2))	C:\fw\midicontroller\x002x\USB.H	430;"	d	line:430
+EP1Buffer	C:\fw\midicontroller\x002x\usbapplet.c	27;"	v	line:27
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	143;"	m	line:143
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	151;"	m	line:151
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	159;"	m	line:159
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	167;"	m	line:167
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	175;"	m	line:175
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	183;"	m	line:183
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	191;"	m	line:191
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	199;"	m	line:199
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	207;"	m	line:207
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	215;"	m	line:215
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	223;"	m	line:223
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	231;"	m	line:231
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	239;"	m	line:239
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	247;"	m	line:247
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	255;"	m	line:255
+EPCONDIS	C:\fw\midicontroller\x002x\c_18f4455.h	263;"	m	line:263
+EPDir	C:\fw\midicontroller\x002x\USB.H	301;"	m	line:301	struct:_CTRL_TRF_SETUP::<anonymous>
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	144;"	m	line:144
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	152;"	m	line:152
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	160;"	m	line:160
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	168;"	m	line:168
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	176;"	m	line:176
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	184;"	m	line:184
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	192;"	m	line:192
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	200;"	m	line:200
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	208;"	m	line:208
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	216;"	m	line:216
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	224;"	m	line:224
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	232;"	m	line:232
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	240;"	m	line:240
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	248;"	m	line:248
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	256;"	m	line:256
+EPHSHK	C:\fw\midicontroller\x002x\c_18f4455.h	264;"	m	line:264
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	141;"	m	line:141
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	149;"	m	line:149
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	157;"	m	line:157
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	165;"	m	line:165
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	173;"	m	line:173
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	181;"	m	line:181
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	189;"	m	line:189
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	197;"	m	line:197
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	205;"	m	line:205
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	213;"	m	line:213
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	221;"	m	line:221
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	229;"	m	line:229
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	237;"	m	line:237
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	245;"	m	line:245
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	253;"	m	line:253
+EPINEN	C:\fw\midicontroller\x002x\c_18f4455.h	261;"	m	line:261
+EPNum	C:\fw\midicontroller\x002x\USB.H	299;"	m	line:299	struct:_CTRL_TRF_SETUP::<anonymous>
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	142;"	m	line:142
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	150;"	m	line:150
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	158;"	m	line:158
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	166;"	m	line:166
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	174;"	m	line:174
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	182;"	m	line:182
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	190;"	m	line:190
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	198;"	m	line:198
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	206;"	m	line:206
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	214;"	m	line:214
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	222;"	m	line:222
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	230;"	m	line:230
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	238;"	m	line:238
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	246;"	m	line:246
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	254;"	m	line:254
+EPOUTEN	C:\fw\midicontroller\x002x\c_18f4455.h	262;"	m	line:262
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	140;"	m	line:140
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	148;"	m	line:148
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	156;"	m	line:156
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	164;"	m	line:164
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	172;"	m	line:172
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	180;"	m	line:180
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	188;"	m	line:188
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	196;"	m	line:196
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	204;"	m	line:204
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	212;"	m	line:212
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	220;"	m	line:220
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	228;"	m	line:228
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	236;"	m	line:236
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	244;"	m	line:244
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	252;"	m	line:252
+EPSTALL	C:\fw\midicontroller\x002x\c_18f4455.h	260;"	m	line:260
+EP_CTRL::0x06	C:\fw\midicontroller\x002x\USB.H	378;"	d	line:378
+EP_IN::0x0A	C:\fw\midicontroller\x002x\USB.H	380;"	d	line:380
+EP_OUT::0x0C	C:\fw\midicontroller\x002x\USB.H	379;"	d	line:379
+EP_OUT_IN::0x0E	C:\fw\midicontroller\x002x\USB.H	381;"	d	line:381
+Echo1Byte::	C:\fw\midicontroller\x002x\RS232.C	48;"	d	line:48	file:
+Echo2Bytes::CommEcho2Bytes=true;	C:\fw\midicontroller\x002x\RS232.C	49;"	d	line:49	file:
+Echo4Bytes::CommEcho4Bytes=true;	C:\fw\midicontroller\x002x\RS232.C	50;"	d	line:50	file:
+FAIL::FALSE	C:\fw\midicontroller\x002x\TYPEDEFS.H	153;"	d	line:153
+FALSE	C:\fw\midicontroller\x002x\TYPEDEFS.H	150;"	e	line:150	enum:_BOOL
+FAN_ON_BIT::2	C:\fw\midicontroller\x002x\c_portdef.h	78;"	d	line:78
+FAN_ON_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	81;"	d	line:81
+FAN_ON_LAT_BIT::LATBbits.LATB2	C:\fw\midicontroller\x002x\c_portdef.h	80;"	d	line:80
+FAN_ON_PIN::PORTBbits.RB2	C:\fw\midicontroller\x002x\c_portdef.h	79;"	d	line:79
+FAN_ON_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	82;"	d	line:82
+FERR	C:\fw\midicontroller\x002x\c_18f4455.h	644;"	m	line:644
+FLTS	C:\fw\midicontroller\x002x\c_18f4455.h	1074;"	m	line:1074
+FREE	C:\fw\midicontroller\x002x\c_18f4455.h	631;"	m	line:631
+FRM0	C:\fw\midicontroller\x002x\c_18f4455.h	42;"	m	line:42
+FRM1	C:\fw\midicontroller\x002x\c_18f4455.h	43;"	m	line:43
+FRM10	C:\fw\midicontroller\x002x\c_18f4455.h	55;"	m	line:55
+FRM2	C:\fw\midicontroller\x002x\c_18f4455.h	44;"	m	line:44
+FRM3	C:\fw\midicontroller\x002x\c_18f4455.h	45;"	m	line:45
+FRM4	C:\fw\midicontroller\x002x\c_18f4455.h	46;"	m	line:46
+FRM5	C:\fw\midicontroller\x002x\c_18f4455.h	47;"	m	line:47
+FRM6	C:\fw\midicontroller\x002x\c_18f4455.h	48;"	m	line:48
+FRM7	C:\fw\midicontroller\x002x\c_18f4455.h	49;"	m	line:49
+FRM8	C:\fw\midicontroller\x002x\c_18f4455.h	53;"	m	line:53
+FRM9	C:\fw\midicontroller\x002x\c_18f4455.h	54;"	m	line:54
+FSEN	C:\fw\midicontroller\x002x\c_18f4455.h	131;"	m	line:131
+FourBytes	C:\fw\midicontroller\x002x\_TOOLS.H	87;"	t	line:87
+GCEN	C:\fw\midicontroller\x002x\c_18f4455.h	875;"	m	line:875
+GET_MAX_DELAY_LBC	C:\fw\midicontroller\x002x\loaddef.h	14;"	p	line:14	signature:(void)
+GIE	C:\fw\midicontroller\x002x\c_18f4455.h	1176;"	m	line:1176
+GIEH	C:\fw\midicontroller\x002x\c_18f4455.h	1186;"	m	line:1186
+GIEL	C:\fw\midicontroller\x002x\c_18f4455.h	1185;"	m	line:1185
+GO	C:\fw\midicontroller\x002x\c_18f4455.h	856;"	m	line:856
+GO_DONE	C:\fw\midicontroller\x002x\c_18f4455.h	844;"	m	line:844
+HEADER_CHAR::0x7E	C:\fw\midicontroller\x002x\c_cnstdef.h	20;"	d	line:20
+HIDGetReportHandler	C:\fw\midicontroller\x002x\HID.C	45;"	p	line:45	file:	signature:(void)
+HIDGetReportHandler	C:\fw\midicontroller\x002x\RS232.C	45;"	p	line:45	file:	signature:(void)
+HIDGetReportHandler	C:\fw\midicontroller\x002x\usbapplet.c	17;"	f	line:17	signature:(void)
+HIDInitEP	C:\fw\midicontroller\x002x\HID.C	163;"	f	line:163	signature:(void)
+HIDRxReport	C:\fw\midicontroller\x002x\HID.C	274;"	f	line:274	signature:(char *buffer, byte len)
+HIDSetReportHandler	C:\fw\midicontroller\x002x\HID.C	46;"	p	line:46	file:	signature:(void)
+HIDSetReportHandler	C:\fw\midicontroller\x002x\USB.C	51;"	p	line:51	file:	signature:(void)
+HIDSetReportHandler	C:\fw\midicontroller\x002x\usbapplet.c	11;"	f	line:11	signature:(void)
+HIDTxReport	C:\fw\midicontroller\x002x\HID.C	219;"	f	line:219	signature:(char *buffer, byte len)
+HID_BD_IN::ep1Bi	C:\fw\midicontroller\x002x\USBCFG.H	87;"	d	line:87
+HID_BD_OUT::ep1Bo	C:\fw\midicontroller\x002x\USBCFG.H	85;"	d	line:85
+HID_INTF_ID::0x00	C:\fw\midicontroller\x002x\USBCFG.H	83;"	d	line:83
+HID_INT_IN_EP_SIZE::8	C:\fw\midicontroller\x002x\USBCFG.H	88;"	d	line:88
+HID_INT_OUT_EP_SIZE::8	C:\fw\midicontroller\x002x\USBCFG.H	86;"	d	line:86
+HID_NUM_OF_DSC::1	C:\fw\midicontroller\x002x\USBCFG.H	89;"	d	line:89
+HID_RPT_UPS_SIZE::112	C:\fw\midicontroller\x002x\USBCFG.H	91;"	d	line:91
+HID_UEP::UEP1	C:\fw\midicontroller\x002x\USBCFG.H	84;"	d	line:84
+HLVDEN	C:\fw\midicontroller\x002x\c_18f4455.h	1019;"	m	line:1019
+HLVDEN	C:\fw\midicontroller\x002x\c_18f4455.h	1051;"	m	line:1051
+HLVDIE	C:\fw\midicontroller\x002x\c_18f4455.h	588;"	m	line:588
+HLVDIF	C:\fw\midicontroller\x002x\c_18f4455.h	605;"	m	line:605
+HLVDIN	C:\fw\midicontroller\x002x\c_18f4455.h	295;"	m	line:295
+HLVDIP	C:\fw\midicontroller\x002x\c_18f4455.h	622;"	m	line:622
+HLVDL0	C:\fw\midicontroller\x002x\c_18f4455.h	1015;"	m	line:1015
+HLVDL0	C:\fw\midicontroller\x002x\c_18f4455.h	1047;"	m	line:1047
+HLVDL1	C:\fw\midicontroller\x002x\c_18f4455.h	1016;"	m	line:1016
+HLVDL1	C:\fw\midicontroller\x002x\c_18f4455.h	1048;"	m	line:1048
+HLVDL2	C:\fw\midicontroller\x002x\c_18f4455.h	1017;"	m	line:1017
+HLVDL2	C:\fw\midicontroller\x002x\c_18f4455.h	1049;"	m	line:1049
+HLVDL3	C:\fw\midicontroller\x002x\c_18f4455.h	1018;"	m	line:1018
+HLVDL3	C:\fw\midicontroller\x002x\c_18f4455.h	1050;"	m	line:1050
+HSHK_EN::0x10	C:\fw\midicontroller\x002x\USB.H	382;"	d	line:382
+HighB	C:\fw\midicontroller\x002x\TYPEDEFS.H	76;"	m	line:76	struct:_WORD::<anonymous>
+I2C_DAT	C:\fw\midicontroller\x002x\c_18f4455.h	905;"	m	line:905
+I2C_READ	C:\fw\midicontroller\x002x\c_18f4455.h	902;"	m	line:902
+I2C_START	C:\fw\midicontroller\x002x\c_18f4455.h	903;"	m	line:903
+I2C_STOP	C:\fw\midicontroller\x002x\c_18f4455.h	904;"	m	line:904
+IDLEIE	C:\fw\midicontroller\x002x\c_18f4455.h	73;"	m	line:73
+IDLEIF	C:\fw\midicontroller\x002x\c_18f4455.h	63;"	m	line:63
+IDLEN	C:\fw\midicontroller\x002x\c_18f4455.h	1070;"	m	line:1070
+IN::1	C:\fw\midicontroller\x002x\USB.H	395;"	d	line:395
+INCDIS	C:\fw\midicontroller\x002x\USBMMAP.H	88;"	m	line:88	struct:_BD_STAT::<anonymous>
+INDEX_DEVCHEM::0x04	C:\fw\midicontroller\x002x\USBDSC.H	53;"	d	line:53
+INDEX_MANUFACTURER::0x01	C:\fw\midicontroller\x002x\USBDSC.H	50;"	d	line:50
+INDEX_NAME::0x02	C:\fw\midicontroller\x002x\USBDSC.H	51;"	d	line:51
+INDEX_SERIALNUM::0x03	C:\fw\midicontroller\x002x\USBDSC.H	52;"	d	line:52
+INPUT::1	C:\fw\midicontroller\x002x\c_portdef.h	10;"	d	line:10
+INT0	C:\fw\midicontroller\x002x\c_18f4455.h	311;"	m	line:311
+INT0E	C:\fw\midicontroller\x002x\c_18f4455.h	1183;"	m	line:1183
+INT0F	C:\fw\midicontroller\x002x\c_18f4455.h	1180;"	m	line:1180
+INT0IE	C:\fw\midicontroller\x002x\c_18f4455.h	1173;"	m	line:1173
+INT0IF	C:\fw\midicontroller\x002x\c_18f4455.h	1170;"	m	line:1170
+INT1	C:\fw\midicontroller\x002x\c_18f4455.h	312;"	m	line:312
+INT1E	C:\fw\midicontroller\x002x\c_18f4455.h	1140;"	m	line:1140
+INT1F	C:\fw\midicontroller\x002x\c_18f4455.h	1137;"	m	line:1137
+INT1IE	C:\fw\midicontroller\x002x\c_18f4455.h	1130;"	m	line:1130
+INT1IF	C:\fw\midicontroller\x002x\c_18f4455.h	1127;"	m	line:1127
+INT1IP	C:\fw\midicontroller\x002x\c_18f4455.h	1133;"	m	line:1133
+INT1P	C:\fw\midicontroller\x002x\c_18f4455.h	1143;"	m	line:1143
+INT2	C:\fw\midicontroller\x002x\c_18f4455.h	313;"	m	line:313
+INT2E	C:\fw\midicontroller\x002x\c_18f4455.h	1141;"	m	line:1141
+INT2F	C:\fw\midicontroller\x002x\c_18f4455.h	1138;"	m	line:1138
+INT2IE	C:\fw\midicontroller\x002x\c_18f4455.h	1131;"	m	line:1131
+INT2IF	C:\fw\midicontroller\x002x\c_18f4455.h	1128;"	m	line:1128
+INT2IP	C:\fw\midicontroller\x002x\c_18f4455.h	1134;"	m	line:1134
+INT2P	C:\fw\midicontroller\x002x\c_18f4455.h	1144;"	m	line:1144
+INTEDG0	C:\fw\midicontroller\x002x\c_18f4455.h	1156;"	m	line:1156
+INTEDG1	C:\fw\midicontroller\x002x\c_18f4455.h	1155;"	m	line:1155
+INTEDG2	C:\fw\midicontroller\x002x\c_18f4455.h	1154;"	m	line:1154
+INTSAVELOCS::TBLPTR,TABLAT,PROD	C:\fw\midicontroller\x002x\c_18f4455.h	1242;"	d	line:1242
+INTSRC	C:\fw\midicontroller\x002x\c_18f4455.h	539;"	m	line:539
+INVALID_REQUEST::0xff	C:\fw\midicontroller\x002x\RS232.C	21;"	d	line:21	file:
+INVERTER_CURRENT_LIMIT_BIT::0	C:\fw\midicontroller\x002x\c_portdef.h	64;"	d	line:64
+INVERTER_CURRENT_LIMIT_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	67;"	d	line:67
+INVERTER_CURRENT_LIMIT_LAT_BIT::LATBbits.LATB0	C:\fw\midicontroller\x002x\c_portdef.h	66;"	d	line:66
+INVERTER_CURRENT_LIMIT_PIN::PORTBbits.RB0	C:\fw\midicontroller\x002x\c_portdef.h	65;"	d	line:65
+INVERTER_CURRENT_LIMIT_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	68;"	d	line:68
+INVERTER_ON_BIT::5	C:\fw\midicontroller\x002x\c_portdef.h	237;"	d	line:237
+INVERTER_ON_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	240;"	d	line:240
+INVERTER_ON_LAT_BIT::LATDbits.LATD5	C:\fw\midicontroller\x002x\c_portdef.h	239;"	d	line:239
+INVERTER_ON_PIN::PORTDbits.RD5	C:\fw\midicontroller\x002x\c_portdef.h	238;"	d	line:238
+INVERTER_ON_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	241;"	d	line:241
+INVERTER_PHASE_A_BIT::0	C:\fw\midicontroller\x002x\c_portdef.h	195;"	d	line:195
+INVERTER_PHASE_A_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	198;"	d	line:198
+INVERTER_PHASE_A_LAT_BIT::LATDbits.LATD0	C:\fw\midicontroller\x002x\c_portdef.h	197;"	d	line:197
+INVERTER_PHASE_A_PIN::PORTDbits.RD0	C:\fw\midicontroller\x002x\c_portdef.h	196;"	d	line:196
+INVERTER_PHASE_A_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	199;"	d	line:199
+INVERTER_PWM_BIT::1	C:\fw\midicontroller\x002x\c_portdef.h	147;"	d	line:147
+INVERTER_PWM_LAT::LATC	C:\fw\midicontroller\x002x\c_portdef.h	150;"	d	line:150
+INVERTER_PWM_LAT_BIT::LATCbits.LATC1	C:\fw\midicontroller\x002x\c_portdef.h	149;"	d	line:149
+INVERTER_PWM_PIN::PORTCbits.RC1	C:\fw\midicontroller\x002x\c_portdef.h	148;"	d	line:148
+INVERTER_PWM_PORT::PORTC	C:\fw\midicontroller\x002x\c_portdef.h	151;"	d	line:151
+IOFS	C:\fw\midicontroller\x002x\c_18f4455.h	1065;"	m	line:1065
+IPEN	C:\fw\midicontroller\x002x\c_18f4455.h	984;"	m	line:984
+IRCF0	C:\fw\midicontroller\x002x\c_18f4455.h	1067;"	m	line:1067
+IRCF1	C:\fw\midicontroller\x002x\c_18f4455.h	1068;"	m	line:1068
+IRCF2	C:\fw\midicontroller\x002x\c_18f4455.h	1069;"	m	line:1069
+IRVST	C:\fw\midicontroller\x002x\c_18f4455.h	1004;"	m	line:1004
+IRVST	C:\fw\midicontroller\x002x\c_18f4455.h	1036;"	m	line:1036
+IVRST	C:\fw\midicontroller\x002x\c_18f4455.h	1025;"	m	line:1025
+IVRST	C:\fw\midicontroller\x002x\c_18f4455.h	1057;"	m	line:1057
+InputDataPointer	C:\fw\midicontroller\x002x\usbapplet.c	32;"	v	line:32
+InterruptHandlerHigh	C:\fw\midicontroller\x002x\c_system.h	32;"	p	line:32	signature:(void)
+InterruptHandlerHigh	C:\fw\midicontroller\x002x\intslct.c	33;"	f	line:33
+InterruptVectorHigh	C:\fw\midicontroller\x002x\intslct.c	18;"	f	line:18	signature:(void)
+KEEP_ALIVE_BIT::4	C:\fw\midicontroller\x002x\c_portdef.h	229;"	d	line:229
+KEEP_ALIVE_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	232;"	d	line:232
+KEEP_ALIVE_LAT_BIT::LATDbits.LATD4	C:\fw\midicontroller\x002x\c_portdef.h	231;"	d	line:231
+KEEP_ALIVE_PIN::PORTDbits.RD4	C:\fw\midicontroller\x002x\c_portdef.h	230;"	d	line:230
+KEEP_ALIVE_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	233;"	d	line:233
+KEN	C:\fw\midicontroller\x002x\USBMMAP.H	89;"	m	line:89	struct:_BD_STAT::<anonymous>
+LATA0	C:\fw\midicontroller\x002x\c_18f4455.h	392;"	m	line:392
+LATA1	C:\fw\midicontroller\x002x\c_18f4455.h	393;"	m	line:393
+LATA2	C:\fw\midicontroller\x002x\c_18f4455.h	394;"	m	line:394
+LATA3	C:\fw\midicontroller\x002x\c_18f4455.h	395;"	m	line:395
+LATA4	C:\fw\midicontroller\x002x\c_18f4455.h	396;"	m	line:396
+LATA5	C:\fw\midicontroller\x002x\c_18f4455.h	397;"	m	line:397
+LATA6	C:\fw\midicontroller\x002x\c_18f4455.h	398;"	m	line:398
+LATB0	C:\fw\midicontroller\x002x\c_18f4455.h	402;"	m	line:402
+LATB1	C:\fw\midicontroller\x002x\c_18f4455.h	403;"	m	line:403
+LATB2	C:\fw\midicontroller\x002x\c_18f4455.h	404;"	m	line:404
+LATB3	C:\fw\midicontroller\x002x\c_18f4455.h	405;"	m	line:405
+LATB4	C:\fw\midicontroller\x002x\c_18f4455.h	406;"	m	line:406
+LATB5	C:\fw\midicontroller\x002x\c_18f4455.h	407;"	m	line:407
+LATB6	C:\fw\midicontroller\x002x\c_18f4455.h	408;"	m	line:408
+LATB7	C:\fw\midicontroller\x002x\c_18f4455.h	409;"	m	line:409
+LATC0	C:\fw\midicontroller\x002x\c_18f4455.h	413;"	m	line:413
+LATC1	C:\fw\midicontroller\x002x\c_18f4455.h	414;"	m	line:414
+LATC2	C:\fw\midicontroller\x002x\c_18f4455.h	415;"	m	line:415
+LATC6	C:\fw\midicontroller\x002x\c_18f4455.h	417;"	m	line:417
+LATC7	C:\fw\midicontroller\x002x\c_18f4455.h	418;"	m	line:418
+LATD0	C:\fw\midicontroller\x002x\c_18f4455.h	422;"	m	line:422
+LATD1	C:\fw\midicontroller\x002x\c_18f4455.h	423;"	m	line:423
+LATD2	C:\fw\midicontroller\x002x\c_18f4455.h	424;"	m	line:424
+LATD3	C:\fw\midicontroller\x002x\c_18f4455.h	425;"	m	line:425
+LATD4	C:\fw\midicontroller\x002x\c_18f4455.h	426;"	m	line:426
+LATD5	C:\fw\midicontroller\x002x\c_18f4455.h	427;"	m	line:427
+LATD6	C:\fw\midicontroller\x002x\c_18f4455.h	428;"	m	line:428
+LATD7	C:\fw\midicontroller\x002x\c_18f4455.h	429;"	m	line:429
+LATE0	C:\fw\midicontroller\x002x\c_18f4455.h	433;"	m	line:433
+LATE1	C:\fw\midicontroller\x002x\c_18f4455.h	434;"	m	line:434
+LATE2	C:\fw\midicontroller\x002x\c_18f4455.h	435;"	m	line:435
+LCR_BIT::1	C:\fw\midicontroller\x002x\c_portdef.h	202;"	d	line:202
+LCR_FDBCK_BIT::4	C:\fw\midicontroller\x002x\c_portdef.h	223;"	d	line:223
+LCR_FDBCK_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	226;"	d	line:226
+LCR_FDBCK_LAT_BIT::LATDbits.LATD4	C:\fw\midicontroller\x002x\c_portdef.h	225;"	d	line:225
+LCR_FDBCK_PIN::PORTDbits.RD4	C:\fw\midicontroller\x002x\c_portdef.h	224;"	d	line:224
+LCR_FDBCK_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	227;"	d	line:227
+LCR_FDBCK_TRIS::TRISD,4	C:\fw\midicontroller\x002x\c_portdef.h	235;"	d	line:235
+LCR_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	205;"	d	line:205
+LCR_LAT_BIT::LATDbits.LATD1	C:\fw\midicontroller\x002x\c_portdef.h	204;"	d	line:204
+LCR_PIN::PORTDbits.RD1	C:\fw\midicontroller\x002x\c_portdef.h	203;"	d	line:203
+LCR_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	206;"	d	line:206
+LINE_SENSITIVITY_BIT::0	C:\fw\midicontroller\x002x\c_portdef.h	261;"	d	line:261
+LINE_SENSITIVITY_LAT::LATE	C:\fw\midicontroller\x002x\c_portdef.h	264;"	d	line:264
+LINE_SENSITIVITY_LAT_BIT::LATEbits.LATE0	C:\fw\midicontroller\x002x\c_portdef.h	263;"	d	line:263
+LINE_SENSITIVITY_PIN::PORTEbits.RE0	C:\fw\midicontroller\x002x\c_portdef.h	262;"	d	line:262
+LINE_SENSITIVITY_PORT::PORTE	C:\fw\midicontroller\x002x\c_portdef.h	265;"	d	line:265
+LOAD_BANK1_OFF_BIT::6	C:\fw\midicontroller\x002x\c_portdef.h	111;"	d	line:111
+LOAD_BANK1_OFF_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	114;"	d	line:114
+LOAD_BANK1_OFF_LAT_BIT::LATBbits.LATB6	C:\fw\midicontroller\x002x\c_portdef.h	113;"	d	line:113
+LOAD_BANK1_OFF_PIN::PORTBbits.RB6	C:\fw\midicontroller\x002x\c_portdef.h	112;"	d	line:112
+LOAD_BANK1_OFF_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	115;"	d	line:115
+LOAD_BANK2_OFF_BIT::4	C:\fw\midicontroller\x002x\c_portdef.h	47;"	d	line:47
+LOAD_BANK2_OFF_LAT::LATA	C:\fw\midicontroller\x002x\c_portdef.h	50;"	d	line:50
+LOAD_BANK2_OFF_LAT_BIT::LATAbits.LATA4	C:\fw\midicontroller\x002x\c_portdef.h	49;"	d	line:49
+LOAD_BANK2_OFF_PIN::PORTAbits.RA4	C:\fw\midicontroller\x002x\c_portdef.h	48;"	d	line:48
+LOAD_BANK2_OFF_PORT::PORTA	C:\fw\midicontroller\x002x\c_portdef.h	51;"	d	line:51
+LOAD_BANK3_OFF_BIT::0	C:\fw\midicontroller\x002x\c_portdef.h	134;"	d	line:134
+LOAD_BANK3_OFF_LAT::LATC	C:\fw\midicontroller\x002x\c_portdef.h	137;"	d	line:137
+LOAD_BANK3_OFF_LAT_BIT::LATCbits.LATC0	C:\fw\midicontroller\x002x\c_portdef.h	136;"	d	line:136
+LOAD_BANK3_OFF_PIN::PORTCbits.RC0	C:\fw\midicontroller\x002x\c_portdef.h	135;"	d	line:135
+LOAD_BANK3_OFF_PORT::PORTC	C:\fw\midicontroller\x002x\c_portdef.h	138;"	d	line:138
+LOAD_CURRENT_BIT::5	C:\fw\midicontroller\x002x\c_portdef.h	54;"	d	line:54
+LOAD_CURRENT_LAT::LATA	C:\fw\midicontroller\x002x\c_portdef.h	57;"	d	line:57
+LOAD_CURRENT_LAT_BIT::LATAbits.LATA5	C:\fw\midicontroller\x002x\c_portdef.h	56;"	d	line:56
+LOAD_CURRENT_PIN::PORTAbits.RA5	C:\fw\midicontroller\x002x\c_portdef.h	55;"	d	line:55
+LOAD_CURRENT_PORT::PORTA	C:\fw\midicontroller\x002x\c_portdef.h	58;"	d	line:58
+LOAD_RAMP_ROUTINE	C:\fw\midicontroller\x002x\loaddef.h	12;"	p	line:12	signature:(void)
+LOAD_SHED_ROUTINE	C:\fw\midicontroller\x002x\loaddef.h	11;"	p	line:11	signature:(void)
+LOWER_LSB::(a)((a).v[0])	C:\fw\midicontroller\x002x\TYPEDEFS.H	118;"	d	line:118
+LOWER_MSB::(a)((a).v[1])	C:\fw\midicontroller\x002x\TYPEDEFS.H	119;"	d	line:119
+LRC_REBOOT::0	C:\fw\midicontroller\x002x\loaddef.h	35;"	d	line:35
+LRC_TURN_OFF::2	C:\fw\midicontroller\x002x\loaddef.h	37;"	d	line:37
+LRC_TURN_ON::1	C:\fw\midicontroller\x002x\loaddef.h	36;"	d	line:36
+LSB::(a)((a).v[0])	C:\fw\midicontroller\x002x\TYPEDEFS.H	83;"	d	line:83
+LVDEN	C:\fw\midicontroller\x002x\c_18f4455.h	1003;"	m	line:1003
+LVDEN	C:\fw\midicontroller\x002x\c_18f4455.h	1035;"	m	line:1035
+LVDIE	C:\fw\midicontroller\x002x\c_18f4455.h	579;"	m	line:579
+LVDIF	C:\fw\midicontroller\x002x\c_18f4455.h	596;"	m	line:596
+LVDIN	C:\fw\midicontroller\x002x\c_18f4455.h	291;"	m	line:291
+LVDIP	C:\fw\midicontroller\x002x\c_18f4455.h	613;"	m	line:613
+LVDL0	C:\fw\midicontroller\x002x\c_18f4455.h	1031;"	m	line:1031
+LVDL0	C:\fw\midicontroller\x002x\c_18f4455.h	999;"	m	line:999
+LVDL1	C:\fw\midicontroller\x002x\c_18f4455.h	1000;"	m	line:1000
+LVDL1	C:\fw\midicontroller\x002x\c_18f4455.h	1032;"	m	line:1032
+LVDL2	C:\fw\midicontroller\x002x\c_18f4455.h	1001;"	m	line:1001
+LVDL2	C:\fw\midicontroller\x002x\c_18f4455.h	1033;"	m	line:1033
+LVDL3	C:\fw\midicontroller\x002x\c_18f4455.h	1002;"	m	line:1002
+LVDL3	C:\fw\midicontroller\x002x\c_18f4455.h	1034;"	m	line:1034
+LVV0	C:\fw\midicontroller\x002x\c_18f4455.h	1007;"	m	line:1007
+LVV0	C:\fw\midicontroller\x002x\c_18f4455.h	1039;"	m	line:1039
+LVV1	C:\fw\midicontroller\x002x\c_18f4455.h	1008;"	m	line:1008
+LVV1	C:\fw\midicontroller\x002x\c_18f4455.h	1040;"	m	line:1040
+LVV2	C:\fw\midicontroller\x002x\c_18f4455.h	1009;"	m	line:1009
+LVV2	C:\fw\midicontroller\x002x\c_18f4455.h	1041;"	m	line:1041
+LVV3	C:\fw\midicontroller\x002x\c_18f4455.h	1010;"	m	line:1010
+LVV3	C:\fw\midicontroller\x002x\c_18f4455.h	1042;"	m	line:1042
+LoadRampDelaysFromNVR	C:\fw\midicontroller\x002x\loaddef.h	28;"	p	line:28	signature:(void)
+LoadShedDelaysFromNVR	C:\fw\midicontroller\x002x\loaddef.h	29;"	p	line:29	signature:(void)
+LowB	C:\fw\midicontroller\x002x\TYPEDEFS.H	75;"	m	line:75	struct:_WORD::<anonymous>
+MASTER_RELAY_BIT::2	C:\fw\midicontroller\x002x\c_portdef.h	209;"	d	line:209
+MASTER_RELAY_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	212;"	d	line:212
+MASTER_RELAY_LAT_BIT::LATDbits.LATD2	C:\fw\midicontroller\x002x\c_portdef.h	211;"	d	line:211
+MASTER_RELAY_PIN::PORTDbits.RD2	C:\fw\midicontroller\x002x\c_portdef.h	210;"	d	line:210
+MASTER_RELAY_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	213;"	d	line:213
+MAX_EP_NUMBER::1	C:\fw\midicontroller\x002x\USBCFG.H	114;"	d	line:114
+MAX_NUM_INT::1	C:\fw\midicontroller\x002x\USBCFG.H	39;"	d	line:39
+MAX_RX_LENGTH::9	C:\fw\midicontroller\x002x\c_cnstdef.h	17;"	d	line:17
+MAX_TX_LENGTH::64	C:\fw\midicontroller\x002x\c_cnstdef.h	18;"	d	line:18
+MODE_PP::_PPBM0	C:\fw\midicontroller\x002x\USBCFG.H	42;"	d	line:42
+MSB::(a)((a).v[1])	C:\fw\midicontroller\x002x\TYPEDEFS.H	84;"	d	line:84
+MUID_CDC::3	C:\fw\midicontroller\x002x\USBCFG.H	72;"	d	line:72
+MUID_HID::2	C:\fw\midicontroller\x002x\USBCFG.H	71;"	d	line:71
+MUID_NULL::0	C:\fw\midicontroller\x002x\USBCFG.H	69;"	d	line:69
+MUID_USB9::1	C:\fw\midicontroller\x002x\USBCFG.H	70;"	d	line:70
+MfrString	C:\fw\midicontroller\x002x\usbdescript.c	249;"	v	line:249
+MinDelayOnLoadCntrlCheck	C:\fw\midicontroller\x002x\loaddef.h	25;"	p	line:25	signature:(void)
+N	C:\fw\midicontroller\x002x\c_18f4455.h	1096;"	m	line:1096
+NOT_A	C:\fw\midicontroller\x002x\c_18f4455.h	911;"	m	line:911
+NOT_ADDRESS	C:\fw\midicontroller\x002x\c_18f4455.h	917;"	m	line:917
+NOT_BOR	C:\fw\midicontroller\x002x\c_18f4455.h	968;"	m	line:968
+NOT_DONE	C:\fw\midicontroller\x002x\c_18f4455.h	860;"	m	line:860
+NOT_IPEN	C:\fw\midicontroller\x002x\c_18f4455.h	975;"	m	line:975
+NOT_PD	C:\fw\midicontroller\x002x\c_18f4455.h	970;"	m	line:970
+NOT_POR	C:\fw\midicontroller\x002x\c_18f4455.h	969;"	m	line:969
+NOT_RBPU	C:\fw\midicontroller\x002x\c_18f4455.h	1157;"	m	line:1157
+NOT_RI	C:\fw\midicontroller\x002x\c_18f4455.h	972;"	m	line:972
+NOT_T1SYNC	C:\fw\midicontroller\x002x\c_18f4455.h	960;"	m	line:960
+NOT_T3SYNC	C:\fw\midicontroller\x002x\c_18f4455.h	689;"	m	line:689
+NOT_TO	C:\fw\midicontroller\x002x\c_18f4455.h	971;"	m	line:971
+NOT_W	C:\fw\midicontroller\x002x\c_18f4455.h	909;"	m	line:909
+NOT_WRITE	C:\fw\midicontroller\x002x\c_18f4455.h	915;"	m	line:915
+NUMBER_OF_LOAD_BANKS::3	C:\fw\midicontroller\x002x\loaddef.h	38;"	d	line:38
+NVRCommAddr	C:\fw\midicontroller\x002x\RAM_DEF.C	28;"	v	line:28
+Nop::{_asmnop_endasm}	C:\fw\midicontroller\x002x\c_18f4455.h	1227;"	d	line:1227
+NumBytes	C:\fw\midicontroller\x002x\usbapplet.c	35;"	l	line:35
+OERR	C:\fw\midicontroller\x002x\c_18f4455.h	643;"	m	line:643
+OESPP	C:\fw\midicontroller\x002x\c_18f4455.h	387;"	m	line:387
+OK::TRUE	C:\fw\midicontroller\x002x\TYPEDEFS.H	152;"	d	line:152
+OMNI_RELAY_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	125;"	d	line:125
+OMNI_RELAY_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	126;"	d	line:126
+ON_OFF_SWITCH_BIT::6	C:\fw\midicontroller\x002x\c_portdef.h	244;"	d	line:244
+ON_OFF_SWITCH_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	247;"	d	line:247
+ON_OFF_SWITCH_LAT_BIT::LATDbits.LATD6	C:\fw\midicontroller\x002x\c_portdef.h	246;"	d	line:246
+ON_OFF_SWITCH_PIN::PORTDbits.RD6	C:\fw\midicontroller\x002x\c_portdef.h	245;"	d	line:245
+ON_OFF_SWITCH_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	248;"	d	line:248
+OSC2	C:\fw\midicontroller\x002x\c_18f4455.h	284;"	m	line:284
+OSCFIE	C:\fw\midicontroller\x002x\c_18f4455.h	584;"	m	line:584
+OSCFIF	C:\fw\midicontroller\x002x\c_18f4455.h	601;"	m	line:601
+OSCFIP	C:\fw\midicontroller\x002x\c_18f4455.h	618;"	m	line:618
+OSTS	C:\fw\midicontroller\x002x\c_18f4455.h	1066;"	m	line:1066
+OUT::0	C:\fw\midicontroller\x002x\USB.H	394;"	d	line:394
+OUTPUT::0	C:\fw\midicontroller\x002x\c_portdef.h	11;"	d	line:11
+OV	C:\fw\midicontroller\x002x\c_18f4455.h	1095;"	m	line:1095
+P	C:\fw\midicontroller\x002x\c_18f4455.h	895;"	m	line:895
+P1A	C:\fw\midicontroller\x002x\c_18f4455.h	345;"	m	line:345
+P1M0	C:\fw\midicontroller\x002x\c_18f4455.h	803;"	m	line:803
+P1M0	C:\fw\midicontroller\x002x\c_18f4455.h	814;"	m	line:814
+P1M1	C:\fw\midicontroller\x002x\c_18f4455.h	804;"	m	line:804
+P1M1	C:\fw\midicontroller\x002x\c_18f4455.h	815;"	m	line:815
+P1_CONFDESC_LEN::34	C:\fw\midicontroller\x002x\USBDSC.H	62;"	d	line:62
+P1_REPTDESC_LEN	C:\fw\midicontroller\x002x\USBDSC.H	63;"	d	line:63
+PCFG0	C:\fw\midicontroller\x002x\c_18f4455.h	833;"	m	line:833
+PCFG1	C:\fw\midicontroller\x002x\c_18f4455.h	834;"	m	line:834
+PCFG2	C:\fw\midicontroller\x002x\c_18f4455.h	835;"	m	line:835
+PCFG3	C:\fw\midicontroller\x002x\c_18f4455.h	836;"	m	line:836
+PD	C:\fw\midicontroller\x002x\c_18f4455.h	980;"	m	line:980
+PDC0	C:\fw\midicontroller\x002x\c_18f4455.h	746;"	m	line:746
+PDC0	C:\fw\midicontroller\x002x\c_18f4455.h	757;"	m	line:757
+PDC1	C:\fw\midicontroller\x002x\c_18f4455.h	747;"	m	line:747
+PDC1	C:\fw\midicontroller\x002x\c_18f4455.h	758;"	m	line:758
+PDC2	C:\fw\midicontroller\x002x\c_18f4455.h	748;"	m	line:748
+PDC2	C:\fw\midicontroller\x002x\c_18f4455.h	759;"	m	line:759
+PDC3	C:\fw\midicontroller\x002x\c_18f4455.h	749;"	m	line:749
+PDC3	C:\fw\midicontroller\x002x\c_18f4455.h	760;"	m	line:760
+PDC4	C:\fw\midicontroller\x002x\c_18f4455.h	750;"	m	line:750
+PDC4	C:\fw\midicontroller\x002x\c_18f4455.h	761;"	m	line:761
+PDC5	C:\fw\midicontroller\x002x\c_18f4455.h	751;"	m	line:751
+PDC5	C:\fw\midicontroller\x002x\c_18f4455.h	762;"	m	line:762
+PDC6	C:\fw\midicontroller\x002x\c_18f4455.h	752;"	m	line:752
+PDC6	C:\fw\midicontroller\x002x\c_18f4455.h	763;"	m	line:763
+PEIE	C:\fw\midicontroller\x002x\c_18f4455.h	1175;"	m	line:1175
+PEN	C:\fw\midicontroller\x002x\c_18f4455.h	870;"	m	line:870
+PGC	C:\fw\midicontroller\x002x\c_18f4455.h	318;"	m	line:318
+PGD	C:\fw\midicontroller\x002x\c_18f4455.h	319;"	m	line:319
+PGM	C:\fw\midicontroller\x002x\c_18f4455.h	317;"	m	line:317
+PIC_EP_DIR_MASK::0b00000100	C:\fw\midicontroller\x002x\USB.H	398;"	d	line:398
+PIC_EP_NUM_MASK::0b01111000	C:\fw\midicontroller\x002x\USB.H	397;"	d	line:397
+PID	C:\fw\midicontroller\x002x\USBMMAP.H	105;"	m	line:105	struct:_BD_STAT::<anonymous>
+PID0	C:\fw\midicontroller\x002x\USBMMAP.H	96;"	m	line:96	struct:_BD_STAT::<anonymous>
+PID1	C:\fw\midicontroller\x002x\USBMMAP.H	97;"	m	line:97	struct:_BD_STAT::<anonymous>
+PID2	C:\fw\midicontroller\x002x\USBMMAP.H	98;"	m	line:98	struct:_BD_STAT::<anonymous>
+PID3	C:\fw\midicontroller\x002x\USBMMAP.H	99;"	m	line:99	struct:_BD_STAT::<anonymous>
+PIDEE	C:\fw\midicontroller\x002x\c_18f4455.h	89;"	m	line:89
+PIDEF	C:\fw\midicontroller\x002x\c_18f4455.h	79;"	m	line:79
+PKTDIS	C:\fw\midicontroller\x002x\c_18f4455.h	113;"	m	line:113
+POINTER	C:\fw\midicontroller\x002x\TYPEDEFS.H	148;"	t	line:148
+POLLING_COMMAND::0x03	C:\fw\midicontroller\x002x\c_cnstdef.h	23;"	d	line:23
+POLLING_INTERVAL::40	C:\fw\midicontroller\x002x\usbdescript.c	172;"	d	line:172	file:
+POR	C:\fw\midicontroller\x002x\c_18f4455.h	979;"	m	line:979
+POWERED_STATE::2	C:\fw\midicontroller\x002x\USBMMAP.H	59;"	d	line:59
+PPB0	C:\fw\midicontroller\x002x\c_18f4455.h	129;"	m	line:129
+PPB1	C:\fw\midicontroller\x002x\c_18f4455.h	130;"	m	line:130
+PPBI	C:\fw\midicontroller\x002x\c_18f4455.h	100;"	m	line:100
+PPBRST	C:\fw\midicontroller\x002x\c_18f4455.h	115;"	m	line:115
+PROCESS_COMM_REQUEST	C:\fw\midicontroller\x002x\RS232.C	72;"	f	line:72	signature:(void)
+PROCESS_COMM_REQUEST	C:\fw\midicontroller\x002x\c_system.h	21;"	p	line:21	signature:(void)
+PROCESS_COMM_REQUEST	C:\fw\midicontroller\x002x\usbapplet.c	8;"	p	line:8	file:	signature:(void)
+PRODUCTION_TEST_PROTOCOL::0x0003	C:\fw\midicontroller\x002x\RS232.C	22;"	d	line:22	file:
+PRSEN	C:\fw\midicontroller\x002x\c_18f4455.h	753;"	m	line:753
+PRSEN	C:\fw\midicontroller\x002x\c_18f4455.h	764;"	m	line:764
+PSA	C:\fw\midicontroller\x002x\c_18f4455.h	1082;"	m	line:1082
+PSSAC0	C:\fw\midicontroller\x002x\c_18f4455.h	726;"	m	line:726
+PSSAC0	C:\fw\midicontroller\x002x\c_18f4455.h	737;"	m	line:737
+PSSAC1	C:\fw\midicontroller\x002x\c_18f4455.h	727;"	m	line:727
+PSSAC1	C:\fw\midicontroller\x002x\c_18f4455.h	738;"	m	line:738
+PSSBD0	C:\fw\midicontroller\x002x\c_18f4455.h	724;"	m	line:724
+PSSBD0	C:\fw\midicontroller\x002x\c_18f4455.h	735;"	m	line:735
+PSSBD1	C:\fw\midicontroller\x002x\c_18f4455.h	725;"	m	line:725
+PSSBD1	C:\fw\midicontroller\x002x\c_18f4455.h	736;"	m	line:736
+PrdString	C:\fw\midicontroller\x002x\usbdescript.c	259;"	v	line:259
+ProcessCommRequest::CommFlags1.bit0	C:\fw\midicontroller\x002x\C_RAMDEF.H	39;"	d	line:39
+ProcessLoadControl	C:\fw\midicontroller\x002x\loaddef.h	27;"	p	line:27	signature:(void)
+R	C:\fw\midicontroller\x002x\c_18f4455.h	927;"	m	line:927
+RA0	C:\fw\midicontroller\x002x\c_18f4455.h	269;"	m	line:269
+RA0	C:\fw\midicontroller\x002x\c_18f4455.h	439;"	m	line:439
+RA1	C:\fw\midicontroller\x002x\c_18f4455.h	270;"	m	line:270
+RA1	C:\fw\midicontroller\x002x\c_18f4455.h	440;"	m	line:440
+RA2	C:\fw\midicontroller\x002x\c_18f4455.h	271;"	m	line:271
+RA2	C:\fw\midicontroller\x002x\c_18f4455.h	441;"	m	line:441
+RA3	C:\fw\midicontroller\x002x\c_18f4455.h	272;"	m	line:272
+RA3	C:\fw\midicontroller\x002x\c_18f4455.h	442;"	m	line:442
+RA4	C:\fw\midicontroller\x002x\c_18f4455.h	273;"	m	line:273
+RA4	C:\fw\midicontroller\x002x\c_18f4455.h	443;"	m	line:443
+RA5	C:\fw\midicontroller\x002x\c_18f4455.h	274;"	m	line:274
+RA5	C:\fw\midicontroller\x002x\c_18f4455.h	444;"	m	line:444
+RA6	C:\fw\midicontroller\x002x\c_18f4455.h	275;"	m	line:275
+RA6	C:\fw\midicontroller\x002x\c_18f4455.h	445;"	m	line:445
+RAMCommAddr	C:\fw\midicontroller\x002x\RAM_DEF.C	29;"	v	line:29
+RB0	C:\fw\midicontroller\x002x\c_18f4455.h	301;"	m	line:301
+RB0	C:\fw\midicontroller\x002x\c_18f4455.h	459;"	m	line:459
+RB1	C:\fw\midicontroller\x002x\c_18f4455.h	302;"	m	line:302
+RB1	C:\fw\midicontroller\x002x\c_18f4455.h	460;"	m	line:460
+RB2	C:\fw\midicontroller\x002x\c_18f4455.h	303;"	m	line:303
+RB2	C:\fw\midicontroller\x002x\c_18f4455.h	461;"	m	line:461
+RB3	C:\fw\midicontroller\x002x\c_18f4455.h	304;"	m	line:304
+RB3	C:\fw\midicontroller\x002x\c_18f4455.h	462;"	m	line:462
+RB4	C:\fw\midicontroller\x002x\c_18f4455.h	305;"	m	line:305
+RB4	C:\fw\midicontroller\x002x\c_18f4455.h	463;"	m	line:463
+RB5	C:\fw\midicontroller\x002x\c_18f4455.h	306;"	m	line:306
+RB5	C:\fw\midicontroller\x002x\c_18f4455.h	464;"	m	line:464
+RB6	C:\fw\midicontroller\x002x\c_18f4455.h	307;"	m	line:307
+RB6	C:\fw\midicontroller\x002x\c_18f4455.h	465;"	m	line:465
+RB7	C:\fw\midicontroller\x002x\c_18f4455.h	308;"	m	line:308
+RB7	C:\fw\midicontroller\x002x\c_18f4455.h	466;"	m	line:466
+RBIE	C:\fw\midicontroller\x002x\c_18f4455.h	1172;"	m	line:1172
+RBIF	C:\fw\midicontroller\x002x\c_18f4455.h	1169;"	m	line:1169
+RBIP	C:\fw\midicontroller\x002x\c_18f4455.h	1150;"	m	line:1150
+RBPU	C:\fw\midicontroller\x002x\c_18f4455.h	1163;"	m	line:1163
+RC0	C:\fw\midicontroller\x002x\c_18f4455.h	325;"	m	line:325
+RC0	C:\fw\midicontroller\x002x\c_18f4455.h	481;"	m	line:481
+RC1	C:\fw\midicontroller\x002x\c_18f4455.h	326;"	m	line:326
+RC1	C:\fw\midicontroller\x002x\c_18f4455.h	482;"	m	line:482
+RC2	C:\fw\midicontroller\x002x\c_18f4455.h	327;"	m	line:327
+RC2	C:\fw\midicontroller\x002x\c_18f4455.h	483;"	m	line:483
+RC4	C:\fw\midicontroller\x002x\c_18f4455.h	329;"	m	line:329
+RC5	C:\fw\midicontroller\x002x\c_18f4455.h	330;"	m	line:330
+RC6	C:\fw\midicontroller\x002x\c_18f4455.h	331;"	m	line:331
+RC6	C:\fw\midicontroller\x002x\c_18f4455.h	485;"	m	line:485
+RC7	C:\fw\midicontroller\x002x\c_18f4455.h	332;"	m	line:332
+RC7	C:\fw\midicontroller\x002x\c_18f4455.h	486;"	m	line:486
+RCEN	C:\fw\midicontroller\x002x\c_18f4455.h	871;"	m	line:871
+RCIDL	C:\fw\midicontroller\x002x\c_18f4455.h	775;"	m	line:775
+RCIE	C:\fw\midicontroller\x002x\c_18f4455.h	548;"	m	line:548
+RCIF	C:\fw\midicontroller\x002x\c_18f4455.h	559;"	m	line:559
+RCIP	C:\fw\midicontroller\x002x\c_18f4455.h	570;"	m	line:570
+RCMT	C:\fw\midicontroller\x002x\c_18f4455.h	780;"	m	line:780
+RD	C:\fw\midicontroller\x002x\c_18f4455.h	627;"	m	line:627
+RD0	C:\fw\midicontroller\x002x\c_18f4455.h	354;"	m	line:354
+RD0	C:\fw\midicontroller\x002x\c_18f4455.h	499;"	m	line:499
+RD1	C:\fw\midicontroller\x002x\c_18f4455.h	355;"	m	line:355
+RD1	C:\fw\midicontroller\x002x\c_18f4455.h	500;"	m	line:500
+RD16	C:\fw\midicontroller\x002x\c_18f4455.h	681;"	m	line:681
+RD16	C:\fw\midicontroller\x002x\c_18f4455.h	956;"	m	line:956
+RD2	C:\fw\midicontroller\x002x\c_18f4455.h	356;"	m	line:356
+RD2	C:\fw\midicontroller\x002x\c_18f4455.h	501;"	m	line:501
+RD3	C:\fw\midicontroller\x002x\c_18f4455.h	357;"	m	line:357
+RD3	C:\fw\midicontroller\x002x\c_18f4455.h	502;"	m	line:502
+RD4	C:\fw\midicontroller\x002x\c_18f4455.h	358;"	m	line:358
+RD4	C:\fw\midicontroller\x002x\c_18f4455.h	503;"	m	line:503
+RD5	C:\fw\midicontroller\x002x\c_18f4455.h	359;"	m	line:359
+RD5	C:\fw\midicontroller\x002x\c_18f4455.h	504;"	m	line:504
+RD6	C:\fw\midicontroller\x002x\c_18f4455.h	360;"	m	line:360
+RD6	C:\fw\midicontroller\x002x\c_18f4455.h	505;"	m	line:505
+RD7	C:\fw\midicontroller\x002x\c_18f4455.h	361;"	m	line:361
+RD7	C:\fw\midicontroller\x002x\c_18f4455.h	506;"	m	line:506
+RDPU	C:\fw\midicontroller\x002x\c_18f4455.h	382;"	m	line:382
+RDSPP	C:\fw\midicontroller\x002x\c_18f4455.h	32;"	m	line:32
+RE0	C:\fw\midicontroller\x002x\c_18f4455.h	377;"	m	line:377
+RE0	C:\fw\midicontroller\x002x\c_18f4455.h	521;"	m	line:521
+RE1	C:\fw\midicontroller\x002x\c_18f4455.h	378;"	m	line:378
+RE1	C:\fw\midicontroller\x002x\c_18f4455.h	522;"	m	line:522
+RE2	C:\fw\midicontroller\x002x\c_18f4455.h	379;"	m	line:379
+RE2	C:\fw\midicontroller\x002x\c_18f4455.h	523;"	m	line:523
+RE3	C:\fw\midicontroller\x002x\c_18f4455.h	380;"	m	line:380
+READ_WRITE	C:\fw\midicontroller\x002x\c_18f4455.h	921;"	m	line:921
+REGISTER_0_CLK_BIT::6	C:\fw\midicontroller\x002x\c_portdef.h	106;"	d	line:106
+REGISTER_0_CLK_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	109;"	d	line:109
+REGISTER_0_CLK_LAT_BIT::LATBbits.LATB6	C:\fw\midicontroller\x002x\c_portdef.h	108;"	d	line:108
+REGISTER_0_CLK_PIN::PORTBbits.RB6	C:\fw\midicontroller\x002x\c_portdef.h	107;"	d	line:107
+REGISTER_0_CLK_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	110;"	d	line:110
+REGISTER_1_CLK_BIT::0	C:\fw\midicontroller\x002x\c_portdef.h	140;"	d	line:140
+REGISTER_1_CLK_LAT::LATC	C:\fw\midicontroller\x002x\c_portdef.h	143;"	d	line:143
+REGISTER_1_CLK_LAT_BIT::LATCbits.LATC0	C:\fw\midicontroller\x002x\c_portdef.h	142;"	d	line:142
+REGISTER_1_CLK_PIN::PORTCbits.RC0	C:\fw\midicontroller\x002x\c_portdef.h	141;"	d	line:141
+REGISTER_1_CLK_PORT::PORTC	C:\fw\midicontroller\x002x\c_portdef.h	144;"	d	line:144
+RESET_CONTROL_COUNTER_LBC	C:\fw\midicontroller\x002x\loaddef.h	19;"	p	line:19	signature:(void)
+RESUME	C:\fw\midicontroller\x002x\c_18f4455.h	111;"	m	line:111
+RI	C:\fw\midicontroller\x002x\c_18f4455.h	982;"	m	line:982
+RND::6	C:\fw\midicontroller\x002x\STARTUP.C	13;"	d	line:13	file:
+ROMCommAddr	C:\fw\midicontroller\x002x\RAM_DEF.C	30;"	v	line:30
+RS232_ROUTINE	C:\fw\midicontroller\x002x\c_system.h	20;"	p	line:20	signature:(void)
+RSEN	C:\fw\midicontroller\x002x\c_18f4455.h	869;"	m	line:869
+RX	C:\fw\midicontroller\x002x\c_18f4455.h	340;"	m	line:340
+RX9	C:\fw\midicontroller\x002x\c_18f4455.h	648;"	m	line:648
+RX9D	C:\fw\midicontroller\x002x\c_18f4455.h	642;"	m	line:642
+RX_BIT::7	C:\fw\midicontroller\x002x\c_portdef.h	185;"	d	line:185
+RX_LAT::LATC	C:\fw\midicontroller\x002x\c_portdef.h	188;"	d	line:188
+RX_LAT_BIT::LATCbits.LATC7	C:\fw\midicontroller\x002x\c_portdef.h	187;"	d	line:187
+RX_PIN::PORTCbits.RC7	C:\fw\midicontroller\x002x\c_portdef.h	186;"	d	line:186
+RX_PORT::PORTC	C:\fw\midicontroller\x002x\c_portdef.h	189;"	d	line:189
+RX_TRIS_BIT::TRISCbits.TRISC7	C:\fw\midicontroller\x002x\MAIN.C	18;"	d	line:18	file:
+R_W	C:\fw\midicontroller\x002x\c_18f4455.h	893;"	m	line:893
+RcvPtr	C:\fw\midicontroller\x002x\RS232.C	73;"	l	line:73
+RealInitVector	C:\fw\midicontroller\x002x\dummystart.c	7;"	f	line:7	signature:(void)
+RealInterruptVectorHigh	C:\fw\midicontroller\x002x\dummystart.c	17;"	f	line:17	signature:(void)
+Recipient	C:\fw\midicontroller\x002x\USB.H	228;"	m	line:228	struct:_CTRL_TRF_SETUP::<anonymous>
+RemoteWakeup	C:\fw\midicontroller\x002x\USBMMAP.H	75;"	m	line:75	struct:_USB_DEVICE_STATUS::<anonymous>
+RequestType	C:\fw\midicontroller\x002x\USB.H	229;"	m	line:229	struct:_CTRL_TRF_SETUP::<anonymous>
+Reset::{_asmreset_endasm}	C:\fw\midicontroller\x002x\c_18f4455.h	1230;"	d	line:1230
+ResponseType	C:\fw\midicontroller\x002x\RAM_DEF.C	25;"	v	line:25
+Rlcf::(f,dest,access){_asmmovlbfrlcf	C:\fw\midicontroller\x002x\c_18f4455.h	1232;"	d	line:1232
+Rlncf::(f,dest,access){_asmmovlbfrlnc	C:\fw\midicontroller\x002x\c_18f4455.h	1233;"	d	line:1233
+Rrcf::(f,dest,access){_asmmovlbfrrcf	C:\fw\midicontroller\x002x\c_18f4455.h	1234;"	d	line:1234
+Rrncf::(f,dest,access){_asmmovlbfrrnc	C:\fw\midicontroller\x002x\c_18f4455.h	1235;"	d	line:1235
+RxBufPtr	C:\fw\midicontroller\x002x\RAM_DEF.C	21;"	v	line:21
+RxBuffer	C:\fw\midicontroller\x002x\RAM_DEF.C	32;"	v	line:32
+S	C:\fw\midicontroller\x002x\c_18f4455.h	894;"	m	line:894
+SBOREN	C:\fw\midicontroller\x002x\c_18f4455.h	974;"	m	line:974
+SCKP	C:\fw\midicontroller\x002x\c_18f4455.h	773;"	m	line:773
+SCL_BIT::4	C:\fw\midicontroller\x002x\c_portdef.h	42;"	d	line:42
+SCL_LAT::LATA	C:\fw\midicontroller\x002x\c_portdef.h	45;"	d	line:45
+SCL_LAT_BIT::LATAbits.LATA4	C:\fw\midicontroller\x002x\c_portdef.h	44;"	d	line:44
+SCL_PIN::PORTAbits.RA4	C:\fw\midicontroller\x002x\c_portdef.h	43;"	d	line:43
+SCL_PORT::PORTA	C:\fw\midicontroller\x002x\c_portdef.h	46;"	d	line:46
+SCS0	C:\fw\midicontroller\x002x\c_18f4455.h	1063;"	m	line:1063
+SCS1	C:\fw\midicontroller\x002x\c_18f4455.h	1064;"	m	line:1064
+SDA_BIT::1	C:\fw\midicontroller\x002x\c_portdef.h	268;"	d	line:268
+SDA_LAT::LATE	C:\fw\midicontroller\x002x\c_portdef.h	271;"	d	line:271
+SDA_LAT_BIT::LATEbits.LATE1	C:\fw\midicontroller\x002x\c_portdef.h	270;"	d	line:270
+SDA_PIN::PORTEbits.RE1	C:\fw\midicontroller\x002x\c_portdef.h	269;"	d	line:269
+SDA_PORT::PORTE	C:\fw\midicontroller\x002x\c_portdef.h	272;"	d	line:272
+SE0	C:\fw\midicontroller\x002x\c_18f4455.h	114;"	m	line:114
+SEN	C:\fw\midicontroller\x002x\c_18f4455.h	868;"	m	line:868
+SENDB	C:\fw\midicontroller\x002x\c_18f4455.h	661;"	m	line:661
+SEND_TO_LATCHES_10	C:\fw\midicontroller\x002x\loaddef.h	23;"	p	line:23	signature:(void)
+SETUP_AUX_OUTLETS_COMMAND	C:\fw\midicontroller\x002x\loaddef.h	26;"	p	line:26	signature:(void)
+SET_COMMAND::0x04	C:\fw\midicontroller\x002x\c_cnstdef.h	24;"	d	line:24
+SHUTDOWN_OFF_BIT::7	C:\fw\midicontroller\x002x\c_portdef.h	118;"	d	line:118
+SHUTDOWN_OFF_LAT::LATB	C:\fw\midicontroller\x002x\c_portdef.h	121;"	d	line:121
+SHUTDOWN_OFF_LAT_BIT::LATBbits.LATB7	C:\fw\midicontroller\x002x\c_portdef.h	120;"	d	line:120
+SHUTDOWN_OFF_PIN::PORTBbits.RB7	C:\fw\midicontroller\x002x\c_portdef.h	119;"	d	line:119
+SHUTDOWN_OFF_PORT::PORTB	C:\fw\midicontroller\x002x\c_portdef.h	122;"	d	line:122
+SMP	C:\fw\midicontroller\x002x\c_18f4455.h	898;"	m	line:898
+SOFIE	C:\fw\midicontroller\x002x\c_18f4455.h	75;"	m	line:75
+SOFIF	C:\fw\midicontroller\x002x\c_18f4455.h	65;"	m	line:65
+SPEN	C:\fw\midicontroller\x002x\c_18f4455.h	649;"	m	line:649
+SPP0	C:\fw\midicontroller\x002x\c_18f4455.h	364;"	m	line:364
+SPP1	C:\fw\midicontroller\x002x\c_18f4455.h	365;"	m	line:365
+SPP2	C:\fw\midicontroller\x002x\c_18f4455.h	366;"	m	line:366
+SPP3	C:\fw\midicontroller\x002x\c_18f4455.h	367;"	m	line:367
+SPP4	C:\fw\midicontroller\x002x\c_18f4455.h	368;"	m	line:368
+SPP5	C:\fw\midicontroller\x002x\c_18f4455.h	369;"	m	line:369
+SPP6	C:\fw\midicontroller\x002x\c_18f4455.h	370;"	m	line:370
+SPP7	C:\fw\midicontroller\x002x\c_18f4455.h	371;"	m	line:371
+SPPBUSY	C:\fw\midicontroller\x002x\c_18f4455.h	29;"	m	line:29
+SPPEN	C:\fw\midicontroller\x002x\c_18f4455.h	36;"	m	line:36
+SPPIE	C:\fw\midicontroller\x002x\c_18f4455.h	550;"	m	line:550
+SPPIF	C:\fw\midicontroller\x002x\c_18f4455.h	561;"	m	line:561
+SPPIP	C:\fw\midicontroller\x002x\c_18f4455.h	572;"	m	line:572
+SPPOWN	C:\fw\midicontroller\x002x\c_18f4455.h	37;"	m	line:37
+SREN	C:\fw\midicontroller\x002x\c_18f4455.h	647;"	m	line:647
+SSPEN	C:\fw\midicontroller\x002x\c_18f4455.h	884;"	m	line:884
+SSPIE	C:\fw\midicontroller\x002x\c_18f4455.h	546;"	m	line:546
+SSPIF	C:\fw\midicontroller\x002x\c_18f4455.h	557;"	m	line:557
+SSPIP	C:\fw\midicontroller\x002x\c_18f4455.h	568;"	m	line:568
+SSPM0	C:\fw\midicontroller\x002x\c_18f4455.h	879;"	m	line:879
+SSPM1	C:\fw\midicontroller\x002x\c_18f4455.h	880;"	m	line:880
+SSPM2	C:\fw\midicontroller\x002x\c_18f4455.h	881;"	m	line:881
+SSPM3	C:\fw\midicontroller\x002x\c_18f4455.h	882;"	m	line:882
+SSPOV	C:\fw\midicontroller\x002x\c_18f4455.h	885;"	m	line:885
+STALLIE	C:\fw\midicontroller\x002x\c_18f4455.h	74;"	m	line:74
+STALLIF	C:\fw\midicontroller\x002x\c_18f4455.h	64;"	m	line:64
+START_LBC	C:\fw\midicontroller\x002x\loaddef.h	20;"	p	line:20	signature:(void)
+START_RAMPING_LBC	C:\fw\midicontroller\x002x\loaddef.h	17;"	p	line:17	signature:(void)
+START_SHEDDING_LBC	C:\fw\midicontroller\x002x\loaddef.h	15;"	p	line:15	signature:(void)
+STKFUL	C:\fw\midicontroller\x002x\c_18f4455.h	1210;"	m	line:1210
+STKPTR0	C:\fw\midicontroller\x002x\c_18f4455.h	1203;"	m	line:1203
+STKPTR1	C:\fw\midicontroller\x002x\c_18f4455.h	1204;"	m	line:1204
+STKPTR2	C:\fw\midicontroller\x002x\c_18f4455.h	1205;"	m	line:1205
+STKPTR3	C:\fw\midicontroller\x002x\c_18f4455.h	1206;"	m	line:1206
+STKPTR4	C:\fw\midicontroller\x002x\c_18f4455.h	1207;"	m	line:1207
+STKUNF	C:\fw\midicontroller\x002x\c_18f4455.h	1209;"	m	line:1209
+STOP_LBC	C:\fw\midicontroller\x002x\loaddef.h	21;"	p	line:21	signature:(void)
+SUSPND	C:\fw\midicontroller\x002x\c_18f4455.h	110;"	m	line:110
+SWDTE	C:\fw\midicontroller\x002x\c_18f4455.h	993;"	m	line:993
+SWDTEN	C:\fw\midicontroller\x002x\c_18f4455.h	990;"	m	line:990
+SYNC	C:\fw\midicontroller\x002x\c_18f4455.h	662;"	m	line:662
+Sample	C:\fw\midicontroller\x002x\RAM_DEF.C	8;"	v	line:8
+SampleData	C:\fw\midicontroller\x002x\RAM_DEF.C	9;"	v	line:9
+SendingOutString::CommFlags1.bit2	C:\fw\midicontroller\x002x\C_RAMDEF.H	41;"	d	line:41
+SerialNum	C:\fw\midicontroller\x002x\usbdescript.c	264;"	v	line:264
+ServiceEP1	C:\fw\midicontroller\x002x\usbapplet.c	34;"	f	line:34	signature:(void)
+ServiceEP1Data::CommFlags1.bit5	C:\fw\midicontroller\x002x\C_RAMDEF.H	43;"	d	line:43
+ServiceUSB	C:\fw\midicontroller\x002x\MAIN.C	115;"	f	line:115	signature:(void)
+ServiceUSB	C:\fw\midicontroller\x002x\MAIN.C	16;"	p	line:16	file:	signature:(void)
+SetupPkt	C:\fw\midicontroller\x002x\USB.C	442;"	v	line:442
+Sleep::{_asmsleep_endasm}	C:\fw\midicontroller\x002x\c_18f4455.h	1229;"	d	line:1229
+Stat	C:\fw\midicontroller\x002x\USBMMAP.H	114;"	m	line:114	struct:_BDT::<anonymous>
+StringChksum	C:\fw\midicontroller\x002x\RAM_DEF.C	24;"	v	line:24
+StringPtr	C:\fw\midicontroller\x002x\RAM_DEF.C	22;"	v	line:22
+StringPtr_H	C:\fw\midicontroller\x002x\RAM_DEF.C	23;"	v	line:23
+Swapf::(f,dest,access){_asmmovlbfswap	C:\fw\midicontroller\x002x\c_18f4455.h	1236;"	d	line:1236
+T08BIT	C:\fw\midicontroller\x002x\c_18f4455.h	1085;"	m	line:1085
+T0CKI	C:\fw\midicontroller\x002x\c_18f4455.h	282;"	m	line:282
+T0CS	C:\fw\midicontroller\x002x\c_18f4455.h	1084;"	m	line:1084
+T0IE	C:\fw\midicontroller\x002x\c_18f4455.h	1184;"	m	line:1184
+T0IF	C:\fw\midicontroller\x002x\c_18f4455.h	1181;"	m	line:1181
+T0IP	C:\fw\midicontroller\x002x\c_18f4455.h	1161;"	m	line:1161
+T0PS0	C:\fw\midicontroller\x002x\c_18f4455.h	1079;"	m	line:1079
+T0PS1	C:\fw\midicontroller\x002x\c_18f4455.h	1080;"	m	line:1080
+T0PS2	C:\fw\midicontroller\x002x\c_18f4455.h	1081;"	m	line:1081
+T0SE	C:\fw\midicontroller\x002x\c_18f4455.h	1083;"	m	line:1083
+T13CKI	C:\fw\midicontroller\x002x\c_18f4455.h	343;"	m	line:343
+T1CKPS0	C:\fw\midicontroller\x002x\c_18f4455.h	953;"	m	line:953
+T1CKPS1	C:\fw\midicontroller\x002x\c_18f4455.h	954;"	m	line:954
+T1OSCEN	C:\fw\midicontroller\x002x\c_18f4455.h	952;"	m	line:952
+T1OSI	C:\fw\midicontroller\x002x\c_18f4455.h	336;"	m	line:336
+T1OSO	C:\fw\midicontroller\x002x\c_18f4455.h	335;"	m	line:335
+T1RUN	C:\fw\midicontroller\x002x\c_18f4455.h	955;"	m	line:955
+T1SYNC	C:\fw\midicontroller\x002x\c_18f4455.h	951;"	m	line:951
+T2CKPS0	C:\fw\midicontroller\x002x\c_18f4455.h	936;"	m	line:936
+T2CKPS1	C:\fw\midicontroller\x002x\c_18f4455.h	937;"	m	line:937
+T2OUTPS0	C:\fw\midicontroller\x002x\c_18f4455.h	939;"	m	line:939
+T2OUTPS1	C:\fw\midicontroller\x002x\c_18f4455.h	940;"	m	line:940
+T2OUTPS2	C:\fw\midicontroller\x002x\c_18f4455.h	941;"	m	line:941
+T2OUTPS3	C:\fw\midicontroller\x002x\c_18f4455.h	942;"	m	line:942
+T3CCP1	C:\fw\midicontroller\x002x\c_18f4455.h	677;"	m	line:677
+T3CCP2	C:\fw\midicontroller\x002x\c_18f4455.h	680;"	m	line:680
+T3CKPS0	C:\fw\midicontroller\x002x\c_18f4455.h	678;"	m	line:678
+T3CKPS1	C:\fw\midicontroller\x002x\c_18f4455.h	679;"	m	line:679
+T3NSYNC	C:\fw\midicontroller\x002x\c_18f4455.h	685;"	m	line:685
+T3SYNC	C:\fw\midicontroller\x002x\c_18f4455.h	676;"	m	line:676
+TEMPRATURE_BIT::2	C:\fw\midicontroller\x002x\c_portdef.h	28;"	d	line:28
+TEMPRATURE_LAT::LATA	C:\fw\midicontroller\x002x\c_portdef.h	31;"	d	line:31
+TEMPRATURE_LAT_BIT::LATAbits.LATA2	C:\fw\midicontroller\x002x\c_portdef.h	30;"	d	line:30
+TEMPRATURE_PIN::PORTAbits.RA2	C:\fw\midicontroller\x002x\c_portdef.h	29;"	d	line:29
+TEMPRATURE_PORT::PORTA	C:\fw\midicontroller\x002x\c_portdef.h	32;"	d	line:32
+TEST_MUTE_SWITCH_BIT::7	C:\fw\midicontroller\x002x\c_portdef.h	251;"	d	line:251
+TEST_MUTE_SWITCH_LAT::LATD	C:\fw\midicontroller\x002x\c_portdef.h	254;"	d	line:254
+TEST_MUTE_SWITCH_LAT_BIT::LATDbits.LATD7	C:\fw\midicontroller\x002x\c_portdef.h	253;"	d	line:253
+TEST_MUTE_SWITCH_PIN::PORTDbits.RD7	C:\fw\midicontroller\x002x\c_portdef.h	252;"	d	line:252
+TEST_MUTE_SWITCH_PORT::PORTD	C:\fw\midicontroller\x002x\c_portdef.h	255;"	d	line:255
+TMR0IE	C:\fw\midicontroller\x002x\c_18f4455.h	1174;"	m	line:1174
+TMR0IF	C:\fw\midicontroller\x002x\c_18f4455.h	1171;"	m	line:1171
+TMR0IP	C:\fw\midicontroller\x002x\c_18f4455.h	1152;"	m	line:1152
+TMR0ON	C:\fw\midicontroller\x002x\c_18f4455.h	1086;"	m	line:1086
+TMR1CS	C:\fw\midicontroller\x002x\c_18f4455.h	950;"	m	line:950
+TMR1IE	C:\fw\midicontroller\x002x\c_18f4455.h	543;"	m	line:543
+TMR1IF	C:\fw\midicontroller\x002x\c_18f4455.h	554;"	m	line:554
+TMR1IP	C:\fw\midicontroller\x002x\c_18f4455.h	565;"	m	line:565
+TMR1ON	C:\fw\midicontroller\x002x\c_18f4455.h	949;"	m	line:949
+TMR2IE	C:\fw\midicontroller\x002x\c_18f4455.h	544;"	m	line:544
+TMR2IF	C:\fw\midicontroller\x002x\c_18f4455.h	555;"	m	line:555
+TMR2IP	C:\fw\midicontroller\x002x\c_18f4455.h	566;"	m	line:566
+TMR2ON	C:\fw\midicontroller\x002x\c_18f4455.h	938;"	m	line:938
+TMR3CS	C:\fw\midicontroller\x002x\c_18f4455.h	675;"	m	line:675
+TMR3IE	C:\fw\midicontroller\x002x\c_18f4455.h	578;"	m	line:578
+TMR3IF	C:\fw\midicontroller\x002x\c_18f4455.h	595;"	m	line:595
+TMR3IP	C:\fw\midicontroller\x002x\c_18f4455.h	612;"	m	line:612
+TMR3ON	C:\fw\midicontroller\x002x\c_18f4455.h	674;"	m	line:674
+TO	C:\fw\midicontroller\x002x\c_18f4455.h	981;"	m	line:981
+TRISA0	C:\fw\midicontroller\x002x\c_18f4455.h	449;"	m	line:449
+TRISA0::(INPUT<<V_BATT_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	19;"	d	line:19
+TRISA1	C:\fw\midicontroller\x002x\c_18f4455.h	450;"	m	line:450
+TRISA1::(INPUT<<CHARGER_CURRENT_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	26;"	d	line:26
+TRISA2	C:\fw\midicontroller\x002x\c_18f4455.h	451;"	m	line:451
+TRISA2::(INPUT<<TEMPRATURE_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	33;"	d	line:33
+TRISA3	C:\fw\midicontroller\x002x\c_18f4455.h	452;"	m	line:452
+TRISA3::(INPUT<<V_RMS_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	40;"	d	line:40
+TRISA4	C:\fw\midicontroller\x002x\c_18f4455.h	453;"	m	line:453
+TRISA4::(OUTPUT<<LOAD_BANK2_OFF_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	52;"	d	line:52
+TRISA5	C:\fw\midicontroller\x002x\c_18f4455.h	454;"	m	line:454
+TRISA5::(INPUT<<LOAD_CURRENT_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	59;"	d	line:59
+TRISA6	C:\fw\midicontroller\x002x\c_18f4455.h	455;"	m	line:455
+TRISB0	C:\fw\midicontroller\x002x\c_18f4455.h	470;"	m	line:470
+TRISB0::(INPUT<<INVERTER_CURRENT_LIMIT	C:\fw\midicontroller\x002x\c_portdef.h	69;"	d	line:69
+TRISB1	C:\fw\midicontroller\x002x\c_18f4455.h	471;"	m	line:471
+TRISB1::(INPUT<<EMERGENCY_POWER_OFF_BI	C:\fw\midicontroller\x002x\c_portdef.h	76;"	d	line:76
+TRISB2	C:\fw\midicontroller\x002x\c_18f4455.h	472;"	m	line:472
+TRISB2::(OUTPUT<<FAN_ON_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	83;"	d	line:83
+TRISB3	C:\fw\midicontroller\x002x\c_18f4455.h	473;"	m	line:473
+TRISB3::(OUTPUT<<CUT_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	90;"	d	line:90
+TRISB4	C:\fw\midicontroller\x002x\c_18f4455.h	474;"	m	line:474
+TRISB4::(OUTPUT<<BOOST1_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	97;"	d	line:97
+TRISB5	C:\fw\midicontroller\x002x\c_18f4455.h	475;"	m	line:475
+TRISB5::(OUTPUT<<BOOST2_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	104;"	d	line:104
+TRISB6	C:\fw\midicontroller\x002x\c_18f4455.h	476;"	m	line:476
+TRISB6::(OUTPUT<<LOAD_BANK1_OFF_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	116;"	d	line:116
+TRISB7	C:\fw\midicontroller\x002x\c_18f4455.h	477;"	m	line:477
+TRISB7::(INPUT<<SHUTDOWN_OFF_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	123;"	d	line:123
+TRISC0	C:\fw\midicontroller\x002x\c_18f4455.h	490;"	m	line:490
+TRISC0::(OUTPUT<<LOAD_BANK3_OFF_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	139;"	d	line:139
+TRISC1	C:\fw\midicontroller\x002x\c_18f4455.h	491;"	m	line:491
+TRISC1::(OUTPUT<<INVERTER_PWM_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	152;"	d	line:152
+TRISC2	C:\fw\midicontroller\x002x\c_18f4455.h	492;"	m	line:492
+TRISC2::(INPUT<<ZEROXING_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	159;"	d	line:159
+TRISC3::(INPUT<<3)	C:\fw\midicontroller\x002x\c_portdef.h	162;"	d	line:162
+TRISC4::(INPUT<<USBDM)	C:\fw\midicontroller\x002x\c_portdef.h	169;"	d	line:169
+TRISC5::(INPUT<<USBDP_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	176;"	d	line:176
+TRISC6	C:\fw\midicontroller\x002x\c_18f4455.h	494;"	m	line:494
+TRISC6::(INPUT<<TX_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	183;"	d	line:183
+TRISC7	C:\fw\midicontroller\x002x\c_18f4455.h	495;"	m	line:495
+TRISC7::(INPUT<<RX_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	190;"	d	line:190
+TRISD0	C:\fw\midicontroller\x002x\c_18f4455.h	510;"	m	line:510
+TRISD0::(OUTPUT<<INVERTER_PHASE_A_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	200;"	d	line:200
+TRISD1	C:\fw\midicontroller\x002x\c_18f4455.h	511;"	m	line:511
+TRISD1::(OUTPUT<<LCR_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	207;"	d	line:207
+TRISD2	C:\fw\midicontroller\x002x\c_18f4455.h	512;"	m	line:512
+TRISD2::(OUTPUT<<MASTER_RELAY_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	214;"	d	line:214
+TRISD3	C:\fw\midicontroller\x002x\c_18f4455.h	513;"	m	line:513
+TRISD3::(OUTPUT<<CHARGER_SW_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	221;"	d	line:221
+TRISD4	C:\fw\midicontroller\x002x\c_18f4455.h	514;"	m	line:514
+TRISD4::(OUTPUT<<KEEP_ALIVE_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	234;"	d	line:234
+TRISD5	C:\fw\midicontroller\x002x\c_18f4455.h	515;"	m	line:515
+TRISD5::(OUTPUT<<INVERTER_ON_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	242;"	d	line:242
+TRISD6	C:\fw\midicontroller\x002x\c_18f4455.h	516;"	m	line:516
+TRISD6::(INPUT<<ON_OFF_SWITCH_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	249;"	d	line:249
+TRISD7	C:\fw\midicontroller\x002x\c_18f4455.h	517;"	m	line:517
+TRISD7::(INPUT<<TEST_MUTE_SWITCH_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	256;"	d	line:256
+TRISE0	C:\fw\midicontroller\x002x\c_18f4455.h	527;"	m	line:527
+TRISE1	C:\fw\midicontroller\x002x\c_18f4455.h	528;"	m	line:528
+TRISE2	C:\fw\midicontroller\x002x\c_18f4455.h	529;"	m	line:529
+TRISE_0::(INPUT<<LINE_SENSITIVITY_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	266;"	d	line:266
+TRISE_1::(INPUT<<CHARGE_RATE_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	278;"	d	line:278
+TRISE_2::(OUTPUT<<AUX_POWER_OFF_BIT)	C:\fw\midicontroller\x002x\c_portdef.h	285;"	d	line:285
+TRMT	C:\fw\midicontroller\x002x\c_18f4455.h	659;"	m	line:659
+TRNIE	C:\fw\midicontroller\x002x\c_18f4455.h	72;"	m	line:72
+TRNIF	C:\fw\midicontroller\x002x\c_18f4455.h	62;"	m	line:62
+TRUE	C:\fw\midicontroller\x002x\TYPEDEFS.H	150;"	e	line:150	enum:_BOOL
+TUN0	C:\fw\midicontroller\x002x\c_18f4455.h	533;"	m	line:533
+TUN1	C:\fw\midicontroller\x002x\c_18f4455.h	534;"	m	line:534
+TUN2	C:\fw\midicontroller\x002x\c_18f4455.h	535;"	m	line:535
+TUN3	C:\fw\midicontroller\x002x\c_18f4455.h	536;"	m	line:536
+TUN4	C:\fw\midicontroller\x002x\c_18f4455.h	537;"	m	line:537
+TX	C:\fw\midicontroller\x002x\c_18f4455.h	339;"	m	line:339
+TX9	C:\fw\midicontroller\x002x\c_18f4455.h	664;"	m	line:664
+TX9D	C:\fw\midicontroller\x002x\c_18f4455.h	658;"	m	line:658
+TXEN	C:\fw\midicontroller\x002x\c_18f4455.h	663;"	m	line:663
+TXENQ	C:\fw\midicontroller\x002x\RS232.C	54;"	f	line:54	signature:(unsigned char Input)
+TXENQ	C:\fw\midicontroller\x002x\c_system.h	19;"	p	line:19	signature:(unsigned char Input)
+TXENQ_0x00	C:\fw\midicontroller\x002x\RS232.C	35;"	f	line:35	signature:(void)
+TXENQ_0xFFFF	C:\fw\midicontroller\x002x\RS232.C	30;"	f	line:30	signature:(void)
+TXIE	C:\fw\midicontroller\x002x\c_18f4455.h	547;"	m	line:547
+TXIF	C:\fw\midicontroller\x002x\c_18f4455.h	558;"	m	line:558
+TXIP	C:\fw\midicontroller\x002x\c_18f4455.h	569;"	m	line:569
+TX_BIT::6	C:\fw\midicontroller\x002x\c_portdef.h	178;"	d	line:178
+TX_LAT::LATC	C:\fw\midicontroller\x002x\c_portdef.h	181;"	d	line:181
+TX_LAT_BIT::LATCbits.LATC6	C:\fw\midicontroller\x002x\c_portdef.h	180;"	d	line:180
+TX_PIN::PORTCbits.RC6	C:\fw\midicontroller\x002x\c_portdef.h	179;"	d	line:179
+TX_PORT::PORTC	C:\fw\midicontroller\x002x\c_portdef.h	182;"	d	line:182
+TX_TRIS_BIT::TRISCbits.TRISC6	C:\fw\midicontroller\x002x\MAIN.C	19;"	d	line:19	file:
+TYPEDEFS_H	C:\fw\midicontroller\x002x\TYPEDEFS.H	38;"	d	line:38
+Temp6	C:\fw\midicontroller\x002x\RAM_DEF.C	35;"	v	line:35
+ThreeBytes	C:\fw\midicontroller\x002x\_TOOLS.H	74;"	t	line:74
+TildeFlg::CommFlags1.bit1	C:\fw\midicontroller\x002x\C_RAMDEF.H	40;"	d	line:40
+TwoBytes	C:\fw\midicontroller\x002x\_TOOLS.H	64;"	t	line:64
+TxBufOutPtr	C:\fw\midicontroller\x002x\RAM_DEF.C	19;"	v	line:19
+TxBufPtr	C:\fw\midicontroller\x002x\RAM_DEF.C	18;"	v	line:18
+TxBuffer	C:\fw\midicontroller\x002x\RAM_DEF.C	33;"	v	line:33
+UA	C:\fw\midicontroller\x002x\c_18f4455.h	892;"	m	line:892
+UCFG_VAL::_PUEN|_TRINT|_FS|MODE_PP	C:\fw\midicontroller\x002x\USBCFG.H	43;"	d	line:43
+UERRIE	C:\fw\midicontroller\x002x\c_18f4455.h	70;"	m	line:70
+UERRIF	C:\fw\midicontroller\x002x\c_18f4455.h	60;"	m	line:60
+UOEMON	C:\fw\midicontroller\x002x\c_18f4455.h	135;"	m	line:135
+UOWN	C:\fw\midicontroller\x002x\USBMMAP.H	101;"	m	line:101	struct:_BD_STAT::<anonymous>
+UOWN	C:\fw\midicontroller\x002x\USBMMAP.H	91;"	m	line:91	struct:_BD_STAT::<anonymous>
+UPPER_LSB::(a)((a).v[2])	C:\fw\midicontroller\x002x\TYPEDEFS.H	120;"	d	line:120
+UPPER_MSB::(a)((a).v[3])	C:\fw\midicontroller\x002x\TYPEDEFS.H	121;"	d	line:121
+UPUEN	C:\fw\midicontroller\x002x\c_18f4455.h	133;"	m	line:133
+URSTIE	C:\fw\midicontroller\x002x\c_18f4455.h	69;"	m	line:69
+URSTIF	C:\fw\midicontroller\x002x\c_18f4455.h	59;"	m	line:59
+USBCFG_H	C:\fw\midicontroller\x002x\USBCFG.H	35;"	d	line:35
+USBCheckBusStatus	C:\fw\midicontroller\x002x\USB.C	973;"	f	line:973	signature:(void)
+USBCheckHIDRequest	C:\fw\midicontroller\x002x\HID.C	74;"	f	line:74	signature:(void)
+USBCheckStdRequest	C:\fw\midicontroller\x002x\USB.C	71;"	f	line:71	signature:(void)
+USBCtrlEPService	C:\fw\midicontroller\x002x\USB.C	501;"	f	line:501	signature:(void)
+USBCtrlEPServiceComplete	C:\fw\midicontroller\x002x\USB.C	812;"	f	line:812	signature:(void)
+USBCtrlTrfInHandler	C:\fw\midicontroller\x002x\USB.C	477;"	p	line:477	file:	signature:(void)
+USBCtrlTrfInHandler	C:\fw\midicontroller\x002x\USB.C	647;"	f	line:647	signature:(void)
+USBCtrlTrfOutHandler	C:\fw\midicontroller\x002x\USB.C	476;"	p	line:476	file:	signature:(void)
+USBCtrlTrfOutHandler	C:\fw\midicontroller\x002x\USB.C	602;"	f	line:602	signature:(void)
+USBCtrlTrfRxService	C:\fw\midicontroller\x002x\USB.C	760;"	f	line:760	signature:(void)
+USBCtrlTrfSetupHandler	C:\fw\midicontroller\x002x\USB.C	475;"	p	line:475	file:	signature:(void)
+USBCtrlTrfSetupHandler	C:\fw\midicontroller\x002x\USB.C	556;"	f	line:556	signature:(void)
+USBCtrlTrfTxService	C:\fw\midicontroller\x002x\USB.C	690;"	f	line:690	signature:(void)
+USBDEFS_EP0_BUFF_H	C:\fw\midicontroller\x002x\USB.H	183;"	d	line:183
+USBDEFS_STD_DSC_H	C:\fw\midicontroller\x002x\USB.H	54;"	d	line:54
+USBDM_BIT::4	C:\fw\midicontroller\x002x\c_portdef.h	164;"	d	line:164
+USBDM_LAT::LATC	C:\fw\midicontroller\x002x\c_portdef.h	167;"	d	line:167
+USBDM_LAT_BIT::LATCbits.LATC4	C:\fw\midicontroller\x002x\c_portdef.h	166;"	d	line:166
+USBDM_PIN::PORTCbits.RC4	C:\fw\midicontroller\x002x\c_portdef.h	165;"	d	line:165
+USBDM_PORT::PORTC	C:\fw\midicontroller\x002x\c_portdef.h	168;"	d	line:168
+USBDP_BIT::5	C:\fw\midicontroller\x002x\c_portdef.h	171;"	d	line:171
+USBDP_LAT::LATC	C:\fw\midicontroller\x002x\c_portdef.h	174;"	d	line:174
+USBDP_LAT_BIT::LATCbits.LATC5	C:\fw\midicontroller\x002x\c_portdef.h	173;"	d	line:173
+USBDP_PIN::PORTCbits.RC5	C:\fw\midicontroller\x002x\c_portdef.h	172;"	d	line:172
+USBDP_PORT::PORTC	C:\fw\midicontroller\x002x\c_portdef.h	175;"	d	line:175
+USBDRV_H	C:\fw\midicontroller\x002x\USB.H	357;"	d	line:357
+USBDSC_H	C:\fw\midicontroller\x002x\USBDSC.H	40;"	d	line:40
+USBDataPointer	C:\fw\midicontroller\x002x\RAM_DEF.C	27;"	v	line:27
+USBDriverService	C:\fw\midicontroller\x002x\USB.C	1113;"	f	line:1113	signature:(void)
+USBEN	C:\fw\midicontroller\x002x\c_18f4455.h	112;"	m	line:112
+USBEP0DataInBuffer	C:\fw\midicontroller\x002x\RAM_DEF.C	31;"	v	line:31
+USBErrorHandler	C:\fw\midicontroller\x002x\USB.C	1439;"	f	line:1439	signature:(void)
+USBErrorHandler	C:\fw\midicontroller\x002x\USB.C	953;"	p	line:953	file:	signature:(void)
+USBIE	C:\fw\midicontroller\x002x\c_18f4455.h	582;"	m	line:582
+USBIF	C:\fw\midicontroller\x002x\c_18f4455.h	599;"	m	line:599
+USBIP	C:\fw\midicontroller\x002x\c_18f4455.h	616;"	m	line:616
+USBMMAP_H	C:\fw\midicontroller\x002x\USBMMAP.H	38;"	d	line:38
+USBModuleDisable	C:\fw\midicontroller\x002x\USB.C	1059;"	f	line:1059	signature:(void)
+USBModuleDisable	C:\fw\midicontroller\x002x\USB.C	945;"	p	line:945	file:	signature:(void)
+USBModuleEnable	C:\fw\midicontroller\x002x\USB.C	1033;"	f	line:1033	signature:(void)
+USBModuleEnable	C:\fw\midicontroller\x002x\USB.C	944;"	p	line:944	file:	signature:(void)
+USBPrepareForNextSetupTrf	C:\fw\midicontroller\x002x\USB.C	920;"	f	line:920	signature:(void)
+USBProtocolResetHandler	C:\fw\midicontroller\x002x\USB.C	1466;"	f	line:1466	signature:(void)
+USBProtocolResetHandler	C:\fw\midicontroller\x002x\USB.C	950;"	p	line:950	file:	signature:(void)
+USBQuery::CommFlags1.bit4	C:\fw\midicontroller\x002x\C_RAMDEF.H	42;"	d	line:42
+USBSoftDetach	C:\fw\midicontroller\x002x\USB.C	1090;"	f	line:1090	signature:(void)
+USBStallHandler	C:\fw\midicontroller\x002x\USB.C	1403;"	f	line:1403	signature:(void)
+USBStallHandler	C:\fw\midicontroller\x002x\USB.C	952;"	p	line:952	file:	signature:(void)
+USBStdFeatureReqHandler	C:\fw\midicontroller\x002x\USB.C	285;"	f	line:285	signature:(void)
+USBStdFeatureReqHandler	C:\fw\midicontroller\x002x\USB.C	50;"	p	line:50	file:	signature:(void)
+USBStdGetDscHandler	C:\fw\midicontroller\x002x\USB.C	137;"	f	line:137	signature:(void)
+USBStdGetDscHandler	C:\fw\midicontroller\x002x\USB.C	47;"	p	line:47	file:	signature:(void)
+USBStdGetStatusHandler	C:\fw\midicontroller\x002x\USB.C	228;"	f	line:228	signature:(void)
+USBStdGetStatusHandler	C:\fw\midicontroller\x002x\USB.C	49;"	p	line:49	file:	signature:(void)
+USBStdSetCfgHandler	C:\fw\midicontroller\x002x\USB.C	190;"	f	line:190	signature:(void)
+USBStdSetCfgHandler	C:\fw\midicontroller\x002x\USB.C	48;"	p	line:48	file:	signature:(void)
+USBSuspend	C:\fw\midicontroller\x002x\USB.C	1199;"	f	line:1199	signature:(void)
+USBSuspend	C:\fw\midicontroller\x002x\USB.C	947;"	p	line:947	file:	signature:(void)
+USBWakeFromSuspend	C:\fw\midicontroller\x002x\USB.C	1268;"	f	line:1268	signature:(void)
+USBWakeFromSuspend	C:\fw\midicontroller\x002x\USB.C	948;"	p	line:948	file:	signature:(void)
+USB_BUS_ATTACHED::1	C:\fw\midicontroller\x002x\USB.C	979;"	d	line:979	file:
+USB_BUS_DETACHED::0	C:\fw\midicontroller\x002x\USB.C	980;"	d	line:980	file:
+USB_CD_Ptr	C:\fw\midicontroller\x002x\usbdescript.c	389;"	v	line:389
+USB_CFG_DSC	C:\fw\midicontroller\x002x\USB.H	152;"	t	line:152
+USB_DEVICE_STATUS	C:\fw\midicontroller\x002x\USBMMAP.H	78;"	t	line:78
+USB_DEV_DSC	C:\fw\midicontroller\x002x\USB.H	142;"	t	line:142
+USB_EP_DSC	C:\fw\midicontroller\x002x\USB.H	171;"	t	line:171
+USB_H	C:\fw\midicontroller\x002x\USB.H	37;"	d	line:37
+USB_INTF_DSC	C:\fw\midicontroller\x002x\USB.H	162;"	t	line:162
+USB_SD_Ptr	C:\fw\midicontroller\x002x\usbdescript.c	390;"	v	line:390
+USB_SOF_Handler	C:\fw\midicontroller\x002x\USB.C	1360;"	f	line:1360	signature:(void)
+USB_SOF_Handler	C:\fw\midicontroller\x002x\USB.C	951;"	p	line:951	file:	signature:(void)
+USB_USE_HID	C:\fw\midicontroller\x002x\USBCFG.H	62;"	d	line:62
+UTEYE	C:\fw\midicontroller\x002x\c_18f4455.h	136;"	m	line:136
+UTRDIS	C:\fw\midicontroller\x002x\c_18f4455.h	132;"	m	line:132
+UpdateLBCCntr	C:\fw\midicontroller\x002x\loaddef.h	24;"	p	line:24	signature:(void)
+VCFG0	C:\fw\midicontroller\x002x\c_18f4455.h	837;"	m	line:837
+VCFG1	C:\fw\midicontroller\x002x\c_18f4455.h	838;"	m	line:838
+VDIRMAG	C:\fw\midicontroller\x002x\c_18f4455.h	1021;"	m	line:1021
+VDIRMAG	C:\fw\midicontroller\x002x\c_18f4455.h	1053;"	m	line:1053
+VENDOR_ID::0x09AE	C:\fw\midicontroller\x002x\USBDSC.H	49;"	d	line:49
+VREFM	C:\fw\midicontroller\x002x\c_18f4455.h	288;"	m	line:288
+VREFP	C:\fw\midicontroller\x002x\c_18f4455.h	289;"	m	line:289
+V_BATT_BIT::0	C:\fw\midicontroller\x002x\c_portdef.h	14;"	d	line:14
+V_BATT_LAT::LATA	C:\fw\midicontroller\x002x\c_portdef.h	17;"	d	line:17
+V_BATT_LAT_BIT::LATAbits.LATA0	C:\fw\midicontroller\x002x\c_portdef.h	16;"	d	line:16
+V_BATT_PIN::PORTAbits.RA0	C:\fw\midicontroller\x002x\c_portdef.h	15;"	d	line:15
+V_BATT_PORT::PORTA	C:\fw\midicontroller\x002x\c_portdef.h	18;"	d	line:18
+V_RMS_BIT::3	C:\fw\midicontroller\x002x\c_portdef.h	35;"	d	line:35
+V_RMS_LAT::LATA	C:\fw\midicontroller\x002x\c_portdef.h	38;"	d	line:38
+V_RMS_LAT_BIT::LATAbits.LATA3	C:\fw\midicontroller\x002x\c_portdef.h	37;"	d	line:37
+V_RMS_PIN::PORTAbits.RA3	C:\fw\midicontroller\x002x\c_portdef.h	36;"	d	line:36
+V_RMS_PORT::PORTA	C:\fw\midicontroller\x002x\c_portdef.h	39;"	d	line:39
+WCOL	C:\fw\midicontroller\x002x\c_18f4455.h	886;"	m	line:886
+WORD	C:\fw\midicontroller\x002x\TYPEDEFS.H	82;"	t	line:82
+WR	C:\fw\midicontroller\x002x\c_18f4455.h	628;"	m	line:628
+WREN	C:\fw\midicontroller\x002x\c_18f4455.h	629;"	m	line:629
+WRERR	C:\fw\midicontroller\x002x\c_18f4455.h	630;"	m	line:630
+WRITE_TO_RELAYS	C:\fw\midicontroller\x002x\loaddef.h	22;"	p	line:22	signature:(void)
+WRSPP	C:\fw\midicontroller\x002x\c_18f4455.h	31;"	m	line:31
+WS0	C:\fw\midicontroller\x002x\c_18f4455.h	14;"	m	line:14
+WS1	C:\fw\midicontroller\x002x\c_18f4455.h	15;"	m	line:15
+WS2	C:\fw\midicontroller\x002x\c_18f4455.h	16;"	m	line:16
+WS3	C:\fw\midicontroller\x002x\c_18f4455.h	17;"	m	line:17
+WUE	C:\fw\midicontroller\x002x\c_18f4455.h	770;"	m	line:770
+W_Index	C:\fw\midicontroller\x002x\USB.H	223;"	m	line:223	struct:_CTRL_TRF_SETUP::<anonymous>
+W_Length	C:\fw\midicontroller\x002x\USB.H	224;"	m	line:224	struct:_CTRL_TRF_SETUP::<anonymous>
+W_Value	C:\fw\midicontroller\x002x\USB.H	222;"	m	line:222	struct:_CTRL_TRF_SETUP::<anonymous>
+Word0	C:\fw\midicontroller\x002x\TYPEDEFS.H	110;"	m	line:110	struct:_DWORD::<anonymous>
+Word1	C:\fw\midicontroller\x002x\TYPEDEFS.H	111;"	m	line:111	struct:_DWORD::<anonymous>
+Z	C:\fw\midicontroller\x002x\c_18f4455.h	1094;"	m	line:1094
+ZEROXING_BIT::2	C:\fw\midicontroller\x002x\c_portdef.h	154;"	d	line:154
+ZEROXING_LAT::LATC	C:\fw\midicontroller\x002x\c_portdef.h	157;"	d	line:157
+ZEROXING_LAT_BIT::LATCbits.LATC2	C:\fw\midicontroller\x002x\c_portdef.h	156;"	d	line:156
+ZEROXING_PIN::PORTCbits.RC2	C:\fw\midicontroller\x002x\c_portdef.h	155;"	d	line:155
+ZEROXING_PORT::PORTC	C:\fw\midicontroller\x002x\c_portdef.h	158;"	d	line:158
+_AD::0x02<<2	C:\fw\midicontroller\x002x\USB.H	121;"	d	line:121
+_AS::0x01<<2	C:\fw\midicontroller\x002x\USB.H	120;"	d	line:120
+_BDT	C:\fw\midicontroller\x002x\USBMMAP.H	110;"	u	line:110
+_BD_STAT	C:\fw\midicontroller\x002x\USBMMAP.H	80;"	u	line:80
+_BOOL	C:\fw\midicontroller\x002x\TYPEDEFS.H	150;"	g	line:150
+_BSTALL::0x04	C:\fw\midicontroller\x002x\USBMMAP.H	46;"	d	line:46
+_BULK::0x02	C:\fw\midicontroller\x002x\USB.H	115;"	d	line:115
+_BYTE	C:\fw\midicontroller\x002x\TYPEDEFS.H	44;"	u	line:44
+_CTRL::0x00	C:\fw\midicontroller\x002x\USB.H	113;"	d	line:113
+_CTRL_TRF_DATA	C:\fw\midicontroller\x002x\USB.H	321;"	u	line:321
+_CTRL_TRF_SETUP	C:\fw\midicontroller\x002x\USB.H	201;"	u	line:201
+_DAT0::0x00	C:\fw\midicontroller\x002x\USBMMAP.H	50;"	d	line:50
+_DAT1::0x40	C:\fw\midicontroller\x002x\USBMMAP.H	51;"	d	line:51
+_DE::0x00<<4	C:\fw\midicontroller\x002x\USB.H	125;"	d	line:125
+_DEFAULT::0x01<<7	C:\fw\midicontroller\x002x\USB.H	108;"	d	line:108
+_DTSEN::0x08	C:\fw\midicontroller\x002x\USBMMAP.H	47;"	d	line:47
+_DTSMASK::0x40	C:\fw\midicontroller\x002x\USBMMAP.H	52;"	d	line:52
+_DWORD	C:\fw\midicontroller\x002x\TYPEDEFS.H	86;"	u	line:86
+_EP01_IN::0x81	C:\fw\midicontroller\x002x\USB.H	77;"	d	line:77
+_EP01_OUT::0x01	C:\fw\midicontroller\x002x\USB.H	76;"	d	line:76
+_EP02_IN::0x82	C:\fw\midicontroller\x002x\USB.H	79;"	d	line:79
+_EP02_OUT::0x02	C:\fw\midicontroller\x002x\USB.H	78;"	d	line:78
+_EP03_IN::0x83	C:\fw\midicontroller\x002x\USB.H	81;"	d	line:81
+_EP03_OUT::0x03	C:\fw\midicontroller\x002x\USB.H	80;"	d	line:80
+_EP04_IN::0x84	C:\fw\midicontroller\x002x\USB.H	83;"	d	line:83
+_EP04_OUT::0x04	C:\fw\midicontroller\x002x\USB.H	82;"	d	line:82
+_EP05_IN::0x85	C:\fw\midicontroller\x002x\USB.H	85;"	d	line:85
+_EP05_OUT::0x05	C:\fw\midicontroller\x002x\USB.H	84;"	d	line:84
+_EP06_IN::0x86	C:\fw\midicontroller\x002x\USB.H	87;"	d	line:87
+_EP06_OUT::0x06	C:\fw\midicontroller\x002x\USB.H	86;"	d	line:86
+_EP07_IN::0x87	C:\fw\midicontroller\x002x\USB.H	89;"	d	line:89
+_EP07_OUT::0x07	C:\fw\midicontroller\x002x\USB.H	88;"	d	line:88
+_EP08_IN::0x88	C:\fw\midicontroller\x002x\USB.H	91;"	d	line:91
+_EP08_OUT::0x08	C:\fw\midicontroller\x002x\USB.H	90;"	d	line:90
+_EP09_IN::0x89	C:\fw\midicontroller\x002x\USB.H	93;"	d	line:93
+_EP09_OUT::0x09	C:\fw\midicontroller\x002x\USB.H	92;"	d	line:92
+_EP10_IN::0x8A	C:\fw\midicontroller\x002x\USB.H	95;"	d	line:95
+_EP10_OUT::0x0A	C:\fw\midicontroller\x002x\USB.H	94;"	d	line:94
+_EP11_IN::0x8B	C:\fw\midicontroller\x002x\USB.H	97;"	d	line:97
+_EP11_OUT::0x0B	C:\fw\midicontroller\x002x\USB.H	96;"	d	line:96
+_EP12_IN::0x8C	C:\fw\midicontroller\x002x\USB.H	99;"	d	line:99
+_EP12_OUT::0x0C	C:\fw\midicontroller\x002x\USB.H	98;"	d	line:98
+_EP13_IN::0x8D	C:\fw\midicontroller\x002x\USB.H	101;"	d	line:101
+_EP13_OUT::0x0D	C:\fw\midicontroller\x002x\USB.H	100;"	d	line:100
+_EP14_IN::0x8E	C:\fw\midicontroller\x002x\USB.H	103;"	d	line:103
+_EP14_OUT::0x0E	C:\fw\midicontroller\x002x\USB.H	102;"	d	line:102
+_EP15_IN::0x8F	C:\fw\midicontroller\x002x\USB.H	105;"	d	line:105
+_EP15_OUT::0x0F	C:\fw\midicontroller\x002x\USB.H	104;"	d	line:104
+_FE::0x01<<4	C:\fw\midicontroller\x002x\USB.H	126;"	d	line:126
+_FS::0x04	C:\fw\midicontroller\x002x\USB.H	370;"	d	line:370
+_IE::0x02<<4	C:\fw\midicontroller\x002x\USB.H	127;"	d	line:127
+_INCDIS::0x10	C:\fw\midicontroller\x002x\USBMMAP.H	48;"	d	line:48
+_INT::0x03	C:\fw\midicontroller\x002x\USB.H	116;"	d	line:116
+_ISO::0x01	C:\fw\midicontroller\x002x\USB.H	114;"	d	line:114
+_KEN::0x20	C:\fw\midicontroller\x002x\USBMMAP.H	49;"	d	line:49
+_LS::0x00	C:\fw\midicontroller\x002x\USB.H	369;"	d	line:369
+_NS::0x00<<2	C:\fw\midicontroller\x002x\USB.H	119;"	d	line:119
+_OEMON::0x40	C:\fw\midicontroller\x002x\USB.H	374;"	d	line:374
+_POINTER	C:\fw\midicontroller\x002x\TYPEDEFS.H	125;"	u	line:125
+_PPBM0::0x00	C:\fw\midicontroller\x002x\USB.H	366;"	d	line:366
+_PPBM1::0x01	C:\fw\midicontroller\x002x\USB.H	367;"	d	line:367
+_PPBM2::0x02	C:\fw\midicontroller\x002x\USB.H	368;"	d	line:368
+_PUEN::0x10	C:\fw\midicontroller\x002x\USB.H	373;"	d	line:373
+_RAM::0	C:\fw\midicontroller\x002x\USBMMAP.H	66;"	d	line:66
+_ROM::1	C:\fw\midicontroller\x002x\USBMMAP.H	67;"	d	line:67
+_RWU::0x01<<5	C:\fw\midicontroller\x002x\USB.H	110;"	d	line:110
+_SELF::0x01<<6	C:\fw\midicontroller\x002x\USB.H	109;"	d	line:109
+_SY::0x03<<2	C:\fw\midicontroller\x002x\USB.H	122;"	d	line:122
+_TREXT::0x08	C:\fw\midicontroller\x002x\USB.H	372;"	d	line:372
+_TRINT::0x00	C:\fw\midicontroller\x002x\USB.H	371;"	d	line:371
+_UCPU::0x00	C:\fw\midicontroller\x002x\USBMMAP.H	54;"	d	line:54
+_USB_CFG_DSC	C:\fw\midicontroller\x002x\USB.H	147;"	s	line:147
+_USB_DEVICE_STATUS	C:\fw\midicontroller\x002x\USBMMAP.H	70;"	u	line:70
+_USB_DEV_DSC	C:\fw\midicontroller\x002x\USB.H	135;"	s	line:135
+_USB_EP_DSC	C:\fw\midicontroller\x002x\USB.H	167;"	s	line:167
+_USB_INTF_DSC	C:\fw\midicontroller\x002x\USB.H	157;"	s	line:157
+_USIE::0x80	C:\fw\midicontroller\x002x\USBMMAP.H	53;"	d	line:53
+_UTEYE::0x80	C:\fw\midicontroller\x002x\USB.H	375;"	d	line:375
+_WORD	C:\fw\midicontroller\x002x\TYPEDEFS.H	60;"	u	line:60
+__18F4455_H	C:\fw\midicontroller\x002x\c_18f4455.h	9;"	d	line:9
+_byte	C:\fw\midicontroller\x002x\TYPEDEFS.H	46;"	m	line:46	union:_BYTE
+_byte	C:\fw\midicontroller\x002x\USB.H	206;"	m	line:206	struct:_CTRL_TRF_SETUP::<anonymous>
+_byte	C:\fw\midicontroller\x002x\USB.H	326;"	m	line:326	struct:_CTRL_TRF_DATA::<anonymous>
+_byte	C:\fw\midicontroller\x002x\USBMMAP.H	72;"	m	line:72	union:_USB_DEVICE_STATUS
+_byte	C:\fw\midicontroller\x002x\USBMMAP.H	82;"	m	line:82	union:_BD_STAT
+_byte0	C:\fw\midicontroller\x002x\USB.H	332;"	m	line:332	struct:_CTRL_TRF_DATA::<anonymous>
+_byte1	C:\fw\midicontroller\x002x\USB.H	333;"	m	line:333	struct:_CTRL_TRF_DATA::<anonymous>
+_byte2	C:\fw\midicontroller\x002x\USB.H	334;"	m	line:334	struct:_CTRL_TRF_DATA::<anonymous>
+_byte3	C:\fw\midicontroller\x002x\USB.H	335;"	m	line:335	struct:_CTRL_TRF_DATA::<anonymous>
+_byte4	C:\fw\midicontroller\x002x\USB.H	336;"	m	line:336	struct:_CTRL_TRF_DATA::<anonymous>
+_byte5	C:\fw\midicontroller\x002x\USB.H	337;"	m	line:337	struct:_CTRL_TRF_DATA::<anonymous>
+_byte6	C:\fw\midicontroller\x002x\USB.H	338;"	m	line:338	struct:_CTRL_TRF_DATA::<anonymous>
+_byte7	C:\fw\midicontroller\x002x\USB.H	339;"	m	line:339	struct:_CTRL_TRF_DATA::<anonymous>
+_dword	C:\fw\midicontroller\x002x\TYPEDEFS.H	88;"	m	line:88	union:_DWORD
+_entry	C:\fw\midicontroller\x002x\STARTUP.C	10;"	p	line:10	file:	signature:(void)
+_entry	C:\fw\midicontroller\x002x\STARTUP.C	17;"	f	line:17	signature:(void)
+_startup	C:\fw\midicontroller\x002x\STARTUP.C	11;"	p	line:11	file:	signature:(void)
+_word	C:\fw\midicontroller\x002x\TYPEDEFS.H	133;"	m	line:133	union:_POINTER
+_word	C:\fw\midicontroller\x002x\TYPEDEFS.H	62;"	m	line:62	union:_WORD
+_word0	C:\fw\midicontroller\x002x\USB.H	343;"	m	line:343	struct:_CTRL_TRF_DATA::<anonymous>
+_word1	C:\fw\midicontroller\x002x\USB.H	344;"	m	line:344	struct:_CTRL_TRF_DATA::<anonymous>
+_word2	C:\fw\midicontroller\x002x\USB.H	345;"	m	line:345	struct:_CTRL_TRF_DATA::<anonymous>
+_word3	C:\fw\midicontroller\x002x\USB.H	346;"	m	line:346	struct:_CTRL_TRF_DATA::<anonymous>
+active_protocol	C:\fw\midicontroller\x002x\HID.C	51;"	v	line:51
+b0	C:\fw\midicontroller\x002x\TYPEDEFS.H	49;"	m	line:49	struct:_BYTE::<anonymous>
+b1	C:\fw\midicontroller\x002x\TYPEDEFS.H	50;"	m	line:50	struct:_BYTE::<anonymous>
+b2	C:\fw\midicontroller\x002x\TYPEDEFS.H	51;"	m	line:51	struct:_BYTE::<anonymous>
+b3	C:\fw\midicontroller\x002x\TYPEDEFS.H	52;"	m	line:52	struct:_BYTE::<anonymous>
+b4	C:\fw\midicontroller\x002x\TYPEDEFS.H	53;"	m	line:53	struct:_BYTE::<anonymous>
+b5	C:\fw\midicontroller\x002x\TYPEDEFS.H	54;"	m	line:54	struct:_BYTE::<anonymous>
+b6	C:\fw\midicontroller\x002x\TYPEDEFS.H	55;"	m	line:55	struct:_BYTE::<anonymous>
+b7	C:\fw\midicontroller\x002x\TYPEDEFS.H	56;"	m	line:56	struct:_BYTE::<anonymous>
+bAltID	C:\fw\midicontroller\x002x\USB.H	275;"	m	line:275	struct:_CTRL_TRF_SETUP::<anonymous>
+bAltID_H	C:\fw\midicontroller\x002x\USB.H	276;"	m	line:276	struct:_CTRL_TRF_SETUP::<anonymous>
+bAltSetting	C:\fw\midicontroller\x002x\USB.H	160;"	m	line:160	struct:_USB_INTF_DSC
+bCfgRSD	C:\fw\midicontroller\x002x\USB.H	265;"	m	line:265	struct:_CTRL_TRF_SETUP::<anonymous>
+bCfgValue	C:\fw\midicontroller\x002x\USB.H	150;"	m	line:150	struct:_USB_CFG_DSC
+bCfgValue	C:\fw\midicontroller\x002x\USB.H	264;"	m	line:264	struct:_CTRL_TRF_SETUP::<anonymous>
+bDevADR	C:\fw\midicontroller\x002x\USB.H	253;"	m	line:253	struct:_CTRL_TRF_SETUP::<anonymous>
+bDevADRH	C:\fw\midicontroller\x002x\USB.H	254;"	m	line:254	struct:_CTRL_TRF_SETUP::<anonymous>
+bDevCls	C:\fw\midicontroller\x002x\USB.H	138;"	m	line:138	struct:_USB_DEV_DSC
+bDevProtocol	C:\fw\midicontroller\x002x\USB.H	138;"	m	line:138	struct:_USB_DEV_DSC
+bDevSubCls	C:\fw\midicontroller\x002x\USB.H	138;"	m	line:138	struct:_USB_DEV_DSC
+bDscIndex	C:\fw\midicontroller\x002x\USB.H	243;"	m	line:243	struct:_CTRL_TRF_SETUP::<anonymous>
+bDscType	C:\fw\midicontroller\x002x\RS232.C	24;"	m	line:24	file:
+bDscType	C:\fw\midicontroller\x002x\RS232.C	25;"	m	line:25	file:
+bDscType	C:\fw\midicontroller\x002x\RS232.C	26;"	m	line:26	file:
+bDscType	C:\fw\midicontroller\x002x\RS232.C	27;"	m	line:27	file:
+bDscType	C:\fw\midicontroller\x002x\USB.H	137;"	m	line:137	struct:_USB_DEV_DSC
+bDscType	C:\fw\midicontroller\x002x\USB.H	149;"	m	line:149	struct:_USB_CFG_DSC
+bDscType	C:\fw\midicontroller\x002x\USB.H	159;"	m	line:159	struct:_USB_INTF_DSC
+bDscType	C:\fw\midicontroller\x002x\USB.H	169;"	m	line:169	struct:_USB_EP_DSC
+bDscType	C:\fw\midicontroller\x002x\USB.H	244;"	m	line:244	struct:_CTRL_TRF_SETUP::<anonymous>
+bDscType	C:\fw\midicontroller\x002x\usbdescript.c	245;"	m	line:245	file:
+bDscType	C:\fw\midicontroller\x002x\usbdescript.c	249;"	m	line:249	file:
+bDscType	C:\fw\midicontroller\x002x\usbdescript.c	254;"	m	line:254	file:
+bDscType	C:\fw\midicontroller\x002x\usbdescript.c	259;"	m	line:259	file:
+bDscType	C:\fw\midicontroller\x002x\usbdescript.c	264;"	m	line:264	file:
+bEPAdr	C:\fw\midicontroller\x002x\USB.H	169;"	m	line:169	struct:_USB_EP_DSC
+bEPID	C:\fw\midicontroller\x002x\USB.H	288;"	m	line:288	struct:_CTRL_TRF_SETUP::<anonymous>
+bEPID_H	C:\fw\midicontroller\x002x\USB.H	289;"	m	line:289	struct:_CTRL_TRF_SETUP::<anonymous>
+bFeature	C:\fw\midicontroller\x002x\USB.H	232;"	m	line:232	struct:_CTRL_TRF_SETUP::<anonymous>
+bHigh	C:\fw\midicontroller\x002x\TYPEDEFS.H	130;"	m	line:130	struct:_POINTER::<anonymous>
+bInterval	C:\fw\midicontroller\x002x\USB.H	170;"	m	line:170	struct:_USB_EP_DSC
+bIntfCls	C:\fw\midicontroller\x002x\USB.H	160;"	m	line:160	struct:_USB_INTF_DSC
+bIntfID	C:\fw\midicontroller\x002x\USB.H	277;"	m	line:277	struct:_CTRL_TRF_SETUP::<anonymous>
+bIntfID_H	C:\fw\midicontroller\x002x\USB.H	278;"	m	line:278	struct:_CTRL_TRF_SETUP::<anonymous>
+bIntfNum	C:\fw\midicontroller\x002x\USB.H	159;"	m	line:159	struct:_USB_INTF_DSC
+bIntfProtocol	C:\fw\midicontroller\x002x\USB.H	161;"	m	line:161	struct:_USB_INTF_DSC
+bIntfSubCls	C:\fw\midicontroller\x002x\USB.H	161;"	m	line:161	struct:_USB_INTF_DSC
+bLength	C:\fw\midicontroller\x002x\RS232.C	24;"	m	line:24	file:
+bLength	C:\fw\midicontroller\x002x\RS232.C	25;"	m	line:25	file:
+bLength	C:\fw\midicontroller\x002x\RS232.C	26;"	m	line:26	file:
+bLength	C:\fw\midicontroller\x002x\RS232.C	27;"	m	line:27	file:
+bLength	C:\fw\midicontroller\x002x\USB.H	137;"	m	line:137	struct:_USB_DEV_DSC
+bLength	C:\fw\midicontroller\x002x\USB.H	149;"	m	line:149	struct:_USB_CFG_DSC
+bLength	C:\fw\midicontroller\x002x\USB.H	159;"	m	line:159	struct:_USB_INTF_DSC
+bLength	C:\fw\midicontroller\x002x\USB.H	169;"	m	line:169	struct:_USB_EP_DSC
+bLength	C:\fw\midicontroller\x002x\usbdescript.c	245;"	m	line:245	file:
+bLength	C:\fw\midicontroller\x002x\usbdescript.c	249;"	m	line:249	file:
+bLength	C:\fw\midicontroller\x002x\usbdescript.c	254;"	m	line:254	file:
+bLength	C:\fw\midicontroller\x002x\usbdescript.c	259;"	m	line:259	file:
+bLength	C:\fw\midicontroller\x002x\usbdescript.c	264;"	m	line:264	file:
+bLow	C:\fw\midicontroller\x002x\TYPEDEFS.H	129;"	m	line:129	struct:_POINTER::<anonymous>
+bMaxPktSize0	C:\fw\midicontroller\x002x\USB.H	139;"	m	line:139	struct:_USB_DEV_DSC
+bMaxPower	C:\fw\midicontroller\x002x\USB.H	151;"	m	line:151	struct:_USB_CFG_DSC
+bNumCfg	C:\fw\midicontroller\x002x\USB.H	141;"	m	line:141	struct:_USB_DEV_DSC
+bNumEPs	C:\fw\midicontroller\x002x\USB.H	160;"	m	line:160	struct:_USB_INTF_DSC
+bNumIntf	C:\fw\midicontroller\x002x\USB.H	150;"	m	line:150	struct:_USB_CFG_DSC
+bRam	C:\fw\midicontroller\x002x\TYPEDEFS.H	137;"	m	line:137	union:_POINTER
+bRequest	C:\fw\midicontroller\x002x\USB.H	213;"	m	line:213	struct:_CTRL_TRF_SETUP::<anonymous>
+bRom	C:\fw\midicontroller\x002x\TYPEDEFS.H	142;"	m	line:142	union:_POINTER
+b_form	C:\fw\midicontroller\x002x\_TOOLS.H	62;"	m	line:62
+b_form	C:\fw\midicontroller\x002x\_TOOLS.H	70;"	m	line:70
+b_form	C:\fw\midicontroller\x002x\_TOOLS.H	85;"	m	line:85
+b_formBits	C:\fw\midicontroller\x002x\_TOOLS.H	63;"	m	line:63
+b_formBits	C:\fw\midicontroller\x002x\_TOOLS.H	86;"	m	line:86
+bcdDevice	C:\fw\midicontroller\x002x\USB.H	140;"	m	line:140	struct:_USB_DEV_DSC
+bcdUSB	C:\fw\midicontroller\x002x\USB.H	137;"	m	line:137	struct:_USB_DEV_DSC
+bit0	C:\fw\midicontroller\x002x\_TOOLS.H	45;"	m	line:45
+bit1	C:\fw\midicontroller\x002x\_TOOLS.H	46;"	m	line:46
+bit2	C:\fw\midicontroller\x002x\_TOOLS.H	47;"	m	line:47
+bit3	C:\fw\midicontroller\x002x\_TOOLS.H	48;"	m	line:48
+bit4	C:\fw\midicontroller\x002x\_TOOLS.H	49;"	m	line:49
+bit5	C:\fw\midicontroller\x002x\_TOOLS.H	50;"	m	line:50
+bit6	C:\fw\midicontroller\x002x\_TOOLS.H	51;"	m	line:51
+bit7	C:\fw\midicontroller\x002x\_TOOLS.H	52;"	m	line:52
+bmAttributes	C:\fw\midicontroller\x002x\USB.H	151;"	m	line:151	struct:_USB_CFG_DSC
+bmAttributes	C:\fw\midicontroller\x002x\USB.H	170;"	m	line:170	struct:_USB_EP_DSC
+bmRequestType	C:\fw\midicontroller\x002x\USB.H	212;"	m	line:212	struct:_CTRL_TRF_SETUP::<anonymous>
+byte	C:\fw\midicontroller\x002x\TYPEDEFS.H	40;"	t	line:40
+byte	C:\fw\midicontroller\x002x\_TOOLS.H	43;"	m	line:43
+byte	C:\fw\midicontroller\x002x\_TOOLS.H	71;"	m	line:71
+byte0	C:\fw\midicontroller\x002x\TYPEDEFS.H	65;"	m	line:65	struct:_WORD::<anonymous>
+byte0	C:\fw\midicontroller\x002x\TYPEDEFS.H	91;"	m	line:91	struct:_DWORD::<anonymous>
+byte0	C:\fw\midicontroller\x002x\_TOOLS.H	63;"	m	line:63
+byte0	C:\fw\midicontroller\x002x\_TOOLS.H	73;"	m	line:73
+byte0	C:\fw\midicontroller\x002x\_TOOLS.H	84;"	m	line:84
+byte0	C:\fw\midicontroller\x002x\_TOOLS.H	85;"	m	line:85
+byte0	C:\fw\midicontroller\x002x\_TOOLS.H	86;"	m	line:86
+byte1	C:\fw\midicontroller\x002x\TYPEDEFS.H	66;"	m	line:66	struct:_WORD::<anonymous>
+byte1	C:\fw\midicontroller\x002x\TYPEDEFS.H	92;"	m	line:92	struct:_DWORD::<anonymous>
+byte1	C:\fw\midicontroller\x002x\_TOOLS.H	63;"	m	line:63
+byte1	C:\fw\midicontroller\x002x\_TOOLS.H	85;"	m	line:85
+byte1	C:\fw\midicontroller\x002x\_TOOLS.H	86;"	m	line:86
+byte2	C:\fw\midicontroller\x002x\TYPEDEFS.H	93;"	m	line:93	struct:_DWORD::<anonymous>
+byte2	C:\fw\midicontroller\x002x\_TOOLS.H	72;"	m	line:72
+byte2	C:\fw\midicontroller\x002x\_TOOLS.H	85;"	m	line:85
+byte2	C:\fw\midicontroller\x002x\_TOOLS.H	86;"	m	line:86
+byte3	C:\fw\midicontroller\x002x\TYPEDEFS.H	94;"	m	line:94	struct:_DWORD::<anonymous>
+byte3	C:\fw\midicontroller\x002x\_TOOLS.H	84;"	m	line:84
+byte3	C:\fw\midicontroller\x002x\_TOOLS.H	85;"	m	line:85
+byte3	C:\fw\midicontroller\x002x\_TOOLS.H	86;"	m	line:86
+byte_to_read	C:\fw\midicontroller\x002x\USB.C	762;"	l	line:762
+byte_to_send	C:\fw\midicontroller\x002x\USB.C	692;"	l	line:692
+cd01	C:\fw\midicontroller\x002x\USBDSC.H	56;"	v	line:56
+chkbit::(VAR,Place)(VAR&1<<Place)	C:\fw\midicontroller\x002x\_TOOLS.H	29;"	d	line:29
+clrbit::(VAR,Place)VAR&=(1<<Place)^255	C:\fw\midicontroller\x002x\_TOOLS.H	28;"	d	line:28
+ctrl_trf_mem	C:\fw\midicontroller\x002x\USBMMAP.H	76;"	m	line:76	struct:_USB_DEVICE_STATUS::<anonymous>
+ctrl_trf_session_owner	C:\fw\midicontroller\x002x\USB.C	468;"	v	line:468
+ctrl_trf_state	C:\fw\midicontroller\x002x\USB.C	467;"	v	line:467
+device_dsc	C:\fw\midicontroller\x002x\usbdescript.c	182;"	v	line:182
+dword	C:\fw\midicontroller\x002x\TYPEDEFS.H	42;"	t	line:42
+ep01i_i00a00	C:\fw\midicontroller\x002x\USBDSC.H	59;"	v	line:59
+ep0Bi	C:\fw\midicontroller\x002x\USB.C	349;"	v	line:349
+ep0Bo	C:\fw\midicontroller\x002x\USB.C	348;"	v	line:348
+ep10Bi	C:\fw\midicontroller\x002x\USB.C	399;"	v	line:399
+ep10Bo	C:\fw\midicontroller\x002x\USB.C	398;"	v	line:398
+ep11Bi	C:\fw\midicontroller\x002x\USB.C	404;"	v	line:404
+ep11Bo	C:\fw\midicontroller\x002x\USB.C	403;"	v	line:403
+ep12Bi	C:\fw\midicontroller\x002x\USB.C	409;"	v	line:409
+ep12Bo	C:\fw\midicontroller\x002x\USB.C	408;"	v	line:408
+ep13Bi	C:\fw\midicontroller\x002x\USB.C	414;"	v	line:414
+ep13Bo	C:\fw\midicontroller\x002x\USB.C	413;"	v	line:413
+ep14Bi	C:\fw\midicontroller\x002x\USB.C	419;"	v	line:419
+ep14Bo	C:\fw\midicontroller\x002x\USB.C	418;"	v	line:418
+ep15Bi	C:\fw\midicontroller\x002x\USB.C	424;"	v	line:424
+ep15Bo	C:\fw\midicontroller\x002x\USB.C	423;"	v	line:423
+ep1Bi	C:\fw\midicontroller\x002x\USB.C	354;"	v	line:354
+ep1Bo	C:\fw\midicontroller\x002x\USB.C	353;"	v	line:353
+ep2Bi	C:\fw\midicontroller\x002x\USB.C	359;"	v	line:359
+ep2Bo	C:\fw\midicontroller\x002x\USB.C	358;"	v	line:358
+ep3Bi	C:\fw\midicontroller\x002x\USB.C	364;"	v	line:364
+ep3Bo	C:\fw\midicontroller\x002x\USB.C	363;"	v	line:363
+ep4Bi	C:\fw\midicontroller\x002x\USB.C	369;"	v	line:369
+ep4Bo	C:\fw\midicontroller\x002x\USB.C	368;"	v	line:368
+ep5Bi	C:\fw\midicontroller\x002x\USB.C	374;"	v	line:374
+ep5Bo	C:\fw\midicontroller\x002x\USB.C	373;"	v	line:373
+ep6Bi	C:\fw\midicontroller\x002x\USB.C	379;"	v	line:379
+ep6Bo	C:\fw\midicontroller\x002x\USB.C	378;"	v	line:378
+ep7Bi	C:\fw\midicontroller\x002x\USB.C	384;"	v	line:384
+ep7Bo	C:\fw\midicontroller\x002x\USB.C	383;"	v	line:383
+ep8Bi	C:\fw\midicontroller\x002x\USB.C	389;"	v	line:389
+ep8Bo	C:\fw\midicontroller\x002x\USB.C	388;"	v	line:388
+ep9Bi	C:\fw\midicontroller\x002x\USB.C	394;"	v	line:394
+ep9Bo	C:\fw\midicontroller\x002x\USB.C	393;"	v	line:393
+false::0	C:\fw\midicontroller\x002x\_TOOLS.H	21;"	d	line:21
+hid_i00a00	C:\fw\midicontroller\x002x\USBDSC.H	58;"	v	line:58
+hid_report_in	C:\fw\midicontroller\x002x\USB.C	452;"	v	line:452
+hid_report_out	C:\fw\midicontroller\x002x\USB.C	451;"	v	line:451
+hid_rpt_UPS	C:\fw\midicontroller\x002x\usbdescript.c	308;"	v	line:308
+hid_rpt_rx_len	C:\fw\midicontroller\x002x\HID.C	52;"	v	line:52
+high	C:\fw\midicontroller\x002x\_TOOLS.H	62;"	m	line:62
+high	C:\fw\midicontroller\x002x\_TOOLS.H	70;"	m	line:70
+high	C:\fw\midicontroller\x002x\_TOOLS.H	83;"	m	line:83
+high_word	C:\fw\midicontroller\x002x\_TOOLS.H	73;"	m	line:73
+i	C:\fw\midicontroller\x002x\HID.C	221;"	l	line:221
+i	C:\fw\midicontroller\x002x\MAIN.C	22;"	l	line:22
+i	C:\fw\midicontroller\x002x\USB.C	558;"	l	line:558
+i00a00	C:\fw\midicontroller\x002x\USBDSC.H	57;"	v	line:57
+iCfg	C:\fw\midicontroller\x002x\USB.H	150;"	m	line:150	struct:_USB_CFG_DSC
+iIntf	C:\fw\midicontroller\x002x\USB.H	161;"	m	line:161	struct:_USB_INTF_DSC
+iMFR	C:\fw\midicontroller\x002x\USB.H	140;"	m	line:140	struct:_USB_DEV_DSC
+iProduct	C:\fw\midicontroller\x002x\USB.H	140;"	m	line:140	struct:_USB_DEV_DSC
+iSerialNum	C:\fw\midicontroller\x002x\USB.H	141;"	m	line:141	struct:_USB_DEV_DSC
+idProduct	C:\fw\midicontroller\x002x\USB.H	139;"	m	line:139	struct:_USB_DEV_DSC
+idVendor	C:\fw\midicontroller\x002x\USB.H	139;"	m	line:139	struct:_USB_DEV_DSC
+idle_rate	C:\fw\midicontroller\x002x\HID.C	50;"	v	line:50
+jumpto::(LOCATION)_asmgotoLOCATION_end	C:\fw\midicontroller\x002x\_TOOLS.H	32;"	d	line:32
+l_form	C:\fw\midicontroller\x002x\_TOOLS.H	82;"	m	line:82
+low	C:\fw\midicontroller\x002x\_TOOLS.H	62;"	m	line:62
+low	C:\fw\midicontroller\x002x\_TOOLS.H	70;"	m	line:70
+low	C:\fw\midicontroller\x002x\_TOOLS.H	83;"	m	line:83
+low_word	C:\fw\midicontroller\x002x\_TOOLS.H	72;"	m	line:72
+ls_form	C:\fw\midicontroller\x002x\_TOOLS.H	69;"	m	line:69
+mInitializeUSBDriver::{UCFG=UCFG_VAL;\	C:\fw\midicontroller\x002x\USB.H	454;"	d	line:454
+mUSBGetHIDDscAdr::(ptr)\	C:\fw\midicontroller\x002x\USBCFG.H	94;"	d	line:94
+mUSBGetHIDRptDscAdr::(ptr)\	C:\fw\midicontroller\x002x\USBCFG.H	100;"	d	line:100
+mUSBGetHIDRptDscSize::(count)\	C:\fw\midicontroller\x002x\USBCFG.H	107;"	d	line:107
+main	C:\fw\midicontroller\x002x\MAIN.C	21;"	f	line:21
+main	C:\fw\midicontroller\x002x\STARTUP.C	8;"	p	line:8	file:	signature:(void)
+main	C:\fw\midicontroller\x002x\dummystart.c	3;"	p	line:3	file:	signature:(void)
+mid	C:\fw\midicontroller\x002x\_TOOLS.H	84;"	m	line:84
+nop::(x)_asmNOP_endasm	C:\fw\midicontroller\x002x\_TOOLS.H	34;"	d	line:34
+pDst	C:\fw\midicontroller\x002x\USB.C	471;"	v	line:471
+pFunc	C:\fw\midicontroller\x002x\TYPEDEFS.H	123;"	t	line:123
+pSrc	C:\fw\midicontroller\x002x\USB.C	470;"	v	line:470
+report	C:\fw\midicontroller\x002x\USBDSC.H	74;"	m	line:74
+report	C:\fw\midicontroller\x002x\usbdescript.c	308;"	m	line:308	file:
+s_form	C:\fw\midicontroller\x002x\_TOOLS.H	61;"	m	line:61
+s_form	C:\fw\midicontroller\x002x\_TOOLS.H	83;"	m	line:83
+sd000	C:\fw\midicontroller\x002x\usbdescript.c	245;"	v	line:245
+self_power::1	C:\fw\midicontroller\x002x\USBCFG.H	58;"	d	line:58
+self_power::PORTAbits.RA2	C:\fw\midicontroller\x002x\USBCFG.H	56;"	d	line:56
+setbit::(VAR,Place)VAR|=1<<Place	C:\fw\midicontroller\x002x\_TOOLS.H	25;"	d	line:25
+sm_form	C:\fw\midicontroller\x002x\_TOOLS.H	84;"	m	line:84
+string	C:\fw\midicontroller\x002x\RS232.C	24;"	m	line:24	file:
+string	C:\fw\midicontroller\x002x\RS232.C	25;"	m	line:25	file:
+string	C:\fw\midicontroller\x002x\RS232.C	26;"	m	line:26	file:
+string	C:\fw\midicontroller\x002x\RS232.C	27;"	m	line:27	file:
+string	C:\fw\midicontroller\x002x\usbdescript.c	245;"	m	line:245	file:
+string	C:\fw\midicontroller\x002x\usbdescript.c	249;"	m	line:249	file:
+string	C:\fw\midicontroller\x002x\usbdescript.c	254;"	m	line:254	file:
+string	C:\fw\midicontroller\x002x\usbdescript.c	259;"	m	line:259	file:
+string	C:\fw\midicontroller\x002x\usbdescript.c	264;"	m	line:264	file:
+tempcntr	C:\fw\midicontroller\x002x\MAIN.C	96;"	l	line:96
+tempreg	C:\fw\midicontroller\x002x\RAM_DEF.C	34;"	v	line:34
+tempvar0	C:\fw\midicontroller\x002x\RS232.C	74;"	l	line:74
+tempvar0	C:\fw\midicontroller\x002x\usbapplet.c	36;"	l	line:36
+tempvar1	C:\fw\midicontroller\x002x\RS232.C	74;"	l	line:74
+tempvar1	C:\fw\midicontroller\x002x\usbapplet.c	36;"	l	line:36
+test	C:\fw\midicontroller\x002x\MAIN.C	22;"	l	line:22
+tglbit::(VAR,Place)VAR^=1<<Place	C:\fw\midicontroller\x002x\_TOOLS.H	30;"	d	line:30
+true::1	C:\fw\midicontroller\x002x\_TOOLS.H	22;"	d	line:22
+upper	C:\fw\midicontroller\x002x\_TOOLS.H	70;"	m	line:70
+usb_active_cfg	C:\fw\midicontroller\x002x\USB.C	332;"	v	line:332
+usb_alt_intf	C:\fw\midicontroller\x002x\USB.C	333;"	v	line:333
+usb_bus_sense::1	C:\fw\midicontroller\x002x\USBCFG.H	52;"	d	line:52
+usb_bus_sense::PORTAbits.RA1	C:\fw\midicontroller\x002x\USBCFG.H	50;"	d	line:50
+usb_device_state	C:\fw\midicontroller\x002x\USB.C	330;"	v	line:330
+usb_stat	C:\fw\midicontroller\x002x\USB.C	331;"	v	line:331
+v	C:\fw\midicontroller\x002x\TYPEDEFS.H	115;"	m	line:115	struct:_DWORD::<anonymous>
+v	C:\fw\midicontroller\x002x\TYPEDEFS.H	80;"	m	line:80	struct:_WORD::<anonymous>
+w	C:\fw\midicontroller\x002x\_TOOLS.H	68;"	m	line:68
+wCount	C:\fw\midicontroller\x002x\USB.C	472;"	v	line:472
+wIndex	C:\fw\midicontroller\x002x\USB.H	215;"	m	line:215	struct:_CTRL_TRF_SETUP::<anonymous>
+wLangID	C:\fw\midicontroller\x002x\USB.H	245;"	m	line:245	struct:_CTRL_TRF_SETUP::<anonymous>
+wLength	C:\fw\midicontroller\x002x\USB.H	216;"	m	line:216	struct:_CTRL_TRF_SETUP::<anonymous>
+wMaxPktSize	C:\fw\midicontroller\x002x\USB.H	170;"	m	line:170	struct:_USB_EP_DSC
+wRam	C:\fw\midicontroller\x002x\TYPEDEFS.H	139;"	m	line:139	union:_POINTER
+wRom	C:\fw\midicontroller\x002x\TYPEDEFS.H	143;"	m	line:143	union:_POINTER
+wTotalLength	C:\fw\midicontroller\x002x\USB.H	149;"	m	line:149	struct:_USB_CFG_DSC
+wValue	C:\fw\midicontroller\x002x\USB.H	214;"	m	line:214	struct:_CTRL_TRF_SETUP::<anonymous>
+word	C:\fw\midicontroller\x002x\TYPEDEFS.H	41;"	t	line:41
+word0	C:\fw\midicontroller\x002x\TYPEDEFS.H	98;"	m	line:98	struct:_DWORD::<anonymous>
+word0	C:\fw\midicontroller\x002x\_TOOLS.H	72;"	m	line:72
+word1	C:\fw\midicontroller\x002x\TYPEDEFS.H	99;"	m	line:99	struct:_DWORD::<anonymous>
+word1	C:\fw\midicontroller\x002x\_TOOLS.H	73;"	m	line:73

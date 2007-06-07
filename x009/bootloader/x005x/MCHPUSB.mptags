@@ -1,0 +1,333 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+ADDRESS_STATE::5	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	63;"	d	line:63
+ADR	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	189;"	p	line:189	file:	signature:((int)counter) << 6
+ADR	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	191;"	m	line:191	struct:_BOOT_DATA_PACKET::<anonymous>
+ADR	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	124;"	m	line:124	struct:_BDT::<anonymous>
+ADRH	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	118;"	m	line:118	struct:_BDT::<anonymous>
+ADRL	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	117;"	m	line:117	struct:_BDT::<anonymous>
+ADR_PENDING_STATE::4	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	62;"	d	line:62
+ATTACHED_STATE::1	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	59;"	d	line:59
+BC8	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	85;"	m	line:85	struct:_BD_STAT::<anonymous>
+BC8	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	95;"	m	line:95	struct:_BD_STAT::<anonymous>
+BC9	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	86;"	m	line:86	struct:_BD_STAT::<anonymous>
+BC9	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	96;"	m	line:96	struct:_BD_STAT::<anonymous>
+BDT	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	126;"	t	line:126
+BD_STAT	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	109;"	t	line:109
+BOOL	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	150;"	t	line:150
+BOOT_BD_IN::ep1Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	71;"	d	line:71
+BOOT_BD_OUT::ep1Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	70;"	d	line:70
+BOOT_DATA_PACKET	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	200;"	t	line:200
+BOOT_EP_SIZE::64	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	72;"	d	line:72
+BOOT_H	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	37;"	d	line:37
+BOOT_INTF_ID::0x00	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	68;"	d	line:68
+BOOT_LOAD_MODE	C:\fw\midicontroller\x001x\bootloader\x005x\main.c	66;"	p	line:66	file:	signature:(void)
+BOOT_UEP::UEP1	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	69;"	d	line:69
+BSTALL	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	87;"	m	line:87	struct:_BD_STAT::<anonymous>
+BYTE	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	58;"	t	line:58
+BootInitEP	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	87;"	f	line:87	signature:(void)
+BootInitEP	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	236;"	p	line:236	signature:(void)
+BootService	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	237;"	f	line:237	signature:(void)
+BootService	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	237;"	p	line:237	signature:(void)
+Byte0	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	103;"	m	line:103	struct:_DWORD::<anonymous>
+Byte0	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	70;"	m	line:70	struct:_WORD::<anonymous>
+Byte1	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	104;"	m	line:104	struct:_DWORD::<anonymous>
+Byte1	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	71;"	m	line:71	struct:_WORD::<anonymous>
+Byte2	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	105;"	m	line:105	struct:_DWORD::<anonymous>
+Byte3	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	106;"	m	line:106	struct:_DWORD::<anonymous>
+CARD_DETECT::PORTBbits.RB4	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	116;"	d	line:116
+CFG01::romstruct\	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	49;"	d	line:49
+CHECKSUM_CHECK_EN	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	217;"	d	line:217
+CHECKSUM_CHECK_EN	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	222;"	d	line:222
+CHECKSUM_CHECK_EN	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	227;"	d	line:227
+CMD	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	180;"	m	line:180	struct:_BOOT_DATA_PACKET::<anonymous>
+CONFIGURED_STATE::6	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	64;"	d	line:64
+Cnt	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	116;"	m	line:116	struct:_BDT::<anonymous>
+CtrlTrfData	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	269;"	v	line:269
+DATA_SIZE::(BOOT_EP_SIZE-OVER_HEAD)	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	161;"	d	line:161
+DEFAULT_STATE::3	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	61;"	d	line:61
+DETACHED_STATE::0	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	58;"	d	line:58
+DTS	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	91;"	m	line:91	struct:_BD_STAT::<anonymous>
+DTSEN	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	88;"	m	line:88	struct:_BD_STAT::<anonymous>
+DWORD	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	117;"	t	line:117
+EECON1_RD::EECON1bits.RD	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	60;"	d	line:60
+EECON1_WR::EECON1bits.WR	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	61;"	d	line:61
+ENCRYPTION_ENABLED	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	218;"	d	line:218
+ENCRYPTION_ENABLED	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	228;"	d	line:228
+ENCRYPTION_MASK::0x19	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	231;"	d	line:231
+EP0_BUFF_SIZE::8	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	38;"	d	line:38
+ERASE_FLASH	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	173;"	e	line:173	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+EraseProgMem	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	180;"	f	line:180	signature:(void)
+FAIL::FALSE	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	153;"	d	line:153
+FALSE	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	150;"	e	line:150	enum:_BOOL
+HITECH_C18	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	46;"	d	line:46
+HighB	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	76;"	m	line:76	struct:_WORD::<anonymous>
+INCDIS	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	89;"	m	line:89	struct:_BD_STAT::<anonymous>
+INPUT_PIN::1	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	54;"	d	line:54
+IO_CFG_H	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	48;"	d	line:48
+KEN	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	90;"	m	line:90	struct:_BD_STAT::<anonymous>
+LAB_TEST	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	206;"	d	line:206
+LOWER_LSB::(a)((a).v[0])	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	118;"	d	line:118
+LOWER_MSB::(a)((a).v[1])	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	119;"	d	line:119
+LSB::(a)((a).v[0])	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	83;"	d	line:83
+LowB	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	75;"	m	line:75	struct:_WORD::<anonymous>
+MAJOR_VERSION::0x01	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	96;"	d	line:96
+MAX_EP_NUMBER::1	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	74;"	d	line:74
+MAX_NUM_INT::1	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	39;"	d	line:39
+MCHP_C18	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	48;"	d	line:48
+MINOR_VERSION::0x00	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	95;"	d	line:95
+MODE_PP::_PPBM0	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	42;"	d	line:42
+MSB::(a)((a).v[1])	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	84;"	d	line:84
+MUID_NULL::0	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	59;"	d	line:59
+MUID_USB9::1	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	60;"	d	line:60
+OK::TRUE	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	152;"	d	line:152
+OUTPUT_PIN::0	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	55;"	d	line:55
+OVER_HEAD::5	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	160;"	d	line:160
+PID	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	106;"	m	line:106	struct:_BD_STAT::<anonymous>
+PID0	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	97;"	m	line:97	struct:_BD_STAT::<anonymous>
+PID1	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	98;"	m	line:98	struct:_BD_STAT::<anonymous>
+PID2	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	99;"	m	line:99	struct:_BD_STAT::<anonymous>
+PID3	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	100;"	m	line:100	struct:_BD_STAT::<anonymous>
+POINTER	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	148;"	t	line:148
+POWERED_STATE::2	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	60;"	d	line:60
+READ_CONFIG	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	176;"	e	line:176	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+READ_EEDATA	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	174;"	e	line:174	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+READ_FLASH	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	171;"	e	line:171	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+READ_PROTECT	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	219;"	d	line:219
+READ_PROTECT	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	224;"	d	line:224
+READ_PROTECT	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	229;"	d	line:229
+READ_VERSION	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	170;"	e	line:170	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+REMAPPED_RESET_VECTOR::0xA00	C:\fw\midicontroller\x001x\bootloader\x005x\main.c	45;"	d	line:45	file:
+RESET	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	179;"	e	line:179	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+RM_HIGH_INTERRUPT_VECTOR::0x000A08	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	88;"	d	line:88
+RM_LOW_INTERRUPT_VECTOR::0x000A18	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	89;"	d	line:89
+RM_RESET_VECTOR::0x000A00	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	87;"	d	line:87
+ReadEE	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	197;"	f	line:197	signature:(void)
+ReadProgMem	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	128;"	f	line:128	signature:(void)
+ReadVersion	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	122;"	f	line:122	signature:(void)
+RemoteWakeup	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	76;"	m	line:76	struct:_USB_DEVICE_STATUS::<anonymous>
+SENDING_RESP::0x01	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	100;"	d	line:100
+SetupPkt	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	268;"	v	line:268
+StartWrite	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	112;"	f	line:112	signature:(void)
+Stat	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	115;"	m	line:115	struct:_BDT::<anonymous>
+TRIS_CARD_DETECT::TRISBbits.TRISB4	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	115;"	d	line:115
+TRIS_WRITE_DETECT::TRISAbits.TRISA4	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	118;"	d	line:118
+TRUE	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	150;"	e	line:150	enum:_BOOL
+TYPEDEFS_H	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	38;"	d	line:38
+UCFG_VAL::_PUEN|_TRINT|_FS|MODE_PP	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	43;"	d	line:43
+UOWN	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	102;"	m	line:102	struct:_BD_STAT::<anonymous>
+UOWN	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	92;"	m	line:92	struct:_BD_STAT::<anonymous>
+UPDATE_LED	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	178;"	e	line:178	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+UPPER_LSB::(a)((a).v[2])	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	120;"	d	line:120
+UPPER_MSB::(a)((a).v[3])	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	121;"	d	line:121
+USBCFG_H	C:\fw\midicontroller\x001x\bootloader\x005x\usbcfg.h	35;"	d	line:35
+USBCheckBusStatus	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	87;"	f	line:87	signature:(void)
+USBCheckStdRequest	C:\fw\midicontroller\x001x\bootloader\x005x\usb9.c	79;"	f	line:79	signature:(void)
+USBCtrlEPService	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	103;"	f	line:103	signature:(void)
+USBCtrlEPServiceComplete	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	396;"	f	line:396	signature:(void)
+USBCtrlTrfInHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	246;"	f	line:246	signature:(void)
+USBCtrlTrfInHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	79;"	p	line:79	file:	signature:(void)
+USBCtrlTrfOutHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	201;"	f	line:201	signature:(void)
+USBCtrlTrfOutHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	78;"	p	line:78	file:	signature:(void)
+USBCtrlTrfRxService	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	345;"	f	line:345	signature:(void)
+USBCtrlTrfSetupHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	158;"	f	line:158	signature:(void)
+USBCtrlTrfSetupHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	77;"	p	line:77	file:	signature:(void)
+USBCtrlTrfTxService	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	285;"	f	line:285	signature:(void)
+USBDSC_H	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	40;"	d	line:40
+USBDriverService	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	121;"	f	line:121	signature:(void)
+USBErrorHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	67;"	p	line:67	file:	signature:(void)
+USBMMAP_H	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	38;"	d	line:38
+USBModuleDisable	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	59;"	p	line:59	file:	signature:(void)
+USBModuleEnable	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	58;"	p	line:58	file:	signature:(void)
+USBPrepareForNextSetupTrf	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	504;"	f	line:504	signature:(void)
+USBProtocolResetHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	226;"	f	line:226	signature:(void)
+USBProtocolResetHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	64;"	p	line:64	file:	signature:(void)
+USBStallHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	66;"	p	line:66	file:	signature:(void)
+USBStdFeatureReqHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usb9.c	59;"	p	line:59	file:	signature:(void)
+USBStdGetDscHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usb9.c	56;"	p	line:56	file:	signature:(void)
+USBStdGetStatusHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usb9.c	58;"	p	line:58	file:	signature:(void)
+USBStdSetCfgHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usb9.c	210;"	f	line:210	signature:(void)
+USBStdSetCfgHandler	C:\fw\midicontroller\x001x\bootloader\x005x\usb9.c	57;"	p	line:57	file:	signature:(void)
+USBSuspend	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	61;"	p	line:61	file:	signature:(void)
+USBWakeFromSuspend	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	62;"	p	line:62	file:	signature:(void)
+USB_DEVICE_STATUS	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	79;"	t	line:79
+USB_H	C:\fw\midicontroller\x001x\bootloader\x005x\usb.h	37;"	d	line:37
+USB_SOF_Handler	C:\fw\midicontroller\x001x\bootloader\x005x\usbdrv.c	65;"	p	line:65	file:	signature:(void)
+WAIT_FOR_CMD::0x00	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	99;"	d	line:99
+WORD	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	82;"	t	line:82
+WRITE_CONFIG	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	177;"	e	line:177	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+WRITE_DETECT::PORTAbits.RA4	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	119;"	d	line:119
+WRITE_EEDATA	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	175;"	e	line:175	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+WRITE_FLASH	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	172;"	e	line:172	enum:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+Word0	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	110;"	m	line:110	struct:_DWORD::<anonymous>
+Word1	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	111;"	m	line:111	struct:_DWORD::<anonymous>
+WriteConfig	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	223;"	f	line:223	signature:(void)
+WriteEE	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	209;"	f	line:209	signature:(void)
+WriteProgMem	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	150;"	f	line:150	signature:(void)
+_BDT	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	111;"	u	line:111
+_BD_STAT	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	81;"	u	line:81
+_BOOL	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	150;"	g	line:150
+_BOOT_DATA_PACKET	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	163;"	u	line:163
+_BSTALL::0x04	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	47;"	d	line:47
+_BYTE	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	44;"	u	line:44
+_DAT0::0x00	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	51;"	d	line:51
+_DAT1::0x40	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	52;"	d	line:52
+_DTSEN::0x08	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	48;"	d	line:48
+_DTSMASK::0x40	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	53;"	d	line:53
+_DWORD	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	86;"	u	line:86
+_INCDIS::0x10	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	49;"	d	line:49
+_KEN::0x20	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	50;"	d	line:50
+_POINTER	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	125;"	u	line:125
+_RAM::0	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	67;"	d	line:67
+_ROM::1	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	68;"	d	line:68
+_UCPU::0x00	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	55;"	d	line:55
+_USB_DEVICE_STATUS	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	71;"	u	line:71
+_USIE::0x80	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	54;"	d	line:54
+_WORD	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	60;"	u	line:60
+_byte	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	165;"	m	line:165	union:_BOOT_DATA_PACKET
+_byte	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	46;"	m	line:46	union:_BYTE
+_byte	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	73;"	m	line:73	union:_USB_DEVICE_STATUS
+_byte	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	83;"	m	line:83	union:_BD_STAT
+_dword	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	88;"	m	line:88	union:_DWORD
+_high_ISR	C:\fw\midicontroller\x001x\bootloader\x005x\main.c	71;"	f	line:71	signature:(void)
+_word	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	133;"	m	line:133	union:_POINTER
+_word	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	62;"	m	line:62	union:_WORD
+b0	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	49;"	m	line:49	struct:_BYTE::<anonymous>
+b1	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	50;"	m	line:50	struct:_BYTE::<anonymous>
+b2	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	51;"	m	line:51	struct:_BYTE::<anonymous>
+b3	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	52;"	m	line:52	struct:_BYTE::<anonymous>
+b4	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	53;"	m	line:53	struct:_BYTE::<anonymous>
+b5	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	54;"	m	line:54	struct:_BYTE::<anonymous>
+b6	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	55;"	m	line:55	struct:_BYTE::<anonymous>
+b7	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	56;"	m	line:56	struct:_BYTE::<anonymous>
+bDscType	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.c	227;"	m	line:227	file:
+bDscType	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	59;"	m	line:59
+bHigh	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	130;"	m	line:130	struct:_POINTER::<anonymous>
+bLength	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.c	227;"	m	line:227	file:
+bLength	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	59;"	m	line:59
+bLow	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	129;"	m	line:129	struct:_POINTER::<anonymous>
+bRam	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	137;"	m	line:137	union:_POINTER
+bRom	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	142;"	m	line:142	union:_POINTER
+big_counter	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	56;"	v	line:56
+byte	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	40;"	t	line:40
+byte0	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	65;"	m	line:65	struct:_WORD::<anonymous>
+byte0	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	91;"	m	line:91	struct:_DWORD::<anonymous>
+byte1	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	66;"	m	line:66	struct:_WORD::<anonymous>
+byte1	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	92;"	m	line:92	struct:_DWORD::<anonymous>
+byte2	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	93;"	m	line:93	struct:_DWORD::<anonymous>
+byte3	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	94;"	m	line:94	struct:_DWORD::<anonymous>
+byteTemp	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	53;"	v	line:53
+byte_to_read	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	347;"	l	line:347
+byte_to_send	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	287;"	l	line:287
+cd01	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	50;"	v	line:50
+counter	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	52;"	v	line:52
+cs_sdmmc::LATBbits.LATB3	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	112;"	d	line:112
+cs_temp_sensor::LATBbits.LATB2	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	109;"	d	line:109
+ctrl_trf_mem	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.h	77;"	m	line:77	struct:_USB_DEVICE_STATUS::<anonymous>
+ctrl_trf_session_owner	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	70;"	v	line:70
+ctrl_trf_state	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	69;"	v	line:69
+data	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	192;"	m	line:192	struct:_BOOT_DATA_PACKET::<anonymous>
+dataPacket	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	276;"	v	line:276
+device_dsc	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.c	180;"	v	line:180
+dword	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	42;"	t	line:42
+ep01i_i00a00	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	53;"	v	line:53
+ep01o_i00a00	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	52;"	v	line:52
+ep0Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	175;"	v	line:175
+ep0Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	174;"	v	line:174
+ep10Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	225;"	v	line:225
+ep10Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	224;"	v	line:224
+ep11Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	230;"	v	line:230
+ep11Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	229;"	v	line:229
+ep12Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	235;"	v	line:235
+ep12Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	234;"	v	line:234
+ep13Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	240;"	v	line:240
+ep13Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	239;"	v	line:239
+ep14Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	245;"	v	line:245
+ep14Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	244;"	v	line:244
+ep15Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	250;"	v	line:250
+ep15Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	249;"	v	line:249
+ep1Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	180;"	v	line:180
+ep1Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	179;"	v	line:179
+ep2Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	185;"	v	line:185
+ep2Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	184;"	v	line:184
+ep3Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	190;"	v	line:190
+ep3Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	189;"	v	line:189
+ep4Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	195;"	v	line:195
+ep4Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	194;"	v	line:194
+ep5Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	200;"	v	line:200
+ep5Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	199;"	v	line:199
+ep6Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	205;"	v	line:205
+ep6Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	204;"	v	line:204
+ep7Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	210;"	v	line:210
+ep7Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	209;"	v	line:209
+ep8Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	215;"	v	line:215
+ep8Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	214;"	v	line:214
+ep9Bi	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	220;"	v	line:220
+ep9Bo	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	219;"	v	line:219
+high	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	188;"	m	line:188	struct:_BOOT_DATA_PACKET::<anonymous>::<anonymous>::<anonymous>
+i	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	160;"	l	line:160
+i00a00	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	51;"	v	line:51
+led_num	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	197;"	m	line:197	struct:_BOOT_DATA_PACKET::<anonymous>
+led_status	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	198;"	m	line:198	struct:_BOOT_DATA_PACKET::<anonymous>
+len	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	181;"	m	line:181	struct:_BOOT_DATA_PACKET::<anonymous>
+low	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	187;"	m	line:187	struct:_BOOT_DATA_PACKET::<anonymous>::<anonymous>::<anonymous>
+mBootRxIsBusy::BOOT_BD_OUT.Stat.UOWN	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	119;"	d	line:119
+mBootTxIsBusy::BOOT_BD_IN.Stat.UOWN	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	138;"	d	line:138
+mInitAllLEDs::LATD&=0xF0;TRISD&=0xF0;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	75;"	d	line:75
+mInitAllSwitches::TRISBbits.TRISB4=1;TRISBbits.T	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	98;"	d	line:98
+mInitPOT::TRISAbits.TRISA0=1;ADCON0=0x01	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	105;"	d	line:105
+mInitSwitch2::TRISBbits.TRISB4=1;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	99;"	d	line:99
+mInitSwitch3::TRISBbits.TRISB5=1;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	100;"	d	line:100
+mLED_1::LATDbits.LATD0	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	77;"	d	line:77
+mLED_1_Off::mLED_1=0;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	87;"	d	line:87
+mLED_1_On::mLED_1=1;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	82;"	d	line:82
+mLED_1_Toggle::mLED_1=!mLED_1;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	92;"	d	line:92
+mLED_2::LATDbits.LATD1	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	78;"	d	line:78
+mLED_2_Off::mLED_2=0;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	88;"	d	line:88
+mLED_2_On::mLED_2=1;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	83;"	d	line:83
+mLED_2_Toggle::mLED_2=!mLED_2;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	93;"	d	line:93
+mLED_3::LATDbits.LATD2	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	79;"	d	line:79
+mLED_3_Off::mLED_3=0;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	89;"	d	line:89
+mLED_3_On::mLED_3=1;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	84;"	d	line:84
+mLED_3_Toggle::mLED_3=!mLED_3;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	94;"	d	line:94
+mLED_4::LATDbits.LATD3	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	80;"	d	line:80
+mLED_4_Off::mLED_4=0;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	90;"	d	line:90
+mLED_4_On::mLED_4=1;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	85;"	d	line:85
+mLED_4_Toggle::mLED_4=!mLED_4;	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	95;"	d	line:95
+pAdr	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	184;"	m	line:184	union:_BOOT_DATA_PACKET::<anonymous>::<anonymous>
+pDst	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	73;"	v	line:73
+pFunc	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	123;"	t	line:123
+pSrc	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	72;"	v	line:72
+sd000	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.c	227;"	v	line:227
+self_power::1	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	71;"	d	line:71
+self_power::PORTAbits.RA2	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	69;"	d	line:69
+string	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.c	227;"	m	line:227	file:
+string	C:\fw\midicontroller\x001x\bootloader\x005x\usbdsc.h	59;"	m	line:59
+sw2::PORTBbits.RB4	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	101;"	d	line:101
+sw3::PORTBbits.RB5	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	102;"	d	line:102
+trf_state	C:\fw\midicontroller\x001x\bootloader\x005x\boot.c	54;"	v	line:54
+tris_cs_sdmmc::TRISBbits.TRISB3	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	111;"	d	line:111
+tris_cs_temp_sensor::TRISBbits.TRISB2	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	108;"	d	line:108
+tris_self_power::TRISAbits.TRISA2	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	66;"	d	line:66
+tris_usb_bus_sense::TRISAbits.TRISA1	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	58;"	d	line:58
+upper	C:\fw\midicontroller\x001x\bootloader\x005x\boot.h	189;"	m	line:189	struct:_BOOT_DATA_PACKET::<anonymous>::<anonymous>::<anonymous>
+usb_active_cfg	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	159;"	v	line:159
+usb_alt_intf	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	160;"	v	line:160
+usb_bus_sense::1	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	63;"	d	line:63
+usb_bus_sense::PORTAbits.RA1	C:\fw\midicontroller\x001x\bootloader\x005x\io_cfg.h	61;"	d	line:61
+usb_device_state	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	157;"	v	line:157
+usb_stat	C:\fw\midicontroller\x001x\bootloader\x005x\usbmmap.c	158;"	v	line:158
+v	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	115;"	m	line:115	struct:_DWORD::<anonymous>
+v	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	80;"	m	line:80	struct:_WORD::<anonymous>
+wCount	C:\fw\midicontroller\x001x\bootloader\x005x\usbctrltrf.c	74;"	v	line:74
+wRam	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	139;"	m	line:139	union:_POINTER
+wRom	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	143;"	m	line:143	union:_POINTER
+word	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	41;"	t	line:41
+word0	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	98;"	m	line:98	struct:_DWORD::<anonymous>
+word1	C:\fw\midicontroller\x001x\bootloader\x005x\typedefs.h	99;"	m	line:99	struct:_DWORD::<anonymous>
