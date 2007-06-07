@@ -1,0 +1,7 @@
+Warning[2060] C:\fw\midicontroller\x011a\hardware.h 46 : shift expression has no effect
+Warning[2060] C:\fw\midicontroller\x011a\hwcalls.c 103 : shift expression has no effect
+Warning[2060] C:\fw\midicontroller\x011a\hwcalls.c 123 : shift expression has no effect
+Warning[2060] C:\fw\midicontroller\x011a\hwcalls.c 127 : shift expression has no effect
+Warning[2060] C:\fw\midicontroller\x011a\hwcalls.c 132 : shift expression has no effect
+Warning[2058] C:\fw\midicontroller\x011a\hwcalls.c 144 : call of function without prototype
+Warning[2060] C:\fw\midicontroller\x011a\hwcalls.c 151 : shift expression has no effect

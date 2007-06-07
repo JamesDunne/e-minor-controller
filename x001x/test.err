@@ -1,0 +1,2 @@
+Warning[215] C:\FW\TEST\TEST.ASM 17 : Processor superseded by command line.  Verify processor symbol.
+Message[301] C:\FW\TEST\_MICRDEF442.INC 36 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)

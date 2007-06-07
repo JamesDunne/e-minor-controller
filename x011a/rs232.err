@@ -1,0 +1,4 @@
+Warning[2058] C:\fw\midicontroller\x011a\rs232.c 68 : call of function without prototype
+Warning[2058] C:\fw\midicontroller\x011a\rs232.c 159 : call of function without prototype
+Warning[2056] C:\fw\midicontroller\x011a\rs232.c 185 : expression is always true
+Warning[2056] C:\fw\midicontroller\x011a\rs232.c 211 : expression is always true
