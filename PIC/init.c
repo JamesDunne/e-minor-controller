@@ -59,12 +59,18 @@ void init(void) {
 	ADCON2	= 0b10000110;		//Right justified, 0 TAD(manual), FOSC/32
 
 //set up timer0 to interrupt at some interval..
-	INTCON = 0x20;                //disable global and enable TMR0 interrupt
-	INTCON2 = 0x84;               //TMR0 high priority
+	INTCON = INIT_INTCON;
+	INTCON2 = INIT_INTCON2;
 	RCONbits.IPEN = 1;            //enable priority levels
+
 	TMR0H = 0;                    //clear timer
 	TMR0L = 0;                    //clear timer
-	T0CON = 0x80;                 //set up timer0 - prescaler 1:8
+	T0CON = INIT_T0CON;           //set up timer0
+
+	TMR2 = 0;
+	PR2 = INIT_PR2;
+	T2CON = INIT_T2CON;				//enable the timer and set up the scalars
+	PIE1 = INIT_PIE1;
 	INTCONbits.GIEH = 1;          //enable interrupts
 
 

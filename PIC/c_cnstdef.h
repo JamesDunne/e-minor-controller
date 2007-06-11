@@ -15,6 +15,21 @@
 
 #define	LATCH_STROBE_DELAY		16	//4uS minimum
 #define	BTN_SAMPLE_DELAY		5	//probably unnecessary
+
+//system timing:
+#define	SYSTEM_TIME_1MS			4		//in 250uS counts
+#define	SYSTEM_TIME_10MS		10		//in 1mS counts
+#define	SYSTEM_TIME_1S			100		//in 10mS counts
+
+//interrupts:
+#define	INIT_INTCON			0x00	//disable global and enable TMR0 interrupt
+#define	INIT_INTCON2		0x80	//PORTB pullups disabled
+//timing constants:
+#define	INIT_T0CON			0x00	//timer0 disabled
+
+#define	INIT_T2CON			0x0D		//on, 1:4 prescale, 1:2 postscale
+#define	INIT_PR2			0xF9		//250uS interrupt
+#define	INIT_PIE1			0x02		//enable pr2 to tmr2 match interrupt
 //-----------------------------------------------------------------------------
 //Communication constants
 

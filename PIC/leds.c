@@ -114,6 +114,14 @@ unsigned char AsciiTo7Seg(unsigned char chr) {
 	return chr;
 }
 
+void	Scroll7SegDisp(void) {
+	unsigned char chars[5], i;
+
+	for (i=0;i<5;i++) chars[i] = ScrollingDisplayData[ScrollingDisplayIndex+i];
+	SetDispAscii(chars);
+	ScrollingDisplayIndex--;
+	if (ScrollingDisplayIndex == 0) ScrollingDisplayIndex = ScrollingDisplayLength;
+}
 
 rom unsigned char NumbersSegTable[10] = {
 	(1<<0)|(1<<5)|(1<<1)|(1<<4)|(1<<2)|(1<<3),			//0

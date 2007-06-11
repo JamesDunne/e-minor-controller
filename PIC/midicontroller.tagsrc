@@ -17,6 +17,7 @@ C:\fw\midicontroller\svn\trunk\PIC\leds.c
 C:\fw\midicontroller\svn\trunk\PIC\tables.c
 C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
 C:\fw\midicontroller\svn\trunk\PIC\exppedal.c
+C:\fw\midicontroller\svn\trunk\PIC\systick.c
 C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h
 C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h
 C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h
@@ -29,5 +30,5 @@ C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h
 C:\fw\midicontroller\svn\trunk\PIC\c_system.h
 C:\fw\midicontroller\svn\trunk\PIC\..\common\hardware.h
 C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H
-C:\fw\midicontroller\x015x\a_micrdef.inc
 C:\fw\midicontroller\svn\trunk\PIC\..\common\types.h
+C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc

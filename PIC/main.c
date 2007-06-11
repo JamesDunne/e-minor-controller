@@ -17,6 +17,8 @@ void	ServiceUSB(void);
 
 #pragma code	main_code=0xA2A
 
+rom unsigned char 	DataStart[64] = "    princess consuela banana hannoc  ";
+
 void main() {
 	unsigned char chars[5], index;
 
@@ -30,6 +32,10 @@ void main() {
 	chars[4] = 'c';
 	SetDispAscii(chars);
 	SendDataToShiftReg(0xAA);
+
+	ScrollingDisplayLength = 37;
+	ScrollingDisplayIndex = ScrollingDisplayLength;
+	for (index=0;index<64;index++) ScrollingDisplayData[ScrollingDisplayLength-index] = DataStart[index];
 
 /*
 	ProgMemAddr.s_form = 0x4000;
@@ -49,12 +55,16 @@ void main() {
 */
 
 	for(;;) {
+		ENABLE_ALL_INTERRUPTS();
+
 		if (ExpPedalSvc) {
 			ExpPedalRead();
 		}
 		
 		
 		if (Systick) {
+			Systick = false;
+			SystemTimeRoutine();		//1mS system time routine
 
 			ReadButtons();
 

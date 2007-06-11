@@ -30,11 +30,27 @@ InterruptVectorHigh (void)
 #pragma interrupt InterruptHandlerHigh
 void	InterruptHandlerHigh ()
 {
-  if (INTCONbits.TMR0IF)
-    {                                   //check for TMR0 overflow
-      INTCONbits.TMR0IF = 0;            //clear interrupt flag
-      Systick = true;
-    }
+/*
+	if (INTCONbits.TMR0IF)
+	{                                   //check for TMR0 overflow
+		INTCONbits.TMR0IF = 0;            //clear interrupt flag
+		Systick = true;
+	}
+*/
+	if (PIR1bits.TMR2IF){
+		PIR1bits.TMR2IF = 0;            //clear interrupt flag
+
+		Systick = true;
+
+
+//Every 250uS routine:
+		SystickCntr++;
+		if (SystickCntr == SYSTEM_TIME_1MS) {
+			SystickCntr = 0;
+//Every 1mS routine:
+			Systick = true;
+		}
+	}
 }
 #pragma code
 //----------------------------------------------------------------------------

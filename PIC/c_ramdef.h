@@ -21,6 +21,7 @@ extern TwoBytes	ProgMemAddr;
 extern BitField ArbFlags1;
 #define Systick		ArbFlags1.bit0
 #define	ExpPedalSvc	ArbFlags1.bit1
+#define	ButtonsSvc	ArbFlags1.bit2
 
 extern BitField MiscFlags1;
 #define	ModeSwitchState		MiscFlags1.bit0
@@ -30,6 +31,13 @@ extern unsigned char DispNumOfCommons;
 extern unsigned char LedStates;			//footswitch leds
 extern unsigned long	ButtonState;
 extern unsigned char ExpPedalInst;
+extern unsigned char SystickCntr;
+extern unsigned char SystickCntr2;
+extern unsigned char SystickCntr3;
+
+extern unsigned char ScrollingDisplayData[64];
+extern unsigned char ScrollingDisplayLength;
+extern unsigned char ScrollingDisplayIndex;
 
 //---------------------USB stuff---------------------------------
 extern unsigned char USBDataPointer;

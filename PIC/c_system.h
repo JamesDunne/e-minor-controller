@@ -39,7 +39,7 @@ void	SendDataToShiftReg(unsigned char dataToSend);
 void	SetDipAddress(unsigned char Address);
 void	ReadButtons(void);
 unsigned char	ADC_CONVERSION(unsigned char Channel);
-
+void	SetDispAscii(unsigned char chars[]);
 
 extern rom unsigned char NumbersSegTable[10];
 extern rom unsigned char LettersSegTable[26];

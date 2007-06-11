@@ -19,6 +19,13 @@ unsigned char DispNumOfCommons;
 unsigned char LedStates;			//footswitch leds
 unsigned long	ButtonState;
 unsigned char ExpPedalInst;
+unsigned char SystickCntr;
+unsigned char SystickCntr2;
+unsigned char SystickCntr3;
+
+unsigned char ScrollingDisplayData[64];
+unsigned char ScrollingDisplayLength;
+unsigned char ScrollingDisplayIndex;
 
 TwoBytes ExpPedalAvg;
 
