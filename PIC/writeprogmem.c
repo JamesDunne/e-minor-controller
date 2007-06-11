@@ -25,13 +25,14 @@ void StartWrite(void)
      */
     EECON2 = 0x55;
     EECON2 = 0xAA;
-    EECON1bits.WR = 1;
+    EECON1bits.WR = 1;		//processor stall for approx 2mS..
 }//end StartWrite
 
 
 //uses TwoBytes ProgMemAddr;
 //also uses ProgmemBuffer[64]
-void WriteProgMem(void) //TESTED: Passed
+//NOTE: index should be either 0 or 32.  (0 for the first 32 bytes, 32 for the second)
+void WriteProgMem(unsigned char index) //TESTED: Passed
 {
 	unsigned char counter;
     /*
@@ -46,7 +47,7 @@ void WriteProgMem(void) //TESTED: Passed
 
     //LEN = # of byte to write
 
-    for (counter = 0; counter < 32; counter++)
+    for (counter = index; counter < index+32; counter++)
     {
         *(rom far char *)(ProgMemAddr.s_form+counter) = \
         ProgmemBuffer[counter];

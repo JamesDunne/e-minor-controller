@@ -31,11 +31,7 @@ ADC_CONVERSION_DELAY:
 
 /* Send a single MIDI byte. */
 void midi_send_byte(u8 data) {
-	unsigned char temp;
-	//send out first byte.
-	TXREG = data;
-	temp = PIR1;			//clear TXIF..
-	while(!PIR1bits.TXIF);
+	MIDI_ENQUEUE(data);
 }
 
 //******************************************************************************
@@ -163,6 +159,7 @@ u32 fsw_poll(){
 void	UpdateLeds(void) {
 	SendDataToShiftReg(LedStates);
 }
+
 /* Set currently active program foot-switch's LED indicator and disable all others */
 void fsw_led_set_active(int idx){
 	LedStates = 0;
@@ -257,34 +254,48 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BA
 	addrlo = addr & 63;
 
 	/* load the 64-byte aligned chunk: */
-	//read_eeprom(chunk, addrhi);
+	read_rom_to_pmbuffer(addrhi);
 
 	/* overwrite the bank program section for the bank record: */
-	chunk[addrlo+4] = bank[0];
-	chunk[addrlo+5] = bank[1];
-	chunk[addrlo+6] = bank[2];
-	chunk[addrlo+7] = bank[3];
+	ProgmemBuffer[addrlo+4] = bank[0];
+	ProgmemBuffer[addrlo+5] = bank[1];
+	ProgmemBuffer[addrlo+6] = bank[2];
+	ProgmemBuffer[addrlo+7] = bank[3];
 
-	chunk[addrlo+ 8] = bankcontroller[0] & 0x7F;
-	chunk[addrlo+ 9] = bankcontroller[1] & 0x7F;
-	chunk[addrlo+10] = bankcontroller[2] & 0x7F;
-	chunk[addrlo+11] = bankcontroller[3] & 0x7F;
+	ProgmemBuffer[addrlo+ 8] = bankcontroller[0] & 0x7F;
+	ProgmemBuffer[addrlo+ 9] = bankcontroller[1] & 0x7F;
+	ProgmemBuffer[addrlo+10] = bankcontroller[2] & 0x7F;
+	ProgmemBuffer[addrlo+11] = bankcontroller[3] & 0x7F;
 
 	/* count is stored 0-7, but means 1-8 so subtract 1 */
-	chunk[addrlo+12] = (bankmap_count - 1) & 0x07;
+	ProgmemBuffer[addrlo+12] = (bankmap_count - 1) & 0x07;
 	/* store 8x 2-bit (0-3) values to the next few bytes for the sequence: */
-	chunk[addrlo+13] = ((bankmap[0] & 0x03) << 6) |
+	ProgmemBuffer[addrlo+13] = ((bankmap[0] & 0x03) << 6) |
 					   ((bankmap[1] & 0x03) << 4) |
 					   ((bankmap[2] & 0x03) << 2) |
 					    (bankmap[3] & 0x03);
-	chunk[addrlo+14] = ((bankmap[4] & 0x03) << 6) |
+	ProgmemBuffer[addrlo+14] = ((bankmap[4] & 0x03) << 6) |
 					   ((bankmap[5] & 0x03) << 4) |
 					   ((bankmap[6] & 0x03) << 2) |
 					    (bankmap[7] & 0x03);
 
-	/* write back the 64-byte chunk: */
-	//write_eeprom(chunk, (64 + (bank_index * bank_record_size)) & ~63);	
+	//write_eeprom(chunk, (64 + (bank_index * bank_record_size)) & ~63);
+	
+	ProgMemAddr.s_form = ((64 + (bank_index * bank_record_size)) & ~63);
+	EraseProgMem();
+
+	Write0Pending = true;	//arb will catch this and handle it later..
+	Write32Pending = true;	//arb will catch this and handle it later..
 }
+
+void read_rom_to_pmbuffer(unsigned short Address) {
+	unsigned char index;
+	
+	for (index = 0;index<64;index++) {
+		ProgmemBuffer[index] = ROM_SAVEDATA[Address];	//read rom data into ram
+	}
+}
+
 
 /* Load bank name for browsing through banks: */
 void bank_loadname(u16 bank_index, char name[BANK_NAME_MAXLENGTH]){
@@ -314,7 +325,7 @@ u16 bank_getsortedindex(u16 sort_index){
 	/* read the bank count: */
 	count = *((rom u16 *)&(ROM_SAVEDATA[0]));
 	if (sort_index >= count) {
-		return;
+		return	false;				//MODIFIED!!
 	}
 
 	/* read the bank index given the sort index location: */
@@ -333,6 +344,9 @@ u16 bank_getsortedindex(u16 sort_index){
 void midi_send_cmd1(u8 cmd, u8 channel, u8 data1) {
 	/* send the MIDI command to the opened MIDI Mapper device: */
 //	midiOutShortMsg(outHandle, ((cmd & 0xF) << 4) | (channel & 0xF) | ((u32)data1 << 8));
+
+	MIDI_ENQUEUE(((cmd & 0xF) << 4) | (channel & 0xF));
+	MIDI_ENQUEUE(data1);
 }
 
 /* Send formatted MIDI commands.
@@ -345,4 +359,8 @@ void midi_send_cmd1(u8 cmd, u8 channel, u8 data1) {
 void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2) {
 	/* send the MIDI command to the opened MIDI Mapper device: */
 //	midiOutShortMsg(outHandle, ((cmd & 0xF) << 4) | (channel & 0xF) | ((u32)data1 << 8) | ((u32)data2 << 16));
+
+	MIDI_ENQUEUE(((cmd & 0xF) << 4) | (channel & 0xF));
+	MIDI_ENQUEUE(data1);
+	MIDI_ENQUEUE(data2);
 }

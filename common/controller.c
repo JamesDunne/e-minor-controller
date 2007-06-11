@@ -113,7 +113,7 @@ void itoa_fixed(u8 n, char s[LEDS_MAX_ALPHAS]) {
 }
 
 /* display a program value in decimal with a leading 'P': */
-void show_program() {
+void show_program(void) {
 	char	a[LEDS_MAX_ALPHAS];
 
 	/* convert curr_program to ASCII: */
@@ -145,7 +145,7 @@ void preset_activate(u8 notify) {
 }
 
 /* display the sequence index on the 1-digit LED display: */
-void bankmap_show() {
+void bankmap_show(void) {
 	leds_show_1digit(curr_mapindex + 1);
 }
 
@@ -179,13 +179,13 @@ void sortedbank_activate(u8 notify) {
 }
 
 /* load only current bank name and display it on 4-digit display */
-void bank_showname() {
+void bank_showname(void) {
 	bank_loadname(curr_bank, bankname);
 	leds_show_4alphas(bankname);
 }
 
 /* load only current bank name from the sorted index and display it on 4-digit display */
-void sortedbank_showname() {
+void sortedbank_showname(void) {
 	if (program_mode != PROGRAM_NONE) {
 		leds_show_4alphas("SEQ-");
 	} else {
@@ -217,7 +217,7 @@ u8 button_released(u32 mask) {
 }
 
 /* called every 10ms */
-void controller_10msec_timer() {
+void controller_10msec_timer(void) {
 	/* handle inc/dec acceleration: */
 	if (accel_state != ACCEL_NONE) {
 		if (accel_time > 0) --accel_time;
@@ -281,7 +281,7 @@ void controller_10msec_timer() {
 	}
 }
 
-void inc_practice_value() {
+void inc_practice_value(void) {
 	if (incdec_mode == 0) {
 		if (curr_sortedbank == bank_count - 1) curr_sortedbank = 0;
 		else ++curr_sortedbank;
@@ -291,7 +291,7 @@ void inc_practice_value() {
 	}
 }
 
-void dec_practice_value() {
+void dec_practice_value(void) {
 	if (incdec_mode == 0) {
 		if (curr_sortedbank == 0) curr_sortedbank = bank_count - 1;
 		else --curr_sortedbank;
@@ -301,7 +301,7 @@ void dec_practice_value() {
 	}
 }
 
-void notify_practice_value() {
+void notify_practice_value(void) {
 	if (incdec_mode == 0) {
 		sortedbank_showname();
 	} else {
@@ -309,7 +309,7 @@ void notify_practice_value() {
 	}
 }
 
-void activate_practice_value() {
+void activate_practice_value(void) {
 	if (incdec_mode == 0) {
 		sortedbank_activate(0);
 	} else {
@@ -318,7 +318,7 @@ void activate_practice_value() {
 }
 
 /* sequence programming completed, set state to repeat the sequence back: */
-void sequence_complete() {
+void sequence_complete(void) {
 	/* set the sequence length and store to the ROM: */
 	bankmap_count = curr_mapindex;
 	bank_store(curr_bank, bank, bankcontroller, bankmap, bankmap_count);
@@ -329,7 +329,7 @@ void sequence_complete() {
 }
 
 /* set the controller to an initial state */
-void controller_init() {
+void controller_init(void) {
 	bank_count = banks_count();
 
 	curr_bank = 0;
@@ -344,7 +344,7 @@ void controller_init() {
 }
 
 /* main control loop */
-void controller_handle() {
+void controller_handle(void) {
 	/* poll foot-switch depression status: */
 	sw_curr = fsw_poll();
 	/* poll expression pedal value: */

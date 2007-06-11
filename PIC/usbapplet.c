@@ -161,7 +161,7 @@ unsigned char	ProcessGenericTransferWrite(void) {
 			for (index=0;index<32;index++)
 				ProgmemBuffer[index] = USBEP0DataInBuffer[index+4];
 
-			WriteProgMem();	//uses global ProgMemAddr and ProgmemBuffer[]
+			WriteProgMem(0);	//uses global ProgMemAddr and ProgmemBuffer[]
 			break;
 		case	READ_32:
 			ROMCommAddr.b_form.low = USBEP0DataInBuffer[2];

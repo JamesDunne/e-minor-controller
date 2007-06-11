@@ -36,6 +36,7 @@ void main() {
 	ScrollingDisplayLength = 37;
 	ScrollingDisplayIndex = ScrollingDisplayLength;
 	for (index=0;index<64;index++) ScrollingDisplayData[ScrollingDisplayLength-index] = DataStart[index];
+	Scroll7Segs = true;
 
 /*
 	ProgMemAddr.s_form = 0x4000;
@@ -57,25 +58,55 @@ void main() {
 	for(;;) {
 		ENABLE_ALL_INTERRUPTS();
 
-		if (ExpPedalSvc) {
-			ExpPedalRead();
+		ServiceUSB();			//this must be at the top to ensure timely handling of usb events
+
+		if (Write0Pending) {
+			Write0Pending = false;
+			WriteProgMem(0);		//write first set of 32 bytes.
+			continue;				//continue so we can process pending USB routines
 		}
-		
+	
+		if (Write32Pending) {
+			Write32Pending = false;
+			WriteProgMem(32);		//write second set of 32 bytes.
+			continue;				//continue so we can process pending USB routines
+		}
+
+		if (ExpPedalSvc) {
+			ExpPedalRead();			//read ADC data from the expression pedal input
+			continue;
+		}
 		
 		if (Systick) {
 			Systick = false;
-			SystemTimeRoutine();		//1mS system time routine
+			SystemTimeRoutine();	//1mS system time routine
+			continue;
+		}
+		
+		if (CheckButtons) {
+			CheckButtons = false;
+			ReadButtons();			//read buttons off the multiplexor
+			continue;
+		}
+		
+		if (Handle7segs) {
+			Handle7segs = false;
+			Process7Segs();			//handle 7 segment display data
+		}
+		
+		if (HandleLeds) {
+			HandleLeds = false;
+			UpdateLeds();			//handle leds
+		}
 
-			ReadButtons();
-
-//			ProcessControl();
+		if (HandleController) {
+			HandleController = false;
+//			ProcessControl();		//handle UI and other midi commands
+		}
+		
 //			if (LATE == 0x05) LATE = 0x2;
 //			else LATE = 0x05;
-			ProcessLeds();
 			//ServiceRequests();
-			
-		}
-		ServiceUSB();
 	}
 }
 

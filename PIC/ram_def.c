@@ -13,6 +13,7 @@ TwoBytes	ProgMemAddr;
 
 #pragma udata RamData
 BitField ArbFlags1;
+BitField ArbFlags2;
 BitField MiscFlags1;
 BitField DispSegData[5];
 unsigned char DispNumOfCommons;
@@ -28,6 +29,11 @@ unsigned char ScrollingDisplayLength;
 unsigned char ScrollingDisplayIndex;
 
 TwoBytes ExpPedalAvg;
+
+unsigned char TxBuffer[MAX_TX_LENGTH];
+unsigned char TxBufPtr;
+unsigned char TxBufOutPtr;
+
 
 //----------------------------USB stuff----------------------------------
 unsigned char USBDataPointer;

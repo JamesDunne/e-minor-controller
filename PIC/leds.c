@@ -11,7 +11,7 @@
 #include "usb.h"
 #include "hardware.h"
 
-void	ProcessLeds(void) {
+void	Process7Segs(void) {
 	static unsigned char ComPointer;
 
 	AllDigitsOff();

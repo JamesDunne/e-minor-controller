@@ -18,6 +18,7 @@ C:\fw\midicontroller\svn\trunk\PIC\tables.c
 C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
 C:\fw\midicontroller\svn\trunk\PIC\exppedal.c
 C:\fw\midicontroller\svn\trunk\PIC\systick.c
+C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
 C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h
 C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h
 C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h

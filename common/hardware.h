@@ -46,7 +46,7 @@ enum fsw_masks {
 };
 
 /* Poll up to 28 foot-switch toggles simultaneously.  PREV NEXT DEC  INC map to 28-31 bit positions. */
-u32 fsw_poll();
+u32 fsw_poll(void);
 
 /* Set currently active program foot-switch's LED indicator and disable all others */
 void fsw_led_set_active(int idx);
@@ -60,15 +60,15 @@ void fsw_led_disable(int idx);
 /* --------------- External inputs: */
 
 /* Poll the slider switch to see which mode we're in: */
-u8 slider_poll();
+u8 slider_poll(void);
 
 /* Poll the expression pedal's data (0-127): */
-u8 expr_poll();
+u8 expr_poll(void);
 
 /* --------------- Data persistence functions: */
 
 /* Gets number of stored banks */
-u16 banks_count();
+u16 banks_count(void);
 
 /* Loads a bank into the specified arrays: */
 void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count);
@@ -98,6 +98,6 @@ void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2);
 
 /* --------------- Controller logic interface functions: */
 
-void controller_init();
-void controller_10msec_timer();
-void controller_handle();
+void controller_init(void);
+void controller_10msec_timer(void);
+void controller_handle(void);

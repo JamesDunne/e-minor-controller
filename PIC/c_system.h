@@ -22,24 +22,36 @@
 	INTCONbits.GIEH = false;		\
 	INTCONbits.GIEL = false;
 
-
 //-----------------------------------------------------------------------------
-//Define function prototypes here
+//generic function prototypes:
 void	CLEAR_RAM(void);		//asm function.
-
 void	TXENQ(unsigned char Input);
-void	RS232_ROUTINE(void);
-void	PROCESS_COMM_REQUEST(void);
-void InterruptHandlerHigh ();
-void init(void);
+void	RESET_MIDI_TX_BUFFER(void);
 void	HandleDigit(unsigned char ComPointer);
 void	AllDigitsOff(void);
 unsigned char AsciiTo7Seg(unsigned char chr);
 void	SendDataToShiftReg(unsigned char dataToSend);
 void	SetDipAddress(unsigned char Address);
-void	ReadButtons(void);
 unsigned char	ADC_CONVERSION(unsigned char Channel);
-void	SetDispAscii(unsigned char chars[]);
+void	SetDispAscii(unsigned char chars[]);void	MIDI_ENQUEUE(unsigned char Input);
+void	EraseProgMem(void);
+void	WriteProgMem(unsigned char index);
+void	read_rom_to_pmbuffer(unsigned short Address);
+unsigned char	ProcessGenericTransferRead(void);
+unsigned char	ProcessGenericTransferWrite(void);
+
+//routine prototypes:
+void	ExpPedalRead(void);
+void	SystemTimeRoutine(void);
+void	Process7Segs(void);
+void	UpdateLeds(void);
+void	MIDI_COMM_ROUTINE(void);
+void	ReadButtons(void);
+void	init(void);
+void	RS232_ROUTINE(void);
+void	PROCESS_COMM_REQUEST(void);
+void	InterruptHandlerHigh ();
+void	Scroll7SegDisp(void);
 
 extern rom unsigned char NumbersSegTable[10];
 extern rom unsigned char LettersSegTable[26];

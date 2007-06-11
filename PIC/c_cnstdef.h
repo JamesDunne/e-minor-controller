@@ -13,8 +13,11 @@
 
 #define	DISP_NUMBER_OF_COMMONS	5	//5 is default, increase to reduce brightness
 
-#define	LATCH_STROBE_DELAY		16	//4uS minimum
-#define	BTN_SAMPLE_DELAY		5	//probably unnecessary
+#define	LATCH_STROBE_DELAY		16	//4uS minimum (time for shift register bits)
+#define	BTN_SAMPLE_DELAY		5	//probably unnecessary (sampling time for buttons)
+
+//midi comm buffer length:
+#define	MAX_TX_LENGTH			8	//probably more than necessary
 
 //system timing:
 #define	SYSTEM_TIME_1MS			4		//in 250uS counts

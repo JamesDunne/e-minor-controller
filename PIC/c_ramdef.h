@@ -19,12 +19,21 @@ extern unsigned char ProgmemBuffer[32];
 extern TwoBytes	ProgMemAddr;
 
 extern BitField ArbFlags1;
-#define Systick		ArbFlags1.bit0
-#define	ExpPedalSvc	ArbFlags1.bit1
-#define	ButtonsSvc	ArbFlags1.bit2
+#define Systick				ArbFlags1.bit0
+#define	ExpPedalSvc			ArbFlags1.bit1
+#define	ButtonsSvc			ArbFlags1.bit2
+#define	Write0Pending		ArbFlags1.bit3
+#define	Write32Pending		ArbFlags1.bit4
+#define	HandleLeds			ArbFlags1.bit5
+#define	Handle7segs			ArbFlags1.bit6
+#define	HandleController	ArbFlags1.bit7
+
+extern BitField ArbFlags2;
+#define	CheckButtons		ArbFlags2.bit0
 
 extern BitField MiscFlags1;
 #define	ModeSwitchState		MiscFlags1.bit0
+#define	Scroll7Segs			MiscFlags1.bit1
 
 extern BitField DispSegData[5];		//0 = a, 1 = b, etc.. 
 extern unsigned char DispNumOfCommons;
@@ -38,6 +47,12 @@ extern unsigned char SystickCntr3;
 extern unsigned char ScrollingDisplayData[64];
 extern unsigned char ScrollingDisplayLength;
 extern unsigned char ScrollingDisplayIndex;
+
+extern TwoBytes ExpPedalAvg;
+
+extern unsigned char TxBuffer[MAX_TX_LENGTH];
+extern unsigned char TxBufPtr;
+extern unsigned char TxBufOutPtr;
 
 //---------------------USB stuff---------------------------------
 extern unsigned char USBDataPointer;
