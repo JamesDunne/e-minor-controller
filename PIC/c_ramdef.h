@@ -1,11 +1,9 @@
 //This header file contains the global ram definitions for the project
 
-//----------------------------Main variables----------------------------------------
-extern TwoBytes NVRCommAddr;
-extern TwoBytes RAMCommAddr;
-extern TwoBytes ROMCommAddr;
 
-extern BitField CommFlags1;
+//----------------------------Access bank variables----------------------------------------
+
+near extern BitField CommFlags1;
 #define	ProcessCommRequest		CommFlags1.bit0
 #define	TildeFlg				CommFlags1.bit1
 #define	SendingOutString		CommFlags1.bit2
@@ -15,10 +13,7 @@ extern BitField CommFlags1;
 #define	ProdTestCmdsAllowed		CommFlags1.bit6
 #define	StringInRAM				CommFlags1.bit7
 
-extern unsigned char ProgmemBuffer[32];
-extern TwoBytes	ProgMemAddr;
-
-extern BitField ArbFlags1;
+near extern BitField ArbFlags1;
 #define Systick				ArbFlags1.bit0
 #define	ExpPedalSvc			ArbFlags1.bit1
 #define	ButtonsSvc			ArbFlags1.bit2
@@ -28,14 +23,25 @@ extern BitField ArbFlags1;
 #define	Handle7segs			ArbFlags1.bit6
 #define	HandleController	ArbFlags1.bit7
 
-extern BitField ArbFlags2;
+near extern BitField ArbFlags2;
 #define	CheckButtons		ArbFlags2.bit0
+#define	ControllerTiming	ArbFlags2.bit1
 
-extern BitField MiscFlags1;
+near extern BitField MiscFlags1;
 #define	ModeSwitchState		MiscFlags1.bit0
 #define	Scroll7Segs			MiscFlags1.bit1
 
+
+//----------------------------Main variables----------------------------------------
+
 extern BitField DispSegData[5];		//0 = a, 1 = b, etc.. 
+extern TwoBytes	ProgMemAddr;
+extern unsigned char ProgmemBuffer[32];
+
+extern TwoBytes NVRCommAddr;
+extern TwoBytes RAMCommAddr;
+extern TwoBytes ROMCommAddr;
+
 extern unsigned char DispNumOfCommons;
 extern unsigned char LedStates;			//footswitch leds
 extern unsigned long	ButtonState;

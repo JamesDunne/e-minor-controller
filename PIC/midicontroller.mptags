@@ -105,8 +105,8 @@ ATTACHED_STATE::1	C:\fw\midicontroller\svn\trunk\PIC\usbmmap.h	58;"	d	line:58
 Address	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	146;"	l	line:146
 AllDigitsOff	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	31;"	p	line:31	signature:(void)
 AllDigitsOff	C:\fw\midicontroller\svn\trunk\PIC\leds.c	46;"	f	line:46	signature:(void)
-ArbFlags1	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	15;"	v	line:15
-ArbFlags2	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	16;"	v	line:16
+ArbFlags1	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	8;"	v	line:8
+ArbFlags2	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	9;"	v	line:9
 AsciiTo7Seg	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	32;"	p	line:32	signature:(unsigned char chr)
 AsciiTo7Seg	C:\fw\midicontroller\svn\trunk\PIC\leds.c	101;"	f	line:101	signature:(unsigned char chr)
 B0	C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H	71;"	m	line:71
@@ -188,8 +188,8 @@ BTSEF	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	70;"	m	line:70
 BYTE	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	60;"	t	line:60
 BitField	C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H	54;"	t	line:54
 BtnAddress	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	78;"	l	line:78
-ButtonState	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	21;"	v	line:21
-ButtonsSvc::ArbFlags1.bit2	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	24;"	d	line:24
+ButtonState	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	24;"	v	line:24
+ButtonsSvc::ArbFlags1.bit2	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	19;"	d	line:19
 Byte0	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	105;"	m	line:105	struct:_DWORD::<anonymous>
 Byte0	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	72;"	m	line:72	struct:_WORD::<anonymous>
 Byte1	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	106;"	m	line:106	struct:_DWORD::<anonymous>
@@ -300,8 +300,8 @@ CMIF	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	752;"	q	line:752
 CMIF	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	585;"	m	line:585
 CMIP	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	765;"	q	line:765
 CMIP	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	602;"	m	line:602
-COMMAND_ACCEPTED::0x02	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	40;"	d	line:40
-COMMAND_REJECTED::0x01	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	39;"	d	line:39
+COMMAND_ACCEPTED::0x02	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	45;"	d	line:45
+COMMAND_REJECTED::0x01	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	44;"	d	line:44
 CONFIGURED_STATE::6	C:\fw\midicontroller\svn\trunk\PIC\usbmmap.h	63;"	d	line:63
 CRC16EE	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	283;"	q	line:283
 CRC16EE	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	76;"	m	line:76
@@ -338,19 +338,20 @@ CVRR	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	837;"	q	line:837
 CVRR	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	698;"	m	line:698
 CVRSS	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	841;"	q	line:841
 CVRSS	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	704;"	m	line:704
-CheckButtons::ArbFlags2.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	32;"	d	line:32
+CheckButtons::ArbFlags2.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	27;"	d	line:27
 ClassReqHandler	C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c	370;"	v	line:370
 ClearArray	C:\fw\midicontroller\svn\trunk\PIC\usb.c	1481;"	f	line:1481	signature:(byte* startAdr,byte count)
 ClrWdt::{_asmclrwdt_endasm}	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1206;"	d	line:1206
 Cnt	C:\fw\midicontroller\svn\trunk\PIC\usbmmap.h	115;"	m	line:115	struct:_BDT::<anonymous>
 ComPointer	C:\fw\midicontroller\svn\trunk\PIC\leds.c	15;"	l	line:15	file:
-CommFlags1	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	9;"	v	line:9
+CommFlags1	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	7;"	v	line:7
+ControllerTiming::ArbFlags2.bit1	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	28;"	d	line:28
 CtrlTrfData	C:\fw\midicontroller\svn\trunk\PIC\usb.c	436;"	v	line:436
 D	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1003;"	q	line:1003
 D	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	907;"	m	line:907
 DATA_ADDRESS	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1000;"	q	line:1000
 DATA_ADDRESS	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	901;"	m	line:901
-DATA_RETURNED::0x05	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	43;"	d	line:43
+DATA_RETURNED::0x05	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	48;"	d	line:48
 DC	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1126;"	q	line:1126
 DC	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1071;"	m	line:1071
 DC1B0	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	905;"	q	line:905
@@ -476,9 +477,8 @@ D_DIV	C:\fw\midicontroller\svn\trunk\PIC\rs232.c	26;"	p	line:26	file:	signature:
 Data	C:\fw\midicontroller\svn\trunk\PIC\rs232.c	41;"	l	line:41
 DataCounter	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	41;"	l	line:41
 DataDir	C:\fw\midicontroller\svn\trunk\PIC\usb.h	230;"	m	line:230	struct:_CTRL_TRF_SETUP::<anonymous>
-DataStart	C:\fw\midicontroller\svn\trunk\PIC\main.c	20;"	v	line:20
-DispNumOfCommons	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	19;"	v	line:19
-DispSegData	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	18;"	v	line:18
+DispNumOfCommons	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	22;"	v	line:22
+DispSegData	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	14;"	v	line:14
 ECCP1AS	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	142;"	q	line:142
 ECCP1CON	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	151;"	q	line:151
 ECCP1DEL	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	144;"	q	line:144
@@ -723,7 +723,7 @@ EP_CTRL::0x06	C:\fw\midicontroller\svn\trunk\PIC\usb.h	378;"	d	line:378
 EP_IN::0x0A	C:\fw\midicontroller\svn\trunk\PIC\usb.h	380;"	d	line:380
 EP_OUT::0x0C	C:\fw\midicontroller\svn\trunk\PIC\usb.h	379;"	d	line:379
 EP_OUT_IN::0x0E	C:\fw\midicontroller\svn\trunk\PIC\usb.h	381;"	d	line:381
-ERASE_32::0x30	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	47;"	d	line:47
+ERASE_32::0x30	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	52;"	d	line:52
 EXPP_PEDAL_LINEAR_CONV_TABLE	C:\fw\midicontroller\svn\trunk\PIC\tables.c	16;"	v	line:16
 EXP_PEDAL_BIT::0	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	14;"	d	line:14
 EXP_PEDAL_CHANNEL::0x01	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	21;"	d	line:21
@@ -734,11 +734,11 @@ EXP_PEDAL_PORT::PORTA	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	19;"	d	line
 EXP_PEDAL_TRIS_BIT::TRISAPINbits.TRISA0	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	18;"	d	line:18
 EraseProgMem	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	38;"	p	line:38	signature:(void)
 EraseProgMem	C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c	62;"	f	line:62	signature:(void)
-ExpPedalAvg	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	31;"	v	line:31
-ExpPedalInst	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	22;"	v	line:22
+ExpPedalAvg	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	34;"	v	line:34
+ExpPedalInst	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	25;"	v	line:25
 ExpPedalRead	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	45;"	p	line:45	signature:(void)
 ExpPedalRead	C:\fw\midicontroller\svn\trunk\PIC\exppedal.c	11;"	f	line:11	signature:(void)
-ExpPedalSvc::ArbFlags1.bit1	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	23;"	d	line:23
+ExpPedalSvc::ArbFlags1.bit1	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	18;"	d	line:18
 FAIL::FALSE	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	155;"	d	line:155
 FALSE	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	152;"	e	line:152	enum:_BOOL
 FAST	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	44;"	q	line:44
@@ -840,11 +840,11 @@ HLVDL3	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1093;"	q	line:1093
 HLVDL3	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1028;"	m	line:1028
 HLVDL3	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	996;"	m	line:996
 HSHK_EN::0x10	C:\fw\midicontroller\svn\trunk\PIC\usb.h	382;"	d	line:382
-Handle7segs::ArbFlags1.bit6	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	28;"	d	line:28
-HandleController::ArbFlags1.bit7	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	29;"	d	line:29
+Handle7segs::ArbFlags1.bit6	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	23;"	d	line:23
+HandleController::ArbFlags1.bit7	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	24;"	d	line:24
 HandleDigit	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	30;"	p	line:30	signature:(unsigned char ComPointer)
 HandleDigit	C:\fw\midicontroller\svn\trunk\PIC\leds.c	63;"	f	line:63	signature:(unsigned char ComPointer)
-HandleLeds::ArbFlags1.bit5	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	27;"	d	line:27
+HandleLeds::ArbFlags1.bit5	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	22;"	d	line:22
 HighB	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	78;"	m	line:78	struct:_WORD::<anonymous>
 I2C_DAT	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	991;"	q	line:991
 I2C_DAT	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	883;"	m	line:883
@@ -869,12 +869,12 @@ INDEX_SERIALNUM::0x03	C:\fw\midicontroller\svn\trunk\PIC\usbdsc.h	52;"	d	line:52
 INDF0	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	203;"	q	line:203
 INDF1	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	195;"	q	line:195
 INDF2	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	187;"	q	line:187
-INIT_INTCON2::0x80	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	29;"	d	line:29
-INIT_INTCON::0x00	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	28;"	d	line:28
-INIT_PIE1::0x02	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	35;"	d	line:35
-INIT_PR2::0xF9	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	34;"	d	line:34
-INIT_T0CON::0x00	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	31;"	d	line:31
-INIT_T2CON::0x0D	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	33;"	d	line:33
+INIT_INTCON2::0x80	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	34;"	d	line:34
+INIT_INTCON::0x00	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	33;"	d	line:33
+INIT_PIE1::0x02	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	40;"	d	line:40
+INIT_PR2::0xF9	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	39;"	d	line:39
+INIT_T0CON::0x00	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	36;"	d	line:36
+INIT_T2CON::0x0D	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	38;"	d	line:38
 INIT_TRISA::(TRISAPIN0+TRISAPIN1+TRISAPIN2	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	63;"	d	line:63
 INIT_TRISB::(TRISBPIN0+TRISBPIN1+TRISBPIN2	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	132;"	d	line:132
 INIT_TRISC::(TRISCPIN0+TRISCPIN1+TRISCPIN2	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	197;"	d	line:197
@@ -931,7 +931,7 @@ INTEDG2	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1132;"	m	line:1132
 INTSAVELOCS::TBLPTR,TABLAT,PROD	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1220;"	d	line:1220
 INTSRC	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	696;"	q	line:696
 INTSRC	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	524;"	m	line:524
-INVALID_REQUEST::0xff	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	44;"	d	line:44
+INVALID_REQUEST::0xff	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	49;"	d	line:49
 IOFS	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1103;"	q	line:1103
 IOFS	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1043;"	m	line:1043
 IPEN	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1043;"	q	line:1043
@@ -1073,7 +1073,7 @@ LVV3	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1063;"	q	line:1063
 LVV3	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1087;"	q	line:1087
 LVV3	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1020;"	m	line:1020
 LVV3	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	988;"	m	line:988
-LedStates	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	20;"	v	line:20
+LedStates	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	23;"	v	line:23
 LettersSegTable	C:\fw\midicontroller\svn\trunk\PIC\leds.c	139;"	v	line:139
 LowB	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	77;"	m	line:77	struct:_WORD::<anonymous>
 MAX_EP_NUMBER::1	C:\fw\midicontroller\svn\trunk\PIC\usbcfg.h	114;"	d	line:114
@@ -1092,8 +1092,8 @@ MUID_HID::2	C:\fw\midicontroller\svn\trunk\PIC\usbcfg.h	71;"	d	line:71
 MUID_NULL::0	C:\fw\midicontroller\svn\trunk\PIC\usbcfg.h	69;"	d	line:69
 MUID_USB9::1	C:\fw\midicontroller\svn\trunk\PIC\usbcfg.h	70;"	d	line:70
 MfrString	C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c	254;"	v	line:254
-MiscFlags1	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	17;"	v	line:17
-ModeSwitchState::MiscFlags1.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	35;"	d	line:35
+MiscFlags1	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	10;"	v	line:10
+ModeSwitchState::MiscFlags1.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	31;"	d	line:31
 N	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1129;"	q	line:1129
 N	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1074;"	m	line:1074
 NOT_A	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	994;"	q	line:994
@@ -1124,7 +1124,7 @@ NOT_W	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	993;"	q	line:993
 NOT_W	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	887;"	m	line:887
 NOT_WRITE	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	996;"	q	line:996
 NOT_WRITE	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	893;"	m	line:893
-NVRCommAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	5;"	v	line:5
+NVRCommAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	18;"	v	line:18
 Nop::{_asmnop_endasm}	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1205;"	d	line:1205
 NumbersSegTable	C:\fw\midicontroller\svn\trunk\PIC\leds.c	126;"	v	line:126
 OERR	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	783;"	q	line:783
@@ -1221,7 +1221,7 @@ PLUSW0	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	199;"	q	line:199
 PLUSW1	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	191;"	q	line:191
 PLUSW2	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	183;"	q	line:183
 POINTER	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	150;"	t	line:150
-POLLING_COMMAND::0x03	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	41;"	d	line:41
+POLLING_COMMAND::0x03	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	46;"	d	line:46
 POLLING_INTERVAL::40	C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c	172;"	d	line:172	file:
 POR	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1039;"	q	line:1039
 POR	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	957;"	m	line:957
@@ -1281,14 +1281,14 @@ PrdString	C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c	259;"	v	line:259
 PresentCmd	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	110;"	v	line:110
 Process7Segs	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	47;"	p	line:47	signature:(void)
 Process7Segs	C:\fw\midicontroller\svn\trunk\PIC\leds.c	14;"	f	line:14	signature:(void)
-ProcessCommRequest::CommFlags1.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	9;"	d	line:9
+ProcessCommRequest::CommFlags1.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	7;"	d	line:7
 ProcessGenericTransferRead	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	41;"	p	line:41	signature:(void)
 ProcessGenericTransferRead	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	114;"	f	line:114	signature:(void)
 ProcessGenericTransferWrite	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	42;"	p	line:42	signature:(void)
 ProcessGenericTransferWrite	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	144;"	f	line:144	signature:(void)
-ProdTestCmdsAllowed::CommFlags1.bit6	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	15;"	d	line:15
-ProgMemAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	12;"	v	line:12
-ProgmemBuffer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	11;"	v	line:11
+ProdTestCmdsAllowed::CommFlags1.bit6	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	13;"	d	line:13
+ProgMemAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	15;"	v	line:15
+ProgmemBuffer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	16;"	v	line:16
 R	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1002;"	q	line:1002
 R	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	905;"	m	line:905
 RA0	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	456;"	q	line:456
@@ -1320,7 +1320,7 @@ RA6	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	605;"	q	line:605
 RA6	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	260;"	m	line:260
 RA6	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	430;"	m	line:430
 RAMCLEAR	C:\fw\midicontroller\svn\trunk\PIC\config.asm	52;"	l	line:52
-RAMCommAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	6;"	v	line:6
+RAMCommAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	19;"	v	line:19
 RAMPtr	C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c	13;"	l	line:13
 RB0	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	480;"	q	line:480
 RB0	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	619;"	q	line:619
@@ -1457,7 +1457,7 @@ RE2	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	364;"	m	line:364
 RE2	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	508;"	m	line:508
 RE3	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	544;"	q	line:544
 RE3	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	365;"	m	line:365
-READ_32::0x32	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	49;"	d	line:49
+READ_32::0x32	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	54;"	d	line:54
 READ_SYSTEM_NVR	C:\fw\midicontroller\svn\trunk\PIC\rs232.c	29;"	p	line:29	file:	signature:(void)
 READ_WRITE	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	999;"	q	line:999
 READ_WRITE	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	899;"	m	line:899
@@ -1468,9 +1468,9 @@ RESUME	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	96;"	m	line:96
 RI	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1042;"	q	line:1042
 RI	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	960;"	m	line:960
 RND::6	C:\fw\midicontroller\svn\trunk\PIC\startup.c	13;"	d	line:13	file:
-ROMCommAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	7;"	v	line:7
-ROM_BANK_COUNT::0	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	53;"	d	line:53
-ROM_SAVEDATA	C:\fw\midicontroller\svn\trunk\PIC\tables.c	22;"	v	line:22
+ROMCommAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	20;"	v	line:20
+ROM_BANK_COUNT::0	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	58;"	d	line:58
+ROM_SAVEDATA	C:\fw\midicontroller\svn\trunk\PIC\tables.c	277;"	v	line:277
 RS232_ROUTINE	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	52;"	p	line:52	signature:(void)
 RSEN	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	958;"	q	line:958
 RSEN	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	847;"	m	line:847
@@ -1499,7 +1499,7 @@ RemCapCalculation	C:\fw\midicontroller\svn\trunk\PIC\rs232.c	24;"	p	line:24	file
 RemoteWakeup	C:\fw\midicontroller\svn\trunk\PIC\usbmmap.h	75;"	m	line:75	struct:_USB_DEVICE_STATUS::<anonymous>
 RequestType	C:\fw\midicontroller\svn\trunk\PIC\usb.h	229;"	m	line:229	struct:_CTRL_TRF_SETUP::<anonymous>
 Reset::{_asmreset_endasm}	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1208;"	d	line:1208
-ResponseType	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	41;"	v	line:41
+ResponseType	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	43;"	v	line:43
 Rlcf::(f,dest,access){_asmmovlbfrlcf	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1210;"	d	line:1210
 Rlncf::(f,dest,access){_asmmovlbfrlnc	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1211;"	d	line:1211
 Rrcf::(f,dest,access){_asmmovlbfrrcf	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1212;"	d	line:1212
@@ -1520,7 +1520,7 @@ SEN	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	957;"	q	line:957
 SEN	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	846;"	m	line:846
 SENDB	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	798;"	q	line:798
 SENDB	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	646;"	m	line:646
-SET_COMMAND::0x04	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	42;"	d	line:42
+SET_COMMAND::0x04	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	47;"	d	line:47
 SHIFTREG_RCK_BIT::2	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	31;"	d	line:31
 SHIFTREG_RCK_LAT::LATA	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	34;"	d	line:34
 SHIFTREG_RCK_LAT_BIT::LATAbits.LATA2	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	33;"	d	line:33
@@ -1635,22 +1635,22 @@ SWDTEN	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1047;"	q	line:1047
 SWDTEN	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	968;"	m	line:968
 SYNC	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	799;"	q	line:799
 SYNC	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	647;"	m	line:647
-SYSTEM_TIME_10MS::10	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	24;"	d	line:24
-SYSTEM_TIME_1MS::4	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	23;"	d	line:23
-SYSTEM_TIME_1S::100	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	25;"	d	line:25
+SYSTEM_TIME_10MS::10	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	29;"	d	line:29
+SYSTEM_TIME_1MS::4	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	28;"	d	line:28
+SYSTEM_TIME_1S::100	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	30;"	d	line:30
 Scroll7SegDisp	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	55;"	p	line:55	signature:(void)
 Scroll7SegDisp	C:\fw\midicontroller\svn\trunk\PIC\leds.c	117;"	f	line:117	signature:(void)
-Scroll7Segs::MiscFlags1.bit1	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	36;"	d	line:36
-ScrollingDisplayData	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	27;"	v	line:27
-ScrollingDisplayIndex	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	29;"	v	line:29
-ScrollingDisplayLength	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	28;"	v	line:28
+Scroll7Segs::MiscFlags1.bit1	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	32;"	d	line:32
+ScrollingDisplayData	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	30;"	v	line:30
+ScrollingDisplayIndex	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	32;"	v	line:32
+ScrollingDisplayLength	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	31;"	v	line:31
 SendDataToShiftReg	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	33;"	p	line:33	signature:(unsigned char dataToSend)
 SendDataToShiftReg	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	40;"	f	line:40	signature:(unsigned char dataToSend)
-SendingOutString::CommFlags1.bit2	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	11;"	d	line:11
+SendingOutString::CommFlags1.bit2	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	9;"	d	line:9
 SerialNum	C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c	264;"	v	line:264
-ServiceEP1Data::CommFlags1.bit5	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	14;"	d	line:14
-ServiceUSB	C:\fw\midicontroller\svn\trunk\PIC\main.c	113;"	f	line:113	signature:(void)
-ServiceUSB	C:\fw\midicontroller\svn\trunk\PIC\main.c	13;"	p	line:13	file:	signature:(void)
+ServiceEP1Data::CommFlags1.bit5	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	12;"	d	line:12
+ServiceUSB	C:\fw\midicontroller\svn\trunk\PIC\main.c	129;"	f	line:129	signature:(void)
+ServiceUSB	C:\fw\midicontroller\svn\trunk\PIC\main.c	14;"	p	line:14	file:	signature:(void)
 SetDipAddress	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	34;"	p	line:34	signature:(unsigned char Address)
 SetDipAddress	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	139;"	f	line:139	signature:(unsigned char Address)
 SetDispAscii	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	36;"	p	line:36	signature:(unsigned char chars[])
@@ -1659,15 +1659,15 @@ SetupPkt	C:\fw\midicontroller\svn\trunk\PIC\usb.c	435;"	v	line:435
 Sleep::{_asmsleep_endasm}	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1207;"	d	line:1207
 StartWrite	C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c	21;"	f	line:21	signature:(void)
 Stat	C:\fw\midicontroller\svn\trunk\PIC\usbmmap.h	114;"	m	line:114	struct:_BDT::<anonymous>
-StringInEEPROM::CommFlags1.bit3	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	12;"	d	line:12
-StringInRAM::CommFlags1.bit7	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	16;"	d	line:16
+StringInEEPROM::CommFlags1.bit3	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	10;"	d	line:10
+StringInRAM::CommFlags1.bit7	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	14;"	d	line:14
 Swapf::(f,dest,access){_asmmovlbfswap	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1214;"	d	line:1214
 SystemTimeRoutine	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	46;"	p	line:46	signature:(void)
 SystemTimeRoutine	C:\fw\midicontroller\svn\trunk\PIC\systick.c	15;"	f	line:15	signature:(void)
-Systick::ArbFlags1.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	22;"	d	line:22
-SystickCntr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	23;"	v	line:23
-SystickCntr2	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	24;"	v	line:24
-SystickCntr3	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	25;"	v	line:25
+Systick::ArbFlags1.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	17;"	d	line:17
+SystickCntr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	26;"	v	line:26
+SystickCntr2	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	27;"	v	line:27
+SystickCntr3	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	28;"	v	line:28
 T08BIT	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	1120;"	q	line:1120
 T08BIT	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	1063;"	m	line:1063
 T0CKI	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	468;"	q	line:468
@@ -1931,11 +1931,11 @@ TYPEDEFS_H	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	38;"	d	line:38
 TempButtons	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	150;"	l	line:150
 TempButtons	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	79;"	l	line:79
 ThreeBytes	C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H	74;"	t	line:74
-TildeFlg::CommFlags1.bit1	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	10;"	d	line:10
+TildeFlg::CommFlags1.bit1	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	8;"	d	line:8
 TwoBytes	C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H	64;"	t	line:64
-TxBufOutPtr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	35;"	v	line:35
-TxBufPtr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	34;"	v	line:34
-TxBuffer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	33;"	v	line:33
+TxBufOutPtr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	38;"	v	line:38
+TxBufPtr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	37;"	v	line:37
+TxBuffer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	36;"	v	line:36
 UA	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	980;"	q	line:980
 UA	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	870;"	m	line:870
 UADDR	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	81;"	q	line:81
@@ -2048,11 +2048,11 @@ USBDP_PORT::PORTC	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	178;"	d	line:17
 USBDP_TRIS_BIT::TRISCPINbits.TRISC5	C:\fw\midicontroller\svn\trunk\PIC\c_portdef.h	177;"	d	line:177
 USBDRV_H	C:\fw\midicontroller\svn\trunk\PIC\usb.h	357;"	d	line:357
 USBDSC_H	C:\fw\midicontroller\svn\trunk\PIC\usbdsc.h	40;"	d	line:40
-USBDataPointer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	39;"	v	line:39
+USBDataPointer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	41;"	v	line:41
 USBDriverService	C:\fw\midicontroller\svn\trunk\PIC\usb.c	1106;"	f	line:1106	signature:(void)
 USBEN	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	301;"	q	line:301
 USBEN	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	97;"	m	line:97
-USBEP0DataInBuffer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	40;"	v	line:40
+USBEP0DataInBuffer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	42;"	v	line:42
 USBErrorHandler	C:\fw\midicontroller\svn\trunk\PIC\usb.c	1430;"	f	line:1430	signature:(void)
 USBErrorHandler	C:\fw\midicontroller\svn\trunk\PIC\usb.c	946;"	p	line:946	file:	signature:(void)
 USBIE	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	738;"	q	line:738
@@ -2069,7 +2069,7 @@ USBModuleEnable	C:\fw\midicontroller\svn\trunk\PIC\usb.c	937;"	p	line:937	file:	
 USBPrepareForNextSetupTrf	C:\fw\midicontroller\svn\trunk\PIC\usb.c	913;"	f	line:913	signature:(void)
 USBProtocolResetHandler	C:\fw\midicontroller\svn\trunk\PIC\usb.c	1457;"	f	line:1457	signature:(void)
 USBProtocolResetHandler	C:\fw\midicontroller\svn\trunk\PIC\usb.c	943;"	p	line:943	file:	signature:(void)
-USBQuery::CommFlags1.bit4	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	13;"	d	line:13
+USBQuery::CommFlags1.bit4	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	11;"	d	line:11
 USBRemoteWakeup	C:\fw\midicontroller\svn\trunk\PIC\usb.c	1310;"	f	line:1310	signature:(void)
 USBSoftDetach	C:\fw\midicontroller\svn\trunk\PIC\usb.c	1083;"	f	line:1083	signature:(void)
 USBStallHandler	C:\fw\midicontroller\svn\trunk\PIC\usb.c	1394;"	f	line:1394	signature:(void)
@@ -2131,7 +2131,9 @@ WREN	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	774;"	q	line:774
 WREN	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	614;"	m	line:614
 WRERR	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	775;"	q	line:775
 WRERR	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	615;"	m	line:615
-WRITE_32::0x31	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	48;"	d	line:48
+WRITABLE_SEG_ADDR::0x3300	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	23;"	d	line:23
+WRITABLE_SEG_LEN::0x5FFF-WRITABLE_SEG_ADDR	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	24;"	d	line:24
+WRITE_32::0x31	C:\fw\midicontroller\svn\trunk\PIC\c_cnstdef.h	53;"	d	line:53
 WRSPP	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	242;"	q	line:242
 WRSPP	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	31;"	m	line:31
 WS0	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	226;"	q	line:226
@@ -2149,8 +2151,8 @@ W_Length	C:\fw\midicontroller\svn\trunk\PIC\usb.h	224;"	m	line:224	struct:_CTRL_
 W_Value	C:\fw\midicontroller\svn\trunk\PIC\usb.h	222;"	m	line:222	struct:_CTRL_TRF_SETUP::<anonymous>
 Word0	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	112;"	m	line:112	struct:_DWORD::<anonymous>
 Word1	C:\fw\midicontroller\svn\trunk\PIC\typedefs.h	113;"	m	line:113	struct:_DWORD::<anonymous>
-Write0Pending::ArbFlags1.bit3	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	25;"	d	line:25
-Write32Pending::ArbFlags1.bit4	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	26;"	d	line:26
+Write0Pending::ArbFlags1.bit3	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	20;"	d	line:20
+Write32Pending::ArbFlags1.bit4	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	21;"	d	line:21
 WriteEE	C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c	87;"	f	line:87	signature:(unsigned char Addr, unsigned char data)
 WriteProgMem	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	39;"	p	line:39	signature:(unsigned char index)
 WriteProgMem	C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c	35;"	f	line:35	signature:(unsigned char index)
@@ -2551,7 +2553,7 @@ cdtimer_incdec_held	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	61
 cdtimer_store	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	60;"	v	line:60
 cdtimer_value	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	58;"	v	line:58
 chars	C:\fw\midicontroller\svn\trunk\PIC\leds.c	118;"	l	line:118
-chars	C:\fw\midicontroller\svn\trunk\PIC\main.c	23;"	l	line:23
+chars	C:\fw\midicontroller\svn\trunk\PIC\main.c	26;"	l	line:26
 chkbit::(VAR,Place)(VAR&1<<Place)	C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H	29;"	d	line:29
 chunk	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	249;"	l	line:249
 clrbit::(VAR,Place)VAR&=(1<<Place)^255	C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H	28;"	d	line:28
@@ -2659,7 +2661,7 @@ idle_rate	C:\fw\midicontroller\svn\trunk\PIC\hid.c	51;"	v	line:51
 inc_practice_value	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	284;"	f	line:284	signature:(void)
 incdec_mode	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	202;"	v	line:202
 index	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	292;"	l	line:292
-index	C:\fw\midicontroller\svn\trunk\PIC\main.c	23;"	l	line:23
+index	C:\fw\midicontroller\svn\trunk\PIC\main.c	26;"	l	line:26
 index	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	115;"	l	line:115
 index	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	145;"	l	line:145
 init	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	51;"	p	line:51	signature:(void)
@@ -2682,7 +2684,7 @@ mInitializeUSBDriver::{UCFG=UCFG_VAL;\	C:\fw\midicontroller\svn\trunk\PIC\usb.h	
 mUSBGetHIDDscAdr::(ptr)\	C:\fw\midicontroller\svn\trunk\PIC\usbcfg.h	94;"	d	line:94
 mUSBGetHIDRptDscAdr::(ptr)\	C:\fw\midicontroller\svn\trunk\PIC\usbcfg.h	100;"	d	line:100
 mUSBGetHIDRptDscSize::(count)\	C:\fw\midicontroller\svn\trunk\PIC\usbcfg.h	107;"	d	line:107
-main	C:\fw\midicontroller\svn\trunk\PIC\main.c	22;"	f	line:22
+main	C:\fw\midicontroller\svn\trunk\PIC\main.c	25;"	f	line:25
 main	C:\fw\midicontroller\svn\trunk\PIC\startup.c	8;"	p	line:8	file:	signature:(void)
 main	C:\fw\midicontroller\svn\trunk\PIC\vectors.c	12;"	p	line:12	file:	signature:(void)
 mainmode	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	97;"	g	line:97	file:

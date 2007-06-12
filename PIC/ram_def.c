@@ -1,24 +1,27 @@
 //This file contains the global ram definitions for the project
 #include	"c_system.h"
 
+//----------------------------Access bank variables----------------------------------------
+
+#pragma udata access accessram
+near BitField CommFlags1;
+near BitField ArbFlags1;
+near BitField ArbFlags2;
+near BitField MiscFlags1;
+
 //----------------------------Main variables----------------------------------------
+#pragma udata gpr1
+BitField DispSegData[5];
+TwoBytes ProgMemAddr;
+unsigned char ProgmemBuffer[32];
+
 TwoBytes NVRCommAddr;
 TwoBytes RAMCommAddr;
 TwoBytes ROMCommAddr;
 
-BitField	CommFlags1;
-
-unsigned char ProgmemBuffer[32];
-TwoBytes	ProgMemAddr;
-
-#pragma udata RamData
-BitField ArbFlags1;
-BitField ArbFlags2;
-BitField MiscFlags1;
-BitField DispSegData[5];
 unsigned char DispNumOfCommons;
 unsigned char LedStates;			//footswitch leds
-unsigned long	ButtonState;
+unsigned long ButtonState;
 unsigned char ExpPedalInst;
 unsigned char SystickCntr;
 unsigned char SystickCntr2;
@@ -33,7 +36,6 @@ TwoBytes ExpPedalAvg;
 unsigned char TxBuffer[MAX_TX_LENGTH];
 unsigned char TxBufPtr;
 unsigned char TxBufOutPtr;
-
 
 //----------------------------USB stuff----------------------------------
 unsigned char USBDataPointer;

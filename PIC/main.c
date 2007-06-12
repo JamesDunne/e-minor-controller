@@ -9,6 +9,7 @@
 
 #include "c_system.h"
 #include "usb.h"
+#include "hardware.h"
 
 void	ServiceUSB(void);
 
@@ -17,28 +18,41 @@ void	ServiceUSB(void);
 
 #pragma code	main_code=0xA2A
 
+/*
 rom unsigned char 	DataStart[64] = "    princess consuela banana hannoc  ";
+*/
 
 void main() {
 	unsigned char chars[5], index;
 
 	init();
-//	controllerinit();
+	controller_init();
 	
+/*
+//Test to display 'crap' on the LCD display
 	chars[0] = ' ';
 	chars[1] = 'p';
 	chars[2] = 'a';
 	chars[3] = 'r';
 	chars[4] = 'c';
 	SetDispAscii(chars);
-	SendDataToShiftReg(0xAA);
+*/
 
+/*
+//Test to turn on every other LED
+	SendDataToShiftReg(0xAA);
+*/
+
+/*
+//Test to scroll text on the display
 	ScrollingDisplayLength = 37;
 	ScrollingDisplayIndex = ScrollingDisplayLength;
 	for (index=0;index<64;index++) ScrollingDisplayData[ScrollingDisplayLength-index] = DataStart[index];
 	Scroll7Segs = true;
+*/
 
 /*
+//Test to write data to the program memory
 	ProgMemAddr.s_form = 0x4000;
 	
 	USBEP0DataInBuffer[4] = 0xAA;
@@ -58,55 +72,57 @@ void main() {
 	for(;;) {
 		ENABLE_ALL_INTERRUPTS();
 
-		ServiceUSB();			//this must be at the top to ensure timely handling of usb events
+		ServiceUSB();				//this must be at the top to ensure timely handling of usb events
 
 		if (Write0Pending) {
 			Write0Pending = false;
-			WriteProgMem(0);		//write first set of 32 bytes.
-			continue;				//continue so we can process pending USB routines
+			WriteProgMem(0);			//write first set of 32 bytes.
+			continue;					//continue so we can process pending USB routines
 		}
 	
 		if (Write32Pending) {
 			Write32Pending = false;
-			WriteProgMem(32);		//write second set of 32 bytes.
-			continue;				//continue so we can process pending USB routines
+			WriteProgMem(32);			//write second set of 32 bytes.
+			continue;					//continue so we can process pending USB routines
 		}
 
 		if (ExpPedalSvc) {
-			ExpPedalRead();			//read ADC data from the expression pedal input
+			ExpPedalRead();				//read ADC data from the expression pedal input
 			continue;
 		}
 		
 		if (Systick) {
 			Systick = false;
-			SystemTimeRoutine();	//1mS system time routine
+			SystemTimeRoutine();		//1mS system time routine
 			continue;
 		}
 		
 		if (CheckButtons) {
 			CheckButtons = false;
-			ReadButtons();			//read buttons off the multiplexor
+			ReadButtons();				//read buttons off the multiplexor
 			continue;
 		}
 		
 		if (Handle7segs) {
 			Handle7segs = false;
-			Process7Segs();			//handle 7 segment display data
+			Process7Segs();				//handle 7 segment display data
 		}
 		
 		if (HandleLeds) {
 			HandleLeds = false;
-			UpdateLeds();			//handle leds
+			UpdateLeds();				//handle leds
 		}
 
 		if (HandleController) {
 			HandleController = false;
-//			ProcessControl();		//handle UI and other midi commands
+			controller_handle();		//handle UI and other midi commands
 		}
 		
-//			if (LATE == 0x05) LATE = 0x2;
-//			else LATE = 0x05;
-			//ServiceRequests();
+		if (ControllerTiming) {
+			ControllerTiming = false;
+			controller_10msec_timer();	//controller timing functions
+		}
+		MIDI_COMM_ROUTINE();		//handles sending/receiving midi data
 	}
 }
 

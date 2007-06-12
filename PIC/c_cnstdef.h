@@ -19,6 +19,11 @@
 //midi comm buffer length:
 #define	MAX_TX_LENGTH			8	//probably more than necessary
 
+//Size of writable flash segment:
+#define	WRITABLE_SEG_ADDR		0x3300		//Also update this in the lkr file if it needs to change!!
+#define	WRITABLE_SEG_LEN		0x5FFF-WRITABLE_SEG_ADDR
+
+
 //system timing:
 #define	SYSTEM_TIME_1MS			4		//in 250uS counts
 #define	SYSTEM_TIME_10MS		10		//in 1mS counts

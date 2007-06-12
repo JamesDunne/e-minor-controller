@@ -10,5 +10,5 @@
 
 void ExpPedalRead(void) {
 	ExpPedalSvc = false;
-	ExpPedalInst = ADC_CONVERSION(EXP_PEDAL_CHANNEL);
+	ExpPedalInst = EXPP_PEDAL_LINEAR_CONV_TABLE[ADC_CONVERSION(EXP_PEDAL_CHANNEL)];
 }
