@@ -11,18 +11,27 @@
 //-----------------------------------------------------------------------------
 //Define constants here
 
-#define	DISP_NUMBER_OF_COMMONS	5	//5 is default, increase to reduce brightness
+//If this is defined, the UART is set up for RS232, 
+//else its MIDI
+#define	UARTISRS232
 
-#define	LATCH_STROBE_DELAY		16	//4uS minimum (time for shift register bits)
-#define	BTN_SAMPLE_DELAY		5	//probably unnecessary (sampling time for buttons)
+//UART converter initialization constants:
+#ifdef UARTISRS232
+#define	INIT_TXSTA 0xA6		//master,8bit,async,high speed
+#define	INIT_RCSTA 0x90		//enabled,8bit, continuous
+#define	INIT_SPBRG 16		//115200 baud
+#define	INIT_SPBRGH 0x01
+#else
+#define	INIT_TXSTA 0xE6		//master,8bit,async, BRGH=1
+#define	INIT_RCSTA 0x90		//enabled,8bit, continuous
+#define	INIT_SPBRG	63		//31250 baud
+#define	INIT_SPBRGH 0x00
+#endif
 
-//midi comm buffer length:
-#define	MAX_TX_LENGTH			8	//probably more than necessary
-
-//Size of writable flash segment:
-#define	WRITABLE_SEG_ADDR		0x3300		//Also update this in the lkr file if it needs to change!!
-#define	WRITABLE_SEG_LEN		0x5FFF-WRITABLE_SEG_ADDR
-
+//A/D converter initialization constants:
+#define	INIT_ADCON0	0b01000000;		//AN0, off
+#define	INIT_ADCON1	0b00001110;		//1 analog channels
+#define	INIT_ADCON2	0b00000110;		//Left justified, 0 TAD(manual), FOSC/32
 
 //system timing:
 #define	SYSTEM_TIME_1MS			4		//in 250uS counts
@@ -38,6 +47,20 @@
 #define	INIT_T2CON			0x0D		//on, 1:4 prescale, 1:2 postscale
 #define	INIT_PR2			0xF9		//250uS interrupt
 #define	INIT_PIE1			0x02		//enable pr2 to tmr2 match interrupt
+
+#define	DISP_NUMBER_OF_COMMONS	5	//5 is default, increase to reduce brightness
+
+#define	LATCH_STROBE_DELAY		16	//4uS minimum (time for shift register bits)
+#define	BTN_SAMPLE_DELAY		5	//probably unnecessary (sampling time for buttons)
+
+//midi comm buffer length:
+#define	MAX_TX_LENGTH			8	//probably more than necessary
+
+
+//Size of writable flash segment:
+#define	WRITABLE_SEG_ADDR		0x3300		//Also update this in the lkr file if it needs to change!!
+#define	WRITABLE_SEG_LEN		0x5FFF-WRITABLE_SEG_ADDR
+
 //-----------------------------------------------------------------------------
 //Communication constants
 

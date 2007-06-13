@@ -14,11 +14,11 @@
 void init(void) {
 	CLEAR_RAM();
 
-	LATA = 0;
-	LATB = 0;
-	LATC = 0;
-	LATD = 0;
-	LATE = 0;
+	LATA = INIT_LATA;
+	LATB = INIT_LATB;
+	LATC = INIT_LATC;
+	LATD = INIT_LATD;
+	LATE = INIT_LATE;
 
 	TRISA = INIT_TRISA;
 	TRISB = INIT_TRISB;
@@ -28,35 +28,17 @@ void init(void) {
 
 	DispNumOfCommons = DISP_NUMBER_OF_COMMONS;
 
-//	TRISCbits.TRISC6 = false;
-//	RCSTA = 0x90;
-//	TXSTA = 0xA2;		//0x46;
-
-//	SPBRG = 204;
-
-
-#ifdef UARTISRS232
-//	TRISD = 0x00;		//assert all pins on portd as outputs
 //Initialize the USART control registers
-	TXSTA = 0xA6;			//master,8bit,async,high speed
-	RCSTA = 0x90;			//enabled,8bit, continuous
+	TXSTA = INIT_TXSTA;
+	RCSTA = INIT_RCSTA;
 //	BAUDCONbits.BRG16 = true;
-	SPBRG = 16;			//115200 baud
-	SPBRGH = 0x01;
-#else
-//	TRISD = 0x00;		//assert all pins on portd as outputs
-//Initialize the USART control registers
-	TXSTA = 0xE6;			//master,8bit,async, BRGH=1
-	RCSTA = 0x90;			//enabled,8bit, continuous
-//	BAUDCONbits.BRG16 = true;
-	SPBRG = 63;			//31250 baud
-	SPBRGH = 0x00;
-#endif
+	SPBRG = INIT_SPBRG;
+	SPBRGH = INIT_SPBRGH;
 
 //These constants setup the application's MCU Analog-to-Digital Converter module.
-	ADCON0	= 0b01000000;		//AN0, off
-	ADCON1	= 0b00001110;		//1 analog channels
-	ADCON2	= 0b10000110;		//Right justified, 0 TAD(manual), FOSC/32
+	ADCON0	= INIT_ADCON0;
+	ADCON1	= INIT_ADCON1;
+	ADCON2	= INIT_ADCON2;
 
 //set up timer0 to interrupt at some interval..
 	INTCON = INIT_INTCON;

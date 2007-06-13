@@ -9,6 +9,11 @@
 #include "c_system.h"
 
 void ExpPedalRead(void) {
+	unsigned char TempADC;
 	ExpPedalSvc = false;
-	ExpPedalInst = EXPP_PEDAL_LINEAR_CONV_TABLE[ADC_CONVERSION(EXP_PEDAL_CHANNEL)];
+	TempADC = EXPP_PEDAL_LINEAR_CONV_TABLE[ADC_CONVERSION(EXP_PEDAL_CHANNEL)];
+	
+	//Don't update the pedal data if the pedal is disconnected
+	if (TempADC != 0xFF) ExpPedalInst = TempADC;
+	
 }

@@ -4,7 +4,7 @@ file_version=1.0
 [PATH_INFO]
 dir_src=
 dir_bin=
-dir_tmp=C:\fw\midicontroller\x016\Object
+dir_tmp=Object
 dir_sin=
 dir_inc=..\common;C:\mcc18\h
 dir_lib=C:\mcc18\lib
