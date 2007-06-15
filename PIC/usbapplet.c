@@ -127,7 +127,10 @@ unsigned char	ProcessGenericTransferRead(void) {
 			}
 			break;
 		default:
-			//cmdrecognized = false;
+			TXENQ(0);
+			for (index=0;index<62;index++) {
+				TXENQ(0xFF);
+			}
 			break;
 	}
 

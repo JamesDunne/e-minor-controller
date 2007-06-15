@@ -102,7 +102,7 @@ AN3	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	266;"	m	line:266
 AN4	C:\fw\midicontroller\svn\trunk\PIC\a_micrdef.inc	469;"	q	line:469
 AN4	C:\fw\midicontroller\svn\trunk\PIC\p18f4550.h	268;"	m	line:268
 ATTACHED_STATE::1	C:\fw\midicontroller\svn\trunk\PIC\usbmmap.h	58;"	d	line:58
-Address	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	146;"	l	line:146
+Address	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	149;"	l	line:149
 AllDigitsOff	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	31;"	p	line:31	signature:(void)
 AllDigitsOff	C:\fw\midicontroller\svn\trunk\PIC\leds.c	46;"	f	line:46	signature:(void)
 ArbFlags1	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	8;"	v	line:8
@@ -1334,7 +1334,7 @@ ProcessCommRequest::CommFlags1.bit0	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.
 ProcessGenericTransferRead	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	41;"	p	line:41	signature:(void)
 ProcessGenericTransferRead	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	114;"	f	line:114	signature:(void)
 ProcessGenericTransferWrite	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	42;"	p	line:42	signature:(void)
-ProcessGenericTransferWrite	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	144;"	f	line:144	signature:(void)
+ProcessGenericTransferWrite	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	147;"	f	line:147	signature:(void)
 ProdTestCmdsAllowed::CommFlags1.bit6	C:\fw\midicontroller\svn\trunk\PIC\c_ramdef.h	13;"	d	line:13
 ProgMemAddr	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	15;"	v	line:15
 ProgmemBuffer	C:\fw\midicontroller\svn\trunk\PIC\ram_def.c	16;"	v	line:16
@@ -2609,7 +2609,7 @@ chkbit::(VAR,Place)(VAR&1<<Place)	C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H	29
 chunk	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	249;"	l	line:249
 clrbit::(VAR,Place)VAR&=(1<<Place)^255	C:\fw\midicontroller\svn\trunk\PIC\_TOOLS.H	28;"	d	line:28
 cmdrecognized	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	115;"	l	line:115
-cmdrecognized	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	145;"	l	line:145
+cmdrecognized	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	148;"	l	line:148
 controller_10msec_timer	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	220;"	f	line:220	signature:(void)
 controller_10msec_timer	C:\fw\midicontroller\svn\trunk\PIC\..\common\hardware.h	102;"	p	line:102	signature:(void)
 controller_handle	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	347;"	f	line:347	signature:(void)
@@ -2714,7 +2714,7 @@ incdec_mode	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	202;"	v	li
 index	C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c	292;"	l	line:292
 index	C:\fw\midicontroller\svn\trunk\PIC\main.c	26;"	l	line:26
 index	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	115;"	l	line:115
-index	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	145;"	l	line:145
+index	C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c	148;"	l	line:148
 init	C:\fw\midicontroller\svn\trunk\PIC\c_system.h	51;"	p	line:51	signature:(void)
 init	C:\fw\midicontroller\svn\trunk\PIC\init.c	14;"	f	line:14	signature:(void)
 itoa_fixed	C:\fw\midicontroller\svn\trunk\PIC\..\common\controller.c	103;"	f	line:103	signature:(u8 n, char s[LEDS_MAX_ALPHAS])
