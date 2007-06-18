@@ -1,5 +1,5 @@
 MPLINK 4.1, Linker
-Linker Map File - Created Fri Jun 15 13:35:05 2007
+Linker Map File - Created Mon Jun 18 11:44:37 2007
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -16,24 +16,24 @@ Linker Map File - Created Fri Jun 15 13:35:05 2007
              .code_leds.o       code   0x002478    program   0x00025e
             .code_rs232.o       code   0x0026d6    program   0x000204
               .code_hid.o       code   0x0028da    program   0x0001f8
-        .code_usbapplet.o       code   0x002ad2    program   0x000152
-   .romdata_usbdescript.o    romdata   0x002c24    program   0x000128
-        .romdata_tables.o    romdata   0x002d4c    program   0x000100
-     .code_writeprogmem.o       code   0x002e4c    program   0x0000b8
-         .code_MidiComm.o       code   0x002f04    program   0x0000a2
-             .code_init.o       code   0x002fa6    program   0x000072
-           .code_eeprom.o       code   0x003018    program   0x000056
-                     PROG       code   0x00306e    program   0x00003c
-         .code_exppedal.o       code   0x0030aa    program   0x00003a
-          .code_systick.o       code   0x0030e4    program   0x00002c
-          .romdata_leds.o    romdata   0x003110    program   0x000024
-          .code_intslct.o       code   0x003134    program   0x000024
-         .code_fxd0808u.o       code   0x003158    program   0x00001c
-             _startup_scn       code   0x003174    program   0x000014
-                    .code       code   0x003188    program   0x00000e
-             .stringtable    romdata   0x003196    program   0x000005
-       .idata_hwcalls.o_i    romdata   0x00319b    program   0x000001
-    .idata_controller.o_i    romdata   0x00319c    program   0x000022
+        .code_usbapplet.o       code   0x002ad2    program   0x000196
+   .romdata_usbdescript.o    romdata   0x002c68    program   0x000128
+        .romdata_tables.o    romdata   0x002d90    program   0x000100
+     .code_writeprogmem.o       code   0x002e90    program   0x0000b8
+         .code_MidiComm.o       code   0x002f48    program   0x0000a2
+             .code_init.o       code   0x002fea    program   0x000072
+           .code_eeprom.o       code   0x00305c    program   0x000056
+                     PROG       code   0x0030b2    program   0x00003c
+         .code_exppedal.o       code   0x0030ee    program   0x00003a
+          .code_systick.o       code   0x003128    program   0x00002c
+          .romdata_leds.o    romdata   0x003154    program   0x000024
+          .code_intslct.o       code   0x003178    program   0x000024
+         .code_fxd0808u.o       code   0x00319c    program   0x00001c
+             _startup_scn       code   0x0031b8    program   0x000014
+                    .code       code   0x0031cc    program   0x00000e
+             .stringtable    romdata   0x0031da    program   0x000005
+       .idata_hwcalls.o_i    romdata   0x0031df    program   0x000001
+    .idata_controller.o_i    romdata   0x0031e0    program   0x000022
               ROMSAVEDATA    romdata   0x003300    program   0x002cff
   .config_300000_CONFIG.O    romdata   0x300000    program   0x000001
   .config_300001_CONFIG.O    romdata   0x300001    program   0x000001
@@ -70,12 +70,12 @@ Linker Map File - Created Fri Jun 15 13:35:05 2007
                             0x000008    0x00000d      
                             0x000a00    0x000a05      
                             0x000a08    0x000a0d      
-                            0x000a2a    0x0031bd      
+                            0x000a2a    0x003201      
                             0x003300    0x005ffe      
                             0x300000    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            21687 out of 30530 program addresses used, program memory utilization is 71%
+            21755 out of 30530 program addresses used, program memory utilization is 71%
 
 
 
@@ -85,49 +85,49 @@ Linker Map File - Created Fri Jun 15 13:35:05 2007
            ADC_CONVERSION   0x001704    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
              AllDigitsOff   0x0024be    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
               AsciiTo7Seg   0x002572    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
-                CLEAR_RAM   0x003188    program     extern C:\fw\midicontroller\svn\trunk\PIC\config.asm
-          ClassReqHandler   0x002d4a    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                CLEAR_RAM   0x0031cc    program     extern C:\fw\midicontroller\svn\trunk\PIC\config.asm
+          ClassReqHandler   0x002d8e    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
                ClearArray   0x00236a    program     extern C:\fw\midicontroller\svn\trunk\PIC\usb.c
-                   EERead   0x003018    program     extern C:\fw\midicontroller\svn\trunk\PIC\eeprom.c
-                  EEWrite   0x003036    program     extern C:\fw\midicontroller\svn\trunk\PIC\eeprom.c
-EXPP_PEDAL_LINEAR_CONV_TABLE   0x002d4c    program     extern C:\fw\midicontroller\svn\trunk\PIC\tables.c
-             EraseProgMem   0x002eae    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-             ExpPedalRead   0x0030aa    program     extern C:\fw\midicontroller\svn\trunk\PIC\exppedal.c
-                 FXD0808U   0x003158    program     extern C:\MCC18\src\TRADIT~1\math\fxd0808u.c
-                 FXM1616U   0x00306e    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxm1616u.asm
+                   EERead   0x00305c    program     extern C:\fw\midicontroller\svn\trunk\PIC\eeprom.c
+                  EEWrite   0x00307a    program     extern C:\fw\midicontroller\svn\trunk\PIC\eeprom.c
+EXPP_PEDAL_LINEAR_CONV_TABLE   0x002d90    program     extern C:\fw\midicontroller\svn\trunk\PIC\tables.c
+             EraseProgMem   0x002ef2    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+             ExpPedalRead   0x0030ee    program     extern C:\fw\midicontroller\svn\trunk\PIC\exppedal.c
+                 FXD0808U   0x00319c    program     extern C:\MCC18\src\TRADIT~1\math\fxd0808u.c
+                 FXM1616U   0x0030b2    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxm1616u.asm
       HIDGetReportHandler   0x002adc    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
                 HIDInitEP   0x0029bc    program     extern C:\fw\midicontroller\svn\trunk\PIC\hid.c
               HIDRxReport   0x002a46    program     extern C:\fw\midicontroller\svn\trunk\PIC\hid.c
       HIDSetReportHandler   0x002ad2    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
               HIDTxReport   0x0029e6    program     extern C:\fw\midicontroller\svn\trunk\PIC\hid.c
               HandleDigit   0x0024da    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
-     InterruptHandlerHigh   0x003134    program     extern C:\fw\midicontroller\svn\trunk\PIC\intslct.c
+     InterruptHandlerHigh   0x003178    program     extern C:\fw\midicontroller\svn\trunk\PIC\intslct.c
       InterruptVectorHigh   0x000a08    program     extern C:\fw\midicontroller\svn\trunk\PIC\intslct.c
-          LettersSegTable   0x00311a    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
-        MIDI_COMM_ROUTINE   0x002f04    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
-             MIDI_ENQUEUE   0x002f70    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
-                MfrString   0x002c5c    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-          NumbersSegTable   0x003110    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
+          LettersSegTable   0x00315e    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
+        MIDI_COMM_ROUTINE   0x002f48    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
+             MIDI_ENQUEUE   0x002fb4    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
+                MfrString   0x002ca0    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+          NumbersSegTable   0x003154    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
      PROCESS_COMM_REQUEST   0x0026d6    program     extern C:\fw\midicontroller\svn\trunk\PIC\rs232.c
-                PrdString   0x002c74    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                PrdString   0x002cb8    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
              Process7Segs   0x002478    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
 ProcessGenericTransferRead   0x002afa    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
-ProcessGenericTransferWrite   0x002b80    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
-                 RAMCLEAR   0x00318c    program     static C:\fw\midicontroller\svn\trunk\PIC\config.asm
-     RESET_MIDI_TX_BUFFER   0x002f9c    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
+ProcessGenericTransferWrite   0x002ba2    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+                 RAMCLEAR   0x0031d0    program     static C:\fw\midicontroller\svn\trunk\PIC\config.asm
+     RESET_MIDI_TX_BUFFER   0x002fe0    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
              ROM_SAVEDATA   0x003300    program     extern C:\fw\midicontroller\svn\trunk\PIC\tables.c
               ReadButtons   0x001768    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                   ReadEE   0x002ec2    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+                   ReadEE   0x002f06    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
            RealInitVector   0x000000    program     extern C:\fw\midicontroller\svn\trunk\PIC\vectors.c
   RealInterruptVectorHigh   0x000008    program     extern C:\fw\midicontroller\svn\trunk\PIC\vectors.c
            Scroll7SegDisp   0x0025ba    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
        SendDataToShiftReg   0x00172e    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                SerialNum   0x002ca0    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                SerialNum   0x002ce4    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
                ServiceUSB   0x000ab0    program     extern C:\fw\midicontroller\svn\trunk\PIC\main.c
             SetDipAddress   0x001800    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
              SetDispAscii   0x00252a    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
-               StartWrite   0x002e4c    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-        SystemTimeRoutine   0x0030e4    program     extern C:\fw\midicontroller\svn\trunk\PIC\systick.c
+               StartWrite   0x002e90    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+        SystemTimeRoutine   0x003128    program     extern C:\fw\midicontroller\svn\trunk\PIC\systick.c
                     TXENQ   0x00287e    program     extern C:\fw\midicontroller\svn\trunk\PIC\rs232.c
         USBCheckBusStatus   0x002240    program     extern C:\fw\midicontroller\svn\trunk\PIC\usb.c
        USBCheckHIDRequest   0x0028da    program     extern C:\fw\midicontroller\svn\trunk\PIC\hid.c
@@ -154,72 +154,73 @@ USBPrepareForNextSetupTrf   0x002232    program     extern C:\fw\midicontroller\
       USBStdSetCfgHandler   0x001f46    program     extern C:\fw\midicontroller\svn\trunk\PIC\usb.c
                USBSuspend   0x0022f4    program     extern C:\fw\midicontroller\svn\trunk\PIC\usb.c
        USBWakeFromSuspend   0x0022fe    program     extern C:\fw\midicontroller\svn\trunk\PIC\usb.c
-               USB_CD_Ptr   0x002d3e    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-               USB_SD_Ptr   0x002d42    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+               USB_CD_Ptr   0x002d82    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+               USB_SD_Ptr   0x002d86    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
           USB_SOF_Handler   0x00232a    program     extern C:\fw\midicontroller\svn\trunk\PIC\usb.c
                UpdateLeds   0x001866    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  WriteEE   0x002ed2    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-             WriteProgMem   0x002e58    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-           ___do_lbl00002   0x00305e    program     static                          
-           ___do_lbl00003   0x003062    program     static                          
-           ___do_lbl00004   0x00305c    program     static                          
-       ___return_lbl00000   0x000a0c    program     static                          
-       ___return_lbl00000   0x000a04    program     static                          
-       ___return_lbl00000   0x003172    program     static                          
+                  WriteEE   0x002f16    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+             WriteProgMem   0x002e9c    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+           ___do_lbl00002   0x0030a2    program     static                          
+           ___do_lbl00003   0x0030a6    program     static                          
+           ___do_lbl00004   0x0030a0    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x003186    program     static                          
-       ___return_lbl00001   0x003066    program     static                          
+       ___return_lbl00000   0x0031b6    program     static                          
+       ___return_lbl00000   0x000a04    program     static                          
+       ___return_lbl00000   0x000a0c    program     static                          
+       ___return_lbl00001   0x0031ca    program     static                          
+       ___return_lbl00001   0x0030aa    program     static                          
        ___return_lbl00001   0x00000c    program     static                          
        ___return_lbl00132   0x00238c    program     static                          
         ___while_lbl00133   0x00237e    program     static                          
         ___while_lbl00134   0x00238c    program     static                          
                    __pa_0   0x001bde    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                   __pa_0   0x002394    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
+                   __pa_0   0x002f36    program     static C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
                    __pa_0   0x0014b2    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                    __pa_0   0x002632    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
-                   __pa_0   0x002ef2    program     static C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-                   __pa_0   0x002c10    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
                    __pa_0   0x0028aa    program     static C:\fw\midicontroller\svn\trunk\PIC\rs232.c
                    __pa_0   0x002ab2    program     static C:\fw\midicontroller\svn\trunk\PIC\hid.c
-                   __pa_0   0x002394    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
+                   __pa_0   0x002c32    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+                   __pa_1   0x00266a    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
+                   __pa_1   0x0014bc    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                    __pa_1   0x002aca    program     static C:\fw\midicontroller\svn\trunk\PIC\hid.c
+                   __pa_1   0x002f40    program     static C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
                    __pa_1   0x0023a6    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                    __pa_1   0x0028ba    program     static C:\fw\midicontroller\svn\trunk\PIC\rs232.c
-                   __pa_1   0x0014bc    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                   __pa_1   0x002c18    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
-                   __pa_1   0x00266a    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
-                   __pa_1   0x002efc    program     static C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
                    __pa_1   0x001be6    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                   __pa_1   0x002c3a    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
                   __pa_10   0x001c7c    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_10   0x00243a    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                   __pa_10   0x001554    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                  __pa_10   0x00243a    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
+                  __pa_11   0x00155c    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_11   0x001c8e    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_11   0x002442    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
-                  __pa_11   0x00155c    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_12   0x001c98    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_12   0x00244a    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                   __pa_12   0x001576    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                  __pa_13   0x002456    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                   __pa_13   0x001ca2    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_13   0x001590    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                  __pa_14   0x002464    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
-                  __pa_14   0x001cac    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                  __pa_13   0x002456    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                   __pa_14   0x0015a0    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                  __pa_14   0x001cac    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                  __pa_14   0x002464    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
+                  __pa_15   0x0015b0    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_15   0x002470    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                   __pa_15   0x001cba    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_15   0x0015b0    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                  __pa_16   0x0015c8    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_16   0x001cc8    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                  __pa_16   0x0015c8    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_17   0x001cd2    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_17   0x0015d2    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                  __pa_18   0x001cdc    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_18   0x0015de    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                  __pa_18   0x001cdc    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_19   0x001cec    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_19   0x0015ec    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                    __pa_2   0x0014de    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                   __pa_2   0x0023be    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
-                   __pa_2   0x002676    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
                    __pa_2   0x0028c0    program     static C:\fw\midicontroller\svn\trunk\PIC\rs232.c
+                   __pa_2   0x002676    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
                    __pa_2   0x001bf4    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                   __pa_2   0x002c46    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+                   __pa_2   0x0023be    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                   __pa_20   0x001d14    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_20   0x0015f6    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_21   0x001d22    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
@@ -232,23 +233,24 @@ USBPrepareForNextSetupTrf   0x002232    program     extern C:\fw\midicontroller\
                   __pa_24   0x001d3a    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_25   0x001638    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_25   0x001d58    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_26   0x001642    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_26   0x001d70    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_27   0x001652    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                  __pa_26   0x001642    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_27   0x001d82    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_28   0x001660    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                  __pa_27   0x001652    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_28   0x001d8e    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_29   0x001d9c    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                  __pa_28   0x001660    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_29   0x00166e    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                   __pa_3   0x001bfe    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                   __pa_3   0x0023ce    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
-                   __pa_3   0x0014e8    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                  __pa_29   0x001d9c    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                    __pa_3   0x0028c8    program     static C:\fw\midicontroller\svn\trunk\PIC\rs232.c
+                   __pa_3   0x002c5a    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+                   __pa_3   0x001bfe    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                   __pa_3   0x0014e8    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                   __pa_3   0x0023ce    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                    __pa_3   0x002680    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
                   __pa_30   0x00167c    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_30   0x001da8    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_31   0x00168a    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_31   0x001db4    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                  __pa_31   0x00168a    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_32   0x001dc2    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_32   0x001694    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_33   0x001dca    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
@@ -257,47 +259,47 @@ USBPrepareForNextSetupTrf   0x002232    program     extern C:\fw\midicontroller\
                   __pa_34   0x0016a4    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_35   0x001dda    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_35   0x0016aa    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                  __pa_36   0x0016c4    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_36   0x001dfa    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_37   0x0016ca    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                  __pa_36   0x0016c4    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_37   0x001e06    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                  __pa_37   0x0016ca    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_38   0x0016d2    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_38   0x001e0a    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_39   0x0016d8    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_39   0x001e0e    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                    __pa_4   0x0014f2    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                   __pa_4   0x001c22    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                    __pa_4   0x0023dc    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
+                   __pa_4   0x001c22    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                    __pa_4   0x002688    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
                   __pa_40   0x0016e4    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_40   0x001e14    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                   __pa_41   0x0016ec    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_41   0x001e1a    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_42   0x0016f4    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_42   0x001e24    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                  __pa_43   0x0016fa    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+                  __pa_42   0x0016f4    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_43   0x001e2e    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                  __pa_43   0x0016fa    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                   __pa_44   0x001e36    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                    __pa_5   0x0026a0    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
                    __pa_5   0x0023ee    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                    __pa_5   0x001c2c    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                    __pa_5   0x001504    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                   __pa_6   0x0026ae    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
                    __pa_6   0x0023fc    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                    __pa_6   0x001c34    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                    __pa_6   0x00151c    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                   __pa_7   0x0026bc    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
-                   __pa_7   0x00240e    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
-                   __pa_7   0x001c4c    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                   __pa_6   0x0026ae    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
                    __pa_7   0x001534    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                   __pa_8   0x00153e    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
-                   __pa_8   0x001c54    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                   __pa_8   0x00241e    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
+                   __pa_7   0x0026bc    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
+                   __pa_7   0x001c4c    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                   __pa_7   0x00240e    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
                    __pa_8   0x0026ca    program     static C:\fw\midicontroller\svn\trunk\PIC\leds.c
+                   __pa_8   0x00241e    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
+                   __pa_8   0x001c54    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
+                   __pa_8   0x00153e    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                    __pa_9   0x001546    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
                    __pa_9   0x001c76    program     static C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                    __pa_9   0x00242c    program     static C:\fw\midicontroller\svn\trunk\PIC\usb.c
-               __string_0   0x003196    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+               __string_0   0x0031da    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
               __tmplbl_43   0x00153e    program     static                          
               __tmplbl_44   0x00153e    program     static                          
               __tmplbl_45   0x00153e    program     static                          
@@ -309,7 +311,7 @@ USBPrepareForNextSetupTrf   0x002232    program     extern C:\fw\midicontroller\
               __tmplbl_51   0x00153e    program     static                          
               __tmplbl_52   0x00153e    program     static                          
                    _entry   0x000a00    program     extern C:\fw\midicontroller\svn\trunk\PIC\startup.c
-                 _startup   0x003174    program     extern C:\fw\midicontroller\svn\trunk\PIC\startup.c
+                 _startup   0x0031b8    program     extern C:\fw\midicontroller\svn\trunk\PIC\startup.c
   activate_practice_value   0x000ea2    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
             bank_activate   0x000be8    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
       bank_getsortedindex   0x001b56    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
@@ -323,26 +325,26 @@ USBPrepareForNextSetupTrf   0x002232    program     extern C:\fw\midicontroller\
               button_held   0x000cbc    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
            button_pressed   0x000c84    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
           button_released   0x000cd8    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
-                    cfg01   0x002c36    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                    cfg01   0x002c7a    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
   controller_10msec_timer   0x000d24    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
         controller_handle   0x000f0c    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
           controller_init   0x000ed4    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
        dec_practice_value   0x000e68    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
-               device_dsc   0x002c24    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-                  endloop   0x00316e    program     static                          
+               device_dsc   0x002c68    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                  endloop   0x0031b2    program     static                          
                 expr_poll   0x0018c2    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
           fsw_led_disable   0x0018a0    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
            fsw_led_enable   0x00188a    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
        fsw_led_set_active   0x001870    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
                  fsw_poll   0x001818    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-              hid_rpt_UPS   0x002cc2    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+              hid_rpt_UPS   0x002d06    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
        inc_practice_value   0x000e36    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
-                     init   0x002fa6    program     extern C:\fw\midicontroller\svn\trunk\PIC\init.c
+                     init   0x002fea    program     extern C:\fw\midicontroller\svn\trunk\PIC\init.c
                itoa_fixed   0x000ad8    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
          leds_show_1digit   0x00255e    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
         leds_show_4alphas   0x002544    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
-                     loop   0x003160    program     static                          
-                     loop   0x003180    program     static                          
+                     loop   0x0031a4    program     static                          
+                     loop   0x0031c4    program     static                          
                      main   0x000a2a    program     extern C:\fw\midicontroller\svn\trunk\PIC\main.c
            midi_send_byte   0x001726    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
            midi_send_cmd1   0x001bce    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
@@ -351,7 +353,7 @@ USBPrepareForNextSetupTrf   0x002232    program     extern C:\fw\midicontroller\
           preset_activate   0x000b9a    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
          program_activate   0x000b74    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
      read_rom_to_pmbuffer   0x001afa    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
-                    sd000   0x002c58    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                    sd000   0x002c9c    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
         sequence_complete   0x000eb8    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
              show_program   0x000b2e    program     extern C:\fw\midicontroller\svn\trunk\common\controller.c
               slider_poll   0x0018bc    program     extern C:\fw\midicontroller\svn\trunk\PIC\hwcalls.c
@@ -959,53 +961,55 @@ USBPrepareForNextSetupTrf   0x002232    program     extern C:\fw\midicontroller\
       HIDSetReportHandler   0x002ad2    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
       HIDGetReportHandler   0x002adc    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
 ProcessGenericTransferRead   0x002afa    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
-ProcessGenericTransferWrite   0x002b80    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
-                   __pa_0   0x002c10    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
-                   __pa_1   0x002c18    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
-               device_dsc   0x002c24    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-                    cfg01   0x002c36    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-                    sd000   0x002c58    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-                MfrString   0x002c5c    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-                PrdString   0x002c74    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-                SerialNum   0x002ca0    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-              hid_rpt_UPS   0x002cc2    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-               USB_CD_Ptr   0x002d3e    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-               USB_SD_Ptr   0x002d42    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-          ClassReqHandler   0x002d4a    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
-EXPP_PEDAL_LINEAR_CONV_TABLE   0x002d4c    program     extern C:\fw\midicontroller\svn\trunk\PIC\tables.c
-               StartWrite   0x002e4c    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-             WriteProgMem   0x002e58    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-             EraseProgMem   0x002eae    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-                   ReadEE   0x002ec2    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-                  WriteEE   0x002ed2    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-                   __pa_0   0x002ef2    program     static C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-                   __pa_1   0x002efc    program     static C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
-        MIDI_COMM_ROUTINE   0x002f04    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
-             MIDI_ENQUEUE   0x002f70    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
-     RESET_MIDI_TX_BUFFER   0x002f9c    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
-                     init   0x002fa6    program     extern C:\fw\midicontroller\svn\trunk\PIC\init.c
-                   EERead   0x003018    program     extern C:\fw\midicontroller\svn\trunk\PIC\eeprom.c
-                  EEWrite   0x003036    program     extern C:\fw\midicontroller\svn\trunk\PIC\eeprom.c
-           ___do_lbl00004   0x00305c    program     static                          
-           ___do_lbl00002   0x00305e    program     static                          
-           ___do_lbl00003   0x003062    program     static                          
-       ___return_lbl00001   0x003066    program     static                          
-                 FXM1616U   0x00306e    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxm1616u.asm
-             ExpPedalRead   0x0030aa    program     extern C:\fw\midicontroller\svn\trunk\PIC\exppedal.c
-        SystemTimeRoutine   0x0030e4    program     extern C:\fw\midicontroller\svn\trunk\PIC\systick.c
-          NumbersSegTable   0x003110    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
-          LettersSegTable   0x00311a    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
-     InterruptHandlerHigh   0x003134    program     extern C:\fw\midicontroller\svn\trunk\PIC\intslct.c
-                 FXD0808U   0x003158    program     extern C:\MCC18\src\TRADIT~1\math\fxd0808u.c
-                     loop   0x003160    program     static                          
-                  endloop   0x00316e    program     static                          
-       ___return_lbl00000   0x003172    program     static                          
-                 _startup   0x003174    program     extern C:\fw\midicontroller\svn\trunk\PIC\startup.c
-                     loop   0x003180    program     static                          
-       ___return_lbl00001   0x003186    program     static                          
-                CLEAR_RAM   0x003188    program     extern C:\fw\midicontroller\svn\trunk\PIC\config.asm
-                 RAMCLEAR   0x00318c    program     static C:\fw\midicontroller\svn\trunk\PIC\config.asm
-               __string_0   0x003196    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
+ProcessGenericTransferWrite   0x002ba2    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+                   __pa_0   0x002c32    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+                   __pa_1   0x002c3a    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+                   __pa_2   0x002c46    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+                   __pa_3   0x002c5a    program     static C:\fw\midicontroller\svn\trunk\PIC\usbapplet.c
+               device_dsc   0x002c68    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                    cfg01   0x002c7a    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                    sd000   0x002c9c    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                MfrString   0x002ca0    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                PrdString   0x002cb8    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+                SerialNum   0x002ce4    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+              hid_rpt_UPS   0x002d06    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+               USB_CD_Ptr   0x002d82    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+               USB_SD_Ptr   0x002d86    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+          ClassReqHandler   0x002d8e    program     extern C:\fw\midicontroller\svn\trunk\PIC\usbdescript.c
+EXPP_PEDAL_LINEAR_CONV_TABLE   0x002d90    program     extern C:\fw\midicontroller\svn\trunk\PIC\tables.c
+               StartWrite   0x002e90    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+             WriteProgMem   0x002e9c    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+             EraseProgMem   0x002ef2    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+                   ReadEE   0x002f06    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+                  WriteEE   0x002f16    program     extern C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+                   __pa_0   0x002f36    program     static C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+                   __pa_1   0x002f40    program     static C:\fw\midicontroller\svn\trunk\PIC\writeprogmem.c
+        MIDI_COMM_ROUTINE   0x002f48    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
+             MIDI_ENQUEUE   0x002fb4    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
+     RESET_MIDI_TX_BUFFER   0x002fe0    program     extern C:\fw\midicontroller\svn\trunk\PIC\MidiComm.c
+                     init   0x002fea    program     extern C:\fw\midicontroller\svn\trunk\PIC\init.c
+                   EERead   0x00305c    program     extern C:\fw\midicontroller\svn\trunk\PIC\eeprom.c
+                  EEWrite   0x00307a    program     extern C:\fw\midicontroller\svn\trunk\PIC\eeprom.c
+           ___do_lbl00004   0x0030a0    program     static                          
+           ___do_lbl00002   0x0030a2    program     static                          
+           ___do_lbl00003   0x0030a6    program     static                          
+       ___return_lbl00001   0x0030aa    program     static                          
+                 FXM1616U   0x0030b2    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxm1616u.asm
+             ExpPedalRead   0x0030ee    program     extern C:\fw\midicontroller\svn\trunk\PIC\exppedal.c
+        SystemTimeRoutine   0x003128    program     extern C:\fw\midicontroller\svn\trunk\PIC\systick.c
+          NumbersSegTable   0x003154    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
+          LettersSegTable   0x00315e    program     extern C:\fw\midicontroller\svn\trunk\PIC\leds.c
+     InterruptHandlerHigh   0x003178    program     extern C:\fw\midicontroller\svn\trunk\PIC\intslct.c
+                 FXD0808U   0x00319c    program     extern C:\MCC18\src\TRADIT~1\math\fxd0808u.c
+                     loop   0x0031a4    program     static                          
+                  endloop   0x0031b2    program     static                          
+       ___return_lbl00000   0x0031b6    program     static                          
+                 _startup   0x0031b8    program     extern C:\fw\midicontroller\svn\trunk\PIC\startup.c
+                     loop   0x0031c4    program     static                          
+       ___return_lbl00001   0x0031ca    program     static                          
+                CLEAR_RAM   0x0031cc    program     extern C:\fw\midicontroller\svn\trunk\PIC\config.asm
+                 RAMCLEAR   0x0031d0    program     static C:\fw\midicontroller\svn\trunk\PIC\config.asm
+               __string_0   0x0031da    program     static C:\fw\midicontroller\svn\trunk\common\controller.c
              ROM_SAVEDATA   0x003300    program     extern C:\fw\midicontroller\svn\trunk\PIC\tables.c
                      SIGN   0x000000       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
             __FPFLAGSbits   0x000001       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm

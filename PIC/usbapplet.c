@@ -111,6 +111,10 @@ unsigned char PresentCmd;
 
 //This handles data over report ID 44
 //Device to host must always follow a host to device
+//Report ID 44:
+//Byte1 = PresentCmd (command to process)
+//Byte2 = Ack/Reject (1 = ack, 0=Reject)	(Byte is Ingored for writes, always set to 1)
+//Byte3-63 = Freeform
 unsigned char	ProcessGenericTransferRead(void) {
 	unsigned char index, cmdrecognized;
 	
@@ -120,14 +124,30 @@ unsigned char	ProcessGenericTransferRead(void) {
 	
 	switch (PresentCmd) {
 		case	READ_32:		//use address set previously to send out new data
+			TXENQ(1);		//Accepted
 			TXENQ(ROMCommAddr.b_form.low);
 			TXENQ(ROMCommAddr.b_form.high);
 			for (index=0;index<32;index++) {
 				TXENQ(*(rom unsigned char *)(ROMCommAddr.s_form+index));
 			}
 			break;
+		case	WRITE_32:		//A read of a Write_32 command reads back the data written
+			TXENQ(1);		//Accepted
+			TXENQ(ProgMemAddr.b_form.low);
+			TXENQ(ProgMemAddr.b_form.high);
+			for (index=0;index<32;index++) {
+				TXENQ(*(rom unsigned char *)(ProgMemAddr.s_form+index));
+			}
+			break;
+
+		case	ERASE_64:		//A read of an ERASE_64 command returns all 0's
+			TXENQ(1);		//Accepted
+			TXENQ(ProgMemAddr.b_form.low);
+			TXENQ(ProgMemAddr.b_form.high);
+			break;
+			
 		default:
-			TXENQ(0);
+			TXENQ(0);		//Rejected
 			for (index=0;index<62;index++) {
 				TXENQ(0xFF);
 			}
@@ -144,6 +164,11 @@ unsigned char	ProcessGenericTransferRead(void) {
 
 
 //This handles data over report ID 44.	
+
+//Report ID 44:
+//Byte1 = PresentCmd (command to process)
+//Byte2 = Ack/Reject (1 = ack, 0=Reject)	(Byte is Ingored for writes, always set to 1)
+//Byte3-63 = Freeform
 unsigned char	ProcessGenericTransferWrite(void) {
 	unsigned char index, cmdrecognized;
 	unsigned short Address;
@@ -151,24 +176,27 @@ unsigned char	ProcessGenericTransferWrite(void) {
 	cmdrecognized = true;
 	PresentCmd = USBEP0DataInBuffer[1];
 	switch (USBEP0DataInBuffer[1]) {
-		case	ERASE_32:
-			ProgMemAddr.b_form.low = USBEP0DataInBuffer[2];
-			ProgMemAddr.b_form.high = USBEP0DataInBuffer[3];
+		case	ERASE_64:
+			//USBEP0DataInBuffer[2] is ignored
+			ProgMemAddr.b_form.low = USBEP0DataInBuffer[3];
+			ProgMemAddr.b_form.high = USBEP0DataInBuffer[4];
 
 			EraseProgMem();	//uses global ProgMemAddr
 			break;
 		case	WRITE_32:
-			ProgMemAddr.b_form.low = USBEP0DataInBuffer[2];
-			ProgMemAddr.b_form.high = USBEP0DataInBuffer[3];
+			//USBEP0DataInBuffer[2] is ignored
+			ProgMemAddr.b_form.low = USBEP0DataInBuffer[3];
+			ProgMemAddr.b_form.high = USBEP0DataInBuffer[4];
 
 			for (index=0;index<32;index++)
-				ProgmemBuffer[index] = USBEP0DataInBuffer[index+4];
+				ProgmemBuffer[index] = USBEP0DataInBuffer[index+5];
 
 			WriteProgMem(0);	//uses global ProgMemAddr and ProgmemBuffer[]
 			break;
 		case	READ_32:
-			ROMCommAddr.b_form.low = USBEP0DataInBuffer[2];
-			ROMCommAddr.b_form.high = USBEP0DataInBuffer[3];
+			//USBEP0DataInBuffer[2] is ignored
+			ROMCommAddr.b_form.low = USBEP0DataInBuffer[3];
+			ROMCommAddr.b_form.high = USBEP0DataInBuffer[4];
 			break;
 		default:
 			//cmdrecognized = false;

@@ -72,7 +72,7 @@
 #define	INVALID_REQUEST		0xff
 
 //Report ID 44 commands:
-#define	ERASE_32			0x30
+#define	ERASE_64			0x30
 #define	WRITE_32			0x31
 #define	READ_32				0x32
 
