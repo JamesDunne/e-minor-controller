@@ -31,6 +31,7 @@ void	SystemTimeRoutine(void) {
 		if (SystickCntr3 == SYSTEM_TIME_1S) {
 			SystickCntr3 = 0;
 //1S routines:
+			HandleLeds = true;
 			if (Scroll7Segs) Scroll7SegDisp();
 		}
 	}

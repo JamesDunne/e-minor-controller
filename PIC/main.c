@@ -28,20 +28,16 @@ void main() {
 	init();
 	controller_init();
 	
-/*
 //Test to display 'crap' on the LCD display
-	chars[0] = ' ';
-	chars[1] = 'p';
-	chars[2] = 'a';
-	chars[3] = 'r';
-	chars[4] = 'c';
+	chars[0] = 'o';
+	chars[1] = 'l';
+	chars[2] = 'l';
+	chars[3] = 'e';
+	chars[4] = 'h';
 	SetDispAscii(chars);
-*/
 
-/*
 //Test to turn on every other LED
 	SendDataToShiftReg(0xAA);
-*/
 
 /*
 //Test to scroll text on the display
@@ -68,6 +64,8 @@ void main() {
 	
 	WriteProgMem();	//uses global ProgMemAddr and ProgmemBuffer[]
 */
+
+	LedStates = 0;
 
 	for(;;) {
 		ENABLE_ALL_INTERRUPTS();
