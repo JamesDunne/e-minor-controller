@@ -49,17 +49,15 @@ u16		curr_sortedbank;
 
 u16		bank_count;
 
-u32		preset_held = 0;
-
 /* decrement timer in ms: */
 u16		accel_time;
 u8		accel_count;
 
-u16		cdtimer_value = 0;
-u16		cdtimer_flash = 0;
-u16		cdtimer_store = 0;
-u16		cdtimer_incdec_held = 0;
-u16		cdtimer_holdenter = 0;
+u16		cdtimer_value;
+u16		cdtimer_flash;
+u16		cdtimer_store;
+u16		cdtimer_incdec_held;
+u16		cdtimer_holdenter;
 
 enum acceleration_state {
 	ACCEL_NONE,
@@ -333,7 +331,6 @@ void sequence_complete(void) {
 void controller_init(void) {
 	bank_count = banks_count();
 
-	preset_held = 0;
 	flash_led = 0;
 	cdtimer_value = 0;
 	cdtimer_flash = 0;

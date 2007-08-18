@@ -49,6 +49,7 @@ extern unsigned char ExpPedalInst;
 extern unsigned char SystickCntr;
 extern unsigned char SystickCntr2;
 extern unsigned char SystickCntr3;
+extern unsigned char SystickCntr4;
 
 extern unsigned char ScrollingDisplayData[64];
 extern unsigned char ScrollingDisplayLength;

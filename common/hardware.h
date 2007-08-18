@@ -21,29 +21,14 @@ void leds_show_4alphas(char text[LEDS_MAX_ALPHAS]);
 void leds_show_1digit(u8 value);
 
 /* --------------- Momentary toggle foot-switches: */
-
-enum fsw_bits {
-    FSB_PRESET_1 = 0,
-    FSB_PRESET_2 = 1,
-    FSB_PRESET_3 = 2,
-    FSB_PRESET_4 = 3,
-
-    FSB_DEC = 28,
-    FSB_INC = 29,
-    FSB_ENTER = 30,
-    FSB_NEXT = 31,
-};
-enum fsw_masks {
-	FSM_PRESET_1 = (1 << FSB_PRESET_1),
-	FSM_PRESET_2 = (1 << FSB_PRESET_2),
-	FSM_PRESET_3 = (1 << FSB_PRESET_3),
-	FSM_PRESET_4 = (1 << FSB_PRESET_4),
-
-    FSM_DEC = (1 << FSB_DEC),
-    FSM_INC = (1 << FSB_INC),
-    FSM_ENTER = (1 << FSB_ENTER),
-    FSM_NEXT = (1 << FSB_NEXT)
-};
+#define FSM_PRESET_1	0x01		//(1 << 0)
+#define FSM_PRESET_2	0x02		//(1 << 1)
+#define FSM_PRESET_3	0x04		//(1 << 2)
+#define FSM_PRESET_4	0x08		//(1 << 3)
+#define FSM_DEC			0x10000000	//(1 << 28)
+#define FSM_INC			0x20000000	//(1 << 29)
+#define FSM_ENTER		0x40000000	//(1 << 30)
+#define FSM_NEXT		0x80000000	//(1 << 31)
 
 /* Poll up to 28 foot-switch toggles simultaneously.  PREV NEXT DEC  INC map to 28-31 bit positions. */
 u32 fsw_poll(void);
@@ -101,3 +86,6 @@ void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2);
 void controller_init(void);
 void controller_10msec_timer(void);
 void controller_handle(void);
+
+
+u8 button_pressed(u32 mask);

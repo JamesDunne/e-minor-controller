@@ -26,6 +26,7 @@ unsigned char ExpPedalInst;
 unsigned char SystickCntr;
 unsigned char SystickCntr2;
 unsigned char SystickCntr3;
+unsigned char SystickCntr4;
 
 unsigned char ScrollingDisplayData[64];
 unsigned char ScrollingDisplayLength;

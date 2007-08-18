@@ -23,9 +23,15 @@ void	SystemTimeRoutine(void) {
 
 //10mS routines:
 		ExpPedalSvc = true;
-		CheckButtons = true;
 		HandleController = true;
 		ControllerTiming = true;
+
+		SystickCntr4++;
+		if (SystickCntr4 == SYSTEM_TIME_40MS) {
+			SystickCntr4 = 0;
+//40mS routines:
+			CheckButtons = true;
+		}		
 
 		SystickCntr3++;
 		if (SystickCntr3 == SYSTEM_TIME_1S) {
