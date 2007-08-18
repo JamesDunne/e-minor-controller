@@ -381,7 +381,7 @@ void controller_handle(void) {
 	/* NEXT never changes function depending on mode */
 
 	/* NEXT pressed: */
-	if (button_pressed(FSM_NEXT)) {
+	if (button_pressed(FSM_NEXT) && 0) {		//diag..
 		if (loaded_bank != curr_bank) {
 			/* prepared to switch to a bank, but did not activate the first map */
 			bankmap_activate(1);

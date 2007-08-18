@@ -15,7 +15,7 @@
 void	SystemTimeRoutine(void) {
 
 //1mS routines:
-	Handle7segs = true;
+//	Handle7segs = true;
 
 	SystickCntr2++;
 	if (SystickCntr2 == SYSTEM_TIME_10MS) {

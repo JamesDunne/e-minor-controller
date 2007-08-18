@@ -106,6 +106,13 @@ void	ReadButtons(void) {
 	SetDipAddress(BtnAddress);
 	ModeSwitchState = true;
 	if (BTN_IN_PIN) ModeSwitchState = false;
+
+	//diag break when a button is detected as pushed.
+//	if (ButtonState) {
+//		nop();
+//	}
+
+
 }
 
 /*

@@ -87,15 +87,19 @@ void	SetDispAscii(unsigned char chars[]) {
 void leds_show_4alphas(char text[LEDS_MAX_ALPHAS]){
 	unsigned char x,i;
 
+	DISABLE_ALL_INTERRUPTS();
 	for (i = 0;i<4;i++) {
 		x = text[i];
 		DispSegData[i].byte = AsciiTo7Seg(x);
 	}
+	ENABLE_ALL_INTERRUPTS();
 }
 
 /* show single digit on the single digit display */
 void leds_show_1digit(u8 value){
+	DISABLE_ALL_INTERRUPTS();
 	DispSegData[4].byte = AsciiTo7Seg(value+'0');
+	ENABLE_ALL_INTERRUPTS();
 }
 
 unsigned char AsciiTo7Seg(unsigned char chr) {
