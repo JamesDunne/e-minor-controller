@@ -157,8 +157,8 @@ u32 fsw_poll(){
 	FourBytes TempButtons;
 
 	TempButtons.l_form = 0;
-	TempButtons.b_form.byte3 = ButtonState&0xF0;
-	TempButtons.b_form.byte0 = ButtonState&0x0F;
+	TempButtons.b_form.byte3 = ButtonState&(unsigned char)0xF0;
+	TempButtons.b_form.byte0 = ButtonState&(unsigned char)0x0F;
 
 	return TempButtons.l_form;
 }
@@ -255,6 +255,10 @@ void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRES
 void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 bankmap_count){
 	u8 chunk[64];
 	u16	addr, addrhi, addrlo;
+
+	//diag disable store for now...
+	return;		//this is not the code that is performing the write...
+
 
 	addr = 64 + (bank_index * bank_record_size);
 	addrhi = addr & ~63;

@@ -21,7 +21,7 @@ TwoBytes ROMCommAddr;
 
 unsigned char DispNumOfCommons;
 unsigned char LedStates;			//footswitch leds
-unsigned long ButtonState;
+unsigned char ButtonState;
 unsigned char ExpPedalInst;
 unsigned char SystickCntr;
 unsigned char SystickCntr2;

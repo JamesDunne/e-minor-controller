@@ -44,7 +44,7 @@ extern TwoBytes ROMCommAddr;
 
 extern unsigned char DispNumOfCommons;
 extern unsigned char LedStates;			//footswitch leds
-extern unsigned long	ButtonState;
+extern unsigned char ButtonState;
 extern unsigned char ExpPedalInst;
 extern unsigned char SystickCntr;
 extern unsigned char SystickCntr2;

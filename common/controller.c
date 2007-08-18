@@ -746,7 +746,9 @@ void controller_handle(void) {
 			/* INC pressed: */
 			if (button_pressed(FSM_INC)) {
 				if (curr_bank == bank_count - 1) curr_bank = 0;
-				else ++curr_bank;
+				else {
+					++curr_bank;
+				}
 				bank_showname();
 
 				accel_state = ACCEL_NONE;
@@ -764,7 +766,9 @@ void controller_handle(void) {
 			/* DEC pressed: */
 			if (button_pressed(FSM_DEC)) {
 				if (curr_bank == 0) curr_bank = bank_count - 1;
-				else --curr_bank;
+				else {
+					--curr_bank;
+				}
 				bank_showname();
 
 				accel_state = ACCEL_NONE;
@@ -822,7 +826,9 @@ void controller_handle(void) {
 				switch (accel_state) {
 					case ACCEL_INC_SLOW:
 						if (curr_bank == bank_count - 1) curr_bank = 0;
-						else ++curr_bank;
+						else {
+							++curr_bank;
+						}
 						bank_showname();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
@@ -836,7 +842,9 @@ void controller_handle(void) {
 						break;
 					case ACCEL_INC_MEDIUM:
 						if (curr_bank == bank_count - 1) curr_bank = 0;
-						else ++curr_bank;
+						else {
+							++curr_bank;
+						}
 						bank_showname();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
@@ -850,14 +858,18 @@ void controller_handle(void) {
 						break;
 					case ACCEL_INC_FAST:
 						if (curr_bank == bank_count - 1) curr_bank = 0;
-						else ++curr_bank;
+						else {
+							++curr_bank;
+						}
 						bank_showname();
 
 						accel_time = accel_time_fast;
 						break;
 					case ACCEL_DEC_SLOW:
 						if (curr_bank == 0) curr_bank = bank_count - 1;
-						else --curr_bank;
+						else {
+							--curr_bank;
+						}
 						bank_showname();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
@@ -871,7 +883,9 @@ void controller_handle(void) {
 						break;
 					case ACCEL_DEC_MEDIUM:
 						if (curr_bank == 0) curr_bank = bank_count - 1;
-						else --curr_bank;
+						else {
+							--curr_bank;
+						}
 						bank_showname();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
@@ -885,7 +899,9 @@ void controller_handle(void) {
 						break;
 					case ACCEL_DEC_FAST:
 						if (curr_bank == 0) curr_bank = bank_count - 1;
-						else --curr_bank;
+						else {
+							--curr_bank;
+						}
 						bank_showname();
 
 						accel_time = accel_time_fast;

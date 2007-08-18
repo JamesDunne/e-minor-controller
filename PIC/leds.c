@@ -77,10 +77,12 @@ void	HandleDigit(unsigned char ComPointer) {
 void	SetDispAscii(unsigned char chars[]) {
 	unsigned char x,i;
 
+	DISABLE_ALL_INTERRUPTS();
 	for (i = 0;i<5;i++) {
 		x = chars[i];
 		DispSegData[i].byte = AsciiTo7Seg(x);
 	}
+	ENABLE_ALL_INTERRUPTS();
 }
 
 /* show 4 alphas on the 4-digit display */
@@ -90,7 +92,7 @@ void leds_show_4alphas(char text[LEDS_MAX_ALPHAS]){
 	DISABLE_ALL_INTERRUPTS();
 	for (i = 0;i<4;i++) {
 		x = text[i];
-		DispSegData[i].byte = AsciiTo7Seg(x);
+		DispSegData[3-i].byte = AsciiTo7Seg(x);
 	}
 	ENABLE_ALL_INTERRUPTS();
 }
