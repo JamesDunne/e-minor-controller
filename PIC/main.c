@@ -120,7 +120,7 @@ void main() {
 		
 		if (ControllerTiming) {
 			ControllerTiming = false;
-			controller_10msec_timer();	//controller timing functions
+//			controller_10msec_timer();	//controller timing functions
 		}
 		MIDI_COMM_ROUTINE();		//handles sending/receiving midi data
 	}

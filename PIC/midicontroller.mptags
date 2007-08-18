@@ -1135,6 +1135,7 @@ MIDI_ENQUEUE	D:\work\midicontroller\svn\trunk\PIC\c_system.h	37;"	p	line:37	sign
 MODE_CONCERT	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	99;"	e	line:99	enum:mainmode	file:
 MODE_PP::_PPBM0	D:\work\midicontroller\svn\trunk\PIC\usbcfg.h	42;"	d	line:42
 MODE_PRACTICE	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	98;"	e	line:98	enum:mainmode	file:
+MODE_UNDEFINED	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	100;"	e	line:100	enum:mainmode	file:
 MSB::(a)((a).v[1])	D:\work\midicontroller\svn\trunk\PIC\typedefs.h	86;"	d	line:86
 MUID_CDC::3	D:\work\midicontroller\svn\trunk\PIC\usbcfg.h	72;"	d	line:72
 MUID_HID::2	D:\work\midicontroller\svn\trunk\PIC\usbcfg.h	71;"	d	line:71
@@ -2449,15 +2450,15 @@ _word0	D:\work\midicontroller\svn\trunk\PIC\usb.h	343;"	m	line:343	struct:_CTRL_
 _word1	D:\work\midicontroller\svn\trunk\PIC\usb.h	344;"	m	line:344	struct:_CTRL_TRF_DATA::<anonymous>
 _word2	D:\work\midicontroller\svn\trunk\PIC\usb.h	345;"	m	line:345	struct:_CTRL_TRF_DATA::<anonymous>
 _word3	D:\work\midicontroller\svn\trunk\PIC\usb.h	346;"	m	line:346	struct:_CTRL_TRF_DATA::<anonymous>
-a	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	117;"	l	line:117
+a	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	118;"	l	line:118
 accel_count	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	56;"	v	line:56
 accel_state	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	72;"	v	line:72
 accel_time	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	55;"	v	line:55
-accel_time_fast	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	92;"	v	line:92
-accel_time_medium	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	91;"	v	line:91
-accel_time_slow	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	90;"	v	line:90
+accel_time_fast::2	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	92;"	d	line:92	file:
+accel_time_medium::5	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	91;"	d	line:91	file:
+accel_time_slow::15	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	90;"	d	line:90	file:
 acceleration_state	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	64;"	g	line:64	file:
-activate_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	312;"	f	line:312	signature:(void)
+activate_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	313;"	f	line:313	signature:(void)
 active_protocol	D:\work\midicontroller\svn\trunk\PIC\hid.c	52;"	v	line:52
 addr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	213;"	l	line:213
 addr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	257;"	l	line:257
@@ -2533,7 +2534,7 @@ b_form	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	85;"	m	line:85
 b_formBits	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	63;"	m	line:63
 b_formBits	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	86;"	m	line:86
 bank	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	37;"	v	line:37
-bank_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	163;"	f	line:163	signature:(u8 notify)
+bank_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	164;"	f	line:164	signature:(u8 notify)
 bank_count	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	50;"	v	line:50
 bank_getsortedindex	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	82;"	p	line:82	signature:(u16 sort_index)
 bank_getsortedindex	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	332;"	f	line:332	signature:(u16 sort_index)
@@ -2541,15 +2542,15 @@ bank_load	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	74;"	p	line:
 bank_load	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	211;"	f	line:211	signature:(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count)
 bank_loadname	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	79;"	p	line:79	signature:(u16 bank_index, char name[BANK_NAME_MAXLENGTH])
 bank_loadname	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	312;"	f	line:312	signature:(u16 bank_index, char name[BANK_NAME_MAXLENGTH])
-bank_record_size	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	208;"	v	line:208
-bank_showname	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	182;"	f	line:182	signature:(void)
+bank_record_size::16	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	208;"	d	line:208	file:
+bank_showname	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	183;"	f	line:183	signature:(void)
 bank_store	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	76;"	p	line:76	signature:(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 bankmap_count)
 bank_store	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	255;"	f	line:255	signature:(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 bankmap_count)
 bankcontroller	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	38;"	v	line:38
 bankmap	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	39;"	v	line:39
-bankmap_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	153;"	f	line:153	signature:(u8 notify)
+bankmap_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	154;"	f	line:154	signature:(u8 notify)
 bankmap_count	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	40;"	v	line:40
-bankmap_show	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	148;"	f	line:148	signature:(void)
+bankmap_show	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	149;"	f	line:149	signature:(void)
 bankname	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	41;"	v	line:41
 banks_count	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	71;"	p	line:71	signature:(void)
 banks_count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	199;"	f	line:199
@@ -2567,9 +2568,9 @@ bitloc	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	78;"	l	line:78
 bmAttributes	D:\work\midicontroller\svn\trunk\PIC\usb.h	151;"	m	line:151	struct:_USB_CFG_DSC
 bmAttributes	D:\work\midicontroller\svn\trunk\PIC\usb.h	170;"	m	line:170	struct:_USB_EP_DSC
 bmRequestType	D:\work\midicontroller\svn\trunk\PIC\usb.h	212;"	m	line:212	struct:_CTRL_TRF_SETUP::<anonymous>
-button_held	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	210;"	f	line:210	signature:(u32 mask)
-button_pressed	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	205;"	f	line:205	signature:(u32 mask)
-button_released	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	215;"	f	line:215	signature:(u32 mask)
+button_held	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	211;"	f	line:211	signature:(u32 mask)
+button_pressed	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	206;"	f	line:206	signature:(u32 mask)
+button_released	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	216;"	f	line:216	signature:(u32 mask)
 byte	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	43;"	m	line:43
 byte	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	71;"	m	line:71
 byte	D:\work\midicontroller\svn\trunk\PIC\typedefs.h	42;"	t	line:42
@@ -2595,8 +2596,8 @@ byte3	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	86;"	m	line:86
 byte3	D:\work\midicontroller\svn\trunk\PIC\typedefs.h	96;"	m	line:96	struct:_DWORD::<anonymous>
 byte_to_read	D:\work\midicontroller\svn\trunk\PIC\usb.c	755;"	l	line:755
 byte_to_send	D:\work\midicontroller\svn\trunk\PIC\usb.c	685;"	l	line:685
-cc_curr	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	200;"	v	line:200
-cc_last	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	200;"	v	line:200
+cc_curr	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	201;"	v	line:201
+cc_last	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	201;"	v	line:201
 cd01	D:\work\midicontroller\svn\trunk\PIC\usbdsc.h	56;"	v	line:56
 cdtimer_flash	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	59;"	v	line:59
 cdtimer_holdenter	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	62;"	v	line:62
@@ -2610,11 +2611,11 @@ chunk	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	256;"	l	line:256
 clrbit::(VAR,Place)VAR&=(1<<Place)^255	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	28;"	d	line:28
 cmdrecognized	D:\work\midicontroller\svn\trunk\PIC\usbapplet.c	119;"	l	line:119
 cmdrecognized	D:\work\midicontroller\svn\trunk\PIC\usbapplet.c	173;"	l	line:173
-controller_10msec_timer	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	220;"	f	line:220	signature:(void)
+controller_10msec_timer	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	221;"	f	line:221	signature:(void)
 controller_10msec_timer	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	102;"	p	line:102	signature:(void)
-controller_handle	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	347;"	f	line:347	signature:(void)
+controller_handle	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	360;"	f	line:360	signature:(void)
 controller_handle	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	103;"	p	line:103	signature:(void)
-controller_init	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	332;"	f	line:332	signature:(void)
+controller_init	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	333;"	f	line:333	signature:(void)
 controller_init	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	101;"	p	line:101	signature:(void)
 count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	200;"	l	line:200
 count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	212;"	l	line:212
@@ -2629,7 +2630,7 @@ curr_mapindex	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	46;"	v
 curr_preset	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	45;"	v	line:45
 curr_program	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	44;"	v	line:44
 curr_sortedbank	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	48;"	v	line:48
-dec_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	294;"	f	line:294	signature:(void)
+dec_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	295;"	f	line:295	signature:(void)
 delay_count	D:\work\midicontroller\svn\trunk\PIC\usb.c	1312;"	l	line:1312	file:
 device_dsc	D:\work\midicontroller\svn\trunk\PIC\usbdescript.c	182;"	v	line:182
 dword	D:\work\midicontroller\svn\trunk\PIC\typedefs.h	44;"	t	line:44
@@ -2693,7 +2694,7 @@ high	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	62;"	m	line:62
 high	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	70;"	m	line:70
 high	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	83;"	m	line:83
 high_word	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	73;"	m	line:73
-i	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	104;"	l	line:104
+i	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	105;"	l	line:105
 i	D:\work\midicontroller\svn\trunk\PIC\hid.c	222;"	l	line:222
 i	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	78;"	l	line:78
 i	D:\work\midicontroller\svn\trunk\PIC\leds.c	124;"	l	line:124
@@ -2709,15 +2710,15 @@ iSerialNum	D:\work\midicontroller\svn\trunk\PIC\usb.h	141;"	m	line:141	struct:_U
 idProduct	D:\work\midicontroller\svn\trunk\PIC\usb.h	139;"	m	line:139	struct:_USB_DEV_DSC
 idVendor	D:\work\midicontroller\svn\trunk\PIC\usb.h	139;"	m	line:139	struct:_USB_DEV_DSC
 idle_rate	D:\work\midicontroller\svn\trunk\PIC\hid.c	51;"	v	line:51
-inc_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	284;"	f	line:284	signature:(void)
-incdec_mode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	202;"	v	line:202
+inc_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	285;"	f	line:285	signature:(void)
+incdec_mode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	203;"	v	line:203
 index	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	303;"	l	line:303
 index	D:\work\midicontroller\svn\trunk\PIC\main.c	26;"	l	line:26
 index	D:\work\midicontroller\svn\trunk\PIC\usbapplet.c	119;"	l	line:119
 index	D:\work\midicontroller\svn\trunk\PIC\usbapplet.c	173;"	l	line:173
 init	D:\work\midicontroller\svn\trunk\PIC\c_system.h	51;"	p	line:51	signature:(void)
 init	D:\work\midicontroller\svn\trunk\PIC\init.c	14;"	f	line:14	signature:(void)
-itoa_fixed	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	103;"	f	line:103	signature:(u8 n, char s[LEDS_MAX_ALPHAS])
+itoa_fixed	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	104;"	f	line:104	signature:(u8 n, char s[LEDS_MAX_ALPHAS])
 jumpto::(LOCATION)_asmgotoLOCATION_end	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	32;"	d	line:32
 l_form	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	82;"	m	line:82
 leds_show_1digit	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	21;"	p	line:21	signature:(u8 value)
@@ -2740,22 +2741,22 @@ main	D:\work\midicontroller\svn\trunk\PIC\startup.c	8;"	p	line:8	file:	signature
 main	D:\work\midicontroller\svn\trunk\PIC\vectors.c	12;"	p	line:12	file:	signature:(void)
 mainmode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	97;"	g	line:97	file:
 mid	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	84;"	m	line:84
-midi_channel	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	35;"	v	line:35
+midi_channel::0	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	35;"	d	line:35	file:
 midi_send_byte	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	87;"	p	line:87	signature:(u8 data)
 midi_send_byte	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	33;"	f	line:33	signature:(u8 data)
 midi_send_cmd1	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	96;"	p	line:96	signature:(u8 cmd, u8 channel, u8 data1)
 midi_send_cmd1	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	355;"	f	line:355	signature:(u8 cmd, u8 channel, u8 data1)
 midi_send_cmd2	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	97;"	p	line:97	signature:(u8 cmd, u8 channel, u8 data1, u8 data2)
 midi_send_cmd2	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	370;"	f	line:370	signature:(u8 cmd, u8 channel, u8 data1, u8 data2)
-mode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	100;"	v	line:100
+mode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	101;"	v	line:101
 nop::(x)_asmNOP_endasm	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	34;"	d	line:34
-notify_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	304;"	f	line:304	signature:(void)
+notify_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	305;"	f	line:305	signature:(void)
 pDst	D:\work\midicontroller\svn\trunk\PIC\usb.c	464;"	v	line:464
 pFunc	D:\work\midicontroller\svn\trunk\PIC\typedefs.h	125;"	t	line:125
 pSrc	D:\work\midicontroller\svn\trunk\PIC\usb.c	463;"	v	line:463
-preset_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	139;"	f	line:139	signature:(u8 notify)
+preset_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	140;"	f	line:140	signature:(u8 notify)
 preset_held	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	52;"	v	line:52
-program_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	130;"	f	line:130	signature:(u8 notify)
+program_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	131;"	f	line:131	signature:(u8 notify)
 program_mode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	85;"	v	line:85
 program_modes	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	81;"	g	line:81	file:
 read_rom_to_pmbuffer	D:\work\midicontroller\svn\trunk\PIC\c_system.h	40;"	p	line:40	signature:(unsigned short Address)
@@ -2770,24 +2771,24 @@ s_form	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	83;"	m	line:83
 sd000	D:\work\midicontroller\svn\trunk\PIC\usbdescript.c	250;"	v	line:250
 self_power::1	D:\work\midicontroller\svn\trunk\PIC\usbcfg.h	58;"	d	line:58
 self_power::PORTAbits.RA2	D:\work\midicontroller\svn\trunk\PIC\usbcfg.h	56;"	d	line:56
-sequence_complete	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	321;"	f	line:321	signature:(void)
+sequence_complete	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	322;"	f	line:322	signature:(void)
 setbit::(VAR,Place)VAR|=1<<Place	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	25;"	d	line:25
-show_program	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	116;"	f	line:116	signature:(void)
+show_program	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	117;"	f	line:117	signature:(void)
 slider_poll	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	63;"	p	line:63	signature:(void)
 slider_poll	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	187;"	f	line:187
 sm_form	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	84;"	m	line:84
-sortedbank_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	176;"	f	line:176	signature:(u8 notify)
-sortedbank_showname	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	188;"	f	line:188	signature:(void)
-store_state	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	201;"	v	line:201
+sortedbank_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	177;"	f	line:177	signature:(u8 notify)
+sortedbank_showname	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	189;"	f	line:189	signature:(void)
+store_state	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	202;"	v	line:202
 string	D:\work\midicontroller\svn\trunk\PIC\rs232.c	21;"	m	line:21	file:
 string	D:\work\midicontroller\svn\trunk\PIC\rs232.c	22;"	m	line:22	file:
 string	D:\work\midicontroller\svn\trunk\PIC\usbdescript.c	250;"	m	line:250	file:
 string	D:\work\midicontroller\svn\trunk\PIC\usbdescript.c	254;"	m	line:254	file:
 string	D:\work\midicontroller\svn\trunk\PIC\usbdescript.c	259;"	m	line:259	file:
 string	D:\work\midicontroller\svn\trunk\PIC\usbdescript.c	264;"	m	line:264	file:
-sw_curr	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	199;"	v	line:199
-sw_last	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	199;"	v	line:199
-switch_state	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	201;"	v	line:201
+sw_curr	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	200;"	v	line:200
+sw_last	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	200;"	v	line:200
+switch_state	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	202;"	v	line:202
 tReceivedChar	D:\work\midicontroller\svn\trunk\PIC\MidiComm.c	12;"	l	line:12
 tempcntr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	15;"	l	line:15
 tempnum0	D:\work\midicontroller\svn\trunk\PIC\rs232.c	43;"	l	line:43
@@ -2811,7 +2812,7 @@ usb_stat	D:\work\midicontroller\svn\trunk\PIC\usb.c	324;"	v	line:324
 v	D:\work\midicontroller\svn\trunk\PIC\typedefs.h	117;"	m	line:117	struct:_DWORD::<anonymous>
 v	D:\work\midicontroller\svn\trunk\PIC\typedefs.h	82;"	m	line:82	struct:_WORD::<anonymous>
 value	D:\work\midicontroller\svn\trunk\PIC\rs232.c	43;"	l	line:43
-value_flashtime	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	94;"	v	line:94
+value_flashtime::75	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	94;"	d	line:94	file:
 w	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	68;"	m	line:68
 wCount	D:\work\midicontroller\svn\trunk\PIC\usb.c	465;"	v	line:465
 wIndex	D:\work\midicontroller\svn\trunk\PIC\usb.h	215;"	m	line:215	struct:_CTRL_TRF_SETUP::<anonymous>

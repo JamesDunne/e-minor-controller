@@ -32,7 +32,7 @@
 #include "../common/types.h"
 #include "../common/hardware.h"
 
-const u8 midi_channel = 0;
+#define	midi_channel	0
 
 u8      bank[BANK_PRESET_COUNT];
 u8		bankcontroller[BANK_PRESET_COUNT];
@@ -84,19 +84,20 @@ enum program_modes {
 	PROGRAM_COMPLETE
 } program_mode = PROGRAM_NONE;
 
-u8		flash_led = 0;
+u8		flash_led;
 
 /* time period in ms before value is changed */
-const u16 accel_time_slow	= 15;
-const u16 accel_time_medium	=  5;
-const u16 accel_time_fast	=  2;
+#define accel_time_slow		15
+#define accel_time_medium 	5
+#define accel_time_fast		2
 
-const u16 value_flashtime	= 75;
+#define value_flashtime		75
 
 /* concert/practice main mode switch */
 enum mainmode {
 	MODE_PRACTICE = 0,
-	MODE_CONCERT = 1
+	MODE_CONCERT = 1,
+	MODE_UNDEFINED = 2
 } mode;
 
 /* convert integer to ASCII in fixed number of chars, right-aligned */
@@ -196,10 +197,10 @@ void sortedbank_showname(void) {
 }
 
 /* current and previous foot-switch states: */
-u32		sw_curr = 0, sw_last = 0;
-u8		cc_curr = 0, cc_last = 0;
-u8		switch_state = 0, store_state = 0;
-u8		incdec_mode = 0;
+u32		sw_curr, sw_last;
+u8		cc_curr, cc_last;
+u8		switch_state, store_state;
+u8		incdec_mode;
 
 /* determine if a footswitch was pressed: */
 u8 button_pressed(u32 mask) {
@@ -332,15 +333,27 @@ void sequence_complete(void) {
 void controller_init(void) {
 	bank_count = banks_count();
 
+	preset_held = 0;
+	flash_led = 0;
+	cdtimer_value = 0;
+	cdtimer_flash = 0;
+	cdtimer_store = 0;
+	cdtimer_incdec_held = 0;
+	cdtimer_holdenter = 0;
+
 	curr_bank = 0;
 	bank_activate(1);
 
 	curr_mapindex = 0;
 	bankmap_activate(1);
 
+	switch_state = 0;
+	store_state = 0;
+	incdec_mode = 0;
+
 	sw_curr = sw_last = 0;
 	cc_curr = cc_last = expr_poll();
-	mode = slider_poll();
+	mode = MODE_UNDEFINED;			//let controller poll and set the initial state
 }
 
 /* main control loop */
@@ -357,8 +370,8 @@ void controller_handle(void) {
 
 	/* determine mode */
 	if (slider_poll() == 0) {
-		if (mode == MODE_CONCERT) {
-			/* switched from CONCERT to PRACTICE */
+		if (mode != MODE_PRACTICE) {
+			/* switched to PRACTICE mode */
 			mode = MODE_PRACTICE;
 			/* load the alphabetically first bank and start from the beginning of its program */
 			curr_sortedbank = 0;
@@ -367,8 +380,8 @@ void controller_handle(void) {
 			bankmap_activate(0);
 		}
 	} else {
-		if (mode == MODE_PRACTICE) {
-			/* switched from PRACTICE to CONCERT */
+		if (mode != MODE_CONCERT) {
+			/* switched to CONCERT mode */
 			mode = MODE_CONCERT;
 			/* load the sequentially first bank and start from the beginning of its program */
 			curr_bank = 0;
@@ -381,7 +394,7 @@ void controller_handle(void) {
 	/* NEXT never changes function depending on mode */
 
 	/* NEXT pressed: */
-	if (button_pressed(FSM_NEXT) && 0) {		//diag..
+	if (button_pressed(FSM_NEXT)) {
 		if (loaded_bank != curr_bank) {
 			/* prepared to switch to a bank, but did not activate the first map */
 			bankmap_activate(1);

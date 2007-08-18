@@ -205,7 +205,7 @@ u16 banks_count(){
 	return count;	
 }
 
-const u8 bank_record_size = 16;
+#define	bank_record_size		16
 
 /* Loads a bank into the specified arrays: */
 void bank_load(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count){
