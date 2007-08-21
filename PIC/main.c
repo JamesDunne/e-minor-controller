@@ -72,7 +72,6 @@ void main() {
 
 		ServiceUSB();				//this must be at the top to ensure timely handling of usb events
 
-/*
 		if (Write0Pending) {
 			Write0Pending = false;
 			WriteProgMem(0);			//write first set of 32 bytes.
@@ -84,7 +83,6 @@ void main() {
 			WriteProgMem(32);			//write second set of 32 bytes.
 			continue;					//continue so we can process pending USB routines
 		}
-*/
 
 		if (ExpPedalSvc) {
 			ExpPedalRead();				//read ADC data from the expression pedal input
@@ -103,10 +101,10 @@ void main() {
 			continue;
 		}
 		
-		if (Handle7segs) {
-			Handle7segs = false;
-			Process7Segs();				//handle 7 segment display data
-		}
+//		if (Handle7segs) {
+//			Handle7segs = false;
+//			Process7Segs();				//handle 7 segment display data
+//		}
 		
 		if (HandleLeds) {
 			HandleLeds = false;

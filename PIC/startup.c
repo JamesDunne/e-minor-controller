@@ -32,6 +32,16 @@ _startup (void)
     clrf TBLPTRU, 0 // 1st silicon doesn't do this on POR
 
     bcf __FPFLAGS,RND,0 // Initalize rounding flag for floating point libs
+
+	clrf	FSR0H, 0	//the 0 indicates its in access ram
+	clrf	FSR0L, 0
+
+RAMCLEAR:
+	CLRWDT
+	clrf	POSTINC0, 0
+	btfss	FSR0H, 3, 0
+	goto	RAMCLEAR
+
 _endasm loop:
 
   // Call the user's main routine

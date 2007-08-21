@@ -12,7 +12,12 @@
 #include "hardware.h"
 
 void	Process7Segs(void) {
-	static unsigned char ComPointer;
+//	static unsigned char ComPointer;
+
+	if (mode == MODE_CONCERT) {
+		DispSegData[0].bit7 = true;
+	}
+
 
 	AllDigitsOff();
 	switch (ComPointer) {
@@ -116,6 +121,7 @@ unsigned char AsciiTo7Seg(unsigned char chr) {
 		chr=NumbersSegTable[chr];
 	}
 	else if (chr == ' ') chr = 0;		//space characters
+	else if (chr == '-') chr = (1<<6);		//space characters
 	else chr = 0;				//all other characters are spaces
 	return chr;
 }
@@ -159,7 +165,7 @@ rom unsigned char LettersSegTable[26] = {
 	(1<<4)|(1<<6)|(1<<2),						//n
 	(1<<6)|(1<<4)|(1<<2)|(1<<3),				//o
 	(1<<0)|(1<<5)|(1<<1)|(1<<6)|(1<<4),			//P
-	(1<<0)|(1<<5)|(1<<1)|(1<<6)|(1<<2),			//q
+	(1<<0)|(1<<5)|(1<<1)|(1<<6)|(1<<2)|(1<<7),			//q
 	(1<<4)|(1<<6),								//r
 	(1<<3)|(1<<2)|(1<<6)|(1<<5)|(1<<0),			//S
 	(1<<0)|(1<<1)|(1<<2),						//T

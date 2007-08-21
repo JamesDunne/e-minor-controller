@@ -105,7 +105,7 @@ void	ReadButtons(void) {
 	BtnAddress = 0x07;
 	SetDipAddress(BtnAddress);
 	ModeSwitchState = true;
-	if (BTN_IN_PIN) ModeSwitchState = false;
+	if (!BTN_IN_PIN) ModeSwitchState = false;
 
 	//diag break when a button is detected as pushed.
 //	if (ButtonState) {
@@ -257,7 +257,7 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BA
 	u16	addr, addrhi, addrlo;
 
 	//diag disable store for now...
-	return;		//this is not the code that is performing the write...
+//	return;		//this is not the code that is performing the write...
 
 
 	addr = 64 + (bank_index * bank_record_size);

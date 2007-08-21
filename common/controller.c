@@ -92,11 +92,7 @@ u8		flash_led;
 #define value_flashtime		75
 
 /* concert/practice main mode switch */
-enum mainmode {
-	MODE_PRACTICE = 0,
-	MODE_CONCERT = 1,
-	MODE_UNDEFINED = 2
-} mode;
+enum mainmode mode;
 
 /* convert integer to ASCII in fixed number of chars, right-aligned */
 void itoa_fixed(u8 n, char s[LEDS_MAX_ALPHAS]) {
@@ -185,8 +181,13 @@ void bank_showname(void) {
 
 /* load only current bank name from the sorted index and display it on 4-digit display */
 void sortedbank_showname(void) {
+	char seq[4];
 	if (program_mode != PROGRAM_NONE) {
-		leds_show_4alphas("SEQ-");
+		seq[0] = 'S';
+		seq[1] = 'E';
+		seq[2] = 'Q';
+		seq[3] = '-';
+		leds_show_4alphas(seq);
 	} else {
 		curr_bank = bank_getsortedindex(curr_sortedbank);
 		bank_loadname(curr_bank, bankname);

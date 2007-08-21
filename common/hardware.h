@@ -26,9 +26,9 @@ void leds_show_1digit(u8 value);
 #define FSM_PRESET_3	0x04		//(1 << 2)
 #define FSM_PRESET_4	0x08		//(1 << 3)
 #define FSM_DEC			0x10000000	//(1 << 28)
-#define FSM_INC			0x20000000	//(1 << 29)
+#define FSM_INC			0x80000000	//(1 << 29)
 #define FSM_ENTER		0x40000000	//(1 << 30)
-#define FSM_NEXT		0x80000000	//(1 << 31)
+#define FSM_NEXT		0x20000000	//(1 << 31)
 
 /* Poll up to 28 foot-switch toggles simultaneously.  PREV NEXT DEC  INC map to 28-31 bit positions. */
 u32 fsw_poll(void);
@@ -89,3 +89,11 @@ void controller_handle(void);
 
 
 u8 button_pressed(u32 mask);
+
+enum mainmode {
+	MODE_PRACTICE = 0,
+	MODE_CONCERT = 1,
+	MODE_UNDEFINED = 2
+};
+
+extern enum mainmode mode;

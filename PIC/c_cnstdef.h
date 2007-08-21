@@ -37,6 +37,7 @@
 #define	SYSTEM_TIME_1MS			4		//in 250uS counts
 #define	SYSTEM_TIME_10MS		10		//in 1mS counts
 #define	SYSTEM_TIME_40MS		4		//in 10mS counts
+#define	SYSTEM_TIME_100MS		10		//in 10mS counts
 #define	SYSTEM_TIME_1S			100		//in 10mS counts
 
 //interrupts:

@@ -40,9 +40,6 @@ void	InterruptHandlerHigh ()
 	if (PIR1bits.TMR2IF){
 		PIR1bits.TMR2IF = 0;            //clear interrupt flag
 
-		Systick = true;
-
-
 //Every 250uS routine:
 		SystickCntr++;
 		if (SystickCntr == SYSTEM_TIME_1MS) {
