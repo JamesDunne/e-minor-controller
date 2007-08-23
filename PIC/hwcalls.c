@@ -292,11 +292,12 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BA
 
 	//write_eeprom(chunk, (64 + (bank_index * bank_record_size)) & ~63);
 	
-	ProgMemAddr.s_form = ((64 + (bank_index * bank_record_size)) & ~63);
+	ProgMemAddr.s_form = ((64 + (bank_index * bank_record_size)) & ~63) + WRITABLE_SEG_ADDR + 512;
 	EraseProgMem();
 
-	Write0Pending = true;	//arb will catch this and handle it later..
-	Write32Pending = true;	//arb will catch this and handle it later..
+//diag..
+//	Write0Pending = true;	//arb will catch this and handle it later..
+//	Write32Pending = true;	//arb will catch this and handle it later..
 }
 
 void read_rom_to_pmbuffer(unsigned short Address) {

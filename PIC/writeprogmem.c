@@ -37,7 +37,7 @@ void WriteProgMem(unsigned char index) //TESTED: Passed
 	unsigned char counter;
 
 	//diag 
-	return;
+	//return;
 
 
     /*
@@ -69,7 +69,7 @@ void EraseProgMem(void) //TESTED: Passed
 
 
 	//diag 
-	return;
+	//return;
 
 
 

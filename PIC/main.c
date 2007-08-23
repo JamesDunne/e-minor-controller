@@ -47,7 +47,7 @@ void main() {
 	Scroll7Segs = true;
 */
 
-/*
+
 //Test to write data to the program memory
 	ProgMemAddr.s_form = 0x4000;
 	
@@ -63,11 +63,12 @@ void main() {
 	EraseProgMem();	//uses global ProgMemAddr
 	
 	WriteProgMem();	//uses global ProgMemAddr and ProgmemBuffer[]
-*/
+
 
 	LedStates = 0;
 
 	for(;;) {
+		CLRWDT();
 		ENABLE_ALL_INTERRUPTS();
 
 		ServiceUSB();				//this must be at the top to ensure timely handling of usb events

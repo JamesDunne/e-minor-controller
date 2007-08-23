@@ -1693,7 +1693,7 @@ SendDataToShiftReg	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	40;"	f	line:40
 SendingOutString::CommFlags1.bit2	D:\work\midicontroller\svn\trunk\PIC\c_ramdef.h	9;"	d	line:9
 SerialNum	D:\work\midicontroller\svn\trunk\PIC\usbdescript.c	264;"	v	line:264
 ServiceEP1Data::CommFlags1.bit5	D:\work\midicontroller\svn\trunk\PIC\c_ramdef.h	12;"	d	line:12
-ServiceUSB	D:\work\midicontroller\svn\trunk\PIC\main.c	128;"	f	line:128	signature:(void)
+ServiceUSB	D:\work\midicontroller\svn\trunk\PIC\main.c	129;"	f	line:129	signature:(void)
 ServiceUSB	D:\work\midicontroller\svn\trunk\PIC\main.c	14;"	p	line:14	file:	signature:(void)
 SetDipAddress	D:\work\midicontroller\svn\trunk\PIC\c_system.h	34;"	p	line:34	signature:(unsigned char Address)
 SetDipAddress	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	146;"	f	line:146	signature:(unsigned char Address)
@@ -2179,7 +2179,7 @@ WREN	D:\work\midicontroller\svn\trunk\PIC\a_micrdef.inc	774;"	q	line:774
 WREN	D:\work\midicontroller\svn\trunk\PIC\p18f4550.h	614;"	m	line:614
 WRERR	D:\work\midicontroller\svn\trunk\PIC\a_micrdef.inc	775;"	q	line:775
 WRERR	D:\work\midicontroller\svn\trunk\PIC\p18f4550.h	615;"	m	line:615
-WRITABLE_SEG_ADDR::0x3400	D:\work\midicontroller\svn\trunk\PIC\c_cnstdef.h	63;"	d	line:63
+WRITABLE_SEG_ADDR::0x3500	D:\work\midicontroller\svn\trunk\PIC\c_cnstdef.h	63;"	d	line:63
 WRITABLE_SEG_LEN::0x5FFF-WRITABLE_SEG_ADDR	D:\work\midicontroller\svn\trunk\PIC\c_cnstdef.h	64;"	d	line:64
 WRITE_32::0x31	D:\work\midicontroller\svn\trunk\PIC\c_cnstdef.h	78;"	d	line:78
 WRSPP	D:\work\midicontroller\svn\trunk\PIC\a_micrdef.inc	242;"	q	line:242
@@ -2458,8 +2458,8 @@ activate_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controlle
 active_protocol	D:\work\midicontroller\svn\trunk\PIC\hid.c	52;"	v	line:52
 addr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	213;"	l	line:213
 addr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	257;"	l	line:257
-addr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	310;"	l	line:310
-addr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	330;"	l	line:330
+addr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	315;"	l	line:315
+addr	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	335;"	l	line:335
 addrhi	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	257;"	l	line:257
 addrlo	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	257;"	l	line:257
 b0	D:\work\midicontroller\svn\trunk\PIC\typedefs.h	51;"	m	line:51	struct:_BYTE::<anonymous>
@@ -2533,11 +2533,11 @@ bank	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	37;"	v	line:37
 bank_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	158;"	f	line:158	signature:(u8 notify)
 bank_count	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	50;"	v	line:50
 bank_getsortedindex	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	67;"	p	line:67	signature:(u16 sort_index)
-bank_getsortedindex	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	328;"	f	line:328	signature:(u16 sort_index)
+bank_getsortedindex	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	333;"	f	line:333	signature:(u16 sort_index)
 bank_load	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	59;"	p	line:59	signature:(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count)
 bank_load	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	211;"	f	line:211	signature:(u16 bank_index, char name[BANK_NAME_MAXLENGTH], u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 *bankmap_count)
 bank_loadname	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	64;"	p	line:64	signature:(u16 bank_index, char name[BANK_NAME_MAXLENGTH])
-bank_loadname	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	308;"	f	line:308	signature:(u16 bank_index, char name[BANK_NAME_MAXLENGTH])
+bank_loadname	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	313;"	f	line:313	signature:(u16 bank_index, char name[BANK_NAME_MAXLENGTH])
 bank_record_size::16	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	208;"	d	line:208	file:
 bank_showname	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	177;"	f	line:177	signature:(void)
 bank_store	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	61;"	p	line:61	signature:(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BANK_PRESET_COUNT], u8 bankmap[BANK_MAP_COUNT], u8 bankmap_count)
@@ -2616,8 +2616,8 @@ controller_init	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	332;
 controller_init	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	86;"	p	line:86	signature:(void)
 count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	200;"	l	line:200
 count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	212;"	l	line:212
-count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	309;"	l	line:309
-count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	329;"	l	line:329
+count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	314;"	l	line:314
+count	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	334;"	l	line:334
 counter	D:\work\midicontroller\svn\trunk\PIC\writeprogmem.c	37;"	l	line:37
 ctrl_trf_mem	D:\work\midicontroller\svn\trunk\PIC\usbmmap.h	76;"	m	line:76	struct:_USB_DEVICE_STATUS::<anonymous>
 ctrl_trf_session_owner	D:\work\midicontroller\svn\trunk\PIC\usb.c	461;"	v	line:461
@@ -2707,7 +2707,7 @@ idVendor	D:\work\midicontroller\svn\trunk\PIC\usb.h	139;"	m	line:139	struct:_USB
 idle_rate	D:\work\midicontroller\svn\trunk\PIC\hid.c	51;"	v	line:51
 inc_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	284;"	f	line:284	signature:(void)
 incdec_mode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	202;"	v	line:202
-index	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	299;"	l	line:299
+index	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	304;"	l	line:304
 index	D:\work\midicontroller\svn\trunk\PIC\main.c	26;"	l	line:26
 index	D:\work\midicontroller\svn\trunk\PIC\usbapplet.c	119;"	l	line:119
 index	D:\work\midicontroller\svn\trunk\PIC\usbapplet.c	173;"	l	line:173
@@ -2740,9 +2740,9 @@ midi_channel::0	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	35;"
 midi_send_byte	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	72;"	p	line:72	signature:(u8 data)
 midi_send_byte	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	33;"	f	line:33	signature:(u8 data)
 midi_send_cmd1	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	81;"	p	line:81	signature:(u8 cmd, u8 channel, u8 data1)
-midi_send_cmd1	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	351;"	f	line:351	signature:(u8 cmd, u8 channel, u8 data1)
+midi_send_cmd1	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	356;"	f	line:356	signature:(u8 cmd, u8 channel, u8 data1)
 midi_send_cmd2	D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h	82;"	p	line:82	signature:(u8 cmd, u8 channel, u8 data1, u8 data2)
-midi_send_cmd2	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	366;"	f	line:366	signature:(u8 cmd, u8 channel, u8 data1, u8 data2)
+midi_send_cmd2	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	371;"	f	line:371	signature:(u8 cmd, u8 channel, u8 data1, u8 data2)
 mode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	95;"	v	line:95
 nop::(x)_asmNOP_endasm	D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H	34;"	d	line:34
 notify_practice_value	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	304;"	f	line:304	signature:(void)
@@ -2754,7 +2754,7 @@ program_activate	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	125
 program_mode	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	83;"	v	line:83
 program_modes	D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c	79;"	g	line:79	file:
 read_rom_to_pmbuffer	D:\work\midicontroller\svn\trunk\PIC\c_system.h	40;"	p	line:40	signature:(unsigned short Address)
-read_rom_to_pmbuffer	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	298;"	f	line:298	signature:(unsigned short Address)
+read_rom_to_pmbuffer	D:\work\midicontroller\svn\trunk\PIC\hwcalls.c	303;"	f	line:303	signature:(unsigned short Address)
 report	D:\work\midicontroller\svn\trunk\PIC\usbdescript.c	270;"	m	line:270	file:
 report	D:\work\midicontroller\svn\trunk\PIC\usbdsc.h	76;"	m	line:76
 s16	D:\work\midicontroller\svn\trunk\PIC\..\common\types.h	5;"	t	line:5
