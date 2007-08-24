@@ -36,7 +36,7 @@ near extern BitField MiscFlags1;
 
 extern BitField DispSegData[5];		//0 = a, 1 = b, etc.. 
 extern TwoBytes	ProgMemAddr;
-extern unsigned char ProgmemBuffer[32];
+extern unsigned char ProgmemBuffer[64];
 
 extern TwoBytes NVRCommAddr;
 extern TwoBytes RAMCommAddr;

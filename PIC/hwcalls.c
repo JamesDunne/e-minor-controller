@@ -266,8 +266,9 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BA
 	/* load the 64-byte aligned chunk: */
 	read_rom_to_pmbuffer(addrhi);
 
-//diag...
+	//diag...
 	return;
+
 
 	/* overwrite the bank program section for the bank record: */
 	ProgmemBuffer[addrlo+4] = bank[0];

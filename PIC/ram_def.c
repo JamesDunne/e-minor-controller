@@ -13,7 +13,7 @@ near BitField MiscFlags1;
 #pragma udata gpr1
 BitField DispSegData[5];
 TwoBytes ProgMemAddr;
-unsigned char ProgmemBuffer[32];
+unsigned char ProgmemBuffer[64];
 
 TwoBytes NVRCommAddr;
 TwoBytes RAMCommAddr;
