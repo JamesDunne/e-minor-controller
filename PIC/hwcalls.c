@@ -256,19 +256,12 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BA
 	u8 chunk[64];
 	u16	addr, addrhi, addrlo;
 
-	//diag disable store for now...
-	//return;		//this is not the code that is performing the write...
-
 	addr = 64 + (bank_index * bank_record_size);
 	addrhi = addr & ~63;
 	addrlo = addr & 63;
 
 	/* load the 64-byte aligned chunk: */
 	read_rom_to_pmbuffer(addrhi);
-
-	//diag...
-	return;
-
 
 	/* overwrite the bank program section for the bank record: */
 	ProgmemBuffer[addrlo+4] = bank[0];
@@ -295,12 +288,11 @@ void bank_store(u16 bank_index, u8 bank[BANK_PRESET_COUNT], u8 bankcontroller[BA
 
 	//write_eeprom(chunk, (64 + (bank_index * bank_record_size)) & ~63);
 	
-	ProgMemAddr.s_form = ((64 + (bank_index * bank_record_size)) & ~63) + WRITABLE_SEG_ADDR + 512;
-//	EraseProgMem();
+	ProgMemAddr.s_form = ((64 + (bank_index * bank_record_size)) & ~63) + WRITABLE_SEG_ADDR;	//+512 for debugging..
+	EraseProgMem();
 
-//diag
-//	Write0Pending = true;	//arb will catch this and handle it later..
-//	Write32Pending = true;	//arb will catch this and handle it later..
+	Write0Pending = true;	//arb will catch this and handle it later..
+	Write32Pending = true;	//arb will catch this and handle it later..
 }
 
 void read_rom_to_pmbuffer(unsigned short Address) {
