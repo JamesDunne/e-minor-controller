@@ -10,7 +10,7 @@ D:\work\midicontroller\svn\trunk\PIC\config.asm
 D:\work\midicontroller\svn\trunk\PIC\intslct.c
 D:\work\midicontroller\svn\trunk\PIC\init.c
 D:\work\midicontroller\svn\trunk\PIC\hwcalls.c
-D:\work\midicontroller\svn\trunk\PIC\..\common\controller.c
+D:\work\midicontroller\svn\trunk\common\controller.c
 D:\work\midicontroller\svn\trunk\PIC\vectors.c
 D:\work\midicontroller\svn\trunk\PIC\eeprom.c
 D:\work\midicontroller\svn\trunk\PIC\leds.c
@@ -29,7 +29,7 @@ D:\work\midicontroller\svn\trunk\PIC\usbdsc.h
 D:\work\midicontroller\svn\trunk\PIC\usbmmap.h
 D:\work\midicontroller\svn\trunk\PIC\c_ramdef.h
 D:\work\midicontroller\svn\trunk\PIC\c_system.h
-D:\work\midicontroller\svn\trunk\PIC\..\common\hardware.h
+D:\work\midicontroller\svn\trunk\common\hardware.h
 D:\work\midicontroller\svn\trunk\PIC\_TOOLS.H
-D:\work\midicontroller\svn\trunk\PIC\..\common\types.h
+D:\work\midicontroller\svn\trunk\common\types.h
 D:\work\midicontroller\svn\trunk\PIC\a_micrdef.inc
