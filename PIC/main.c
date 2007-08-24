@@ -25,8 +25,11 @@ rom unsigned char 	DataStart[64] = "    princess consuela banana hannoc  ";
 void main() {
 	unsigned char chars[5], index;
 
+	CLRWDT();
 	init();
+	CLRWDT();
 	controller_init();
+	CLRWDT();
 	
 //Test to display 'crap' on the LCD display
 	chars[0] = 'o';

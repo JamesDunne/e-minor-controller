@@ -16,7 +16,7 @@ void
 RealInitVector (void)
 {
   _asm
-	goto main //jump to interrupt routine
+	goto 0x0A00 //jump to interrupt routine
   _endasm
 }
 
