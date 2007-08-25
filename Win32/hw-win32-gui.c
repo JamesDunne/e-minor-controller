@@ -405,9 +405,9 @@ u32 fsw_poll() {
 		   ((u32)pushed[2] << FSB_PRESET_3) |
 		   ((u32)pushed[3] << FSB_PRESET_4) |
 		   ((u32)pushed[4] << FSB_DEC) |
-		   ((u32)pushed[7] << FSB_INC) |
+		   ((u32)pushed[5] << FSB_INC) |
 		   ((u32)pushed[6] << FSB_ENTER) |
-		   ((u32)pushed[5] << FSB_NEXT);
+		   ((u32)pushed[7] << FSB_NEXT);
 }
 
 /* Set currently active program foot-switch's LED indicator and disable all others */
@@ -624,7 +624,7 @@ u16 bank_getsortedindex(u16 sort_index) {
 	/* read the bank count: */
 	count = *((u16 *)&(rom_data[0]));
 	if (sort_index >= count) {
-		return;
+		return count;
 	}
 
 	/* read the bank index given the sort index location: */
