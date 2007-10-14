@@ -13,7 +13,7 @@
 
 //If this is defined, the UART is set up for RS232, 
 //else its MIDI
-#define	UARTISRS232
+//#define	UARTISRS232
 
 //UART converter initialization constants:
 #ifdef UARTISRS232
