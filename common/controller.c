@@ -85,9 +85,9 @@ enum program_modes {
 u8		flash_led;
 
 /* time period in ms before value is changed */
-#define accel_time_slow		15
-#define accel_time_medium 	5
-#define accel_time_fast		2
+#define accel_time_slow		20
+#define accel_time_medium 	15
+#define accel_time_fast		10
 
 #define value_flashtime		75
 
@@ -199,6 +199,7 @@ void sortedbank_showname(void) {
 u32		sw_curr, sw_last;
 u8		cc_curr, cc_last;
 u8		switch_state, store_state;
+u8		store_preset;
 u8		incdec_mode;
 
 /* determine if a footswitch was pressed: */
@@ -239,19 +240,19 @@ void controller_10msec_timer(void) {
 	if (cdtimer_flash > 0) {
 		switch (flash_state) {
 			case FLASH_STORE:
-				if ((cdtimer_flash & 31) == 0) {
+				if ((cdtimer_flash & 63) == 0) {
 					fsw_led_enable(flash_led);
-				} else if ((cdtimer_flash & 31) == 15) {
+				} else if ((cdtimer_flash & 63) == 31) {
 					fsw_led_disable(flash_led);
 				}
 				break;
 			case FLASH_BANK_SELECT_MODE:
-				if ((cdtimer_flash & 31) == 0) {
+				if ((cdtimer_flash & 63) == 0) {
 					fsw_led_enable(0);
 					fsw_led_enable(1);
 					fsw_led_disable(2);
 					fsw_led_disable(3);
-				} else if ((cdtimer_flash & 31) == 15) {
+				} else if ((cdtimer_flash & 63) == 31) {
 					fsw_led_disable(0);
 					fsw_led_disable(1);
 					fsw_led_disable(2);
@@ -259,12 +260,12 @@ void controller_10msec_timer(void) {
 				}
 				break;
 			case FLASH_PRGM_SELECT_MODE:
-				if ((cdtimer_flash & 31) == 0) {
+				if ((cdtimer_flash & 63) == 0) {
 					fsw_led_disable(0);
 					fsw_led_disable(1);
 					fsw_led_enable(2);
 					fsw_led_enable(3);
-				} else if ((cdtimer_flash & 31) == 15) {
+				} else if ((cdtimer_flash & 63) == 31) {
 					fsw_led_disable(0);
 					fsw_led_disable(1);
 					fsw_led_disable(2);
@@ -326,6 +327,16 @@ void sequence_complete(void) {
 	program_mode = PROGRAM_COMPLETE;
 	cdtimer_holdenter = 50;
 	curr_mapindex = 0;
+}
+
+void store_sequence(void) {
+	preset_activate(1);
+	bankmap[curr_mapindex++] = curr_preset;
+	bankmap_show();
+	/* just stored our last sequence: */
+	if (curr_mapindex == 8) {
+		sequence_complete();
+	}
 }
 
 /* set the controller to an initial state */
@@ -439,8 +450,9 @@ void controller_handle(void) {
 					if (button_pressed(FSM_PRESET_1)) {
 						curr_preset = 0;
 						if (incdec_mode == 1) {
-							/* check if held for ~300msec */
-							cdtimer_store = 30;
+							/* check if held for ~500msec */
+							cdtimer_store = 50;
+							store_preset = curr_preset;
 							store_state = 0;
 						} else {
 							preset_activate(1);
@@ -449,8 +461,9 @@ void controller_handle(void) {
 					if (button_pressed(FSM_PRESET_2)) {
 						curr_preset = 1;
 						if (incdec_mode == 1) {
-							/* check if held for ~300msec */
-							cdtimer_store = 30;
+							/* check if held for ~500msec */
+							cdtimer_store = 50;
+							store_preset = curr_preset;
 							store_state = 0;
 						} else {
 							preset_activate(1);
@@ -459,8 +472,9 @@ void controller_handle(void) {
 					if (button_pressed(FSM_PRESET_3)) {
 						curr_preset = 2;
 						if (incdec_mode == 1) {
-							/* check if held for ~300msec */
-							cdtimer_store = 30;
+							/* check if held for ~500msec */
+							cdtimer_store = 50;
+							store_preset = curr_preset;
 							store_state = 0;
 						} else {
 							preset_activate(1);
@@ -469,8 +483,9 @@ void controller_handle(void) {
 					if (button_pressed(FSM_PRESET_4)) {
 						curr_preset = 3;
 						if (incdec_mode == 1) {
-							/* check if held for ~300msec */
-							cdtimer_store = 30;
+							/* check if held for ~500msec */
+							cdtimer_store = 50;
+							store_preset = curr_preset;
 							store_state = 0;
 						} else {
 							preset_activate(1);
@@ -483,12 +498,12 @@ void controller_handle(void) {
 							if (button_held(FSM_PRESET_1) || button_held(FSM_PRESET_2) || button_held(FSM_PRESET_3) || button_held(FSM_PRESET_4)) {
 								/* store the program */
 								store_state = 1;
-								bank[curr_preset] = curr_program;
+								bank[store_preset] = curr_program;
 								bank_store(curr_bank, bank, bankcontroller, bankmap, bankmap_count);
 								preset_activate(1);
 								/* flash the stored LED */
 								flash_state = FLASH_STORE;
-								flash_led = curr_preset;
+								flash_led = store_preset;
 								cdtimer_flash = 100;
 							}
 						}
@@ -546,9 +561,9 @@ void controller_handle(void) {
 
 					/* ENTER pressed */
 					if (button_pressed(FSM_ENTER)) {
-						cdtimer_holdenter = 30;
+						cdtimer_holdenter = 50;
 					}
-					/* ENTER held at least ~300msec: */
+					/* ENTER held at least ~500msec: */
 					if (button_held(FSM_ENTER) && (cdtimer_holdenter == 0) && (program_mode == PROGRAM_NONE)) {
 						/* enter sequence program mode */
 						program_mode = PROGRAM_SEQUENCE;
@@ -556,19 +571,19 @@ void controller_handle(void) {
 						curr_preset = 4;
 						sortedbank_showname();
 					}
-					/* ENTER released before ~300msec was up: */
+					/* ENTER released before ~500msec was up: */
 					if (button_released(FSM_ENTER) && (cdtimer_holdenter > 0)) {
 						if (incdec_mode == 0) {
 							/* program-select mode */
 							incdec_mode = 1;
 							flash_state = FLASH_PRGM_SELECT_MODE;
-							cdtimer_flash = 100;
+							cdtimer_flash = 150;
 							notify_practice_value();
 						} else {
 							/* bank-select mode by alphabetical order */
 							incdec_mode = 0;
 							flash_state = FLASH_BANK_SELECT_MODE;
-							cdtimer_flash = 100;
+							cdtimer_flash = 150;
 							notify_practice_value();
 						}
 					}
@@ -580,8 +595,8 @@ void controller_handle(void) {
 								inc_practice_value();
 								notify_practice_value();
 
-								/* if we cycled more than 5 values, ramp up to next speed */
-								if (accel_count++ == 5) {
+								/* if we cycled more than 10 values, ramp up to next speed */
+								if (accel_count++ == 10) {
 									accel_count = 0;
 									accel_state = ACCEL_INC_MEDIUM;
 									accel_time = accel_time_medium;
@@ -593,8 +608,8 @@ void controller_handle(void) {
 								inc_practice_value();
 								notify_practice_value();
 
-								/* if we cycled more than 5 values, ramp up to next speed */
-								if (accel_count++ == 20) {
+								/* if we cycled more than 10 values, ramp up to next speed */
+								if (accel_count++ == 10) {
 									accel_count = 0;
 									accel_state = ACCEL_INC_FAST;
 									accel_time = accel_time_fast;
@@ -613,8 +628,8 @@ void controller_handle(void) {
 								dec_practice_value();
 								notify_practice_value();
 
-								/* if we cycled more than 5 values, ramp up to next speed */
-								if (accel_count++ == 5) {
+								/* if we cycled more than 20 values, ramp up to next speed */
+								if (accel_count++ == 10) {
 									accel_count = 0;
 									accel_state = ACCEL_DEC_MEDIUM;
 									accel_time = accel_time_medium;
@@ -627,7 +642,7 @@ void controller_handle(void) {
 								notify_practice_value();
 
 								/* if we cycled more than 5 values, ramp up to next speed */
-								if (accel_count++ == 20) {
+								if (accel_count++ == 10) {
 									accel_count = 0;
 									accel_state = ACCEL_DEC_FAST;
 									accel_time = accel_time_fast;
@@ -651,49 +666,25 @@ void controller_handle(void) {
 					if (button_pressed(FSM_PRESET_1)) {
 						if (curr_preset != 0) {
 							curr_preset = 0;
-							preset_activate(1);
-							bankmap[curr_mapindex++] = curr_preset;
-							bankmap_show();
-							/* just stored our last sequence: */
-							if (curr_mapindex == 8) {
-								sequence_complete();
-							}
+							store_sequence();
 						}
 					}
 					if (button_pressed(FSM_PRESET_2)) {
 						if (curr_preset != 1) {
 							curr_preset = 1;
-							preset_activate(1);
-							bankmap[curr_mapindex++] = curr_preset;
-							bankmap_show();
-							/* just stored our last sequence: */
-							if (curr_mapindex == 8) {
-								sequence_complete();
-							}
+							store_sequence();
 						}
 					}
 					if (button_pressed(FSM_PRESET_3)) {
 						if (curr_preset != 2) {
 							curr_preset = 2;
-							preset_activate(1);
-							bankmap[curr_mapindex++] = curr_preset;
-							bankmap_show();
-							/* just stored our last sequence: */
-							if (curr_mapindex == 8) {
-								sequence_complete();
-							}
+							store_sequence();
 						}
 					}
 					if (button_pressed(FSM_PRESET_4)) {
 						if (curr_preset != 3) {
 							curr_preset = 3;
-							preset_activate(1);
-							bankmap[curr_mapindex++] = curr_preset;
-							bankmap_show();
-							/* just stored our last sequence: */
-							if (curr_mapindex == 8) {
-								sequence_complete();
-							}
+							store_sequence();
 						}
 					}
 
