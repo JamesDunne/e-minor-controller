@@ -2457,11 +2457,11 @@ a	D:\Work\e-minor-controller\common\controller.c	112;"	l	line:112
 accel_count	D:\Work\e-minor-controller\common\controller.c	54;"	v	line:54
 accel_state	D:\Work\e-minor-controller\common\controller.c	70;"	v	line:70
 accel_time	D:\Work\e-minor-controller\common\controller.c	53;"	v	line:53
-accel_time_fast::2	D:\Work\e-minor-controller\common\controller.c	90;"	d	line:90	file:
-accel_time_medium::5	D:\Work\e-minor-controller\common\controller.c	89;"	d	line:89	file:
-accel_time_slow::15	D:\Work\e-minor-controller\common\controller.c	88;"	d	line:88	file:
+accel_time_fast::10	D:\Work\e-minor-controller\common\controller.c	90;"	d	line:90	file:
+accel_time_medium::15	D:\Work\e-minor-controller\common\controller.c	89;"	d	line:89	file:
+accel_time_slow::20	D:\Work\e-minor-controller\common\controller.c	88;"	d	line:88	file:
 acceleration_state	D:\Work\e-minor-controller\common\controller.c	62;"	g	line:62	file:
-activate_practice_value	D:\Work\e-minor-controller\common\controller.c	312;"	f	line:312	signature:(void)
+activate_practice_value	D:\Work\e-minor-controller\common\controller.c	313;"	f	line:313	signature:(void)
 active_protocol	D:\Work\e-minor-controller\PIC\hid.c	52;"	v	line:52
 addr	D:\Work\e-minor-controller\PIC\hwcalls.c	213;"	l	line:213
 addr	D:\Work\e-minor-controller\PIC\hwcalls.c	257;"	l	line:257
@@ -2571,10 +2571,10 @@ bitloc	D:\Work\e-minor-controller\PIC\hwcalls.c	78;"	l	line:78
 bmAttributes	D:\Work\e-minor-controller\PIC\usb.h	151;"	m	line:151	struct:_USB_CFG_DSC
 bmAttributes	D:\Work\e-minor-controller\PIC\usb.h	170;"	m	line:170	struct:_USB_EP_DSC
 bmRequestType	D:\Work\e-minor-controller\PIC\usb.h	212;"	m	line:212	struct:_CTRL_TRF_SETUP::<anonymous>
-button_held	D:\Work\e-minor-controller\common\controller.c	210;"	f	line:210	signature:(u32 mask)
-button_pressed	D:\Work\e-minor-controller\common\controller.c	205;"	f	line:205	signature:(u32 mask)
+button_held	D:\Work\e-minor-controller\common\controller.c	211;"	f	line:211	signature:(u32 mask)
+button_pressed	D:\Work\e-minor-controller\common\controller.c	206;"	f	line:206	signature:(u32 mask)
 button_pressed	D:\Work\e-minor-controller\common\hardware.h	101;"	p	line:101	signature:(u32 mask)
-button_released	D:\Work\e-minor-controller\common\controller.c	215;"	f	line:215	signature:(u32 mask)
+button_released	D:\Work\e-minor-controller\common\controller.c	216;"	f	line:216	signature:(u32 mask)
 byte	D:\Work\e-minor-controller\PIC\_TOOLS.H	43;"	m	line:43
 byte	D:\Work\e-minor-controller\PIC\_TOOLS.H	71;"	m	line:71
 byte	D:\Work\e-minor-controller\PIC\typedefs.h	42;"	t	line:42
@@ -2615,11 +2615,11 @@ chunk	D:\Work\e-minor-controller\PIC\hwcalls.c	256;"	l	line:256
 clrbit::(VAR,Place)VAR&=(1<<Place)^255	D:\Work\e-minor-controller\PIC\_TOOLS.H	28;"	d	line:28
 cmdrecognized	D:\Work\e-minor-controller\PIC\usbapplet.c	119;"	l	line:119
 cmdrecognized	D:\Work\e-minor-controller\PIC\usbapplet.c	173;"	l	line:173
-controller_10msec_timer	D:\Work\e-minor-controller\common\controller.c	220;"	f	line:220	signature:(void)
+controller_10msec_timer	D:\Work\e-minor-controller\common\controller.c	221;"	f	line:221	signature:(void)
 controller_10msec_timer	D:\Work\e-minor-controller\common\hardware.h	97;"	p	line:97	signature:(void)
-controller_handle	D:\Work\e-minor-controller\common\controller.c	358;"	f	line:358	signature:(void)
+controller_handle	D:\Work\e-minor-controller\common\controller.c	369;"	f	line:369	signature:(void)
 controller_handle	D:\Work\e-minor-controller\common\hardware.h	98;"	p	line:98	signature:(void)
-controller_init	D:\Work\e-minor-controller\common\controller.c	332;"	f	line:332	signature:(void)
+controller_init	D:\Work\e-minor-controller\common\controller.c	343;"	f	line:343	signature:(void)
 controller_init	D:\Work\e-minor-controller\common\hardware.h	96;"	p	line:96	signature:(void)
 count	D:\Work\e-minor-controller\PIC\hwcalls.c	200;"	l	line:200
 count	D:\Work\e-minor-controller\PIC\hwcalls.c	212;"	l	line:212
@@ -2634,7 +2634,7 @@ curr_mapindex	D:\Work\e-minor-controller\common\controller.c	46;"	v	line:46
 curr_preset	D:\Work\e-minor-controller\common\controller.c	45;"	v	line:45
 curr_program	D:\Work\e-minor-controller\common\controller.c	44;"	v	line:44
 curr_sortedbank	D:\Work\e-minor-controller\common\controller.c	48;"	v	line:48
-dec_practice_value	D:\Work\e-minor-controller\common\controller.c	294;"	f	line:294	signature:(void)
+dec_practice_value	D:\Work\e-minor-controller\common\controller.c	295;"	f	line:295	signature:(void)
 delay_count	D:\Work\e-minor-controller\PIC\usb.c	1312;"	l	line:1312	file:
 device_dsc	D:\Work\e-minor-controller\PIC\usbdescript.c	182;"	v	line:182
 dword	D:\Work\e-minor-controller\PIC\typedefs.h	44;"	t	line:44
@@ -2712,8 +2712,8 @@ iSerialNum	D:\Work\e-minor-controller\PIC\usb.h	141;"	m	line:141	struct:_USB_DEV
 idProduct	D:\Work\e-minor-controller\PIC\usb.h	139;"	m	line:139	struct:_USB_DEV_DSC
 idVendor	D:\Work\e-minor-controller\PIC\usb.h	139;"	m	line:139	struct:_USB_DEV_DSC
 idle_rate	D:\Work\e-minor-controller\PIC\hid.c	51;"	v	line:51
-inc_practice_value	D:\Work\e-minor-controller\common\controller.c	284;"	f	line:284	signature:(void)
-incdec_mode	D:\Work\e-minor-controller\common\controller.c	202;"	v	line:202
+inc_practice_value	D:\Work\e-minor-controller\common\controller.c	285;"	f	line:285	signature:(void)
+incdec_mode	D:\Work\e-minor-controller\common\controller.c	203;"	v	line:203
 index	D:\Work\e-minor-controller\PIC\hwcalls.c	299;"	l	line:299
 index	D:\Work\e-minor-controller\PIC\main.c	26;"	l	line:26
 index	D:\Work\e-minor-controller\PIC\usbapplet.c	119;"	l	line:119
@@ -2752,7 +2752,7 @@ midi_send_cmd2	D:\Work\e-minor-controller\PIC\hwcalls.c	366;"	f	line:366	signatu
 midi_send_cmd2	D:\Work\e-minor-controller\common\hardware.h	92;"	p	line:92	signature:(u8 cmd, u8 channel, u8 data1, u8 data2)
 mode	D:\Work\e-minor-controller\common\controller.c	95;"	v	line:95
 nop::(x)_asmNOP_endasm	D:\Work\e-minor-controller\PIC\_TOOLS.H	34;"	d	line:34
-notify_practice_value	D:\Work\e-minor-controller\common\controller.c	304;"	f	line:304	signature:(void)
+notify_practice_value	D:\Work\e-minor-controller\common\controller.c	305;"	f	line:305	signature:(void)
 pDst	D:\Work\e-minor-controller\PIC\usb.c	464;"	v	line:464
 pFunc	D:\Work\e-minor-controller\PIC\typedefs.h	125;"	t	line:125
 pSrc	D:\Work\e-minor-controller\PIC\usb.c	463;"	v	line:463
@@ -2773,7 +2773,7 @@ sd000	D:\Work\e-minor-controller\PIC\usbdescript.c	250;"	v	line:250
 self_power::1	D:\Work\e-minor-controller\PIC\usbcfg.h	58;"	d	line:58
 self_power::PORTAbits.RA2	D:\Work\e-minor-controller\PIC\usbcfg.h	56;"	d	line:56
 seq	D:\Work\e-minor-controller\common\controller.c	184;"	l	line:184
-sequence_complete	D:\Work\e-minor-controller\common\controller.c	321;"	f	line:321	signature:(void)
+sequence_complete	D:\Work\e-minor-controller\common\controller.c	322;"	f	line:322	signature:(void)
 setbit::(VAR,Place)VAR|=1<<Place	D:\Work\e-minor-controller\PIC\_TOOLS.H	25;"	d	line:25
 show_program	D:\Work\e-minor-controller\common\controller.c	111;"	f	line:111	signature:(void)
 slider_poll	D:\Work\e-minor-controller\PIC\hwcalls.c	187;"	f	line:187
@@ -2781,6 +2781,8 @@ slider_poll	D:\Work\e-minor-controller\common\hardware.h	58;"	p	line:58	signatur
 sm_form	D:\Work\e-minor-controller\PIC\_TOOLS.H	84;"	m	line:84
 sortedbank_activate	D:\Work\e-minor-controller\common\controller.c	171;"	f	line:171	signature:(u8 notify)
 sortedbank_showname	D:\Work\e-minor-controller\common\controller.c	183;"	f	line:183	signature:(void)
+store_preset	D:\Work\e-minor-controller\common\controller.c	202;"	v	line:202
+store_sequence	D:\Work\e-minor-controller\common\controller.c	332;"	f	line:332	signature:(void)
 store_state	D:\Work\e-minor-controller\common\controller.c	201;"	v	line:201
 string	D:\Work\e-minor-controller\PIC\rs232.c	21;"	m	line:21	file:
 string	D:\Work\e-minor-controller\PIC\rs232.c	22;"	m	line:22	file:
