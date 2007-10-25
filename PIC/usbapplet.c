@@ -117,6 +117,7 @@ unsigned char PresentCmd;
 //Byte3-63 = Freeform
 unsigned char	ProcessGenericTransferRead(void) {
 	unsigned char index, cmdrecognized;
+	unsigned short TempAddress;
 	
 	cmdrecognized = true;
 	
@@ -127,23 +128,25 @@ unsigned char	ProcessGenericTransferRead(void) {
 			TXENQ(1);		//Accepted
 			TXENQ(ROMCommAddr.b_form.low);
 			TXENQ(ROMCommAddr.b_form.high);
+			TempAddress = ROMCommAddr.s_form + (unsigned short)WRITABLE_SEG_ADDR;
 			for (index=0;index<32;index++) {
-				TXENQ(*(rom unsigned char *)(ROMCommAddr.s_form+index));
+				TXENQ(*(rom unsigned char *)(TempAddress+index));
 			}
 			break;
 		case	WRITE_32:		//A read of a Write_32 command reads back the data written
 			TXENQ(1);		//Accepted
-			TXENQ(ProgMemAddr.b_form.low);
-			TXENQ(ProgMemAddr.b_form.high);
+			TXENQ(ROMCommAddr.b_form.low);
+			TXENQ(ROMCommAddr.b_form.high);
+			TempAddress = ROMCommAddr.s_form + (unsigned short)WRITABLE_SEG_ADDR;
 			for (index=0;index<32;index++) {
-				TXENQ(*(rom unsigned char *)(ProgMemAddr.s_form+index));
+				TXENQ(*(rom unsigned char *)(TempAddress+index));
 			}
 			break;
 
 		case	ERASE_64:		//A read of an ERASE_64 command returns all 0's
 			TXENQ(1);		//Accepted
-			TXENQ(ProgMemAddr.b_form.low);
-			TXENQ(ProgMemAddr.b_form.high);
+			TXENQ(ROMCommAddr.b_form.low);
+			TXENQ(ROMCommAddr.b_form.high);
 			break;
 			
 		default:
@@ -178,15 +181,16 @@ unsigned char	ProcessGenericTransferWrite(void) {
 	switch (USBEP0DataInBuffer[1]) {
 		case	ERASE_64:
 			//USBEP0DataInBuffer[2] is ignored
-			ProgMemAddr.b_form.low = USBEP0DataInBuffer[3];
-			ProgMemAddr.b_form.high = USBEP0DataInBuffer[4];
-
+			ROMCommAddr.b_form.low = USBEP0DataInBuffer[3];
+			ROMCommAddr.b_form.high = USBEP0DataInBuffer[4];
+			ProgMemAddr.s_form = ROMCommAddr.s_form + (unsigned short)WRITABLE_SEG_ADDR;
 			EraseProgMem();	//uses global ProgMemAddr
 			break;
 		case	WRITE_32:
 			//USBEP0DataInBuffer[2] is ignored
-			ProgMemAddr.b_form.low = USBEP0DataInBuffer[3];
-			ProgMemAddr.b_form.high = USBEP0DataInBuffer[4];
+			ROMCommAddr.b_form.low = USBEP0DataInBuffer[3];
+			ROMCommAddr.b_form.high = USBEP0DataInBuffer[4];
+			ProgMemAddr.s_form = ROMCommAddr.s_form + (unsigned short)WRITABLE_SEG_ADDR;
 
 			for (index=0;index<32;index++)
 				ProgmemBuffer[index] = USBEP0DataInBuffer[index+5];
