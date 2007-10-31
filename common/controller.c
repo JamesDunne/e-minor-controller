@@ -85,11 +85,11 @@ enum program_modes {
 u8		flash_led;
 
 /* time period in ms before value is changed */
-#define accel_time_slow		20
-#define accel_time_medium 	15
-#define accel_time_fast		10
+#define accel_time_slow		12
+#define accel_time_medium 	8
+#define accel_time_fast		4
 
-#define value_flashtime		75
+#define value_flashtime		128
 
 /* concert/practice main mode switch */
 enum mainmode mode;
@@ -609,7 +609,7 @@ void controller_handle(void) {
 								notify_practice_value();
 
 								/* if we cycled more than 10 values, ramp up to next speed */
-								if (accel_count++ == 10) {
+								if (accel_count++ == 20) {
 									accel_count = 0;
 									accel_state = ACCEL_INC_FAST;
 									accel_time = accel_time_fast;
@@ -642,7 +642,7 @@ void controller_handle(void) {
 								notify_practice_value();
 
 								/* if we cycled more than 5 values, ramp up to next speed */
-								if (accel_count++ == 10) {
+								if (accel_count++ == 20) {
 									accel_count = 0;
 									accel_state = ACCEL_DEC_FAST;
 									accel_time = accel_time_fast;
@@ -746,15 +746,18 @@ void controller_handle(void) {
 			}
 
 			/* INC pressed: */
-			if (button_pressed(FSM_INC)) {
+			if (button_pressed(FSM_INC) && !button_held(FSM_DEC) && (cdtimer_incdec_held < 30)) {
 				if (curr_bank == bank_count - 1) curr_bank = 0;
 				else {
 					++curr_bank;
 				}
 				bank_showname();
-
-				accel_state = ACCEL_NONE;
-				accel_time = accel_time_slow;
+				/* INC pushed first */
+				cdtimer_incdec_held = 30;
+			}
+			/* Still holding INC alone after ~300 ms: */
+			if ((accel_state == ACCEL_NONE) && button_held(FSM_INC) && !button_held(FSM_DEC) && (cdtimer_incdec_held == 0)) {
+				accel_time = 0;
 				accel_count = 0;
 				accel_state = ACCEL_INC_SLOW;
 			}
@@ -766,15 +769,18 @@ void controller_handle(void) {
 			}
 
 			/* DEC pressed: */
-			if (button_pressed(FSM_DEC)) {
+			if (button_pressed(FSM_DEC) && !button_held(FSM_INC) && (cdtimer_incdec_held < 30)) {
 				if (curr_bank == 0) curr_bank = bank_count - 1;
 				else {
 					--curr_bank;
 				}
 				bank_showname();
-
-				accel_state = ACCEL_NONE;
-				accel_time = accel_time_slow;
+				/* DEC pushed first */
+				cdtimer_incdec_held = 30;
+			}
+			/* Still holding DEC alone after ~300 ms: */
+			if ((accel_state == ACCEL_NONE) && button_held(FSM_DEC) && !button_held(FSM_INC) && (cdtimer_incdec_held == 0)) {
+				accel_time = 0;
 				accel_count = 0;
 				accel_state = ACCEL_DEC_SLOW;
 			}
@@ -793,6 +799,7 @@ void controller_handle(void) {
 				} else {
 					if (curr_mapindex == 0) {
 						/* crossed the lower bank-map boundary, load the previous bank */
+#if 0
 						if (mode == MODE_PRACTICE) {
 							/* PRACTICE mode cycles through banks by sorted index #: */
 							if (curr_sortedbank == 0) {
@@ -803,6 +810,7 @@ void controller_handle(void) {
 							/* show the bank name */
 							sortedbank_activate(1);
 						} else {
+#endif
 							/* CONCERT mode cycles through banks by index #: */
 							if (curr_bank == 0) {
 								curr_bank = bank_count - 1;
@@ -811,7 +819,9 @@ void controller_handle(void) {
 							}
 							/* show the bank name */
 							bank_activate(1);
+#if 0
 						}
+#endif
 						/* activate the last map for the new bank, but do not display the MIDI program # */
 						curr_mapindex = bankmap_count - 1;
 						bankmap_activate(0);
@@ -834,7 +844,7 @@ void controller_handle(void) {
 						bank_showname();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
-						if (accel_count++ == 5) {
+						if (accel_count++ == 10) {
 							accel_count = 0;
 							accel_state = ACCEL_INC_MEDIUM;
 							accel_time = accel_time_medium;
@@ -875,7 +885,7 @@ void controller_handle(void) {
 						bank_showname();
 
 						/* if we cycled more than 5 values, ramp up to next speed */
-						if (accel_count++ == 5) {
+						if (accel_count++ == 10) {
 							accel_count = 0;
 							accel_state = ACCEL_DEC_MEDIUM;
 							accel_time = accel_time_medium;
