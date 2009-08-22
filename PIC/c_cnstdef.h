@@ -22,10 +22,16 @@
 #define	INIT_SPBRG 16		//115200 baud
 #define	INIT_SPBRGH 0x01
 #else
-#define	INIT_TXSTA 0xE6		//master,8bit,async, BRGH=1
+//#define	INIT_TXSTA 0xE6		//master,8bit,async, BRGH=1
+//#define	INIT_RCSTA 0x90		//enabled,8bit, continuous
+//#define	INIT_SPBRG	63		//31250 baud
+//#define	INIT_SPBRGH 0x00
+
+#define	INIT_TXSTA 0xA6		//master,8bit,async, BRGH=1 -- I DONT KNOW HOW, BUT TURNING E6 INTO A6 FIXED THE ISSUE WITH G-MAJOR.
 #define	INIT_RCSTA 0x90		//enabled,8bit, continuous
 #define	INIT_SPBRG	63		//31250 baud
 #define	INIT_SPBRGH 0x00
+
 #endif
 
 //A/D converter initialization constants:

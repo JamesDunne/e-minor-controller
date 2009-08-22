@@ -3,7 +3,7 @@
 // Sample linker script for the PIC18F4455 processor
 
 //LIBPATH C:\mcc18v303\lib
-LIBPATH D:\programs\mcc18v310\lib
+LIBPATH J:\mcc18\lib
 
 FILES clib.lib
 FILES p18f4455.lib

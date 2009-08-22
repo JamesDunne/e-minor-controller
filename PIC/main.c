@@ -30,7 +30,7 @@ void main() {
 	CLRWDT();
 	controller_init();
 	CLRWDT();
-	
+
 //Test to display 'crap' on the LCD display
 	chars[0] = 'o';
 	chars[1] = 'l';
@@ -81,7 +81,7 @@ void main() {
 			WriteProgMem(0);			//write first set of 32 bytes.
 			continue;					//continue so we can process pending USB routines
 		}
-	
+
 		if (Write32Pending) {
 			Write32Pending = false;
 			WriteProgMem(32);			//write second set of 32 bytes.
@@ -92,24 +92,24 @@ void main() {
 			ExpPedalRead();				//read ADC data from the expression pedal input
 			continue;
 		}
-		
+
 		if (Systick) {
 			Systick = false;
 			SystemTimeRoutine();		//1mS system time routine
 			continue;
 		}
-		
+
 		if (CheckButtons) {
 			CheckButtons = false;
 			ReadButtons();				//read buttons off the multiplexor
 			continue;
 		}
-		
+
 //		if (Handle7segs) {
 //			Handle7segs = false;
 //			Process7Segs();				//handle 7 segment display data
 //		}
-		
+
 		if (HandleLeds) {
 			HandleLeds = false;
 			UpdateLeds();				//handle leds
@@ -119,7 +119,7 @@ void main() {
 			HandleController = false;
 			controller_handle();		//handle UI and other midi commands
 		}
-		
+
 		if (ControllerTiming) {
 			ControllerTiming = false;
 			controller_10msec_timer();	//controller timing functions

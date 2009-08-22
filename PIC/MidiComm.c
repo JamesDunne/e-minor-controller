@@ -33,6 +33,8 @@ void	MIDI_COMM_ROUTINE() {
 		return;						//exit
 	}
 
+	tglbit(LedStates,2);
+
 //handle the received character:
 	if (RCSTAbits.OERR || RCSTAbits.FERR) {		//Overrun or framing error?
 		RCSTAbits.CREN = false;
@@ -46,9 +48,16 @@ void	MIDI_COMM_ROUTINE() {
 //						Handle receiving queries
 //--------------------------------------------------------------
 
+#if 0
 	tReceivedChar = RCREG;		//read received byte
 
-	//TODO: put tReceivedChar in a buffer and do something with it...
+	tglbit(LedStates,3);
+
+	// Put tReceivedChar in a buffer and do something with it...
+	if (midiInBufPtr >= 23) return;		//Exit if buffer full.
+	midiInData[midiInBufPtr] = tReceivedChar;
+	midiInBufPtr++;
+#endif
 
 	return;
 }

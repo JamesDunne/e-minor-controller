@@ -275,7 +275,7 @@ rom unsigned char EXPP_PEDAL_LINEAR_CONV_TABLE[256] =
 
 #pragma romdata ROMSAVEDATA=WRITABLE_SEG_ADDR		//Update lkr file if this is to change!!
 rom unsigned char ROM_SAVEDATA[WRITABLE_SEG_LEN] = {
-	0x04,
+	0x01,
 	0x00,
 	0x00,
 	0x00,
@@ -343,10 +343,10 @@ rom unsigned char ROM_SAVEDATA[WRITABLE_SEG_LEN] = {
 	0x4F,
 	0x43,
 	0x31,
-	0x13,
-	0x14,
-	0x03,
-	0x02,
+	0x1C,
+	0x20,
+	0x19,
+	0x18,
 	0x00,
 	0x00,
 	0x00,

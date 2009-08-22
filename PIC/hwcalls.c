@@ -346,28 +346,28 @@ u16 bank_getsortedindex(u16 sort_index){
 
 	0 <= cmd <= F       - MIDI command
 	0 <= channel <= F   - MIDI channel to send command to
-	00 <= data1 <= FF   - data byte of MIDI command
+	00 <= data1 <= 7F   - data byte of MIDI command
 */
 void midi_send_cmd1(u8 cmd, u8 channel, u8 data1) {
 	/* send the MIDI command to the opened MIDI Mapper device: */
 //	midiOutShortMsg(outHandle, ((cmd & 0xF) << 4) | (channel & 0xF) | ((u32)data1 << 8));
 
 	MIDI_ENQUEUE(((cmd & 0xF) << 4) | (channel & 0xF));
-	MIDI_ENQUEUE(data1);
+	MIDI_ENQUEUE(data1 & 0x7F);
 }
 
 /* Send formatted MIDI commands.
 
 	0 <= cmd <= F       - MIDI command
 	0 <= channel <= F   - MIDI channel to send command to
-	00 <= data1 <= FF   - first data byte of MIDI command
-	00 <= data2 <= FF   - second (optional) data byte of MIDI command
+	00 <= data1 <= 7F   - first data byte of MIDI command
+	00 <= data2 <= 7F   - second (optional) data byte of MIDI command
 */
 void midi_send_cmd2(u8 cmd, u8 channel, u8 data1, u8 data2) {
 	/* send the MIDI command to the opened MIDI Mapper device: */
 //	midiOutShortMsg(outHandle, ((cmd & 0xF) << 4) | (channel & 0xF) | ((u32)data1 << 8) | ((u32)data2 << 16));
 
 	MIDI_ENQUEUE(((cmd & 0xF) << 4) | (channel & 0xF));
-	MIDI_ENQUEUE(data1);
-	MIDI_ENQUEUE(data2);
+	MIDI_ENQUEUE(data1 & 0x7F);
+	MIDI_ENQUEUE(data2 & 0x7F);
 }

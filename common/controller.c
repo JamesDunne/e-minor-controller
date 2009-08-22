@@ -123,6 +123,7 @@ void show_program(void) {
 
 /* send the MIDI program change message */
 void program_activate(u8 notify) {
+	/* program change */
 	midi_send_cmd1(0xC, midi_channel, curr_program);
 	if (notify) {
 		/* show the program value: */
@@ -369,6 +370,8 @@ void controller_init(void) {
 void controller_handle(void) {
 	/* poll foot-switch depression status: */
 	sw_curr = fsw_poll();
+
+#if 0
 	/* poll expression pedal value: */
 	cc_curr = expr_poll();
 
@@ -376,6 +379,7 @@ void controller_handle(void) {
 	if (cc_curr != cc_last) {
 		midi_send_cmd2(0xB, midi_channel, bankcontroller[curr_preset], cc_curr & 0x7F);
 	}
+#endif
 
 	/* determine mode */
 	if (slider_poll() == 0) {
