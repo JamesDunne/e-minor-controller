@@ -22,15 +22,8 @@ void	ServiceUSB(void);
 rom unsigned char 	DataStart[64] = "    princess consuela banana hannoc  ";
 */
 
-void main() {
-	unsigned char chars[5], index;
-
-	CLRWDT();
-	init();
-	CLRWDT();
-	controller_init();
-	CLRWDT();
-
+void testcrap(void) {
+/*
 //Test to display 'crap' on the LCD display
 	chars[0] = 'o';
 	chars[1] = 'l';
@@ -41,6 +34,7 @@ void main() {
 
 //Test to turn on every other LED
 	SendDataToShiftReg(0xAA);
+*/
 
 /*
 //Test to scroll text on the display
@@ -67,8 +61,17 @@ void main() {
 	
 	WriteProgMem();	//uses global ProgMemAddr and ProgmemBuffer[]
 */
+}
 
-	LedStates = 0;
+void main() {
+	unsigned char chars[5], index;
+
+	CLRWDT();
+	init();
+	CLRWDT();
+	//testcrap();
+	controller_init();
+	CLRWDT();
 
 	for(;;) {
 		CLRWDT();

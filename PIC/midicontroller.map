@@ -1,5 +1,5 @@
 MPLINK 4.1, Linker
-Linker Map File - Created Sat Aug 22 13:39:01 2009
+Linker Map File - Created Sat Aug 22 15:50:14 2009
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -8,37 +8,35 @@ Linker Map File - Created Sat Aug 22 13:39:01 2009
   RealInterruptVectorHigh       code   0x000008    program   0x000006
                _entry_scn       code   0x000a00    program   0x000006
       InterruptVectorHigh       code   0x000a08    program   0x000006
-                main_code       code   0x000a2a    program   0x0000f2
-                   .cinit    romdata   0x000b1c    program   0x00000e
-       .code_controller.o       code   0x000b2a    program   0x000d24
-          .code_hwcalls.o       code   0x00184e    program   0x00071a
-              .code_usb.o       code   0x001f68    program   0x000638
-             .code_leds.o       code   0x0025a0    program   0x0002ac
-            .code_rs232.o       code   0x00284c    program   0x000204
-              .code_hid.o       code   0x002a50    program   0x0001f8
-        .code_usbapplet.o       code   0x002c48    program   0x0001a6
-   .romdata_usbdescript.o    romdata   0x002dee    program   0x000128
-        .romdata_tables.o    romdata   0x002f16    program   0x000100
-     .code_writeprogmem.o       code   0x003016    program   0x0000b8
-          .code_intslct.o       code   0x0030ce    program   0x0000aa
-         .code_MidiComm.o       code   0x003178    program   0x0000a0
-             .code_init.o       code   0x003218    program   0x000070
-           .code_eeprom.o       code   0x003288    program   0x000056
-          .code_systick.o       code   0x0032de    program   0x000044
-                     PROG       code   0x003322    program   0x00003c
-         .code_exppedal.o       code   0x00335e    program   0x00003a
-          .romdata_leds.o    romdata   0x003398    program   0x000024
-             _startup_scn       code   0x0033bc    program   0x000022
-         .code_fxd0808u.o       code   0x0033de    program   0x00001c
-                    .code       code   0x0033fa    program   0x00000e
-    .idata_controller.o_i    romdata   0x003408    program   0x000003
+                main_code       code   0x000a2a    program   0x0000ae
+                   .cinit    romdata   0x000ad8    program   0x000002
+          .code_hwcalls.o       code   0x000ada    program   0x00071a
+              .code_usb.o       code   0x0011f4    program   0x000638
+.code_controller-simple.o       code   0x00182c    program   0x0003fc
+             .code_leds.o       code   0x001c28    program   0x0002ac
+            .code_rs232.o       code   0x001ed4    program   0x000204
+              .code_hid.o       code   0x0020d8    program   0x0001f8
+        .code_usbapplet.o       code   0x0022d0    program   0x0001a6
+   .romdata_usbdescript.o    romdata   0x002476    program   0x000128
+        .romdata_tables.o    romdata   0x00259e    program   0x000100
+     .code_writeprogmem.o       code   0x00269e    program   0x0000b8
+          .code_intslct.o       code   0x002756    program   0x0000aa
+         .code_MidiComm.o       code   0x002800    program   0x0000a0
+             .code_init.o       code   0x0028a0    program   0x000070
+           .code_eeprom.o       code   0x002910    program   0x000056
+          .code_systick.o       code   0x002966    program   0x000044
+                     PROG       code   0x0029aa    program   0x00003c
+         .code_exppedal.o       code   0x0029e6    program   0x00003a
+          .romdata_leds.o    romdata   0x002a20    program   0x000024
+             _startup_scn       code   0x002a44    program   0x000022
+         .code_fxd0808u.o       code   0x002a66    program   0x00001c
+                    .code       code   0x002a82    program   0x00000e
               ROMSAVEDATA    romdata   0x004900    program   0x0016ff
                 MATH_DATA      udata   0x000000       data   0x000014
                  .tmpdata      udata   0x000014       data   0x000008
                 accessram      udata   0x00001c       data   0x000004
-      .udata_controller.o      udata   0x000060       data   0x00003d
-                     usb5      udata   0x00009d       data   0x000011
-      .idata_controller.o      idata   0x0000ae       data   0x000003
+.udata_controller-simple.o      udata   0x000060       data   0x000017
+                     usb5      udata   0x000077       data   0x000011
                      gpr1      udata   0x000100       data   0x0000ff
        .udata_usbapplet.o      udata   0x0001ff       data   0x000001
                   usbram4      udata   0x000400       data   0x0000a0
@@ -54,327 +52,264 @@ Linker Map File - Created Sat Aug 22 13:39:01 2009
                             0x000008    0x00000d      
                             0x000a00    0x000a05      
                             0x000a08    0x000a0d      
-                            0x000a2a    0x00340a      
+                            0x000a2a    0x002a8f      
                             0x004900    0x005ffe      
-            16632 out of 30530 program addresses used, program memory utilization is 54%
+            14205 out of 30530 program addresses used, program memory utilization is 46%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-           ADC_CONVERSION   0x00184e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-             AllDigitsOff   0x0025f0    program     extern E:\Work\e-minor-controller\PIC\leds.c
-              AsciiTo7Seg   0x0026d4    program     extern E:\Work\e-minor-controller\PIC\leds.c
-                CLEAR_RAM   0x0033fa    program     extern E:\Work\e-minor-controller\PIC\config.asm
-          ClassReqHandler   0x002f14    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-               ClearArray   0x002492    program     extern E:\Work\e-minor-controller\PIC\usb.c
-                   EERead   0x003288    program     extern E:\Work\e-minor-controller\PIC\eeprom.c
-                  EEWrite   0x0032a6    program     extern E:\Work\e-minor-controller\PIC\eeprom.c
-EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-controller\PIC\tables.c
-             EraseProgMem   0x003078    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-             ExpPedalRead   0x00335e    program     extern E:\Work\e-minor-controller\PIC\exppedal.c
-                 FXD0808U   0x0033de    program     extern C:\MCC18\src\TRADIT~1\math\fxd0808u.c
-                 FXM1616U   0x003322    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxm1616u.asm
-      HIDGetReportHandler   0x002c52    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
-                HIDInitEP   0x002b32    program     extern E:\Work\e-minor-controller\PIC\hid.c
-              HIDRxReport   0x002bbc    program     extern E:\Work\e-minor-controller\PIC\hid.c
-      HIDSetReportHandler   0x002c48    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
-              HIDTxReport   0x002b5c    program     extern E:\Work\e-minor-controller\PIC\hid.c
-              HandleDigit   0x00260c    program     extern E:\Work\e-minor-controller\PIC\leds.c
-     InterruptHandlerHigh   0x0030ce    program     extern E:\Work\e-minor-controller\PIC\intslct.c
+           ADC_CONVERSION   0x000ada    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+             AllDigitsOff   0x001c78    program     extern E:\Work\e-minor-controller\PIC\leds.c
+              AsciiTo7Seg   0x001d5c    program     extern E:\Work\e-minor-controller\PIC\leds.c
+                CLEAR_RAM   0x002a82    program     extern E:\Work\e-minor-controller\PIC\config.asm
+          ClassReqHandler   0x00259c    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+               ClearArray   0x00171e    program     extern E:\Work\e-minor-controller\PIC\usb.c
+                   EERead   0x002910    program     extern E:\Work\e-minor-controller\PIC\eeprom.c
+                  EEWrite   0x00292e    program     extern E:\Work\e-minor-controller\PIC\eeprom.c
+EXPP_PEDAL_LINEAR_CONV_TABLE   0x00259e    program     extern E:\Work\e-minor-controller\PIC\tables.c
+             EraseProgMem   0x002700    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+             ExpPedalRead   0x0029e6    program     extern E:\Work\e-minor-controller\PIC\exppedal.c
+                 FXD0808U   0x002a66    program     extern C:\MCC18\src\TRADIT~1\math\fxd0808u.c
+                 FXM1616U   0x0029aa    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxm1616u.asm
+      HIDGetReportHandler   0x0022da    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
+                HIDInitEP   0x0021ba    program     extern E:\Work\e-minor-controller\PIC\hid.c
+              HIDRxReport   0x002244    program     extern E:\Work\e-minor-controller\PIC\hid.c
+      HIDSetReportHandler   0x0022d0    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
+              HIDTxReport   0x0021e4    program     extern E:\Work\e-minor-controller\PIC\hid.c
+              HandleDigit   0x001c94    program     extern E:\Work\e-minor-controller\PIC\leds.c
+     InterruptHandlerHigh   0x002756    program     extern E:\Work\e-minor-controller\PIC\intslct.c
       InterruptVectorHigh   0x000a08    program     extern E:\Work\e-minor-controller\PIC\intslct.c
-          LettersSegTable   0x0033a2    program     extern E:\Work\e-minor-controller\PIC\leds.c
-        MIDI_COMM_ROUTINE   0x003178    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
-             MIDI_ENQUEUE   0x0031e2    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
-                MfrString   0x002e26    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-          NumbersSegTable   0x003398    program     extern E:\Work\e-minor-controller\PIC\leds.c
-     PROCESS_COMM_REQUEST   0x00284c    program     extern E:\Work\e-minor-controller\PIC\rs232.c
-                PrdString   0x002e3e    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-             Process7Segs   0x0025a0    program     extern E:\Work\e-minor-controller\PIC\leds.c
-ProcessGenericTransferRead   0x002c70    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
-ProcessGenericTransferWrite   0x002cdc    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
-                 RAMCLEAR   0x0033cc    program     static                          
-                RAMCLEAR1   0x0033fe    program     static E:\Work\e-minor-controller\PIC\config.asm
-     RESET_MIDI_TX_BUFFER   0x00320e    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
+          LettersSegTable   0x002a2a    program     extern E:\Work\e-minor-controller\PIC\leds.c
+        MIDI_COMM_ROUTINE   0x002800    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
+             MIDI_ENQUEUE   0x00286a    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
+                MfrString   0x0024ae    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+          NumbersSegTable   0x002a20    program     extern E:\Work\e-minor-controller\PIC\leds.c
+     PROCESS_COMM_REQUEST   0x001ed4    program     extern E:\Work\e-minor-controller\PIC\rs232.c
+                PrdString   0x0024c6    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+             Process7Segs   0x001c28    program     extern E:\Work\e-minor-controller\PIC\leds.c
+ProcessGenericTransferRead   0x0022f8    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
+ProcessGenericTransferWrite   0x002364    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
+                 RAMCLEAR   0x002a54    program     static                          
+                RAMCLEAR1   0x002a86    program     static E:\Work\e-minor-controller\PIC\config.asm
+     RESET_MIDI_TX_BUFFER   0x002896    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
              ROM_SAVEDATA   0x004900    program     extern E:\Work\e-minor-controller\PIC\tables.c
-              ReadButtons   0x0018ba    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                   ReadEE   0x00308c    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+              ReadButtons   0x000b46    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                   ReadEE   0x002714    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
            RealInitVector   0x000000    program     extern E:\Work\e-minor-controller\PIC\vectors.c
   RealInterruptVectorHigh   0x000008    program     extern E:\Work\e-minor-controller\PIC\vectors.c
-           Scroll7SegDisp   0x002732    program     extern E:\Work\e-minor-controller\PIC\leds.c
-       SendDataToShiftReg   0x001880    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                SerialNum   0x002e6a    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-               ServiceUSB   0x000b0e    program     extern E:\Work\e-minor-controller\PIC\main.c
-            SetDipAddress   0x00193c    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-             SetDispAscii   0x002666    program     extern E:\Work\e-minor-controller\PIC\leds.c
-               StartWrite   0x003016    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-        SystemTimeRoutine   0x0032de    program     extern E:\Work\e-minor-controller\PIC\systick.c
-                    TXENQ   0x0029f4    program     extern E:\Work\e-minor-controller\PIC\rs232.c
-        USBCheckBusStatus   0x002368    program     extern E:\Work\e-minor-controller\PIC\usb.c
-       USBCheckHIDRequest   0x002a50    program     extern E:\Work\e-minor-controller\PIC\hid.c
-       USBCheckStdRequest   0x001f68    program     extern E:\Work\e-minor-controller\PIC\usb.c
-         USBCtrlEPService   0x00215a    program     extern E:\Work\e-minor-controller\PIC\usb.c
- USBCtrlEPServiceComplete   0x0022ee    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBCtrlTrfInHandler   0x0021fe    program     extern E:\Work\e-minor-controller\PIC\usb.c
-     USBCtrlTrfOutHandler   0x0021e0    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBCtrlTrfRxService   0x0022ae    program     extern E:\Work\e-minor-controller\PIC\usb.c
-   USBCtrlTrfSetupHandler   0x00217e    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBCtrlTrfTxService   0x00223e    program     extern E:\Work\e-minor-controller\PIC\usb.c
-         USBDriverService   0x0023a0    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USBErrorHandler   0x002462    program     extern E:\Work\e-minor-controller\PIC\usb.c
-         USBModuleDisable   0x002392    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USBModuleEnable   0x002384    program     extern E:\Work\e-minor-controller\PIC\usb.c
-USBPrepareForNextSetupTrf   0x00235a    program     extern E:\Work\e-minor-controller\PIC\usb.c
-  USBProtocolResetHandler   0x002466    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USBRemoteWakeup   0x00242e    program     extern E:\Work\e-minor-controller\PIC\usb.c
-            USBSoftDetach   0x00239c    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USBStallHandler   0x002456    program     extern E:\Work\e-minor-controller\PIC\usb.c
-  USBStdFeatureReqHandler   0x0020f6    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBStdGetDscHandler   0x001ffe    program     extern E:\Work\e-minor-controller\PIC\usb.c
-   USBStdGetStatusHandler   0x00209a    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBStdSetCfgHandler   0x00206e    program     extern E:\Work\e-minor-controller\PIC\usb.c
-               USBSuspend   0x00241c    program     extern E:\Work\e-minor-controller\PIC\usb.c
-       USBWakeFromSuspend   0x002426    program     extern E:\Work\e-minor-controller\PIC\usb.c
-               USB_CD_Ptr   0x002f08    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-               USB_SD_Ptr   0x002f0c    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-          USB_SOF_Handler   0x002452    program     extern E:\Work\e-minor-controller\PIC\usb.c
-               UpdateLeds   0x001998    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                  WriteEE   0x00309c    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-             WriteProgMem   0x003022    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-           ___do_lbl00002   0x0032ce    program     static                          
-           ___do_lbl00003   0x0032d2    program     static                          
-           ___do_lbl00004   0x0032cc    program     static                          
-          ___for_lbl00001   0x000af8    program     static                          
-          ___for_lbl00002   0x000afa    program     static                          
-          ___for_lbl00011   0x000a8a    program     static                          
-           ___if_lbl00003   0x000aa2    program     static                          
-           ___if_lbl00004   0x000ab4    program     static                          
-           ___if_lbl00005   0x000abe    program     static                          
-           ___if_lbl00006   0x000aca    program     static                          
-           ___if_lbl00007   0x000ad6    program     static                          
-           ___if_lbl00008   0x000ae0    program     static                          
-           ___if_lbl00009   0x000aea    program     static                          
-           ___if_lbl00010   0x000af4    program     static                          
-       ___return_lbl00000   0x000afa    program     static                          
-       ___return_lbl00000   0x0033f8    program     static                          
+           Scroll7SegDisp   0x001dba    program     extern E:\Work\e-minor-controller\PIC\leds.c
+       SendDataToShiftReg   0x000b0c    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                SerialNum   0x0024f2    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+               ServiceUSB   0x000aca    program     extern E:\Work\e-minor-controller\PIC\main.c
+            SetDipAddress   0x000bc8    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+             SetDispAscii   0x001cee    program     extern E:\Work\e-minor-controller\PIC\leds.c
+               StartWrite   0x00269e    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+        SystemTimeRoutine   0x002966    program     extern E:\Work\e-minor-controller\PIC\systick.c
+                    TXENQ   0x00207c    program     extern E:\Work\e-minor-controller\PIC\rs232.c
+        USBCheckBusStatus   0x0015f4    program     extern E:\Work\e-minor-controller\PIC\usb.c
+       USBCheckHIDRequest   0x0020d8    program     extern E:\Work\e-minor-controller\PIC\hid.c
+       USBCheckStdRequest   0x0011f4    program     extern E:\Work\e-minor-controller\PIC\usb.c
+         USBCtrlEPService   0x0013e6    program     extern E:\Work\e-minor-controller\PIC\usb.c
+ USBCtrlEPServiceComplete   0x00157a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBCtrlTrfInHandler   0x00148a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+     USBCtrlTrfOutHandler   0x00146c    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBCtrlTrfRxService   0x00153a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+   USBCtrlTrfSetupHandler   0x00140a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBCtrlTrfTxService   0x0014ca    program     extern E:\Work\e-minor-controller\PIC\usb.c
+         USBDriverService   0x00162c    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USBErrorHandler   0x0016ee    program     extern E:\Work\e-minor-controller\PIC\usb.c
+         USBModuleDisable   0x00161e    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USBModuleEnable   0x001610    program     extern E:\Work\e-minor-controller\PIC\usb.c
+USBPrepareForNextSetupTrf   0x0015e6    program     extern E:\Work\e-minor-controller\PIC\usb.c
+  USBProtocolResetHandler   0x0016f2    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USBRemoteWakeup   0x0016ba    program     extern E:\Work\e-minor-controller\PIC\usb.c
+            USBSoftDetach   0x001628    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USBStallHandler   0x0016e2    program     extern E:\Work\e-minor-controller\PIC\usb.c
+  USBStdFeatureReqHandler   0x001382    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBStdGetDscHandler   0x00128a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+   USBStdGetStatusHandler   0x001326    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBStdSetCfgHandler   0x0012fa    program     extern E:\Work\e-minor-controller\PIC\usb.c
+               USBSuspend   0x0016a8    program     extern E:\Work\e-minor-controller\PIC\usb.c
+       USBWakeFromSuspend   0x0016b2    program     extern E:\Work\e-minor-controller\PIC\usb.c
+               USB_CD_Ptr   0x002590    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+               USB_SD_Ptr   0x002594    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+          USB_SOF_Handler   0x0016de    program     extern E:\Work\e-minor-controller\PIC\usb.c
+               UpdateLeds   0x000c24    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                  WriteEE   0x002724    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+             WriteProgMem   0x0026aa    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+           ___do_lbl00002   0x002956    program     static                          
+           ___do_lbl00003   0x00295a    program     static                          
+           ___do_lbl00004   0x002954    program     static                          
+          ___for_lbl00002   0x000ab4    program     static                          
+          ___for_lbl00003   0x000ab6    program     static                          
+          ___for_lbl00012   0x000a46    program     static                          
+           ___if_lbl00004   0x000a5e    program     static                          
+           ___if_lbl00005   0x000a70    program     static                          
+           ___if_lbl00006   0x000a7a    program     static                          
+           ___if_lbl00007   0x000a86    program     static                          
+           ___if_lbl00008   0x000a92    program     static                          
+           ___if_lbl00009   0x000a9c    program     static                          
+           ___if_lbl00010   0x000aa6    program     static                          
+           ___if_lbl00011   0x000ab0    program     static                          
        ___return_lbl00000   0x000a0c    program     static                          
        ___return_lbl00000   0x000a04    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x0033dc    program     static                          
+       ___return_lbl00000   0x002a80    program     static                          
+       ___return_lbl00001   0x00295e    program     static                          
        ___return_lbl00001   0x00000c    program     static                          
-       ___return_lbl00001   0x0032d6    program     static                          
-       ___return_lbl00132   0x0024b4    program     static                          
-        ___while_lbl00133   0x0024a6    program     static                          
-        ___while_lbl00134   0x0024b4    program     static                          
-                   __pa_0   0x001598    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_0   0x0027aa    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_0   0x001d1c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_0   0x0024bc    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_0   0x0030bc    program     static E:\Work\e-minor-controller\PIC\writeprogmem.c
-                   __pa_0   0x002c28    program     static E:\Work\e-minor-controller\PIC\hid.c
-                   __pa_0   0x002d50    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_0   0x002a20    program     static E:\Work\e-minor-controller\PIC\rs232.c
-                   __pa_1   0x0024ce    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_1   0x0030c6    program     static E:\Work\e-minor-controller\PIC\writeprogmem.c
-                   __pa_1   0x001d24    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_1   0x002d70    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_1   0x0015a4    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_1   0x002a30    program     static E:\Work\e-minor-controller\PIC\rs232.c
-                   __pa_1   0x0027b6    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_1   0x002c40    program     static E:\Work\e-minor-controller\PIC\hid.c
-                  __pa_10   0x001d9c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_10   0x001634    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_10   0x002562    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_11   0x001db0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_11   0x00256a    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_11   0x00163c    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_12   0x002572    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_12   0x001dc2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_12   0x00164a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_13   0x001652    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_13   0x00257e    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_13   0x001dcc    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_14   0x001dd6    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_14   0x00165a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_14   0x00258c    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_15   0x001662    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_15   0x002598    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_15   0x001de0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_16   0x00166a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_16   0x001dee    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_17   0x001df8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_17   0x001684    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_18   0x001e02    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_18   0x001694    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_19   0x001e0c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_19   0x00169e    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_2   0x0015aa    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_2   0x0027e2    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_2   0x002a36    program     static E:\Work\e-minor-controller\PIC\rs232.c
-                   __pa_2   0x002d94    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_2   0x001d32    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_2   0x0024e6    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_20   0x001e1c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_20   0x0016a8    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_21   0x001e4e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_21   0x0016b4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_22   0x001e5c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_22   0x0016c2    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_23   0x0016d6    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_23   0x001e62    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_24   0x001e68    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_24   0x0016ea    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_25   0x0016fa    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_25   0x001e74    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_26   0x001706    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_26   0x001e88    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_27   0x001710    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_27   0x001ea0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_28   0x001eae    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_28   0x001718    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_29   0x001eba    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_29   0x001722    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_3   0x0024f6    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_3   0x001d3c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_3   0x002db2    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_3   0x0015bc    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_3   0x002a3e    program     static E:\Work\e-minor-controller\PIC\rs232.c
-                   __pa_3   0x0027ec    program     static E:\Work\e-minor-controller\PIC\leds.c
-                  __pa_30   0x001ec6    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_30   0x001732    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_31   0x001ed4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_31   0x00173a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_32   0x00173e    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_32   0x001ee2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_33   0x00174c    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_33   0x001eea    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_34   0x00175a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_34   0x001ef4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_35   0x001768    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_35   0x001efa    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_36   0x001776    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_36   0x001f06    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_37   0x001784    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_37   0x001f12    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_38   0x00178e    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_38   0x001f16    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_39   0x001796    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_39   0x001f1a    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_4   0x002dc6    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_4   0x0015c8    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_4   0x002504    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_4   0x001d46    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_4   0x0027f4    program     static E:\Work\e-minor-controller\PIC\leds.c
-                  __pa_40   0x00179c    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_40   0x001f28    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_41   0x0017a4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_41   0x001f2e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_42   0x0017aa    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_42   0x001f34    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_43   0x0017ae    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_43   0x001f3e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_44   0x0017c8    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_44   0x001f48    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_45   0x001f50    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_45   0x0017d8    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_46   0x001f5a    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_46   0x0017e4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_47   0x0017ec    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_48   0x0017f4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_49   0x0017fc    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_5   0x002516    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_5   0x001d4e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_5   0x002dd2    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_5   0x00280c    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_5   0x0015e4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_50   0x001802    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_51   0x00180a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_52   0x001812    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_53   0x001818    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_54   0x00181e    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_55   0x00182a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_56   0x001836    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_57   0x00183c    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_58   0x001842    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_59   0x001848    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_6   0x0015fc    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_6   0x002de6    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_6   0x001d66    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_6   0x002822    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_6   0x002524    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_7   0x001d6e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_7   0x001604    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_7   0x002830    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_7   0x002536    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_8   0x00161c    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_8   0x002546    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_8   0x00283e    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_8   0x001d90    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_9   0x002554    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_9   0x001626    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_9   0x001d96    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-              __tmplbl_60   0x0015fc    program     static                          
-              __tmplbl_61   0x0015fc    program     static                          
-              __tmplbl_62   0x0015fc    program     static                          
-              __tmplbl_63   0x0015fc    program     static                          
-              __tmplbl_64   0x0015fc    program     static                          
-              __tmplbl_65   0x0015fc    program     static                          
-              __tmplbl_66   0x0015fc    program     static                          
-              __tmplbl_67   0x0015fc    program     static                          
-              __tmplbl_68   0x0015fc    program     static                          
-              __tmplbl_69   0x0015fc    program     static                          
-              __tmplbl_70   0x0015fc    program     static                          
+       ___return_lbl00001   0x000ab6    program     static                          
+       ___return_lbl00001   0x002a64    program     static                          
+       ___return_lbl00132   0x001740    program     static                          
+        ___while_lbl00133   0x001732    program     static                          
+        ___while_lbl00134   0x001740    program     static                          
+                   __pa_0   0x0022b0    program     static E:\Work\e-minor-controller\PIC\hid.c
+                   __pa_0   0x001e32    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_0   0x0020a8    program     static E:\Work\e-minor-controller\PIC\rs232.c
+                   __pa_0   0x000fa8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_0   0x0023d8    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_0   0x002744    program     static E:\Work\e-minor-controller\PIC\writeprogmem.c
+                   __pa_0   0x001748    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_0   0x001b52    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_1   0x000fb0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_1   0x00175a    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_1   0x001b60    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_1   0x0022c8    program     static E:\Work\e-minor-controller\PIC\hid.c
+                   __pa_1   0x0020b8    program     static E:\Work\e-minor-controller\PIC\rs232.c
+                   __pa_1   0x001e3e    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_1   0x0023f8    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_1   0x00274e    program     static E:\Work\e-minor-controller\PIC\writeprogmem.c
+                  __pa_10   0x001028    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_10   0x001be2    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_10   0x0017ee    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_11   0x001be6    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_11   0x0017f6    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_11   0x00103c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_12   0x001bf4    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_12   0x0017fe    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_12   0x00104e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_13   0x00180a    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_13   0x001bfc    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_13   0x001058    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_14   0x001c04    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_14   0x001062    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_14   0x001818    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_15   0x001c08    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_15   0x001824    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_15   0x00106c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_16   0x001c10    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_16   0x00107a    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_17   0x001c1c    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_17   0x001084    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_18   0x00108e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_19   0x001098    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_2   0x00241c    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_2   0x000fbe    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_2   0x001e6a    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_2   0x0020be    program     static E:\Work\e-minor-controller\PIC\rs232.c
+                   __pa_2   0x001b7c    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_2   0x001772    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_20   0x0010a8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_21   0x0010da    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_22   0x0010e8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_23   0x0010ee    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_24   0x0010f4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_25   0x001100    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_26   0x001114    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_27   0x00112c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_28   0x00113a    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_29   0x001146    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_3   0x001782    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_3   0x001b94    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_3   0x000fc8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_3   0x0020c6    program     static E:\Work\e-minor-controller\PIC\rs232.c
+                   __pa_3   0x001e74    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_3   0x00243a    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                  __pa_30   0x001152    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_31   0x001160    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_32   0x00116e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_33   0x001176    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_34   0x001180    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_35   0x001186    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_36   0x001192    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_37   0x00119e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_38   0x0011a2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_39   0x0011a6    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_4   0x001b9c    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_4   0x001790    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_4   0x000fd2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_4   0x001e7c    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_4   0x00244e    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                  __pa_40   0x0011b4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_41   0x0011ba    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_42   0x0011c0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_43   0x0011ca    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_44   0x0011d4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_45   0x0011dc    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_46   0x0011e6    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_5   0x00245a    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_5   0x001e94    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_5   0x0017a2    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_5   0x001ba6    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_5   0x000fda    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_6   0x00246e    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_6   0x000ff2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_6   0x001eaa    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_6   0x001bba    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_6   0x0017b0    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_7   0x001eb8    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_7   0x000ffa    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_7   0x0017c2    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_7   0x001bc2    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_8   0x001bd2    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_8   0x001ec6    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_8   0x0017d2    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_8   0x00101c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_9   0x0017e0    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_9   0x001022    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_9   0x001bda    program     static E:\Work\e-minor-controller\common\controller-simple.c
                    _entry   0x000a00    program     extern E:\Work\e-minor-controller\PIC\startup.c
-                 _startup   0x0033bc    program     extern E:\Work\e-minor-controller\PIC\startup.c
-  activate_practice_value   0x000f36    program     extern E:\Work\e-minor-controller\common\controller.c
-            bank_activate   0x000c2c    program     extern E:\Work\e-minor-controller\common\controller.c
-      bank_getsortedindex   0x001cb0    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                bank_load   0x001a1e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-            bank_loadname   0x001c84    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-            bank_showname   0x000c82    program     extern E:\Work\e-minor-controller\common\controller.c
-               bank_store   0x001afc    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-         bankmap_activate   0x000c0c    program     extern E:\Work\e-minor-controller\common\controller.c
-             bankmap_show   0x000bfe    program     extern E:\Work\e-minor-controller\common\controller.c
-              banks_count   0x0019fa    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-              button_held   0x000d2e    program     extern E:\Work\e-minor-controller\common\controller.c
-           button_pressed   0x000ce8    program     extern E:\Work\e-minor-controller\common\controller.c
-          button_released   0x000d54    program     extern E:\Work\e-minor-controller\common\controller.c
-                    cfg01   0x002e00    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-  controller_10msec_timer   0x000db4    program     extern E:\Work\e-minor-controller\common\controller.c
-        controller_handle   0x000fec    program     extern E:\Work\e-minor-controller\common\controller.c
-          controller_init   0x000f8c    program     extern E:\Work\e-minor-controller\common\controller.c
-       dec_practice_value   0x000ef8    program     extern E:\Work\e-minor-controller\common\controller.c
-               device_dsc   0x002dee    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-                  endloop   0x0033f4    program     static                          
-                expr_poll   0x0019f4    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-          fsw_led_disable   0x0019d2    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-           fsw_led_enable   0x0019bc    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-       fsw_led_set_active   0x0019a2    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                 fsw_poll   0x001954    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-              hid_rpt_UPS   0x002e8c    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-       inc_practice_value   0x000eca    program     extern E:\Work\e-minor-controller\common\controller.c
-                     init   0x003218    program     extern E:\Work\e-minor-controller\PIC\init.c
-               itoa_fixed   0x000b2a    program     extern E:\Work\e-minor-controller\common\controller.c
-         leds_show_1digit   0x0026b8    program     extern E:\Work\e-minor-controller\PIC\leds.c
-        leds_show_4alphas   0x00268a    program     extern E:\Work\e-minor-controller\PIC\leds.c
-                     loop   0x0033d6    program     static                          
-                     loop   0x0033e6    program     static                          
-                     main   0x000a2a    program     extern E:\Work\e-minor-controller\PIC\main.c
-           midi_send_byte   0x001870    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-           midi_send_cmd1   0x001d0c    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-           midi_send_cmd2   0x001d12    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-    notify_practice_value   0x000f28    program     extern E:\Work\e-minor-controller\common\controller.c
-          preset_activate   0x000be2    program     extern E:\Work\e-minor-controller\common\controller.c
-         program_activate   0x000bbe    program     extern E:\Work\e-minor-controller\common\controller.c
-     read_rom_to_pmbuffer   0x001c48    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                    sd000   0x002e22    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-        sequence_complete   0x000f4c    program     extern E:\Work\e-minor-controller\common\controller.c
-             show_program   0x000b80    program     extern E:\Work\e-minor-controller\common\controller.c
-              slider_poll   0x0019ee    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-      sortedbank_activate   0x000c6c    program     extern E:\Work\e-minor-controller\common\controller.c
-      sortedbank_showname   0x000c8e    program     extern E:\Work\e-minor-controller\common\controller.c
-           store_sequence   0x000f68    program     extern E:\Work\e-minor-controller\common\controller.c
+                 _startup   0x002a44    program     extern E:\Work\e-minor-controller\PIC\startup.c
+          activate_preset   0x0019c0    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+      bank_getsortedindex   0x000f3c    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                bank_load   0x000caa    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+            bank_loadname   0x000f10    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+               bank_store   0x000d88    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+              banks_count   0x000c86    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+              button_held   0x0018f8    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+           button_pressed   0x0018bc    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+          button_released   0x00191a    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+                    cfg01   0x002488    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+  controller_10msec_timer   0x001aa0    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+        controller_handle   0x001aa2    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+          controller_init   0x001a68    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+               device_dsc   0x002476    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+                  endloop   0x002a7c    program     static                          
+                expr_poll   0x000c80    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+          fsw_led_disable   0x000c5e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+           fsw_led_enable   0x000c48    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+       fsw_led_set_active   0x000c2e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                 fsw_poll   0x000be0    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+              hid_rpt_UPS   0x002514    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+                     init   0x0028a0    program     extern E:\Work\e-minor-controller\PIC\init.c
+               itoa_fixed   0x00182c    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+         leds_show_1digit   0x001d40    program     extern E:\Work\e-minor-controller\PIC\leds.c
+        leds_show_4alphas   0x001d12    program     extern E:\Work\e-minor-controller\PIC\leds.c
+                     loop   0x002a5e    program     static                          
+                     loop   0x002a6e    program     static                          
+                     main   0x000a2c    program     extern E:\Work\e-minor-controller\PIC\main.c
+           midi_send_byte   0x000afc    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+           midi_send_cmd1   0x000f98    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+           midi_send_cmd2   0x000f9e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+     read_rom_to_pmbuffer   0x000ed4    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                    sd000   0x0024aa    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+          set_toggle_leds   0x00196e    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+             show_program   0x001874    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+              slider_poll   0x000c7a    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                 testcrap   0x000a2a    program     extern E:\Work\e-minor-controller\PIC\main.c
+           toggle_control   0x0019fe    program     extern E:\Work\e-minor-controller\common\controller-simple.c
                    ADCON0   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                ADCON0bits   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    ADCON1   0x000fc1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
@@ -682,66 +617,42 @@ USBPrepareForNextSetupTrf   0x00235a    program     extern E:\Work\e-minor-contr
                  __TEMPB1   0x000012       data     extern C:\MCC18\SRC\TRADIT~1\MATH\temparg.asm
                  __TEMPB2   0x000011       data     extern C:\MCC18\SRC\TRADIT~1\MATH\temparg.asm
                  __TEMPB3   0x000010       data     extern C:\MCC18\SRC\TRADIT~1\MATH\temparg.asm
-                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\hid.c
-                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\usbapplet.c
                   __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\usb.c
-                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\common\controller.c
+                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\hid.c
+                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\hwcalls.c
                   __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\leds.c
                   __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\writeprogmem.c
-              accel_count   0x000082       data     extern E:\Work\e-minor-controller\common\controller.c
-              accel_state   0x0000ae       data     extern E:\Work\e-minor-controller\common\controller.c
-               accel_time   0x000080       data     extern E:\Work\e-minor-controller\common\controller.c
-          active_protocol   0x0000ac       data     extern E:\Work\e-minor-controller\PIC\hid.c
-                     bank   0x000060       data     extern E:\Work\e-minor-controller\common\controller.c
-               bank_count   0x00007e       data     extern E:\Work\e-minor-controller\common\controller.c
-           bankcontroller   0x000064       data     extern E:\Work\e-minor-controller\common\controller.c
-                  bankmap   0x000068       data     extern E:\Work\e-minor-controller\common\controller.c
-            bankmap_count   0x000070       data     extern E:\Work\e-minor-controller\common\controller.c
-                 bankname   0x000071       data     extern E:\Work\e-minor-controller\common\controller.c
-                  cc_curr   0x000097       data     extern E:\Work\e-minor-controller\common\controller.c
-                  cc_last   0x000098       data     extern E:\Work\e-minor-controller\common\controller.c
-            cdtimer_flash   0x000085       data     extern E:\Work\e-minor-controller\common\controller.c
-        cdtimer_holdenter   0x00008b       data     extern E:\Work\e-minor-controller\common\controller.c
-      cdtimer_incdec_held   0x000089       data     extern E:\Work\e-minor-controller\common\controller.c
-            cdtimer_store   0x000087       data     extern E:\Work\e-minor-controller\common\controller.c
-            cdtimer_value   0x000083       data     extern E:\Work\e-minor-controller\common\controller.c
-   ctrl_trf_session_owner   0x0000a2       data     extern E:\Work\e-minor-controller\PIC\usb.c
-           ctrl_trf_state   0x0000a1       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                curr_bank   0x000078       data     extern E:\Work\e-minor-controller\common\controller.c
-            curr_mapindex   0x000077       data     extern E:\Work\e-minor-controller\common\controller.c
-              curr_preset   0x000076       data     extern E:\Work\e-minor-controller\common\controller.c
-             curr_program   0x000075       data     extern E:\Work\e-minor-controller\common\controller.c
-          curr_sortedbank   0x00007c       data     extern E:\Work\e-minor-controller\common\controller.c
-              delay_count   0x0000a9       data     static E:\Work\e-minor-controller\PIC\usb.c
+                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\common\controller-simple.c
+            active_preset   0x000060       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+          active_protocol   0x000086       data     extern E:\Work\e-minor-controller\PIC\hid.c
+           control_values   0x00006d       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+   ctrl_trf_session_owner   0x00007c       data     extern E:\Work\e-minor-controller\PIC\usb.c
+           ctrl_trf_state   0x00007b       data     extern E:\Work\e-minor-controller\PIC\usb.c
+              delay_count   0x000083       data     static E:\Work\e-minor-controller\PIC\usb.c
                     ep0Bi   0x000404       data     extern E:\Work\e-minor-controller\PIC\usb.c
                     ep0Bo   0x000400       data     extern E:\Work\e-minor-controller\PIC\usb.c
                     ep1Bi   0x00040c       data     extern E:\Work\e-minor-controller\PIC\usb.c
                     ep1Bo   0x000408       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                flash_led   0x00008d       data     extern E:\Work\e-minor-controller\common\controller.c
-              flash_state   0x0000af       data     extern E:\Work\e-minor-controller\common\controller.c
             hid_report_in   0x000498       data     extern E:\Work\e-minor-controller\PIC\usb.c
            hid_report_out   0x000490       data     extern E:\Work\e-minor-controller\PIC\usb.c
-           hid_rpt_rx_len   0x0000ad       data     extern E:\Work\e-minor-controller\PIC\hid.c
-                idle_rate   0x0000ab       data     extern E:\Work\e-minor-controller\PIC\hid.c
-              incdec_mode   0x00009c       data     extern E:\Work\e-minor-controller\common\controller.c
-              loaded_bank   0x00007a       data     extern E:\Work\e-minor-controller\common\controller.c
+           hid_rpt_rx_len   0x000087       data     extern E:\Work\e-minor-controller\PIC\hid.c
+                idle_rate   0x000085       data     extern E:\Work\e-minor-controller\PIC\hid.c
              midiInBufPtr   0x0001fe       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
                midiInData   0x0001e7       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
-                     mode   0x00008e       data     extern E:\Work\e-minor-controller\common\controller.c
-                     pDst   0x0000a5       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                     pSrc   0x0000a3       data     extern E:\Work\e-minor-controller\PIC\usb.c
-             program_mode   0x0000b0       data     extern E:\Work\e-minor-controller\common\controller.c
-             store_preset   0x00009b       data     extern E:\Work\e-minor-controller\common\controller.c
-              store_state   0x00009a       data     extern E:\Work\e-minor-controller\common\controller.c
-                  sw_curr   0x00008f       data     extern E:\Work\e-minor-controller\common\controller.c
-                  sw_last   0x000093       data     extern E:\Work\e-minor-controller\common\controller.c
-             switch_state   0x000099       data     extern E:\Work\e-minor-controller\common\controller.c
-           usb_active_cfg   0x00009f       data     extern E:\Work\e-minor-controller\PIC\usb.c
-             usb_alt_intf   0x0000a0       data     extern E:\Work\e-minor-controller\PIC\usb.c
-         usb_device_state   0x00009d       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                 usb_stat   0x00009e       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                   wCount   0x0000a7       data     extern E:\Work\e-minor-controller\PIC\usb.c
+                     mode   0x000076       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+                     pDst   0x00007f       data     extern E:\Work\e-minor-controller\PIC\usb.c
+                     pSrc   0x00007d       data     extern E:\Work\e-minor-controller\PIC\usb.c
+     preset_controltoggle   0x000071       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+preset_controltoggle_init   0x000072       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+          preset_programs   0x000069       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+                  sw_curr   0x000061       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+                  sw_last   0x000065       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+           usb_active_cfg   0x000079       data     extern E:\Work\e-minor-controller\PIC\usb.c
+             usb_alt_intf   0x00007a       data     extern E:\Work\e-minor-controller\PIC\usb.c
+         usb_device_state   0x000077       data     extern E:\Work\e-minor-controller\PIC\usb.c
+                 usb_stat   0x000078       data     extern E:\Work\e-minor-controller\PIC\usb.c
+                   wCount   0x000081       data     extern E:\Work\e-minor-controller\PIC\usb.c
 
 
 
@@ -756,321 +667,258 @@ USBPrepareForNextSetupTrf   0x00235a    program     extern E:\Work\e-minor-contr
        ___return_lbl00000   0x000a04    program     static                          
       InterruptVectorHigh   0x000a08    program     extern E:\Work\e-minor-controller\PIC\intslct.c
        ___return_lbl00000   0x000a0c    program     static                          
-                     main   0x000a2a    program     extern E:\Work\e-minor-controller\PIC\main.c
-          ___for_lbl00011   0x000a8a    program     static                          
-           ___if_lbl00003   0x000aa2    program     static                          
-           ___if_lbl00004   0x000ab4    program     static                          
-           ___if_lbl00005   0x000abe    program     static                          
-           ___if_lbl00006   0x000aca    program     static                          
-           ___if_lbl00007   0x000ad6    program     static                          
-           ___if_lbl00008   0x000ae0    program     static                          
-           ___if_lbl00009   0x000aea    program     static                          
-           ___if_lbl00010   0x000af4    program     static                          
-          ___for_lbl00001   0x000af8    program     static                          
-          ___for_lbl00002   0x000afa    program     static                          
-       ___return_lbl00000   0x000afa    program     static                          
-               ServiceUSB   0x000b0e    program     extern E:\Work\e-minor-controller\PIC\main.c
-               itoa_fixed   0x000b2a    program     extern E:\Work\e-minor-controller\common\controller.c
-             show_program   0x000b80    program     extern E:\Work\e-minor-controller\common\controller.c
-         program_activate   0x000bbe    program     extern E:\Work\e-minor-controller\common\controller.c
-          preset_activate   0x000be2    program     extern E:\Work\e-minor-controller\common\controller.c
-             bankmap_show   0x000bfe    program     extern E:\Work\e-minor-controller\common\controller.c
-         bankmap_activate   0x000c0c    program     extern E:\Work\e-minor-controller\common\controller.c
-            bank_activate   0x000c2c    program     extern E:\Work\e-minor-controller\common\controller.c
-      sortedbank_activate   0x000c6c    program     extern E:\Work\e-minor-controller\common\controller.c
-            bank_showname   0x000c82    program     extern E:\Work\e-minor-controller\common\controller.c
-      sortedbank_showname   0x000c8e    program     extern E:\Work\e-minor-controller\common\controller.c
-           button_pressed   0x000ce8    program     extern E:\Work\e-minor-controller\common\controller.c
-              button_held   0x000d2e    program     extern E:\Work\e-minor-controller\common\controller.c
-          button_released   0x000d54    program     extern E:\Work\e-minor-controller\common\controller.c
-  controller_10msec_timer   0x000db4    program     extern E:\Work\e-minor-controller\common\controller.c
-       inc_practice_value   0x000eca    program     extern E:\Work\e-minor-controller\common\controller.c
-       dec_practice_value   0x000ef8    program     extern E:\Work\e-minor-controller\common\controller.c
-    notify_practice_value   0x000f28    program     extern E:\Work\e-minor-controller\common\controller.c
-  activate_practice_value   0x000f36    program     extern E:\Work\e-minor-controller\common\controller.c
-        sequence_complete   0x000f4c    program     extern E:\Work\e-minor-controller\common\controller.c
-           store_sequence   0x000f68    program     extern E:\Work\e-minor-controller\common\controller.c
-          controller_init   0x000f8c    program     extern E:\Work\e-minor-controller\common\controller.c
-        controller_handle   0x000fec    program     extern E:\Work\e-minor-controller\common\controller.c
-                   __pa_0   0x001598    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_1   0x0015a4    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_2   0x0015aa    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_3   0x0015bc    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_4   0x0015c8    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_5   0x0015e4    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_6   0x0015fc    program     static E:\Work\e-minor-controller\common\controller.c
-              __tmplbl_68   0x0015fc    program     static                          
-              __tmplbl_67   0x0015fc    program     static                          
-              __tmplbl_66   0x0015fc    program     static                          
-              __tmplbl_69   0x0015fc    program     static                          
-              __tmplbl_65   0x0015fc    program     static                          
-              __tmplbl_64   0x0015fc    program     static                          
-              __tmplbl_63   0x0015fc    program     static                          
-              __tmplbl_62   0x0015fc    program     static                          
-              __tmplbl_61   0x0015fc    program     static                          
-              __tmplbl_60   0x0015fc    program     static                          
-              __tmplbl_70   0x0015fc    program     static                          
-                   __pa_7   0x001604    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_8   0x00161c    program     static E:\Work\e-minor-controller\common\controller.c
-                   __pa_9   0x001626    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_10   0x001634    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_11   0x00163c    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_12   0x00164a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_13   0x001652    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_14   0x00165a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_15   0x001662    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_16   0x00166a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_17   0x001684    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_18   0x001694    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_19   0x00169e    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_20   0x0016a8    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_21   0x0016b4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_22   0x0016c2    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_23   0x0016d6    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_24   0x0016ea    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_25   0x0016fa    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_26   0x001706    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_27   0x001710    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_28   0x001718    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_29   0x001722    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_30   0x001732    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_31   0x00173a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_32   0x00173e    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_33   0x00174c    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_34   0x00175a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_35   0x001768    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_36   0x001776    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_37   0x001784    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_38   0x00178e    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_39   0x001796    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_40   0x00179c    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_41   0x0017a4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_42   0x0017aa    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_43   0x0017ae    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_44   0x0017c8    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_45   0x0017d8    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_46   0x0017e4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_47   0x0017ec    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_48   0x0017f4    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_49   0x0017fc    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_50   0x001802    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_51   0x00180a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_52   0x001812    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_53   0x001818    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_54   0x00181e    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_55   0x00182a    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_56   0x001836    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_57   0x00183c    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_58   0x001842    program     static E:\Work\e-minor-controller\common\controller.c
-                  __pa_59   0x001848    program     static E:\Work\e-minor-controller\common\controller.c
-           ADC_CONVERSION   0x00184e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-           midi_send_byte   0x001870    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-       SendDataToShiftReg   0x001880    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-              ReadButtons   0x0018ba    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-            SetDipAddress   0x00193c    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                 fsw_poll   0x001954    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-               UpdateLeds   0x001998    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-       fsw_led_set_active   0x0019a2    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-           fsw_led_enable   0x0019bc    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-          fsw_led_disable   0x0019d2    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-              slider_poll   0x0019ee    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                expr_poll   0x0019f4    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-              banks_count   0x0019fa    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                bank_load   0x001a1e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-               bank_store   0x001afc    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-     read_rom_to_pmbuffer   0x001c48    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-            bank_loadname   0x001c84    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-      bank_getsortedindex   0x001cb0    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-           midi_send_cmd1   0x001d0c    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-           midi_send_cmd2   0x001d12    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_0   0x001d1c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_1   0x001d24    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_2   0x001d32    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_3   0x001d3c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_4   0x001d46    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_5   0x001d4e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_6   0x001d66    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_7   0x001d6e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_8   0x001d90    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                   __pa_9   0x001d96    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_10   0x001d9c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_11   0x001db0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_12   0x001dc2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_13   0x001dcc    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_14   0x001dd6    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_15   0x001de0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_16   0x001dee    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_17   0x001df8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_18   0x001e02    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_19   0x001e0c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_20   0x001e1c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_21   0x001e4e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_22   0x001e5c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_23   0x001e62    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_24   0x001e68    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_25   0x001e74    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_26   0x001e88    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_27   0x001ea0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_28   0x001eae    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_29   0x001eba    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_30   0x001ec6    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_31   0x001ed4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_32   0x001ee2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_33   0x001eea    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_34   0x001ef4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_35   0x001efa    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_36   0x001f06    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_37   0x001f12    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_38   0x001f16    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_39   0x001f1a    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_40   0x001f28    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_41   0x001f2e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_42   0x001f34    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_43   0x001f3e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_44   0x001f48    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_45   0x001f50    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-                  __pa_46   0x001f5a    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
-       USBCheckStdRequest   0x001f68    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBStdGetDscHandler   0x001ffe    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBStdSetCfgHandler   0x00206e    program     extern E:\Work\e-minor-controller\PIC\usb.c
-   USBStdGetStatusHandler   0x00209a    program     extern E:\Work\e-minor-controller\PIC\usb.c
-  USBStdFeatureReqHandler   0x0020f6    program     extern E:\Work\e-minor-controller\PIC\usb.c
-         USBCtrlEPService   0x00215a    program     extern E:\Work\e-minor-controller\PIC\usb.c
-   USBCtrlTrfSetupHandler   0x00217e    program     extern E:\Work\e-minor-controller\PIC\usb.c
-     USBCtrlTrfOutHandler   0x0021e0    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBCtrlTrfInHandler   0x0021fe    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBCtrlTrfTxService   0x00223e    program     extern E:\Work\e-minor-controller\PIC\usb.c
-      USBCtrlTrfRxService   0x0022ae    program     extern E:\Work\e-minor-controller\PIC\usb.c
- USBCtrlEPServiceComplete   0x0022ee    program     extern E:\Work\e-minor-controller\PIC\usb.c
-USBPrepareForNextSetupTrf   0x00235a    program     extern E:\Work\e-minor-controller\PIC\usb.c
-        USBCheckBusStatus   0x002368    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USBModuleEnable   0x002384    program     extern E:\Work\e-minor-controller\PIC\usb.c
-         USBModuleDisable   0x002392    program     extern E:\Work\e-minor-controller\PIC\usb.c
-            USBSoftDetach   0x00239c    program     extern E:\Work\e-minor-controller\PIC\usb.c
-         USBDriverService   0x0023a0    program     extern E:\Work\e-minor-controller\PIC\usb.c
-               USBSuspend   0x00241c    program     extern E:\Work\e-minor-controller\PIC\usb.c
-       USBWakeFromSuspend   0x002426    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USBRemoteWakeup   0x00242e    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USB_SOF_Handler   0x002452    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USBStallHandler   0x002456    program     extern E:\Work\e-minor-controller\PIC\usb.c
-          USBErrorHandler   0x002462    program     extern E:\Work\e-minor-controller\PIC\usb.c
-  USBProtocolResetHandler   0x002466    program     extern E:\Work\e-minor-controller\PIC\usb.c
-               ClearArray   0x002492    program     extern E:\Work\e-minor-controller\PIC\usb.c
-        ___while_lbl00133   0x0024a6    program     static                          
-       ___return_lbl00132   0x0024b4    program     static                          
-        ___while_lbl00134   0x0024b4    program     static                          
-                   __pa_0   0x0024bc    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_1   0x0024ce    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_2   0x0024e6    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_3   0x0024f6    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_4   0x002504    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_5   0x002516    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_6   0x002524    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_7   0x002536    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_8   0x002546    program     static E:\Work\e-minor-controller\PIC\usb.c
-                   __pa_9   0x002554    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_10   0x002562    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_11   0x00256a    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_12   0x002572    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_13   0x00257e    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_14   0x00258c    program     static E:\Work\e-minor-controller\PIC\usb.c
-                  __pa_15   0x002598    program     static E:\Work\e-minor-controller\PIC\usb.c
-             Process7Segs   0x0025a0    program     extern E:\Work\e-minor-controller\PIC\leds.c
-             AllDigitsOff   0x0025f0    program     extern E:\Work\e-minor-controller\PIC\leds.c
-              HandleDigit   0x00260c    program     extern E:\Work\e-minor-controller\PIC\leds.c
-             SetDispAscii   0x002666    program     extern E:\Work\e-minor-controller\PIC\leds.c
-        leds_show_4alphas   0x00268a    program     extern E:\Work\e-minor-controller\PIC\leds.c
-         leds_show_1digit   0x0026b8    program     extern E:\Work\e-minor-controller\PIC\leds.c
-              AsciiTo7Seg   0x0026d4    program     extern E:\Work\e-minor-controller\PIC\leds.c
-           Scroll7SegDisp   0x002732    program     extern E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_0   0x0027aa    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_1   0x0027b6    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_2   0x0027e2    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_3   0x0027ec    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_4   0x0027f4    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_5   0x00280c    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_6   0x002822    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_7   0x002830    program     static E:\Work\e-minor-controller\PIC\leds.c
-                   __pa_8   0x00283e    program     static E:\Work\e-minor-controller\PIC\leds.c
-     PROCESS_COMM_REQUEST   0x00284c    program     extern E:\Work\e-minor-controller\PIC\rs232.c
-                    TXENQ   0x0029f4    program     extern E:\Work\e-minor-controller\PIC\rs232.c
-                   __pa_0   0x002a20    program     static E:\Work\e-minor-controller\PIC\rs232.c
-                   __pa_1   0x002a30    program     static E:\Work\e-minor-controller\PIC\rs232.c
-                   __pa_2   0x002a36    program     static E:\Work\e-minor-controller\PIC\rs232.c
-                   __pa_3   0x002a3e    program     static E:\Work\e-minor-controller\PIC\rs232.c
-       USBCheckHIDRequest   0x002a50    program     extern E:\Work\e-minor-controller\PIC\hid.c
-                HIDInitEP   0x002b32    program     extern E:\Work\e-minor-controller\PIC\hid.c
-              HIDTxReport   0x002b5c    program     extern E:\Work\e-minor-controller\PIC\hid.c
-              HIDRxReport   0x002bbc    program     extern E:\Work\e-minor-controller\PIC\hid.c
-                   __pa_0   0x002c28    program     static E:\Work\e-minor-controller\PIC\hid.c
-                   __pa_1   0x002c40    program     static E:\Work\e-minor-controller\PIC\hid.c
-      HIDSetReportHandler   0x002c48    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
-      HIDGetReportHandler   0x002c52    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
-ProcessGenericTransferRead   0x002c70    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
-ProcessGenericTransferWrite   0x002cdc    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_0   0x002d50    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_1   0x002d70    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_2   0x002d94    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_3   0x002db2    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_4   0x002dc6    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_5   0x002dd2    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-                   __pa_6   0x002de6    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
-               device_dsc   0x002dee    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-                    cfg01   0x002e00    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-                    sd000   0x002e22    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-                MfrString   0x002e26    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-                PrdString   0x002e3e    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-                SerialNum   0x002e6a    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-              hid_rpt_UPS   0x002e8c    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-               USB_CD_Ptr   0x002f08    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-               USB_SD_Ptr   0x002f0c    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-          ClassReqHandler   0x002f14    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
-EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-controller\PIC\tables.c
-               StartWrite   0x003016    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-             WriteProgMem   0x003022    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-             EraseProgMem   0x003078    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-                   ReadEE   0x00308c    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-                  WriteEE   0x00309c    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
-                   __pa_0   0x0030bc    program     static E:\Work\e-minor-controller\PIC\writeprogmem.c
-                   __pa_1   0x0030c6    program     static E:\Work\e-minor-controller\PIC\writeprogmem.c
-     InterruptHandlerHigh   0x0030ce    program     extern E:\Work\e-minor-controller\PIC\intslct.c
-        MIDI_COMM_ROUTINE   0x003178    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
-             MIDI_ENQUEUE   0x0031e2    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
-     RESET_MIDI_TX_BUFFER   0x00320e    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
-                     init   0x003218    program     extern E:\Work\e-minor-controller\PIC\init.c
-                   EERead   0x003288    program     extern E:\Work\e-minor-controller\PIC\eeprom.c
-                  EEWrite   0x0032a6    program     extern E:\Work\e-minor-controller\PIC\eeprom.c
-           ___do_lbl00004   0x0032cc    program     static                          
-           ___do_lbl00002   0x0032ce    program     static                          
-           ___do_lbl00003   0x0032d2    program     static                          
-       ___return_lbl00001   0x0032d6    program     static                          
-        SystemTimeRoutine   0x0032de    program     extern E:\Work\e-minor-controller\PIC\systick.c
-                 FXM1616U   0x003322    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxm1616u.asm
-             ExpPedalRead   0x00335e    program     extern E:\Work\e-minor-controller\PIC\exppedal.c
-          NumbersSegTable   0x003398    program     extern E:\Work\e-minor-controller\PIC\leds.c
-          LettersSegTable   0x0033a2    program     extern E:\Work\e-minor-controller\PIC\leds.c
-                 _startup   0x0033bc    program     extern E:\Work\e-minor-controller\PIC\startup.c
-                 RAMCLEAR   0x0033cc    program     static                          
-                     loop   0x0033d6    program     static                          
-       ___return_lbl00001   0x0033dc    program     static                          
-                 FXD0808U   0x0033de    program     extern C:\MCC18\src\TRADIT~1\math\fxd0808u.c
-                     loop   0x0033e6    program     static                          
-                  endloop   0x0033f4    program     static                          
-       ___return_lbl00000   0x0033f8    program     static                          
-                CLEAR_RAM   0x0033fa    program     extern E:\Work\e-minor-controller\PIC\config.asm
-                RAMCLEAR1   0x0033fe    program     static E:\Work\e-minor-controller\PIC\config.asm
+                 testcrap   0x000a2a    program     extern E:\Work\e-minor-controller\PIC\main.c
+                     main   0x000a2c    program     extern E:\Work\e-minor-controller\PIC\main.c
+          ___for_lbl00012   0x000a46    program     static                          
+           ___if_lbl00004   0x000a5e    program     static                          
+           ___if_lbl00005   0x000a70    program     static                          
+           ___if_lbl00006   0x000a7a    program     static                          
+           ___if_lbl00007   0x000a86    program     static                          
+           ___if_lbl00008   0x000a92    program     static                          
+           ___if_lbl00009   0x000a9c    program     static                          
+           ___if_lbl00010   0x000aa6    program     static                          
+           ___if_lbl00011   0x000ab0    program     static                          
+          ___for_lbl00002   0x000ab4    program     static                          
+       ___return_lbl00001   0x000ab6    program     static                          
+          ___for_lbl00003   0x000ab6    program     static                          
+               ServiceUSB   0x000aca    program     extern E:\Work\e-minor-controller\PIC\main.c
+           ADC_CONVERSION   0x000ada    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+           midi_send_byte   0x000afc    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+       SendDataToShiftReg   0x000b0c    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+              ReadButtons   0x000b46    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+            SetDipAddress   0x000bc8    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                 fsw_poll   0x000be0    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+               UpdateLeds   0x000c24    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+       fsw_led_set_active   0x000c2e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+           fsw_led_enable   0x000c48    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+          fsw_led_disable   0x000c5e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+              slider_poll   0x000c7a    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                expr_poll   0x000c80    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+              banks_count   0x000c86    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                bank_load   0x000caa    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+               bank_store   0x000d88    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+     read_rom_to_pmbuffer   0x000ed4    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+            bank_loadname   0x000f10    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+      bank_getsortedindex   0x000f3c    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+           midi_send_cmd1   0x000f98    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+           midi_send_cmd2   0x000f9e    program     extern E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_0   0x000fa8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_1   0x000fb0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_2   0x000fbe    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_3   0x000fc8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_4   0x000fd2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_5   0x000fda    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_6   0x000ff2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_7   0x000ffa    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_8   0x00101c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                   __pa_9   0x001022    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_10   0x001028    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_11   0x00103c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_12   0x00104e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_13   0x001058    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_14   0x001062    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_15   0x00106c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_16   0x00107a    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_17   0x001084    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_18   0x00108e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_19   0x001098    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_20   0x0010a8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_21   0x0010da    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_22   0x0010e8    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_23   0x0010ee    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_24   0x0010f4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_25   0x001100    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_26   0x001114    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_27   0x00112c    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_28   0x00113a    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_29   0x001146    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_30   0x001152    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_31   0x001160    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_32   0x00116e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_33   0x001176    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_34   0x001180    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_35   0x001186    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_36   0x001192    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_37   0x00119e    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_38   0x0011a2    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_39   0x0011a6    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_40   0x0011b4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_41   0x0011ba    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_42   0x0011c0    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_43   0x0011ca    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_44   0x0011d4    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_45   0x0011dc    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+                  __pa_46   0x0011e6    program     static E:\Work\e-minor-controller\PIC\hwcalls.c
+       USBCheckStdRequest   0x0011f4    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBStdGetDscHandler   0x00128a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBStdSetCfgHandler   0x0012fa    program     extern E:\Work\e-minor-controller\PIC\usb.c
+   USBStdGetStatusHandler   0x001326    program     extern E:\Work\e-minor-controller\PIC\usb.c
+  USBStdFeatureReqHandler   0x001382    program     extern E:\Work\e-minor-controller\PIC\usb.c
+         USBCtrlEPService   0x0013e6    program     extern E:\Work\e-minor-controller\PIC\usb.c
+   USBCtrlTrfSetupHandler   0x00140a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+     USBCtrlTrfOutHandler   0x00146c    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBCtrlTrfInHandler   0x00148a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBCtrlTrfTxService   0x0014ca    program     extern E:\Work\e-minor-controller\PIC\usb.c
+      USBCtrlTrfRxService   0x00153a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+ USBCtrlEPServiceComplete   0x00157a    program     extern E:\Work\e-minor-controller\PIC\usb.c
+USBPrepareForNextSetupTrf   0x0015e6    program     extern E:\Work\e-minor-controller\PIC\usb.c
+        USBCheckBusStatus   0x0015f4    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USBModuleEnable   0x001610    program     extern E:\Work\e-minor-controller\PIC\usb.c
+         USBModuleDisable   0x00161e    program     extern E:\Work\e-minor-controller\PIC\usb.c
+            USBSoftDetach   0x001628    program     extern E:\Work\e-minor-controller\PIC\usb.c
+         USBDriverService   0x00162c    program     extern E:\Work\e-minor-controller\PIC\usb.c
+               USBSuspend   0x0016a8    program     extern E:\Work\e-minor-controller\PIC\usb.c
+       USBWakeFromSuspend   0x0016b2    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USBRemoteWakeup   0x0016ba    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USB_SOF_Handler   0x0016de    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USBStallHandler   0x0016e2    program     extern E:\Work\e-minor-controller\PIC\usb.c
+          USBErrorHandler   0x0016ee    program     extern E:\Work\e-minor-controller\PIC\usb.c
+  USBProtocolResetHandler   0x0016f2    program     extern E:\Work\e-minor-controller\PIC\usb.c
+               ClearArray   0x00171e    program     extern E:\Work\e-minor-controller\PIC\usb.c
+        ___while_lbl00133   0x001732    program     static                          
+        ___while_lbl00134   0x001740    program     static                          
+       ___return_lbl00132   0x001740    program     static                          
+                   __pa_0   0x001748    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_1   0x00175a    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_2   0x001772    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_3   0x001782    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_4   0x001790    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_5   0x0017a2    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_6   0x0017b0    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_7   0x0017c2    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_8   0x0017d2    program     static E:\Work\e-minor-controller\PIC\usb.c
+                   __pa_9   0x0017e0    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_10   0x0017ee    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_11   0x0017f6    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_12   0x0017fe    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_13   0x00180a    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_14   0x001818    program     static E:\Work\e-minor-controller\PIC\usb.c
+                  __pa_15   0x001824    program     static E:\Work\e-minor-controller\PIC\usb.c
+               itoa_fixed   0x00182c    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+             show_program   0x001874    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+           button_pressed   0x0018bc    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+              button_held   0x0018f8    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+          button_released   0x00191a    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+          set_toggle_leds   0x00196e    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+          activate_preset   0x0019c0    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+           toggle_control   0x0019fe    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+          controller_init   0x001a68    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+  controller_10msec_timer   0x001aa0    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+        controller_handle   0x001aa2    program     extern E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_0   0x001b52    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_1   0x001b60    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_2   0x001b7c    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_3   0x001b94    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_4   0x001b9c    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_5   0x001ba6    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_6   0x001bba    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_7   0x001bc2    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_8   0x001bd2    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                   __pa_9   0x001bda    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_10   0x001be2    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_11   0x001be6    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_12   0x001bf4    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_13   0x001bfc    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_14   0x001c04    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_15   0x001c08    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_16   0x001c10    program     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __pa_17   0x001c1c    program     static E:\Work\e-minor-controller\common\controller-simple.c
+             Process7Segs   0x001c28    program     extern E:\Work\e-minor-controller\PIC\leds.c
+             AllDigitsOff   0x001c78    program     extern E:\Work\e-minor-controller\PIC\leds.c
+              HandleDigit   0x001c94    program     extern E:\Work\e-minor-controller\PIC\leds.c
+             SetDispAscii   0x001cee    program     extern E:\Work\e-minor-controller\PIC\leds.c
+        leds_show_4alphas   0x001d12    program     extern E:\Work\e-minor-controller\PIC\leds.c
+         leds_show_1digit   0x001d40    program     extern E:\Work\e-minor-controller\PIC\leds.c
+              AsciiTo7Seg   0x001d5c    program     extern E:\Work\e-minor-controller\PIC\leds.c
+           Scroll7SegDisp   0x001dba    program     extern E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_0   0x001e32    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_1   0x001e3e    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_2   0x001e6a    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_3   0x001e74    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_4   0x001e7c    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_5   0x001e94    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_6   0x001eaa    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_7   0x001eb8    program     static E:\Work\e-minor-controller\PIC\leds.c
+                   __pa_8   0x001ec6    program     static E:\Work\e-minor-controller\PIC\leds.c
+     PROCESS_COMM_REQUEST   0x001ed4    program     extern E:\Work\e-minor-controller\PIC\rs232.c
+                    TXENQ   0x00207c    program     extern E:\Work\e-minor-controller\PIC\rs232.c
+                   __pa_0   0x0020a8    program     static E:\Work\e-minor-controller\PIC\rs232.c
+                   __pa_1   0x0020b8    program     static E:\Work\e-minor-controller\PIC\rs232.c
+                   __pa_2   0x0020be    program     static E:\Work\e-minor-controller\PIC\rs232.c
+                   __pa_3   0x0020c6    program     static E:\Work\e-minor-controller\PIC\rs232.c
+       USBCheckHIDRequest   0x0020d8    program     extern E:\Work\e-minor-controller\PIC\hid.c
+                HIDInitEP   0x0021ba    program     extern E:\Work\e-minor-controller\PIC\hid.c
+              HIDTxReport   0x0021e4    program     extern E:\Work\e-minor-controller\PIC\hid.c
+              HIDRxReport   0x002244    program     extern E:\Work\e-minor-controller\PIC\hid.c
+                   __pa_0   0x0022b0    program     static E:\Work\e-minor-controller\PIC\hid.c
+                   __pa_1   0x0022c8    program     static E:\Work\e-minor-controller\PIC\hid.c
+      HIDSetReportHandler   0x0022d0    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
+      HIDGetReportHandler   0x0022da    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
+ProcessGenericTransferRead   0x0022f8    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
+ProcessGenericTransferWrite   0x002364    program     extern E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_0   0x0023d8    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_1   0x0023f8    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_2   0x00241c    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_3   0x00243a    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_4   0x00244e    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_5   0x00245a    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+                   __pa_6   0x00246e    program     static E:\Work\e-minor-controller\PIC\usbapplet.c
+               device_dsc   0x002476    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+                    cfg01   0x002488    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+                    sd000   0x0024aa    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+                MfrString   0x0024ae    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+                PrdString   0x0024c6    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+                SerialNum   0x0024f2    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+              hid_rpt_UPS   0x002514    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+               USB_CD_Ptr   0x002590    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+               USB_SD_Ptr   0x002594    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+          ClassReqHandler   0x00259c    program     extern E:\Work\e-minor-controller\PIC\usbdescript.c
+EXPP_PEDAL_LINEAR_CONV_TABLE   0x00259e    program     extern E:\Work\e-minor-controller\PIC\tables.c
+               StartWrite   0x00269e    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+             WriteProgMem   0x0026aa    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+             EraseProgMem   0x002700    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+                   ReadEE   0x002714    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+                  WriteEE   0x002724    program     extern E:\Work\e-minor-controller\PIC\writeprogmem.c
+                   __pa_0   0x002744    program     static E:\Work\e-minor-controller\PIC\writeprogmem.c
+                   __pa_1   0x00274e    program     static E:\Work\e-minor-controller\PIC\writeprogmem.c
+     InterruptHandlerHigh   0x002756    program     extern E:\Work\e-minor-controller\PIC\intslct.c
+        MIDI_COMM_ROUTINE   0x002800    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
+             MIDI_ENQUEUE   0x00286a    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
+     RESET_MIDI_TX_BUFFER   0x002896    program     extern E:\Work\e-minor-controller\PIC\MidiComm.c
+                     init   0x0028a0    program     extern E:\Work\e-minor-controller\PIC\init.c
+                   EERead   0x002910    program     extern E:\Work\e-minor-controller\PIC\eeprom.c
+                  EEWrite   0x00292e    program     extern E:\Work\e-minor-controller\PIC\eeprom.c
+           ___do_lbl00004   0x002954    program     static                          
+           ___do_lbl00002   0x002956    program     static                          
+           ___do_lbl00003   0x00295a    program     static                          
+       ___return_lbl00001   0x00295e    program     static                          
+        SystemTimeRoutine   0x002966    program     extern E:\Work\e-minor-controller\PIC\systick.c
+                 FXM1616U   0x0029aa    program     extern C:\MCC18\SRC\TRADIT~1\MATH\fxm1616u.asm
+             ExpPedalRead   0x0029e6    program     extern E:\Work\e-minor-controller\PIC\exppedal.c
+          NumbersSegTable   0x002a20    program     extern E:\Work\e-minor-controller\PIC\leds.c
+          LettersSegTable   0x002a2a    program     extern E:\Work\e-minor-controller\PIC\leds.c
+                 _startup   0x002a44    program     extern E:\Work\e-minor-controller\PIC\startup.c
+                 RAMCLEAR   0x002a54    program     static                          
+                     loop   0x002a5e    program     static                          
+       ___return_lbl00001   0x002a64    program     static                          
+                 FXD0808U   0x002a66    program     extern C:\MCC18\src\TRADIT~1\math\fxd0808u.c
+                     loop   0x002a6e    program     static                          
+                  endloop   0x002a7c    program     static                          
+       ___return_lbl00000   0x002a80    program     static                          
+                CLEAR_RAM   0x002a82    program     extern E:\Work\e-minor-controller\PIC\config.asm
+                RAMCLEAR1   0x002a86    program     static E:\Work\e-minor-controller\PIC\config.asm
              ROM_SAVEDATA   0x004900    program     extern E:\Work\e-minor-controller\PIC\tables.c
                      SIGN   0x000000       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
                 __FPFLAGS   0x000001       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
             __FPFLAGSbits   0x000001       data     extern C:\MCC18\SRC\TRADIT~1\MATH\cmath18.asm
-                  __REMB3   0x000002       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB7   0x000002       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
+                  __REMB3   0x000002       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB6   0x000003       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                   __REMB2   0x000003       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                   __REMB1   0x000004       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB5   0x000004       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
-                  __REMB0   0x000005       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB4   0x000005       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
+                  __REMB0   0x000005       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB3   0x000006       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB2   0x000007       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
                  __AARGB1   0x000008       data     extern C:\MCC18\SRC\TRADIT~1\MATH\aarg.asm
@@ -1086,62 +934,38 @@ EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-co
                  __TEMPB1   0x000012       data     extern C:\MCC18\SRC\TRADIT~1\MATH\temparg.asm
                  __TEMPB0   0x000013       data     extern C:\MCC18\SRC\TRADIT~1\MATH\temparg.asm
                    __TEMP   0x000013       data     extern C:\MCC18\SRC\TRADIT~1\MATH\temparg.asm
+                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\common\controller-simple.c
+                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\writeprogmem.c
+                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\leds.c
                   __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\hwcalls.c
                   __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\hid.c
                   __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\usbapplet.c
                   __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\usb.c
-                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\common\controller.c
-                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\leds.c
-                  __tmp_0   0x000014       data     static E:\Work\e-minor-controller\PIC\writeprogmem.c
                CommFlags1   0x00001c       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
                 ArbFlags1   0x00001d       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
                 ArbFlags2   0x00001e       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
                MiscFlags1   0x00001f       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
-                     bank   0x000060       data     extern E:\Work\e-minor-controller\common\controller.c
-           bankcontroller   0x000064       data     extern E:\Work\e-minor-controller\common\controller.c
-                  bankmap   0x000068       data     extern E:\Work\e-minor-controller\common\controller.c
-            bankmap_count   0x000070       data     extern E:\Work\e-minor-controller\common\controller.c
-                 bankname   0x000071       data     extern E:\Work\e-minor-controller\common\controller.c
-             curr_program   0x000075       data     extern E:\Work\e-minor-controller\common\controller.c
-              curr_preset   0x000076       data     extern E:\Work\e-minor-controller\common\controller.c
-            curr_mapindex   0x000077       data     extern E:\Work\e-minor-controller\common\controller.c
-                curr_bank   0x000078       data     extern E:\Work\e-minor-controller\common\controller.c
-              loaded_bank   0x00007a       data     extern E:\Work\e-minor-controller\common\controller.c
-          curr_sortedbank   0x00007c       data     extern E:\Work\e-minor-controller\common\controller.c
-               bank_count   0x00007e       data     extern E:\Work\e-minor-controller\common\controller.c
-               accel_time   0x000080       data     extern E:\Work\e-minor-controller\common\controller.c
-              accel_count   0x000082       data     extern E:\Work\e-minor-controller\common\controller.c
-            cdtimer_value   0x000083       data     extern E:\Work\e-minor-controller\common\controller.c
-            cdtimer_flash   0x000085       data     extern E:\Work\e-minor-controller\common\controller.c
-            cdtimer_store   0x000087       data     extern E:\Work\e-minor-controller\common\controller.c
-      cdtimer_incdec_held   0x000089       data     extern E:\Work\e-minor-controller\common\controller.c
-        cdtimer_holdenter   0x00008b       data     extern E:\Work\e-minor-controller\common\controller.c
-                flash_led   0x00008d       data     extern E:\Work\e-minor-controller\common\controller.c
-                     mode   0x00008e       data     extern E:\Work\e-minor-controller\common\controller.c
-                  sw_curr   0x00008f       data     extern E:\Work\e-minor-controller\common\controller.c
-                  sw_last   0x000093       data     extern E:\Work\e-minor-controller\common\controller.c
-                  cc_curr   0x000097       data     extern E:\Work\e-minor-controller\common\controller.c
-                  cc_last   0x000098       data     extern E:\Work\e-minor-controller\common\controller.c
-             switch_state   0x000099       data     extern E:\Work\e-minor-controller\common\controller.c
-              store_state   0x00009a       data     extern E:\Work\e-minor-controller\common\controller.c
-             store_preset   0x00009b       data     extern E:\Work\e-minor-controller\common\controller.c
-              incdec_mode   0x00009c       data     extern E:\Work\e-minor-controller\common\controller.c
-         usb_device_state   0x00009d       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                 usb_stat   0x00009e       data     extern E:\Work\e-minor-controller\PIC\usb.c
-           usb_active_cfg   0x00009f       data     extern E:\Work\e-minor-controller\PIC\usb.c
-             usb_alt_intf   0x0000a0       data     extern E:\Work\e-minor-controller\PIC\usb.c
-           ctrl_trf_state   0x0000a1       data     extern E:\Work\e-minor-controller\PIC\usb.c
-   ctrl_trf_session_owner   0x0000a2       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                     pSrc   0x0000a3       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                     pDst   0x0000a5       data     extern E:\Work\e-minor-controller\PIC\usb.c
-                   wCount   0x0000a7       data     extern E:\Work\e-minor-controller\PIC\usb.c
-              delay_count   0x0000a9       data     static E:\Work\e-minor-controller\PIC\usb.c
-                idle_rate   0x0000ab       data     extern E:\Work\e-minor-controller\PIC\hid.c
-          active_protocol   0x0000ac       data     extern E:\Work\e-minor-controller\PIC\hid.c
-           hid_rpt_rx_len   0x0000ad       data     extern E:\Work\e-minor-controller\PIC\hid.c
-              accel_state   0x0000ae       data     extern E:\Work\e-minor-controller\common\controller.c
-              flash_state   0x0000af       data     extern E:\Work\e-minor-controller\common\controller.c
-             program_mode   0x0000b0       data     extern E:\Work\e-minor-controller\common\controller.c
+            active_preset   0x000060       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+                  sw_curr   0x000061       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+                  sw_last   0x000065       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+          preset_programs   0x000069       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+           control_values   0x00006d       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+     preset_controltoggle   0x000071       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+preset_controltoggle_init   0x000072       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+                     mode   0x000076       data     extern E:\Work\e-minor-controller\common\controller-simple.c
+         usb_device_state   0x000077       data     extern E:\Work\e-minor-controller\PIC\usb.c
+                 usb_stat   0x000078       data     extern E:\Work\e-minor-controller\PIC\usb.c
+           usb_active_cfg   0x000079       data     extern E:\Work\e-minor-controller\PIC\usb.c
+             usb_alt_intf   0x00007a       data     extern E:\Work\e-minor-controller\PIC\usb.c
+           ctrl_trf_state   0x00007b       data     extern E:\Work\e-minor-controller\PIC\usb.c
+   ctrl_trf_session_owner   0x00007c       data     extern E:\Work\e-minor-controller\PIC\usb.c
+                     pSrc   0x00007d       data     extern E:\Work\e-minor-controller\PIC\usb.c
+                     pDst   0x00007f       data     extern E:\Work\e-minor-controller\PIC\usb.c
+                   wCount   0x000081       data     extern E:\Work\e-minor-controller\PIC\usb.c
+              delay_count   0x000083       data     static E:\Work\e-minor-controller\PIC\usb.c
+                idle_rate   0x000085       data     extern E:\Work\e-minor-controller\PIC\hid.c
+          active_protocol   0x000086       data     extern E:\Work\e-minor-controller\PIC\hid.c
+           hid_rpt_rx_len   0x000087       data     extern E:\Work\e-minor-controller\PIC\hid.c
               DispSegData   0x000100       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
               ProgMemAddr   0x000105       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
             ProgmemBuffer   0x000107       data     extern E:\Work\e-minor-controller\PIC\ram_def.c
@@ -1180,115 +1004,115 @@ EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-co
            hid_report_out   0x000490       data     extern E:\Work\e-minor-controller\PIC\usb.c
             hid_report_in   0x000498       data     extern E:\Work\e-minor-controller\PIC\usb.c
                   SPPDATA   0x000f62       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-               SPPCFGbits   0x000f63       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    SPPCFG   0x000f63       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+               SPPCFGbits   0x000f63       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    SPPEPS   0x000f64       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                SPPEPSbits   0x000f64       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-               SPPCONbits   0x000f65       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    SPPCON   0x000f65       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                     UFRM   0x000f66       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+               SPPCONbits   0x000f65       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 UFRMLbits   0x000f66       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                     UFRM   0x000f66       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     UFRML   0x000f66       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     UFRMH   0x000f67       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 UFRMHbits   0x000f67       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   UIRbits   0x000f68       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                       UIR   0x000f68       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                  UIEbits   0x000f69       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                       UIE   0x000f69       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 UEIRbits   0x000f6a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                  UIEbits   0x000f69       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEIR   0x000f6a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 UEIRbits   0x000f6a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEIE   0x000f6b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEIEbits   0x000f6b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 USTATbits   0x000f6c       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     USTAT   0x000f6c       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UCON   0x000f6d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UCONbits   0x000f6d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                UADDRbits   0x000f6e       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     UADDR   0x000f6e       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                UADDRbits   0x000f6e       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UCFG   0x000f6f       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UCFGbits   0x000f6f       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP0   0x000f70       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEP0bits   0x000f70       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP1   0x000f71       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEP1bits   0x000f71       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 UEP2bits   0x000f72       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP2   0x000f72       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 UEP2bits   0x000f72       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP3   0x000f73       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEP3bits   0x000f73       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP4   0x000f74       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEP4bits   0x000f74       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                     UEP5   0x000f75       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEP5bits   0x000f75       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 UEP6bits   0x000f76       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                     UEP5   0x000f75       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP6   0x000f76       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 UEP6bits   0x000f76       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP7   0x000f77       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEP7bits   0x000f77       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP8   0x000f78       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEP8bits   0x000f78       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  UEP9bits   0x000f79       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      UEP9   0x000f79       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                UEP10bits   0x000f7a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     UEP10   0x000f7a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                UEP10bits   0x000f7a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     UEP11   0x000f7b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 UEP11bits   0x000f7b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                    UEP12   0x000f7c       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 UEP12bits   0x000f7c       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                    UEP13   0x000f7d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                    UEP12   0x000f7c       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 UEP13bits   0x000f7d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                    UEP13   0x000f7d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     UEP14   0x000f7e       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 UEP14bits   0x000f7e       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     UEP15   0x000f7f       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 UEP15bits   0x000f7f       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                PORTAbits   0x000f80       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     PORTA   0x000f80       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                PORTBbits   0x000f81       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     PORTB   0x000f81       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     PORTC   0x000f82       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 PORTCbits   0x000f82       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                PORTDbits   0x000f83       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     PORTD   0x000f83       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                PORTEbits   0x000f84       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                PORTDbits   0x000f83       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     PORTE   0x000f84       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                     LATA   0x000f89       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                PORTEbits   0x000f84       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  LATAbits   0x000f89       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                     LATB   0x000f8a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                     LATA   0x000f89       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  LATBbits   0x000f8a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      LATC   0x000f8b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  LATCbits   0x000f8b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 LATDbits   0x000f8c       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      LATD   0x000f8c       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 LATEbits   0x000f8d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 LATDbits   0x000f8c       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      LATE   0x000f8d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 DDRAbits   0x000f92       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 LATEbits   0x000f8d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      DDRA   0x000f92       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                TRISAbits   0x000f92       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TRISA   0x000f92       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 TRISBbits   0x000f93       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TRISB   0x000f93       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  DDRBbits   0x000f93       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                     DDRB   0x000f93       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                TRISCbits   0x000f94       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TRISC   0x000f94       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      DDRC   0x000f94       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  DDRCbits   0x000f94       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      DDRD   0x000f95       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  DDRDbits   0x000f95       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                    TRISD   0x000f95       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 TRISDbits   0x000f95       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                TRISEbits   0x000f96       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                    TRISE   0x000f96       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                    TRISD   0x000f95       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      DDRE   0x000f96       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  DDREbits   0x000f96       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                TRISEbits   0x000f96       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                    TRISE   0x000f96       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   OSCTUNE   0x000f9b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 PIE1bits   0x000f9d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      PIE1   0x000f9d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  PIR1bits   0x000f9e       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      PIR1   0x000f9e       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                     IPR1   0x000f9f       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  IPR1bits   0x000f9f       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 PIE2bits   0x000fa0       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                     IPR1   0x000f9f       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      PIE2   0x000fa0       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  PIR2bits   0x000fa1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      PIR2   0x000fa1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      IPR2   0x000fa2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
@@ -1306,22 +1130,22 @@ EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-co
                     RCREG   0x000fae       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     SPBRG   0x000faf       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    SPBRGH   0x000fb0       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                    T3CON   0x000fb1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 T3CONbits   0x000fb1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TMR3L   0x000fb2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TMR3H   0x000fb3       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                CMCONbits   0x000fb4       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     CMCON   0x000fb4       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-               CVRCONbits   0x000fb5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                CMCONbits   0x000fb4       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    CVRCON   0x000fb5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                  ECCP1AS   0x000fb6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+               CVRCONbits   0x000fb5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    CCP1AS   0x000fb6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                CCP1ASbits   0x000fb6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-             ECCP1DELbits   0x000fb7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 ECCP1DEL   0x000fb7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
               CCP1DELbits   0x000fb7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   CCP1DEL   0x000fb7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 ECCP1DEL   0x000fb7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+             ECCP1DELbits   0x000fb7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   BAUDCON   0x000fb8       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
               BAUDCONbits   0x000fb8       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   CCP2CON   0x000fba       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
@@ -1329,8 +1153,8 @@ EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-co
                     CCPR2   0x000fbb       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    CCPR2L   0x000fbb       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    CCPR2H   0x000fbc       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-              CCP1CONbits   0x000fbd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   CCP1CON   0x000fbd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                  ECCP1CON   0x000fbd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
              ECCP1CONbits   0x000fbd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     CCPR1   0x000fbe       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
@@ -1340,17 +1164,17 @@ EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-co
                    ADCON2   0x000fc0       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                ADCON1bits   0x000fc1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    ADCON1   0x000fc1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-               ADCON0bits   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    ADCON0   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     ADRES   0x000fc3       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    ADRESL   0x000fc3       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    ADRESH   0x000fc4       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-              SSPCON2bits   0x000fc5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   SSPCON2   0x000fc5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-              SSPCON1bits   0x000fc6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   SSPCON1   0x000fc6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-              SSPSTATbits   0x000fc7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   SSPSTAT   0x000fc7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    SSPADD   0x000fc8       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    SSPBUF   0x000fc9       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                 T2CONbits   0x000fca       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
@@ -1361,24 +1185,24 @@ EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-co
                     T1CON   0x000fcd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TMR1L   0x000fce       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TMR1H   0x000fcf       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                 RCONbits   0x000fd0       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      RCON   0x000fd0       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-               WDTCONbits   0x000fd1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    WDTCON   0x000fd1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                LVDCONbits   0x000fd2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    LVDCON   0x000fd2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
               HLVDCONbits   0x000fd2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   HLVDCON   0x000fd2       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                   OSCCON   0x000fd3       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                OSCCONbits   0x000fd3       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                T0CONbits   0x000fd5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                   OSCCON   0x000fd3       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     T0CON   0x000fd5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TMR0L   0x000fd6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     TMR0H   0x000fd7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                   STATUS   0x000fd8       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                STATUSbits   0x000fd8       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                     FSR2   0x000fd9       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     FSR2L   0x000fd9       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                     FSR2   0x000fd9       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     FSR2H   0x000fda       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    PLUSW2   0x000fdb       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   PREINC2   0x000fdc       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
@@ -1395,8 +1219,8 @@ EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-co
                  POSTINC1   0x000fe6       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     INDF1   0x000fe7       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      WREG   0x000fe8       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                    FSR0L   0x000fe9       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      FSR0   0x000fe9       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                     FSR0H   0x000fea       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    PLUSW0   0x000feb       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                   PREINC0   0x000fec       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
@@ -1423,8 +1247,8 @@ EXPP_PEDAL_LINEAR_CONV_TABLE   0x002f16    program     extern E:\Work\e-minor-co
                    PCLATU   0x000ffb       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                    STKPTR   0x000ffc       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                STKPTRbits   0x000ffc       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
-                     TOSL   0x000ffd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                       TOS   0x000ffd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      TOSH   0x000ffe       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
                      TOSU   0x000fff       data     extern C:\MCC18\SRC\TRADIT~1\PROC\p18f4455.asm
 
